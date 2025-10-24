@@ -57,9 +57,9 @@ export default function FooterSection() {
           <div className="flex flex-row md:flex-row justify-start items-center gap-6">
             <div className="flex space-x-6 ">
               <a
-                href="https://t.me/bEasy_kh"
+                href="https://t.me/bEasy_Cs"
                 aria-label="Telegram"
-                className="flex justify-center items-center w-10 h-10 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
+                className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
                 onClick={() => handleSocialClick("Telegram")}
               >
                 <FaTelegram size={16} />
@@ -67,7 +67,7 @@ export default function FooterSection() {
               <a
                 href="https://www.facebook.com/bEasy.apps"
                 aria-label="Facebook"
-                className="flex justify-center items-center w-10 h-10 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
+                className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
                 onClick={() => handleSocialClick("Facebook")}
               >
                 <FaFacebookF size={16} />
@@ -76,7 +76,7 @@ export default function FooterSection() {
               <a
                 href="https://www.tiktok.com/@beasy_kh?_t=ZS-90hWgLOiOZu&_r=1"
                 aria-label="TikTok"
-                className="flex justify-center items-center w-10 h-10 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
+                className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
                 onClick={() => handleSocialClick("TikTok")}
               >
                 <FaTiktok size={16} />
@@ -84,7 +84,7 @@ export default function FooterSection() {
               <a
                 href="https://www.instagram.com/beasy.cambodia?igsh=MTB4Nm82bjN1enl2YQ=="
                 aria-label="Instagram"
-                className="flex justify-center items-center w-10 h-10 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
+                className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
                 onClick={() => handleSocialClick("Instagram")}
               >
                 <FaInstagram size={16} />

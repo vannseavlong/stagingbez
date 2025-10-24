@@ -25,8 +25,8 @@ const Service = () => {
     pestControl: "/images/services/pest.png",
     laundry: "/images/services/laundry.jpg",
     washingMachine: "/images/services/washing.png",
-    postRenovation: "/images/services/laundry.jpg",
-    acCleaning: "/images/services/laundry.jpg",
+    postRenovation: "/images/services/Post_Reno.png",
+    acCleaning: "/images/services/Ac_cleaning.png",
   };
 
   const mediaItems: Array<{
@@ -59,7 +59,7 @@ const Service = () => {
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-beasy-gradient mb-5 lg:mb-0 md:mb-5">
-          <h5 className="font-inter text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80">
+          <h5 className="font-[Inter] text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80">
             {serviceSection.header?.subtitle}
           </h5>
         </div>
@@ -67,12 +67,12 @@ const Service = () => {
 
       {/* Heading + Navigation */}
       <div className="flex flex-col lg:flex-row md:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-        <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold font-inter tracking-widest leading-snug">
+        <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold font-[Inter] tracking-widest leading-snug">
           {serviceSection.header?.title}
         </h1>
         
         {/* Scroll buttons */}
-        <div className="hidden md:flex gap-5 items-end justify-end mt-5">
+        <div className="flex gap-3 md:gap-5 items-center justify-center md:justify-end mt-5">
           <button
             onClick={scrollLeft}
             className="border rounded-full border-gray-400 p-2 hover:bg-gray-100 transition"
