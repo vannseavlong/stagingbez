@@ -94,7 +94,7 @@ const Para = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 lg:py-5 lg:px-10 md:px-10 px-5 text-white font-[Inter]">
+    <section className="bg-white md:py-20 lg:py-5 lg:px-10 md:px-10 px-5 text-white font-[Inter] overflow-x-hidden">
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-0 md:mb-5">
@@ -132,7 +132,7 @@ const Para = () => {
         </div>
       </div>
 
-      <div className="-mx-10">
+      <div className="mx-0">
         <FeatureSectionWithDividers />
       </div>
     </section>

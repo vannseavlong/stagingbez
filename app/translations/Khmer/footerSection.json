@@ -26,7 +26,6 @@
       { "key": "pestControl", "title": "កម្ចាត់សត្វល្អិត" },
       { "key": "acCleaning", "title": "សំអាតម៉ាស៊ីនត្រជាក់" },
       { "key": "postRenovation", "title": "សំអាតក្រោយជួសជុល" },
-      { "key": "laundry", "title": "សេវាបោកអ៊ុត" },
       { "key": "washingMachine", "title": "សំអាតម៉ាស៊ីនបោក" }
     ]
   },
