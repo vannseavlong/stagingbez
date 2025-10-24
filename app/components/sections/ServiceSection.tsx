@@ -70,7 +70,7 @@ const Service = () => {
         <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold font-[Inter] tracking-widest leading-snug">
           {serviceSection.header?.title}
         </h1>
-        
+
         {/* Scroll buttons */}
         <div className="flex gap-3 md:gap-5 items-center justify-center md:justify-end mt-5">
           <button
@@ -114,3 +114,4 @@ const Service = () => {
 };
 
 export default Service;
+// remove laundry
