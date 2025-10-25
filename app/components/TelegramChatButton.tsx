@@ -25,7 +25,7 @@ interface TelegramChatButtonProps {
 }
 
 export default function TelegramChatButton({
-  telegramLink = "https://t.me/bEasy_Cambodia",
+  telegramLink = "https://t.me/bEasy_Cs",
 }: TelegramChatButtonProps) {
   const { getSection, t } = useTranslate();
   const _sectionAData = getSection("sectionA");
