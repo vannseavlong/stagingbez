@@ -27,7 +27,7 @@ export default function ContactSection() {
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-5 md:mb-5">
-          <h5 className="font-inter text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80">
+          <h5 className="text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
             {header.subtitle}
           </h5>
         </div>
@@ -35,11 +35,11 @@ export default function ContactSection() {
 
       {/* Heading + Description */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-        <h1 className="w-full lg:w-[500px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold font-inter tracking-widest leading-snug">
+        <h1 className="w-full lg:w-[500px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
           {header.title}
         </h1>
         <div className="flex justify-start w-full mb-13 md:justify-items-start lg:justify-end lg:w-[60%] lg:py-0">
-          <p className="text-[#3D3D3D] font-inter text-lg font-normal leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-justify">
+          <p className="text-[#3D3D3D] text-lg font-normal leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-justify font-sans">
             {header.description}
           </p>
         </div>

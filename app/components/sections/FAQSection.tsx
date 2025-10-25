@@ -114,7 +114,7 @@ const FAQSection: React.FC = () => {
         <div className="text-center mb-20 md:mb-24">
           <div className="flex items-center justify-center mb-4">
             <span
-              className="text-[14px] md:text-[16px] font-bold uppercase tracking-wide font-[Inter]"
+              className="text-[14px] md:text-[16px] font-bold uppercase tracking-wide font-sans"
               style={{
                 background: "linear-gradient(90deg,#1B4CFA,#102C90)",
                 WebkitBackgroundClip: "text",
@@ -124,11 +124,11 @@ const FAQSection: React.FC = () => {
               {displayData.header.subtitle}
             </span>
           </div>
-          <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1A1A1A] leading-tight font-[Inter]">
+          <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1A1A1A] leading-tight font-sans">
             {displayData.header.title}
           </h2>
           <div className="mx-auto mt-6 max-w-xl px-4">
-            <span className="text-[16px] md:text-[18px] font-medium text-[#3D3D3D] leading-relaxed font-[Inter]">
+            <span className="text-[16px] md:text-[18px] font-medium text-[#3D3D3D] leading-relaxed font-sans">
               {displayData.header.description}
             </span>
           </div>
@@ -144,7 +144,7 @@ const FAQSection: React.FC = () => {
                     <div
                       key={index}
                       onClick={() => handleCategoryClick(category)}
-                      className={`cursor-pointer text-left px-3 py-2 text-[14px] md:text-[16px] lg:text-[18px] font-medium font-[Inter] mr-3 md:mr-0 whitespace-nowrap ${
+                      className={`cursor-pointer text-left px-3 py-2 text-[14px] md:text-[16px] lg:text-[18px] font-medium font-sans mr-3 md:mr-0 whitespace-nowrap ${
                         isActive
                           ? "bg-gray-100 rounded-lg lg:bg-transparent text-[#1A1A1A]"
                           : "text-[#1A1A1A] hover:bg-gray-50 lg:hover:bg-transparent"
@@ -154,7 +154,8 @@ const FAQSection: React.FC = () => {
                         <span
                           className="hidden lg:inline"
                           style={{
-                            background: "linear-gradient(90deg,#1B4CFA,#102C90)",
+                            background:
+                              "linear-gradient(90deg,#1B4CFA,#102C90)",
                             WebkitBackgroundClip: "text",
                             color: "transparent",
                           }}
@@ -192,7 +193,7 @@ const FAQSection: React.FC = () => {
                             >
                               {isOpen ? "\u2212" : "+"}
                             </span>
-                            <span className="flex-1 text-[16px] md:text-[18px] font-medium text-[#1A1A1A] font-[Inter]">
+                            <span className="flex-1 text-[16px] md:text-[18px] font-medium text-[#1A1A1A] font-sans">
                               {faq?.question || ""}
                             </span>
                           </button>
@@ -204,7 +205,7 @@ const FAQSection: React.FC = () => {
                                 : "max-h-0 opacity-0 py-0"
                             }`}
                           >
-                            <div className="text-[14px] md:text-[16px] font-medium text-gray-700 leading-[150%] font-[Inter]">
+                            <div className="text-[14px] md:text-[16px] font-medium text-gray-700 leading-[150%] font-sans">
                               <p>{faq?.answer || ""}</p>
                             </div>
                           </div>

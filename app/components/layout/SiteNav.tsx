@@ -111,13 +111,13 @@ export default function SiteNav() {
           role="dialog"
           aria-modal={open}
         >
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             <div>
               <LanguageDropdown compact />
             </div>
             <div>
               <ContactUsButton
-                className="px-4 py-2 text-sm"
+                className="w-full px-6 py-3 text-sm justify-center"
                 onClick={() => {
                   setOpen(false);
                   // Scroll to contact section after menu closes
@@ -130,7 +130,7 @@ export default function SiteNav() {
               />
             </div>
             <div>
-              <DownloadAppButton className="px-4 py-2 text-sm" />
+              <DownloadAppButton className="w-full px-6 py-3 text-sm justify-center" />
             </div>
           </div>
         </div>

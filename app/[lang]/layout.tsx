@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import TelegramChatButton from "@/app/components/TelegramChatButton";
 
 export const metadata: Metadata = {
   title: "bEasy Cambodia: Cleaning & Pest",
@@ -18,7 +19,13 @@ export async function generateStaticParams() {
 
 export default async function LangLayout(props: unknown) {
   const { children } = props as { children: React.ReactNode };
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {/* Telegram chat widget (client-only) */}
+      <TelegramChatButton />
+    </>
+  );
 }
 
 // add

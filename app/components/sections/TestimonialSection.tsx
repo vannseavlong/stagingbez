@@ -19,7 +19,7 @@ export default function TestimonialSection() {
       <div className="max-w-5xl mx-auto text-center px-4 overflow-x-hidden">
         {/* Subtitle */}
         <div
-          className="font-bold text-[14px] md:text-[16px] leading-6 mb-4 font-[Inter]"
+          className="font-bold text-[14px] md:text-[16px] leading-6 mb-4 font-sans"
           style={{
             background: "linear-gradient(90deg,#1B4CFA,#102C90)",
             WebkitBackgroundClip: "text",
@@ -30,12 +30,12 @@ export default function TestimonialSection() {
         </div>
 
         {/* Title */}
-        <h2 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] mb-6 font-[Inter]">
+        <h2 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] mb-6 font-sans">
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-[Inter]">
+        <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-sans">
           {description}
         </p>
 
@@ -188,7 +188,7 @@ function VideoRow() {
                       </svg>
                     </button>
                   )}
-                  <div className="absolute bottom-3 left-3 text-white font-medium text-lg font-[Roboto]">
+                  <div className="absolute bottom-3 left-3 text-white font-medium text-lg font-sans">
                     {it.caption}
                   </div>
                 </>
