@@ -13,10 +13,10 @@ const FeatureSectionWithDividers: FC = () => {
   };
 
   const imageMap: Record<string, string> = {
-    quickBooking: "/images/about/Quick_Booking.png",
-    flexibleSchedule: "/images/about/Flexible_Schedule.png",
-    safetyFirst: "/images/about/Sefty.png",
-    professionalTeam: "/images/about/Professional_Cleaner.png",
+    quickBooking: "/images/about/Quick_Booking.webp",
+    flexibleSchedule: "/images/about/Flexible_Schedule.webp",
+    safetyFirst: "/images/about/Sefty.webp",
+    professionalTeam: "/images/about/Professional_Cleaner.webp",
   };
 
   const features = (
@@ -24,7 +24,7 @@ const FeatureSectionWithDividers: FC = () => {
   ).map((it) => ({
     icon: (
       <Image
-        src={imageMap[it.key] || "/images/about/Quick_Booking.png"}
+        src={imageMap[it.key] || "/images/about/Quick_Booking.webp"}
         alt={it.title || ""}
         width={44}
         height={44}
@@ -121,14 +121,14 @@ const Para = () => {
 
       
         <div className="absolute inset-0">
-        
-          <div className="block md:hidden bg-[url('/images/Why_Choose_us_Draft_mobile.png')] bg-no-repeat bg-contain bg-center   h-full w-full"></div>
+          {/* Mobile */}
+          <div className="block md:hidden bg-[url('/images/Why_Choose_us_Draft_mobile.webp')] bg-no-repeat bg-contain bg-center   h-full w-full"></div>
 
+          {/* Tablet */}
+          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.webp')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
 
-          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-
-     
-          <div className="hidden lg:block bg-[url('/images/about/Why.png')] bg-no-repeat  bg-center bg-contain bg-fixed h-full w-full"></div>
+          {/* Desktop */}
+          <div className="hidden lg:block bg-[url('/images/about/Why.webp')] bg-no-repeat  bg-center bg-contain bg-fixed h-full w-full"></div>
         </div>
       </div>
 

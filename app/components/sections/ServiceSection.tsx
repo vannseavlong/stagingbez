@@ -18,15 +18,15 @@ const Service = () => {
 
   // Map of images keyed by the item keys defined in translations
   const imageMap: Record<string, string> = {
-    generalCleaning: "/images/services/general.jpg",
-    deepCleaning: "/images/services/deep.jpg",
-    officeCleaning: "/images/services/office.jpg",
-    upholstery: "/images/services/uphol.jpg",
-    pestControl: "/images/services/pest.png",
-    laundry: "/images/services/laundry.jpg",
-    washingMachine: "/images/services/washing.png",
-    postRenovation: "/images/services/Post_Reno.png",
-    acCleaning: "/images/services/Ac_cleaning.png",
+    generalCleaning: "/images/services/general.webp",
+    deepCleaning: "/images/services/deep.webp",
+    officeCleaning: "/images/services/office.webp",
+    upholstery: "/images/services/uphol.webp",
+    pestControl: "/images/services/pest.webp",
+    laundry: "/images/services/laundry.webp",
+    washingMachine: "/images/services/washing.webp",
+    postRenovation: "/images/services/Post_Reno.webp",
+    acCleaning: "/images/services/Ac_cleaning.webp",
   };
 
   const mediaItems: Array<{
@@ -35,7 +35,7 @@ const Service = () => {
     description: string;
   }> = (Array.isArray(serviceSection.items) ? serviceSection.items : []).map(
     (it) => ({
-      image: imageMap[it.key] || "/images/services/general.jpg",
+      image: imageMap[it.key] || "/images/services/general.webp",
       title: it.title || "",
       description: it.description || "",
     })
