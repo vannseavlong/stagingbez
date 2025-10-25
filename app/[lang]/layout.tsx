@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import TelegramChatButton from "@/app/components/TelegramChatButton";
+import { LanguageProvider } from "../contexts/LanguageContext";
+import { SiteFooter, SiteNav } from "../components/layout";
 
 export const metadata: Metadata = {
   title: "bEasy Cambodia: Cleaning & Pest",
@@ -20,11 +22,15 @@ export async function generateStaticParams() {
 export default async function LangLayout(props: unknown) {
   const { children } = props as { children: React.ReactNode };
   return (
-    <>
-      {children}
-      {/* Telegram chat widget (client-only) */}
-      <TelegramChatButton />
-    </>
+      <LanguageProvider>
+        <SiteNav />
+          <>
+          {children}
+          {/* Telegram chat widget (client-only) */}
+          <TelegramChatButton />
+          </>
+        <SiteFooter />
+      </LanguageProvider> 
   );
 }
 
