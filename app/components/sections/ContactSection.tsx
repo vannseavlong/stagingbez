@@ -55,7 +55,7 @@ export default function ContactSection() {
             data-aos-delay="200"
           >
             <a
-              href="https://www.google.com/maps/place/Flatiron+by+Meridian/@11.5727473,104.9051283,17z"
+              href="https://maps.app.goo.gl/gpXUP1TSj3rKPPn29"
               target="_blank"
               rel="noopener noreferrer"
               className="block h-full w-full"
@@ -64,7 +64,7 @@ export default function ContactSection() {
               <div className="hidden lg:block w-full h-auto max-w-[600px] lg:-mt-8">
                 <Image
                   className="w-full h-full object-cover "
-                  src="/images/location.png"
+                  src="/images/location6.png"
                   alt="Location map (desktop)"
                   width={600}
                   height={400}
@@ -76,7 +76,7 @@ export default function ContactSection() {
               <div className="hidden md:block lg:hidden w-screen -mx-6 h-auto">
                 <Image
                   className="w-full h-full object-cover"
-                  src="/images/location.png"
+                  src="/images/location6.png"
                   alt="Location map (tablet)"
                   width={1200}
                   height={500}
@@ -88,7 +88,7 @@ export default function ContactSection() {
               <div className="block md:hidden w-screen -mx-6 h-auto">
                 <Image
                   className="w-full h-full object-cover"
-                  src="/images/location.png"
+                  src="/images/location6.png"
                   alt="Location map (mobile)"
                   width={800}
                   height={400}
@@ -101,7 +101,7 @@ export default function ContactSection() {
 
         {/* Contact Details */}
 
-        <div className="flex-1 order-2 lg:order-1 lg:max-w-[50%] lg:mt-20 ">
+        <div className="flex-1 order-2 lg:order-1 lg:max-w-[50%] lg:mt-10 ">
           <div className="flex flex-col space-y-12 md:space-y-8 md-10">
             {/* Location */}
             <div>

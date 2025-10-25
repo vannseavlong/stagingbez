@@ -117,9 +117,9 @@ const Para = () => {
       </div>
 
       {/* Parallax Image Section */}
-
       <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
-        {/* Background layer (relative to this section only) */}
+
+      
         <div className="absolute inset-0">
           {/* Mobile */}
           <div className="block md:hidden bg-[url('/images/Why_Choose_us_Draft_mobile.webp')] bg-no-repeat bg-contain bg-center   h-full w-full"></div>
