@@ -25,7 +25,7 @@ export default function ServiceCard({
       </div>
 
       {/* Title */}
-      <h3 className="text-black font-inter text-[18px] md:text-lg font-bold tracking-wide mb-5">
+      <h3 className="text-black text-[18px] md:text-lg font-bold tracking-wide mb-5 font-sans">
         {title}
       </h3>
 

@@ -126,7 +126,7 @@ const Para = () => {
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-0 md:mb-5">
-          <h5 className="font-inter text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80">
+          <h5 className="text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
             WHY CHOOSE US
           </h5>
         </div>
@@ -134,11 +134,11 @@ const Para = () => {
 
       {/* Heading + Description */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-        <h1 className="w-full lg:w-[500px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold font-inter tracking-widest leading-snug">
+        <h1 className="w-full lg:w-[500px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
           Don’t Worry, bEasy Has You Covered
         </h1>
         <div className="flex justify-start w-full mb-10 md:justify-start lg:justify-end lg:w-[60%] lg:py-5">
-          <p className="text-[#3D3D3D] font-normal font-inter text-base  leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-justify">
+          <p className="text-[#3D3D3D] font-normal text-base  leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-justify font-sans">
             Our on-demand cleaners are professionally trained,
             background-checked, and committed to delivering spotless results
             every time.

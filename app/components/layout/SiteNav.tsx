@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { ContactUsButton, DownloadAppButton, LanguageDropdown } from "..";
-import { handleSmartDownload } from "@/lib/smartDownload";
+// import { handleSmartDownload } from "@/lib/smartDownload";
 import { useState } from "react";
 // Phase 2: Uncomment to restore navigation links
 // import { NAV_ITEMS } from "../navigation";
@@ -44,7 +44,7 @@ export default function SiteNav() {
               <ContactUsButton />
             </li>
             <li>
-              <DownloadAppButton onClick={handleSmartDownload} />
+              <DownloadAppButton />
             </li>
           </ul>
 
@@ -85,16 +85,20 @@ export default function SiteNav() {
       </div>
 
       {/* Mobile slide-over menu (always mounted for smooth animation) */}
+      {/* Mobile slide-over menu (always mounted for smooth animation) */}
       <div
-        className={`md:hidden fixed inset-0 z-50 pointer-events-none ${
-          open ? "" : ""
+        className={`md:hidden fixed inset-0 z-50 ${
+          open ? "pointer-events-auto" : "pointer-events-none"
         }`}
+        style={{ display: open ? undefined : "none" }}
         aria-hidden={!open}
       >
         {/* overlay */}
         <div
           className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
-            open ? "opacity-100 pointer-events-auto" : "opacity-0"
+            open
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
           }`}
           onClick={() => setOpen(false)}
         />
@@ -107,18 +111,26 @@ export default function SiteNav() {
           role="dialog"
           aria-modal={open}
         >
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             <div>
               <LanguageDropdown compact />
             </div>
             <div>
-              <ContactUsButton className="px-4 py-2 text-sm" />
+              <ContactUsButton
+                className="w-full px-6 py-3 text-sm justify-center"
+                onClick={() => {
+                  setOpen(false);
+                  // Scroll to contact section after menu closes
+                  setTimeout(() => {
+                    const el = document.getElementById("contact");
+                    if (el)
+                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 200);
+                }}
+              />
             </div>
             <div>
-              <DownloadAppButton
-                onClick={handleSmartDownload}
-                className="px-4 py-2 text-sm"
-              />
+              <DownloadAppButton className="w-full px-6 py-3 text-sm justify-center" />
             </div>
           </div>
         </div>

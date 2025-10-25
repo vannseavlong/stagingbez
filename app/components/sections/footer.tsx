@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="text-black border-t font-inter py-20 pb-10 lg:py-20 lg:mt-20 px-6 md:px-8 relative overflow-hidden bg-white"
+      className="text-black border-t py-20 pb-10 lg:py-20 lg:mt-20 px-6 md:px-8 relative overflow-hidden bg-white font-sans"
       aria-label="Footer section"
     >
       <div className="grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">

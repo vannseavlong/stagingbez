@@ -26,7 +26,6 @@
       { "key": "pestControl", "title": "虫害控制" },
       { "key": "acCleaning", "title": "空调清洁" },
       { "key": "postRenovation", "title": "装修后清洁" },
-      { "key": "laundry", "title": "洗衣服务" },
       { "key": "washingMachine", "title": "洗衣机清洁" }
     ]
   },

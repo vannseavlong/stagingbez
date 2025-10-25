@@ -26,7 +26,6 @@
       { "key": "pestControl", "title": "Pest Control" },
       { "key": "acCleaning", "title": "AC Cleaning" },
       { "key": "postRenovation", "title": "Post Renovation" },
-      { "key": "laundry", "title": "Laundry" },
       { "key": "washingMachine", "title": "Washing Machine" }
     ]
   },

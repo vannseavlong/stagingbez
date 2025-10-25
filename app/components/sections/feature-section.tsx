@@ -1,12 +1,32 @@
-'use client';
-import { FC } from 'react';
-import { Shield, Users, RefreshCcw, Clock } from 'lucide-react';
+"use client";
+import { FC } from "react";
+import { Shield, Users, RefreshCcw, Clock } from "lucide-react";
 
 const features = [
-  { icon: <Clock className="w-8 h-8 text-blue-600" />, title: 'Quick Booking', description: 'Book your cleaning in just a few taps – simple, fast, and hassle-free.' },
-  { icon: <RefreshCcw className="w-8 h-8 text-blue-600" />, title: 'Flexible Service', description: 'Plan change? No problem. Easily reschedule or adjust your booking anytime.' },
-  { icon: <Shield className="w-8 h-8 text-blue-600" />, title: 'Safety First', description: 'Your home’s security matters. Every cleaner is fully vetted and trained for your peace of mind.' },
-  { icon: <Users className="w-8 h-8 text-blue-600" />, title: 'Professional Team', description: 'Our cleaners are properly trained and committed to providing high-quality service.' }
+  {
+    icon: <Clock className="w-8 h-8 text-blue-600" />,
+    title: "Quick Booking",
+    description:
+      "Book your cleaning in just a few taps – simple, fast, and hassle-free.",
+  },
+  {
+    icon: <RefreshCcw className="w-8 h-8 text-blue-600" />,
+    title: "Flexible Service",
+    description:
+      "Plan change? No problem. Easily reschedule or adjust your booking anytime.",
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-blue-600" />,
+    title: "Safety First",
+    description:
+      "Your home’s security matters. Every cleaner is fully vetted and trained for your peace of mind.",
+  },
+  {
+    icon: <Users className="w-8 h-8 text-blue-600" />,
+    title: "Professional Team",
+    description:
+      "Our cleaners are properly trained and committed to providing high-quality service.",
+  },
 ];
 
 const FeatureSectionWithDividers: FC = () => {
@@ -18,8 +38,12 @@ const FeatureSectionWithDividers: FC = () => {
           {features.map((item, i) => (
             <div key={i} className="flex-1 p-8 text-center">
               <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
@@ -29,8 +53,12 @@ const FeatureSectionWithDividers: FC = () => {
           {features.map((item, i) => (
             <div key={i} className="p-6 text-center border rounded-lg">
               <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
