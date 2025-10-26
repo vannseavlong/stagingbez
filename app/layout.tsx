@@ -53,11 +53,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <LanguageProvider>
-          <SiteNav />
           {children}
-          <SiteFooter />
-        </LanguageProvider>
       </body>
     </html>
   );
