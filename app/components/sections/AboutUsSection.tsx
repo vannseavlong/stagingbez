@@ -117,15 +117,15 @@ const Para = () => {
       </div>
 
       {/* Parallax Image Section */}
-      <div className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
 
-      
+      <div className="relative w-full h-[250px] md:h-[600px] overflow-hidden">
+        {/* Background layer (relative to this section only) */}
         <div className="absolute inset-0">
           {/* Mobile */}
-          <div className="block md:hidden bg-[url('/images/Why_Choose_us_Draft_mobile.webp')] bg-no-repeat bg-contain bg-center   h-full w-full"></div>
+          <div className="block md:hidden bg-[url('/images/Why_Choose_us_Draft_mobile.png')] bg-no-repeat bg-contain bg-center   h-full w-full"></div>
 
           {/* Tablet */}
-          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.webp')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
+          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
 
           {/* Desktop */}
           <div className="hidden lg:block bg-[url('/images/about/Why.webp')] bg-no-repeat  bg-center bg-contain bg-fixed h-full w-full"></div>

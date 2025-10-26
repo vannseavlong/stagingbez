@@ -10,7 +10,7 @@ type InstallSectionType = {
 };
 
 export default function InstallSection() {
-  const { getSection } = useTranslate();
+  const { getSection, currentLanguage } = useTranslate();
   const install = getSection("install") as InstallSectionType;
 
   const header = install?.header || {};
@@ -99,8 +99,14 @@ export default function InstallSection() {
             <div className="block lg:hidden mt-8">
               <div className="w-[220px] sm:w-[260px] mx-auto">
                 <Image
-                  src="/images/mock-screen.webp"
-                  alt="phone mockup"
+                  src={
+                    currentLanguage === "km"
+                      ? "/images/mock-screen_KH.webp"
+                      : currentLanguage === "zh"
+                      ? "/images/mock-screen_CN.webp"
+                      : "/images/mock-screen_EN.webp"
+                  }
+                  alt={`phone mockup ${currentLanguage}`}
                   width={300}
                   height={600}
                   className="w-full h-auto object-contain mx-auto"
@@ -115,8 +121,14 @@ export default function InstallSection() {
           <div className="order-1 lg:order-2 hidden lg:flex justify-center lg:justify-end">
             <div className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[420px]">
               <Image
-                src="/images/mock-screen.webp"
-                alt="phone mockup"
+                src={
+                  currentLanguage === "km"
+                    ? "/images/mock-screen_KH.webp"
+                    : currentLanguage === "zh"
+                    ? "/images/mock-screen_CN.webp"
+                    : "/images/mock-screen_EN.webp"
+                }
+                alt={`phone mockup ${currentLanguage}`}
                 width={420}
                 height={840}
                 className="w-full h-auto object-contain lg:ml-auto"
