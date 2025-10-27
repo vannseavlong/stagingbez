@@ -30,7 +30,7 @@ export default function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="text-black text-[16px] md:text-[16px] leading-snug opacity-80 ">
+      <p className="text-black text-[16px] md:text-[16px] leading-[28px] opacity-80 ">
         {description}
       </p>
     </div>

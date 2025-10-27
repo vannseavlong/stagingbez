@@ -27,10 +27,10 @@ export default function ContactUsButton({
   // Two-layer text for hover swap
   const inner = (
     <span className="relative inline-block overflow-hidden">
-      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[110%]">
+      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[100%]">
         {displayText}
       </span>
-      <span className="absolute left-0 top-[110%] block transition-transform duration-500 group-hover:translate-y-[-110%]">
+      <span className="absolute left-0 top-[100%] block transition-transform duration-500 group-hover:translate-y-[-100%]">
         {displayHoverText}
       </span>
     </span>
