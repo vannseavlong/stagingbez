@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslate } from "@/app/hooks/useTranslate";
+import { trackEvent } from "@/lib/analytics";
 import { usePathname, useRouter } from "next/navigation";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 
@@ -54,6 +55,10 @@ export default function ContactUsButton({
   const handleGoToContact = async (e?: React.MouseEvent) => {
     e?.preventDefault();
 
+    try {
+      trackEvent("contact_click", { source: "nav", path: pathname });
+    } catch {}
+
     const lang = currentLanguageCode || "en";
     const targetPath = `/${lang}`;
 
@@ -69,6 +74,9 @@ export default function ContactUsButton({
     // Otherwise navigate to the language home then scroll after mount
     try {
       await router.push(targetPath);
+      try {
+        trackEvent("contact_navigate", { target: targetPath });
+      } catch {}
       // small delay to allow client to render the section
       setTimeout(() => {
         const el = document.getElementById("contact");
@@ -76,6 +84,9 @@ export default function ContactUsButton({
       }, 80);
     } catch {
       // fallback: open anchor on same page
+      try {
+        trackEvent("contact_navigate_fail", { target: targetPath });
+      } catch {}
       const el = document.getElementById("contact");
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }

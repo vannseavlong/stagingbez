@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { useState, useEffect } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export default function TestimonialSection() {
   const { t } = useTranslate();
@@ -188,6 +189,13 @@ function VideoRow() {
                       aria-label={`Play ${it.caption}`}
                       onClick={(e) => {
                         e.stopPropagation();
+                        try {
+                          trackEvent("video_play", {
+                            video_index: originalIdx,
+                            video_id: currentVideo.videoId,
+                            title: currentVideo.caption,
+                          });
+                        } catch {}
                         setPlayingIndex(originalIdx);
                       }}
                       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-20 h-20 md:w-16 md:h-16 rounded-full shadow-2xl hover:scale-110 transition-transform duration-200"
@@ -383,6 +391,13 @@ function VideoRow() {
                     aria-label="Close video"
                     onClick={(e) => {
                       e.stopPropagation();
+                      try {
+                        trackEvent("video_close", {
+                          video_index: originalIdx,
+                          video_id: currentVideo.videoId,
+                          title: currentVideo.caption,
+                        });
+                      } catch {}
                       setPlayingIndex(null);
                     }}
                     className="absolute top-3 right-3 z-30 bg-white/80 rounded-full p-2"

@@ -50,7 +50,7 @@ const Para = () => {
           {aboutSection.header?.title}
         </h1>
         <div className="flex justify-start w-full mb-6 md:justify-start lg:justify-end lg:w-[60%] lg:py-3">
-          <p className="text-[#3D3D3D] font-normal text-[16px] text-md-[18px] text-lg-[18px] md:text-base leading-[150%] lg:max-w-[560px] md:max-w-[520px] text-justify font-sans">
+          <p className="text-[#3D3D3D] font-normal text-[16px] text-md-[18px] text-lg-[18px] md:text-base leading-[150%] lg:max-w-[560px] md:max-w-[520px] text-left font-sans">
             {aboutSection.header?.description}
           </p>
         </div>

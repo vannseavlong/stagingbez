@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslate } from "@/app/hooks/useTranslate";
+import { trackEvent } from "@/lib/analytics";
 // import { useLanguage } from "@/app/contexts/LanguageContext";
 
 interface DownloadAppButtonProps {
@@ -51,20 +52,32 @@ export default function DownloadAppButton({
 
     // On Android: Play Store
     if (isAndroid) {
+      try {
+        trackEvent("download_click", { platform: "android", href: playStore });
+      } catch {}
       window.location.href = playStore;
       return;
     }
     // On iOS: App Store
     if (isIOS) {
+      try {
+        trackEvent("download_click", { platform: "ios", href: appStore });
+      } catch {}
       window.location.href = appStore;
       return;
     }
     // On Mac: App Store (open in new tab)
     if (isMac) {
+      try {
+        trackEvent("download_click", { platform: "mac", href: appStore });
+      } catch {}
       window.open(appStore, "_blank");
       return;
     }
     // On Windows/Linux/other desktop: open both in new tabs (or just Play Store)
+    try {
+      trackEvent("download_click", { platform: "desktop", href: playStore });
+    } catch {}
     window.open(playStore, "_blank");
     setTimeout(() => window.open(appStore, "_blank"), 300);
   };
