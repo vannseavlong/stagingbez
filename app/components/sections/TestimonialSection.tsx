@@ -70,6 +70,19 @@ function VideoRow() {
       videoId: "a9zqWXhw0R4",
       videoSi: "gIiuPT0g2vPO4TO7",
     },
+    // Added YouTube Shorts as requested
+    {
+      img: "/images/testimonial/aircon.webp",
+      caption: t("testimonial.captions.short1", "Air Conditioner Cleaning"),
+      videoId: "3MMXjKZDNlo",
+      videoSi: "",
+    },
+    {
+      img: "/images/testimonial/all_in_bEasy.webp",
+      caption: t("testimonial.captions.short2", "Everything with bEasy"),
+      videoId: "xq0WCurantk",
+      videoSi: "",
+    },
   ];
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [centerIndex, setCenterIndex] = useState<number>(1); // focus middle by default (index 1 = Willow Coffee)
@@ -82,22 +95,26 @@ function VideoRow() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Function to rotate items array so the selected index becomes the center
-  const getRotatedItems = (selectedIndex: number) => {
-    // For 3 items: [0, 1, 2]
-    // If selectedIndex = 0, return [2, 0, 1] (0 in center)
-    // If selectedIndex = 1, return [0, 1, 2] (1 in center - default)
-    // If selectedIndex = 2, return [1, 2, 0] (2 in center)
+  // Return exactly three visible items [left, center, right] around selected index
+  const getVisibleItems = (selectedIndex: number) => {
     const len = items.length;
-    const result: typeof items = [];
-    for (let i = 0; i < len; i++) {
-      const idx = (selectedIndex - 1 + i + len) % len;
-      result.push(items[idx]);
-    }
-    return result;
+    if (len === 0) return [] as typeof items;
+    if (len === 1) return [items[0], items[0], items[0]] as typeof items;
+    if (len === 2)
+      return [
+        items[(selectedIndex - 1 + len) % len],
+        items[selectedIndex],
+        items[(selectedIndex + 1) % len],
+      ] as typeof items;
+
+    // Normal case: len >= 3
+    const left = items[(selectedIndex - 1 + len) % len];
+    const center = items[selectedIndex];
+    const right = items[(selectedIndex + 1) % len];
+    return [left, center, right];
   };
 
-  const rotatedItems = getRotatedItems(centerIndex);
+  const rotatedItems = getVisibleItems(centerIndex);
 
   const handleCardClick = (position: "left" | "center" | "right") => {
     // Stop any playing video when swapping
@@ -140,15 +157,23 @@ function VideoRow() {
               style={{ minWidth: isCenter ? 418 : 300 }}
             >
               {playingIndex === originalIdx && isCenter ? (
-                <iframe
-                  className="w-full h-full"
-                  src={`https://www.youtube.com/embed/${currentVideo.videoId}?si=${currentVideo.videoSi}&rel=0&autoplay=1`}
-                  title={`Testimonial video ${originalIdx}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                (() => {
+                  const siParam = currentVideo.videoSi
+                    ? `&si=${currentVideo.videoSi}`
+                    : "";
+                  const src = `https://www.youtube.com/embed/${currentVideo.videoId}?rel=0&autoplay=1${siParam}`;
+                  return (
+                    <iframe
+                      className="w-full h-full"
+                      src={src}
+                      title={`Testimonial video ${originalIdx}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  );
+                })()
               ) : (
                 <>
                   <div className="absolute inset-0 bg-black/30" />
@@ -291,15 +316,23 @@ function VideoRow() {
                 style={{ width, height }}
               >
                 {playingIndex === originalIdx && isCenter ? (
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${currentVideo.videoId}?si=${currentVideo.videoSi}&rel=0&autoplay=1`}
-                    title={`Testimonial video ${originalIdx}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  />
+                  (() => {
+                    const siParam = currentVideo.videoSi
+                      ? `&si=${currentVideo.videoSi}`
+                      : "";
+                    const src = `https://www.youtube.com/embed/${currentVideo.videoId}?rel=0&autoplay=1${siParam}`;
+                    return (
+                      <iframe
+                        className="w-full h-full"
+                        src={src}
+                        title={`Testimonial video ${originalIdx}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        loading="lazy"
+                      />
+                    );
+                  })()
                 ) : (
                   <>
                     <div className="absolute inset-0 bg-black/30" />
