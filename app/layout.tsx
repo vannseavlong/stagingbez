@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { SiteNav, SiteFooter } from "./components/layout";
-import { LanguageProvider } from "./contexts/LanguageContext";
+// import { SiteNav, SiteFooter } from "./components/layout";
+// import { LanguageProvider } from "./contexts/LanguageContext";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-          {children}
+        {children}
       </body>
     </html>
   );
