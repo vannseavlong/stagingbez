@@ -31,7 +31,7 @@ const features = [
 
 const FeatureSectionWithDividers: FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto">
         {/* Use flex on large screens so divide-x creates vertical lines */}
         <div className="hidden lg:flex divide-x divide-gray-200 border-t border-b border-r border-l">

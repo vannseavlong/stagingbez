@@ -110,11 +110,11 @@ const FAQSection: React.FC = () => {
 
   return (
     <section className="w-full bg-white py-12 md:py-16">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-20 md:mb-24">
           <div className="flex items-center justify-center mb-4">
             <span
-              className="text-[14px] md:text-[16px] font-bold uppercase tracking-wide font-sans"
+              className="text-[14px] md:text-[16px] font-bold uppercase leading-[32px] tracking-wide font-sans"
               style={{
                 background: "linear-gradient(90deg,#1B4CFA,#102C90)",
                 WebkitBackgroundClip: "text",
@@ -137,18 +137,20 @@ const FAQSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:justify-start md:gap-40">
           {categories.length > 0 ? (
             <>
-              <div className="flex md:flex-col gap-2 md:min-w-[250px] mb-6 md:mb-0 overflow-x-auto md:overflow-visible">
+              <div className="flex gap-2 md:flex-col md:min-w-[250px] mb-6 md:mb-0 overflow-x-auto scrollbar-hidden">
                 {categories.map((category, index) => {
                   const isActive = activeCategory === category;
                   return (
                     <div
                       key={index}
                       onClick={() => handleCategoryClick(category)}
-                      className={`cursor-pointer text-left px-3 py-2 text-[14px] md:text-[16px] lg:text-[18px] font-medium font-sans mr-3 md:mr-0 whitespace-nowrap ${
+                      className={`cursor-pointer text-left px-3 py-2 text-[14px] md:text-[16px] lg:text-[18px] font-medium font-sans mr-3 md:mr-0 whitespace-nowrap md:whitespace-normal ${
                         isActive
                           ? "bg-gray-100 rounded-lg lg:bg-transparent text-[#1A1A1A]"
                           : "text-[#1A1A1A] hover:bg-gray-50 lg:hover:bg-transparent"
                       }`}
+                      role="button"
+                      tabIndex={0}
                     >
                       {isActive ? (
                         <span
@@ -182,19 +184,20 @@ const FAQSection: React.FC = () => {
                           className="border-b border-gray-200 pb-4"
                         >
                           <button
-                            className="w-full flex items-start gap-4 text-left bg-transparent border-0 p-0 cursor-pointer"
+                            className="w-full flex items-center justify-between gap-4 text-left bg-transparent border-0 p-0 cursor-pointer"
                             onClick={() => toggleFAQ(index)}
                             aria-expanded={isOpen}
                           >
+                            <span className="flex-1 text-[16px] md:text-[18px] font-medium text-[#1A1A1A] text-left font-sans">
+                              {faq?.question || ""}
+                            </span>
                             <span
-                              className={`ml-auto text-[24px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#1B4CFA] to-[#102C90] transform transition-transform duration-300 ${
+                              className={`ml-3 text-[24px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#1B4CFA] to-[#102C90] transform transition-transform duration-300 ${
                                 isOpen ? "rotate-180" : "rotate-0"
                               }`}
+                              aria-hidden
                             >
                               {isOpen ? "\u2212" : "+"}
-                            </span>
-                            <span className="flex-1 text-[16px] md:text-[18px] font-medium text-[#1A1A1A] font-sans">
-                              {faq?.question || ""}
                             </span>
                           </button>
 

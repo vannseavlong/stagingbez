@@ -44,6 +44,9 @@ import installZh from "@/app/translations/Chinese/installSection.json";
 import footerEn from "@/app/translations/English/footerSection.json";
 import footerKm from "@/app/translations/Khmer/footerSection.json";
 import footerZh from "@/app/translations/Chinese/footerSection.json";
+import compareEn from "@/app/translations/English/compareSection.json";
+import compareKm from "@/app/translations/Khmer/compareSection.json";
+import compareZh from "@/app/translations/Chinese/compareSection.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
@@ -55,6 +58,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialEn?.testimonial || {},
     service: serviceEn || {},
     about: aboutEn || {},
+    compare: compareEn || {},
     contact: (contactEn as unknown as TranslationObject) || {},
     install: (installEn as unknown as TranslationObject) || {},
     footer: (footerEn as unknown as TranslationObject) || {},
@@ -66,6 +70,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialKm?.testimonial || {},
     service: serviceKm || {},
     about: aboutKm || {},
+    compare: compareKm || {},
     contact: (contactKm as unknown as TranslationObject) || {},
     install: (installKm as unknown as TranslationObject) || {},
     footer: (footerKm as unknown as TranslationObject) || {},
@@ -77,6 +82,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialZh?.testimonial || {},
     service: serviceZh || {},
     about: aboutZh || {},
+    compare: compareZh || {},
     contact: (contactZh as unknown as TranslationObject) || {},
     install: (installZh as unknown as TranslationObject) || {},
     footer: (footerZh as unknown as TranslationObject) || {},

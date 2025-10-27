@@ -23,11 +23,11 @@ export default function ContactSection() {
     }) || {};
 
   return (
-    <section className="bg-white md:py-20 lg:py-20 lg:px-10 md:px-10 px-5 py-15 text-white">
+    <section className="bg-white md:py-20 lg:py-20 py-15 text-white">
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-5 md:mb-5">
-          <h5 className="text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
+          <h5 className="text-base font-bold leading-[32px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
             {header.subtitle}
           </h5>
         </div>
@@ -73,7 +73,7 @@ export default function ContactSection() {
               </div>
 
               {/* ✅ Tablet Image (Full Width) */}
-              <div className="hidden md:block lg:hidden w-screen -mx-6 h-auto">
+              <div className="hidden md:block lg:hidden w-screen -mx-6 sm:-mx-8 lg:-mx-16 h-auto">
                 <Image
                   className="w-full h-full object-cover"
                   src="/images/location.webp"
@@ -85,7 +85,7 @@ export default function ContactSection() {
               </div>
 
               {/* ✅ Mobile Image (Full Width) */}
-              <div className="block md:hidden w-screen -mx-6 h-auto">
+              <div className="block md:hidden w-screen -mx-6 sm:-mx-8 lg:-mx-16 h-auto">
                 <Image
                   className="w-full h-full object-cover"
                   src="/images/location.webp"
