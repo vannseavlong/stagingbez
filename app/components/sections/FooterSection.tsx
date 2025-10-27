@@ -6,6 +6,7 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaTelegram } from "react-icons/fa";
 
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { useTranslate } from "@/app/hooks/useTranslate";
+import { trackEvent } from "@/lib/analytics";
 
 export default function FooterSection() {
   const { currentLanguageCode } = useLanguage();
@@ -24,8 +25,12 @@ export default function FooterSection() {
   const header = footer?.header || {};
   const links = footer?.links || {};
   const socialLabel = footer?.social || "Find us on";
-  const handleSocialClick = (platform: string) => {
-    console.log(`${platform} icon clicked`);
+  const handleSocialClick = (platform: string, href?: string) => {
+    try {
+      trackEvent("footer_media_click", { platform, href });
+    } catch {
+      // ignore
+    }
   };
 
   return (
@@ -63,7 +68,9 @@ export default function FooterSection() {
                   href="https://t.me/bEasy_Cs"
                   aria-label="Telegram"
                   className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
-                  onClick={() => handleSocialClick("Telegram")}
+                  onClick={() =>
+                    handleSocialClick("Telegram", "https://t.me/bEasy_Cs")
+                  }
                 >
                   <FaTelegram size={16} />
                 </a>
@@ -71,7 +78,12 @@ export default function FooterSection() {
                   href="https://www.facebook.com/bEasy.apps"
                   aria-label="Facebook"
                   className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
-                  onClick={() => handleSocialClick("Facebook")}
+                  onClick={() =>
+                    handleSocialClick(
+                      "Facebook",
+                      "https://www.facebook.com/bEasy.apps"
+                    )
+                  }
                 >
                   <FaFacebookF size={16} />
                 </a>
@@ -80,7 +92,12 @@ export default function FooterSection() {
                   href="https://www.tiktok.com/@beasy_kh?_t=ZS-90hWgLOiOZu&_r=1"
                   aria-label="TikTok"
                   className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
-                  onClick={() => handleSocialClick("TikTok")}
+                  onClick={() =>
+                    handleSocialClick(
+                      "TikTok",
+                      "https://www.tiktok.com/@beasy_kh"
+                    )
+                  }
                 >
                   <FaTiktok size={16} />
                 </a>
@@ -88,7 +105,12 @@ export default function FooterSection() {
                   href="https://www.instagram.com/beasy.cambodia?igsh=MTB4Nm82bjN1enl2YQ=="
                   aria-label="Instagram"
                   className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
-                  onClick={() => handleSocialClick("Instagram")}
+                  onClick={() =>
+                    handleSocialClick(
+                      "Instagram",
+                      "https://www.instagram.com/beasy.cambodia"
+                    )
+                  }
                 >
                   <FaInstagram size={16} />
                 </a>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import ParallaxProviderClient from "./components/ParallaxProviderClient";
 // import { SiteNav, SiteFooter } from "./components/layout";
 // import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -53,7 +54,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        <ParallaxProviderClient>{children}</ParallaxProviderClient>
       </body>
     </html>
   );

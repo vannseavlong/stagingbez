@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
 const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -42,15 +43,10 @@ export default function TelegramChatButton({
 
   const handleClick = useCallback(async () => {
     try {
-      // Minimal tracking (placeholder for real analytics)
-      if (process.env.NODE_ENV !== "production") {
-        console.debug(
-          "Telegram link clicked",
-          telegramLink,
-          "source",
-          "floating_widget"
-        );
-      }
+      trackEvent("telegram_click", {
+        source: "floating_widget",
+        href: telegramLink,
+      });
     } catch {
       // ignore
     }
@@ -62,6 +58,11 @@ export default function TelegramChatButton({
   const handleClose = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setIsVisible(false);
+    try {
+      trackEvent("telegram_close", { source: "floating_widget" });
+    } catch {
+      // ignore
+    }
   }, []);
 
   if (!isVisible) return null;

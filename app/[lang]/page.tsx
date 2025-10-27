@@ -7,7 +7,8 @@ import ServiceSection from "../components/sections/ServiceSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import ContactSection from "../components/sections/ContactSection";
-import CompareSection from "../components/sections/CompareSection";
+// import CompareSection from "../components/sections/CompareSection";
+// import HowItWorkBlog from "../components/sections/HowItWorkBlog";
 
 export default function Home() {
   return (
@@ -28,9 +29,13 @@ export default function Home() {
             <AboutUsSection />
           </section>
 
-          <section id="compare">
+          {/* <section id="compare">
             <CompareSection />
           </section>
+
+          <section id="blog">
+            <HowItWorkBlog />
+          </section> */}
 
           <section id="testimonials">
             <TestimonialSection />

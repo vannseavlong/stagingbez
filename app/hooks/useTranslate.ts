@@ -47,12 +47,16 @@ import footerZh from "@/app/translations/Chinese/footerSection.json";
 import compareEn from "@/app/translations/English/compareSection.json";
 import compareKm from "@/app/translations/Khmer/compareSection.json";
 import compareZh from "@/app/translations/Chinese/compareSection.json";
+import blogEn from "@/app/translations/English/blogSection.json";
+import blogKm from "@/app/translations/Khmer/blogSection.json";
+import blogZh from "@/app/translations/Chinese/blogSection.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
     navbar: navbarEn,
     sectionA: sectionAEn,
     faqSection: faqEn,
+    blogSection: blogEn || {},
     // testimonial.json has shape { id: 'Testimonials', testimonial: { ... } }
     // we want the inner object so keys like 'testimonial.subtitle' map to the inner properties
     testimonial: testimonialEn?.testimonial || {},
@@ -67,6 +71,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     navbar: navbarKm,
     sectionA: sectionAKm,
     faqSection: faqKm,
+    blogSection: blogKm || {},
     testimonial: testimonialKm?.testimonial || {},
     service: serviceKm || {},
     about: aboutKm || {},
@@ -79,6 +84,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     navbar: navbarZh,
     sectionA: sectionAZh,
     faqSection: faqZh,
+    blogSection: blogZh || {},
     testimonial: testimonialZh?.testimonial || {},
     service: serviceZh || {},
     about: aboutZh || {},

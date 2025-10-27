@@ -39,7 +39,7 @@ export default function ContactSection() {
           {header.title}
         </h1>
         <div className="flex justify-start w-full mb-13 md:justify-items-start lg:justify-end lg:w-[60%] lg:py-0">
-          <p className="text-[#3D3D3D] text-lg font-normal leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-justify font-sans">
+          <p className="text-[#3D3D3D] text-lg font-normal leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-left font-sans">
             {header.description}
           </p>
         </div>
