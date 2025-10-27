@@ -122,7 +122,7 @@ const FeatureSectionWithDividers: FC = () => {
 // ✅ Main section (Para)
 const Para = () => {
   return (
-    <section className="bg-white md:py-20 lg:py-5 px-6 text-white">
+    <section className="bg-white md:py-20 lg:py-5 text-white">
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-0 md:mb-5">
@@ -162,7 +162,7 @@ const Para = () => {
 
       {/* Parallax Image Section */}
 
-      <div className="relative w-screen h-[400px] md:h-[600px] overflow-hidden -mx-6">
+      <div className="relative w-screen h-[400px] md:h-[600px] overflow-hidden -mx-6 sm:-mx-8 lg:-mx-16">
         {/* Background layer (relative to this section only) */}
         <div className="absolute inset-0">
           {/* Mobile */}
@@ -176,7 +176,7 @@ const Para = () => {
         </div>
       </div>
 
-      <div className="-mx-6">
+      <div className="-mx-6 sm:-mx-8 lg:-mx-16">
         <FeatureSectionWithDividers />
       </div>
     </section>

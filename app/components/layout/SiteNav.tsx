@@ -14,7 +14,7 @@ export default function SiteNav() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="w-full bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-3">
+      <div className="max-w-full lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="logo">
