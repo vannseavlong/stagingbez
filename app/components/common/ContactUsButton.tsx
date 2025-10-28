@@ -27,11 +27,11 @@ export default function ContactUsButton({
 
   // Two-layer text for hover swap
   const inner = (
-    <span className="relative inline-block overflow-hidden">
-      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[100%]">
+    <span className="relative inline-flex items-center justify-center overflow-hidden">
+      <span className="inline-block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[100%]">
         {displayText}
       </span>
-      <span className="absolute left-0 top-[100%] block transition-transform duration-500 group-hover:translate-y-[-100%]">
+      <span className="absolute left-0 top-[100%] inline-block transition-transform duration-500 group-hover:translate-y-[-100%]">
         {displayHoverText}
       </span>
     </span>
@@ -96,7 +96,7 @@ export default function ContactUsButton({
     <button
       type="button"
       onClick={handleGoToContact}
-      className={`group inline-block px-8 py-3 border-[1px] border-[#E8E8E8] text-gray-800 text-[16px] font-medium hover:bg-gray-50 transition-colors ${className}`}
+      className={`group inline-flex items-center justify-center leading-[28px] px-8 py-3 border-[1px] border-[#E8E8E8] text-gray-800 text-[16px] font-medium hover:bg-gray-50 transition-colors ${className}`}
     >
       {inner}
     </button>

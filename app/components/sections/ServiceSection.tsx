@@ -187,7 +187,7 @@ const Service = () => {
 
         {/* Heading + Navigation (Desktop/Tablet) */}
         <div className="flex flex-col lg:flex-row md:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-          <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
+          <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-[40px] font-sans">
             {serviceSection.header?.title}
           </h1>
 

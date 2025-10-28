@@ -28,10 +28,10 @@ export default function InstallSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left: Title / Description / Buttons */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-[24px] lg:text-[32px] font-bold mb-6">
               {header.title}
             </h2>
-            <p className="text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-[16px] md:text-[18px] font-medium text-[#3D3D3D] mb-10 max-w-2xl mx-auto lg:mx-0">
               {header.description}
             </p>
 

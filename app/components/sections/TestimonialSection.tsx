@@ -20,7 +20,7 @@ export default function TestimonialSection() {
       <div className="max-w-[1440px] mx-auto text-center px-6 sm:px-8 lg:px-16 overflow-x-hidden">
         {/* Subtitle */}
         <div
-          className="font-bold text-[14px] md:text-[16px] leading-[32px] mb-4 font-sans"
+          className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
           style={{
             background: "linear-gradient(90deg,#1B4CFA,#102C90)",
             WebkitBackgroundClip: "text",
@@ -53,6 +53,7 @@ function VideoRow() {
   const { t } = useTranslate();
 
   const items = [
+    // ... (Your items array remains the same)
     {
       img: "/images/testimonial/loung_coffee.webp",
       caption: t("testimonial.captions.cafeLounge", "Cafe Lounge"),
@@ -88,6 +89,8 @@ function VideoRow() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [centerIndex, setCenterIndex] = useState<number>(1); // focus middle by default (index 1 = Willow Coffee)
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
+  // 💡 NEW STATE for the transition
+  const [direction, setDirection] = useState<"next" | "prev" | null>(null);
 
   useEffect(() => {
     const onResize = () => setIsDesktop(window.innerWidth >= 1024);
@@ -96,8 +99,8 @@ function VideoRow() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Return exactly three visible items [left, center, right] around selected index
   const getVisibleItems = (selectedIndex: number) => {
+    // ... (Your getVisibleItems logic remains the same)
     const len = items.length;
     if (len === 0) return [] as typeof items;
     if (len === 1) return [items[0], items[0], items[0]] as typeof items;
@@ -118,23 +121,43 @@ function VideoRow() {
   const rotatedItems = getVisibleItems(centerIndex);
 
   const handleCardClick = (position: "left" | "center" | "right") => {
-    // Stop any playing video when swapping
     if (position !== "center") {
       setPlayingIndex(null);
+      // 💡 NEW: Set direction for visual transition cue (even if simple fade/scale)
+      if (position === "left") {
+        setDirection("prev");
+        setCenterIndex(
+          (prevIndex) => (prevIndex - 1 + items.length) % items.length
+        );
+      } else if (position === "right") {
+        setDirection("next");
+        setCenterIndex((prevIndex) => (prevIndex + 1) % items.length);
+      }
+      // 💡 NEW: Clear direction after a short delay (must match transition duration)
+      setTimeout(() => setDirection(null), 500); // 500ms matches the transition-all duration below
     }
-
-    if (position === "left") {
-      // Move left card to center
-      setCenterIndex((centerIndex - 1 + items.length) % items.length);
-    } else if (position === "right") {
-      // Move right card to center
-      setCenterIndex((centerIndex + 1) % items.length);
-    }
-    // Center card click does nothing (already centered)
   };
+
+  const handleNext = () => {
+    setPlayingIndex(null);
+    setDirection("next");
+    setCenterIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setTimeout(() => setDirection(null), 500);
+  };
+
+  const handlePrev = () => {
+    setPlayingIndex(null);
+    setDirection("prev");
+    setCenterIndex(
+      (prevIndex) => (prevIndex - 1 + items.length) % items.length
+    );
+    setTimeout(() => setDirection(null), 500);
+  };
+  // ... (isDesktop logic remains the same)
 
   // Desktop: show three cards with center focus (no scrolling)
   if (isDesktop) {
+    // ... (Desktop return block remains the same, but the transition class is already there)
     return (
       <div className="hidden lg:flex items-center justify-center gap-8">
         {rotatedItems.map((it, position) => {
@@ -154,9 +177,11 @@ function VideoRow() {
               onClick={() =>
                 handleCardClick(positionKey as "left" | "center" | "right")
               }
+              // ✅ Desktop already has the transition class: `transition-all duration-300`
               className={`transition-all duration-300 ${sizeClass} relative rounded-sm overflow-hidden shadow-lg cursor-pointer`}
               style={{ minWidth: isCenter ? 418 : 300 }}
             >
+              {/* ... (Video and Image content for desktop) ... */}
               {playingIndex === originalIdx && isCenter ? (
                 (() => {
                   const siParam = currentVideo.videoSi
@@ -252,12 +277,10 @@ function VideoRow() {
         {/* Prev / Next buttons for tablet & mobile */}
         <button
           aria-label="Previous testimonial"
-          onClick={() => {
-            setPlayingIndex(null);
-            setCenterIndex((centerIndex - 1 + items.length) % items.length);
-          }}
+          onClick={handlePrev} // 💡 Use new handler
           className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
         >
+          {/* ... (SVG content) ... */}
           <svg
             width="20"
             height="20"
@@ -277,12 +300,10 @@ function VideoRow() {
 
         <button
           aria-label="Next testimonial"
-          onClick={() => {
-            setPlayingIndex(null);
-            setCenterIndex((centerIndex + 1) % items.length);
-          }}
+          onClick={handleNext} // 💡 Use new handler
           className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
         >
+          {/* ... (SVG content) ... */}
           <svg
             width="20"
             height="20"
@@ -300,7 +321,17 @@ function VideoRow() {
           </svg>
         </button>
 
-        <div className="flex items-center justify-center gap-4 px-4 py-8 overflow-hidden">
+        {/* 💡 Apply transition to the inner container */}
+        <div
+          key={centerIndex} // 💡 Key change forces re-render/transition on content change
+          className={`flex items-center justify-center gap-4 px-4 py-8 overflow-hidden transition-all duration-500 ease-in-out ${
+            direction === "next"
+              ? "animate-slide-out-left"
+              : direction === "prev"
+              ? "animate-slide-out-right"
+              : ""
+          }`}
+        >
           {rotatedItems.map((it, position) => {
             const isCenter = position === 1;
             const positionKey =
@@ -318,12 +349,15 @@ function VideoRow() {
                 onClick={() =>
                   handleCardClick(positionKey as "left" | "center" | "right")
                 }
+                // ✅ Inner transition remains here for the scaling/opacity effect
                 className={`relative rounded-sm overflow-hidden shadow-lg flex-shrink-0 transition-all duration-500 ease-in-out cursor-pointer ${
                   isCenter ? "z-20 scale-100" : "opacity-80 scale-95"
                 }`}
                 style={{ width, height }}
               >
+                {/* ... (Content remains the same) ... */}
                 {playingIndex === originalIdx && isCenter ? (
+                  // ... iframe ...
                   (() => {
                     const siParam = currentVideo.videoSi
                       ? `&si=${currentVideo.videoSi}`
@@ -409,6 +443,7 @@ function VideoRow() {
             );
           })}
         </div>
+        {/* Indicators here if you had them */}
       </div>
     </div>
   );

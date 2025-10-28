@@ -8,8 +8,8 @@ import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import ContactSection from "../components/sections/ContactSection";
 import Media from "../components/sections/mediaSection";
-// import CompareSection from "../components/sections/CompareSection";
-// import HowItWorkBlog from "../components/sections/HowItWorkBlog";
+import CompareSection from "../components/sections/CompareSection";
+import HowItWorkBlog from "../components/sections/HowItWorkBlog";
 
 export default function Home() {
   return (
@@ -30,13 +30,13 @@ export default function Home() {
             <AboutUsSection />
           </section>
 
-          {/* <section id="compare">
+          <section id="compare">
             <CompareSection />
           </section>
 
           <section id="blog">
             <HowItWorkBlog />
-          </section> */}
+          </section>
 
           <section id="testimonials">
             <TestimonialSection />
@@ -50,7 +50,7 @@ export default function Home() {
             <ContactSection />
           </section>
 
-           <section id="media-section">
+          <section id="media-section">
             <Media />
           </section>
 

@@ -22,7 +22,7 @@ export default function CompareSection() {
           <div className="order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
             <div className="mb-4">
               <span
-                className="text-[12px] md:text-[14px] font-bold uppercase tracking-wide font-sans"
+                className="text-[16px] md:text-[16px] font-bold uppercase tracking-wide font-sans"
                 style={{
                   background: "linear-gradient(90deg,#1B4CFA,#102C90)",
                   WebkitBackgroundClip: "text",
@@ -33,11 +33,11 @@ export default function CompareSection() {
               </span>
             </div>
 
-            <h3 className="text-[22px] md:text-[28px] lg:text-[32px] font-extrabold text-[#111827] leading-[32px] mb-4 font-sans">
+            <h3 className="text-[24px] md:text-[32px] lg:text-[32px] font-bold text-[#111827] leading-[32px] mb-6 font-sans">
               {header.title || "Transformations You’ll Love"}
             </h3>
 
-            <p className="text-[16px] md:text-[18px] text-[#374151] max-w-xl font-sans">
+            <p className="text-[16px] md:text-[18px] text-[#374151] max-w-xl font-medium">
               {header.description ||
                 "See the difference our on-demand cleaning service makes. From cluttered living rooms to sparkling spaces, our professional cleaners deliver results that speak for themselves."}
             </p>

@@ -21,21 +21,33 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "km" }, { lang: "zh" }];
 }
 
-export default async function LangLayout(props: unknown) {
-  const { children } = props as { children: React.ReactNode };
+interface LangLayoutProps {
+  children: React.ReactNode;
+  params: { lang: string };
+}
+
+export default async function LangLayout({
+  children,
+  params,
+}: LangLayoutProps) {
+  const lang = params?.lang ?? "en";
+  const fontWrapperClass = lang === "km" ? "font-kantumruy" : "font-inter";
+
   return (
     <LanguageProvider>
-      <SiteNav />
-      <>
-        {children}
-        {/* Analytics provider records UTM/referrer and emits page_view events */}
-        <Suspense fallback={null}>
-          <AnalyticsProviderClient />
-        </Suspense>
-        {/* Telegram chat widget (client-only) */}
-        <TelegramChatButton />
-      </>
-      <SiteFooter />
+      <div className={fontWrapperClass}>
+        <SiteNav />
+        <>
+          {children}
+          {/* Analytics provider records UTM/referrer and emits page_view events */}
+          <Suspense fallback={null}>
+            <AnalyticsProviderClient />
+          </Suspense>
+          {/* Telegram chat widget (client-only) */}
+          <TelegramChatButton />
+        </>
+        <SiteFooter />
+      </div>
     </LanguageProvider>
   );
 }
