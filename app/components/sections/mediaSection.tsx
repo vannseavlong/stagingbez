@@ -349,11 +349,29 @@ import Link from "next/link";
 import MediaCard from "../common/mediaCard";
 import { Button } from "../ui/button";
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { mediaItems } from "../../../data/mediaItem";
+import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
+import { useTranslate } from "@/app/hooks/useTranslate";
 
 export default function Media() {
   const [expanded, setExpanded] = useState(false);
   const { currentLanguageCode } = useLanguage();
+  const { getSection } = useTranslate();
+
+  // Try to load the media section from translations first. Fall back to data/mediaItem if translations are missing.
+  const mediaSection = getSection("media") as {
+    header?: { subtitle?: string; title?: string };
+    articles?: Array<{
+      id?: number;
+      image?: string;
+      date?: string;
+      title?: string;
+      description?: string;
+    }>;
+  };
+
+  const items = Array.isArray(mediaSection.articles)
+    ? mediaSection.articles
+    : mediaItemsFallback;
 
   const handleToggle = () => setExpanded(!expanded);
   return (
@@ -361,18 +379,18 @@ export default function Media() {
       {/* Section Heading */}
       <div className="text-left mb-12 lg:mb-16 md:mb-16 gap-1">
         <div className="flex items-center mb-4 md:mb-4 lg:mb-4">
-          <h5 className="font-[Inter] text-base font-bold tracking-[2px] text-beasy-gradient opacity-80 mr-4">
-            Media
+          <h5 className="text-base font-bold tracking-[2px] text-beasy-gradient opacity-80 mr-4">
+            {mediaSection.header?.subtitle || "Media"}
           </h5>
         </div>
-        <h2 className="text-[24px] md:text-[32px] font-bold text-black font-[Inter] tracking-[4px]">
-          Read Our Latest Articles
+        <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-[4px]">
+          {mediaSection.header?.title || "Read Our Latest Articles"}
         </h2>
       </div>
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 md:gap-10">
-        {(expanded ? mediaItems : mediaItems.slice(0, 4)).map((item, index) => (
+        {(expanded ? items : items.slice(0, 4)).map((item, index) => (
           <Link
             key={index}
             href={`/${currentLanguageCode}/media-detail/${index}`}
@@ -381,10 +399,10 @@ export default function Media() {
             data-aos-delay={index * 150}
           >
             <MediaCard
-              image={item.image}
-              date={item.date}
-              title={item.title}
-              description={item.description}
+              image={item.image || ""}
+              date={item.date || ""}
+              title={item.title || ""}
+              description={item.description || ""}
             />
           </Link>
         ))}

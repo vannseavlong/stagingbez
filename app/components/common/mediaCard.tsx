@@ -34,15 +34,15 @@ export default function MediaCard({
 
       {/* Content */}
       <CardContent className="p-0 ">
-        <CardDescription className="font-[Inter] text-sm md:text-sm opacity-80 font-medium text-[#1A1A1A] mb-4">
+        <CardDescription className="text-sm md:text-sm opacity-80 font-medium text-[#1A1A1A] mb-4">
           {date}
         </CardDescription>
 
-        <CardTitle className="h-[30px] md:lg-[60px] lg:h-[60px] text-black  items-end justify-items-end font-[Inter] text-[20px] md:text-xl font-bold tracking-[1px] mb-4 line-clamp-2">
+        <CardTitle className="h-[30px] md:lg-[60px] lg:h-[60px] text-black  items-end justify-items-end text-[20px] md:text-xl font-bold tracking-[1px] mb-4 line-clamp-2">
           {title}
         </CardTitle>
 
-        <p className="text-[#1A1A1A] font-medium font-[Inter] text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
+        <p className="text-[#1A1A1A] font-medium text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
           {description}
         </p>
       </CardContent>
