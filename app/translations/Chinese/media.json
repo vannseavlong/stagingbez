@@ -1,0 +1,64 @@
+{
+  "header": {
+    "subtitle": "媒體",
+    "title": "閱讀我們的最新文章"
+  },
+  "articles": [
+    {
+      "id": 1,
+      "image": "/images/services/deep.webp",
+      "date": "24-25 / May / 2025",
+      "title": "初步產品路線圖",
+      "description": "上半年戰略目標與里程碑的概述。"
+    },
+    {
+      "id": 2,
+      "image": "/images/services/laundry.webp",
+      "date": "24-25 / May / 2025",
+      "title": "團隊擴展公告",
+      "description": "我們很高興介紹本季度加入工程與設計團隊的新成員。"
+    },
+    {
+      "id": 3,
+      "image": "/images/services/general.webp",
+      "date": "24-25 / May / 2025",
+      "title": "用戶體驗研討會",
+      "description": "回顧為期三天的研討會，重點在於改進我們移動應用的導航。"
+    },
+    {
+      "id": 4,
+      "image": "/images/services/pest.webp",
+      "date": "24-25 / May / 2025",
+      "title": "安全更新與補丁",
+      "description": "有關為保護用戶數據並確保系統完整性而實施的最新安全增強措施的詳細信息。"
+    },
+    {
+      "id": 5,
+      "image": "/images/services/uphol.webp",
+      "date": "24-25 / May / 2025",
+      "title": "社區反饋重點",
+      "description": "彙總我們活躍用戶社區中最具影響力的建議和反饋。"
+    },
+    {
+      "id": 6,
+      "image": "/images/services/washing.webp",
+      "date": "24-25 / May / 2025",
+      "title": "夏季開發衝刺",
+      "description": "最近兩週衝刺的亮點，包括新的 API 端點和更快的頁面加載時間。"
+    },
+    {
+      "id": 7,
+      "image": "/images/services/office.webp",
+      "date": "24-25 / May / 2025",
+      "title": "慶祝五周年",
+      "description": "回顧我們的旅程、主要成就，並向所有支持者致以特別的感謝。"
+    },
+    {
+      "id": 8,
+      "image": "/images/services/office.webp",
+      "date": "24-25 / May / 2025",
+      "title": "數據科學突破",
+      "description": "介紹我們新的機器學習模型，將推薦準確率提高了 25%。"
+    }
+  ]
+}

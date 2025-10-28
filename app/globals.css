@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy:wght@300;400;500;700&display=swap');
+/* Prefer the local/system Khmer UI font when available (Khmer OS Siemreap).
+  Fall back to Noto Sans Khmer (web-hosted) for consistent rendering when the
+  system font isn't available. If you need guaranteed identical rendering
+  across platforms, obtain a licensed Siemreap webfont and self-host it. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "swiper/css";
@@ -148,8 +152,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Default to Inter (provided by next/font and exposed as --font-inter).
-       Khmer pages will explicitly apply Kantumruy via a wrapper class. */
+   /* Default to Inter (provided by next/font and exposed as --font-inter).
+     Khmer pages will explicitly apply a Khmer UI font via a wrapper class. */
     font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 }
@@ -160,7 +164,10 @@
 }
 
 .font-kantumruy {
-  font-family: 'Kantumruy', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* Prefer Khmer OS Siemreap (system font) first, then Noto Sans Khmer as a
+     reliable web fallback. If Siemreap is present on the user's OS it will be
+     used; otherwise Noto Sans Khmer will be loaded by the Google Fonts import. */
+  font-family: 'Khmer OS Siemreap', 'Khmer OS', 'Noto Sans Khmer', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* Swiper Navigation Buttons */
