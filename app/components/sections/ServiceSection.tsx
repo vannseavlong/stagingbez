@@ -174,76 +174,78 @@ const Service = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 lg:py-5 lg:px-10 md:px-10 px-5 text-white relative overflow-hidden">
-      {/* Header */}
-      <div className="mb-5 mt-10">
-        <div className="flex items-center text-beasy-gradient mb-5 lg:mb-0 md:mb-5">
-          <h5 className="text-base font-bold leading-[24px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
-            {serviceSection.header?.subtitle}
-          </h5>
-        </div>
-      </div>
-
-      {/* Heading + Navigation (Desktop/Tablet) */}
-      <div className="flex flex-col lg:flex-row md:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-        <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
-          {serviceSection.header?.title}
-        </h1>
-
-        <div className="hidden md:flex gap-3 items-center justify-center mt-5">
-          <button
-            onClick={handlePrev}
-            className="border rounded-full border-gray-400 p-2 hover:bg-gray-300 transition"
-          >
-            <ChevronLeft className="text-black" />
-          </button>
-          <button
-            onClick={handleNext}
-            className="border rounded-full border-gray-400 p-2 hover:bg-gray-300 transition"
-          >
-            <ChevronRight className="text-black" />
-          </button>
-        </div>
-      </div>
-
-      {/* Scrollable Cards */}
-      <div className="relative mt-10">
-        {/* Buttons are positioned absolute within this container */}
-        <button
-          onClick={handlePrev}
-          disabled={currentIndex === 0}
-          className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-gray-200 hover:bg-gray-300 text-black rounded-full p-3 shadow transition disabled:opacity-30"
-        >
-          <ChevronLeft className="w-4 h-4" />
-        </button>
-
-        <div
-          ref={scrollRef}
-          className="w-full overflow-x-auto scrollbar-hidden scroll-smooth"
-        >
-          <div className="flex space-x-5 md:space-x-5 lg:space-x-8 snap-x snap-mandatory pb-4">
-            {mediaItems.map((item) => (
-              <div
-                key={item.key}
-                className="flex-shrink-0 w-[250px] snap-start"
-              >
-                <ServiceCard
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                />
-              </div>
-            ))}
+    <section className="bg-white md:py-20 lg:py-20 text-white relative overflow-hidden">
+      <div className="max-w-full lg:max-w-[1440px] lg:mx-auto">
+        {/* Header */}
+        <div className="mb-5 mt-10">
+          <div className="flex items-center text-beasy-gradient mb-5 lg:mb-0 md:mb-5">
+            <h5 className="text-base font-bold leading-[32px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
+              {serviceSection.header?.subtitle}
+            </h5>
           </div>
         </div>
 
-        <button
-          onClick={handleNext}
-          disabled={currentIndex === mediaItems.length - 1}
-          className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-gray-200 hover:bg-gray-300 text-black rounded-full p-3 shadow transition disabled:opacity-30"
-        >
-          <ChevronRight className="w-4 h-4" />
-        </button>
+        {/* Heading + Navigation (Desktop/Tablet) */}
+        <div className="flex flex-col lg:flex-row md:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
+          <h1 className="w-full lg:w-[500px] md:w-[400px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
+            {serviceSection.header?.title}
+          </h1>
+
+          <div className="hidden md:flex gap-3 items-center justify-center mt-5">
+            <button
+              onClick={handlePrev}
+              className="border rounded-full border-gray-400 p-2 hover:bg-gray-300 transition"
+            >
+              <ChevronLeft className="text-black" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="border rounded-full border-gray-400 p-2 hover:bg-gray-300 transition"
+            >
+              <ChevronRight className="text-black" />
+            </button>
+          </div>
+        </div>
+
+        {/* Scrollable Cards */}
+        <div className="relative mt-10">
+          {/* Buttons are positioned absolute within this container */}
+          <button
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-gray-200 hover:bg-gray-300 text-black rounded-full p-3 shadow transition disabled:opacity-30"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className="w-full overflow-x-auto scrollbar-hidden scroll-smooth"
+          >
+            <div className="flex space-x-5 md:space-x-5 lg:space-x-8 snap-x snap-mandatory pb-4">
+              {mediaItems.map((item) => (
+                <div
+                  key={item.key}
+                  className="flex-shrink-0 w-[250px] snap-start"
+                >
+                  <ServiceCard
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            onClick={handleNext}
+            disabled={currentIndex === mediaItems.length - 1}
+            className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-gray-200 hover:bg-gray-300 text-black rounded-full p-3 shadow transition disabled:opacity-30"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 export default function ContactUs() {
   return (
-    <section className="bg-white md:py-20 lg:py-5 px-6 text-white">
+    <section className="bg-white md:py-20 lg:py-5 text-white">
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-5 md:mb-5">
@@ -56,7 +56,7 @@ export default function ContactUs() {
               </div>
 
               {/* ✅ Tablet Image (Full Width) */}
-              <div className="hidden md:block lg:hidden w-screen -mx-6 h-auto">
+              <div className="hidden md:block lg:hidden w-screen -mx-6 sm:-mx-8 lg:-mx-16 h-auto">
                 <Image
                   className="w-full h-full object-cover"
                   src="/image.png"
@@ -68,7 +68,7 @@ export default function ContactUs() {
               </div>
 
               {/* ✅ Mobile Image (Full Width) */}
-              <div className="block md:hidden w-screen -mx-6 h-auto">
+              <div className="block md:hidden w-screen -mx-6 sm:-mx-8 lg:-mx-16 h-auto">
                 <Image
                   className="w-full h-full object-cover"
                   src="/location.png"

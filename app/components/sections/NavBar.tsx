@@ -24,7 +24,7 @@ export default function NavBar() {
 
   return (
     <header className="w-full bg-white/70 backdrop-blur sticky top-0 z-50 border-b">
-      <div className="max-w-[1440px] mx-auto px-6 py-3 md:px-8 md:py-4 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 py-3 md:py-4 flex items-center justify-between">
         <Link href="/" className="font-semibold text-lg">
           Beasy
         </Link>

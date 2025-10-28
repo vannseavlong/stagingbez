@@ -1,0 +1,14 @@
+.next
+node_modules
+public
+build
+dist
+.coverage
+
+# Optional: ignore generated type info
+**/*.d.ts
+
+# Ignore lockfiles
+pnpm-lock.yaml
+yarn.lock
+package-lock.json

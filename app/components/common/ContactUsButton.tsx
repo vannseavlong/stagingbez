@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslate } from "@/app/hooks/useTranslate";
+import { trackEvent } from "@/lib/analytics";
 import { usePathname, useRouter } from "next/navigation";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 
@@ -27,10 +28,10 @@ export default function ContactUsButton({
   // Two-layer text for hover swap
   const inner = (
     <span className="relative inline-block overflow-hidden">
-      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[110%]">
+      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[100%]">
         {displayText}
       </span>
-      <span className="absolute left-0 top-[110%] block transition-transform duration-500 group-hover:translate-y-[-110%]">
+      <span className="absolute left-0 top-[100%] block transition-transform duration-500 group-hover:translate-y-[-100%]">
         {displayHoverText}
       </span>
     </span>
@@ -54,6 +55,10 @@ export default function ContactUsButton({
   const handleGoToContact = async (e?: React.MouseEvent) => {
     e?.preventDefault();
 
+    try {
+      trackEvent("contact_click", { source: "nav", path: pathname });
+    } catch {}
+
     const lang = currentLanguageCode || "en";
     const targetPath = `/${lang}`;
 
@@ -69,6 +74,9 @@ export default function ContactUsButton({
     // Otherwise navigate to the language home then scroll after mount
     try {
       await router.push(targetPath);
+      try {
+        trackEvent("contact_navigate", { target: targetPath });
+      } catch {}
       // small delay to allow client to render the section
       setTimeout(() => {
         const el = document.getElementById("contact");
@@ -76,6 +84,9 @@ export default function ContactUsButton({
       }, 80);
     } catch {
       // fallback: open anchor on same page
+      try {
+        trackEvent("contact_navigate_fail", { target: targetPath });
+      } catch {}
       const el = document.getElementById("contact");
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }

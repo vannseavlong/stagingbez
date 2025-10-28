@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { useState, useEffect } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export default function TestimonialSection() {
   const { t } = useTranslate();
@@ -16,10 +17,10 @@ export default function TestimonialSection() {
 
   return (
     <section className="py-16 overflow-x-hidden">
-      <div className="max-w-5xl mx-auto text-center px-4 overflow-x-hidden">
+      <div className="max-w-[1440px] mx-auto text-center px-6 sm:px-8 lg:px-16 overflow-x-hidden">
         {/* Subtitle */}
         <div
-          className="font-bold text-[14px] md:text-[16px] leading-6 mb-4 font-sans"
+          className="font-bold text-[14px] md:text-[16px] leading-[32px] mb-4 font-sans"
           style={{
             background: "linear-gradient(90deg,#1B4CFA,#102C90)",
             WebkitBackgroundClip: "text",
@@ -188,6 +189,13 @@ function VideoRow() {
                       aria-label={`Play ${it.caption}`}
                       onClick={(e) => {
                         e.stopPropagation();
+                        try {
+                          trackEvent("video_play", {
+                            video_index: originalIdx,
+                            video_id: currentVideo.videoId,
+                            title: currentVideo.caption,
+                          });
+                        } catch {}
                         setPlayingIndex(originalIdx);
                       }}
                       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-20 h-20 md:w-16 md:h-16 rounded-full shadow-2xl hover:scale-110 transition-transform duration-200"
@@ -383,6 +391,13 @@ function VideoRow() {
                     aria-label="Close video"
                     onClick={(e) => {
                       e.stopPropagation();
+                      try {
+                        trackEvent("video_close", {
+                          video_index: originalIdx,
+                          video_id: currentVideo.videoId,
+                          title: currentVideo.caption,
+                        });
+                      } catch {}
                       setPlayingIndex(null);
                     }}
                     className="absolute top-3 right-3 z-30 bg-white/80 rounded-full p-2"

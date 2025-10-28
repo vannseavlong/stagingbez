@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import React, { Suspense } from "react";
 import TelegramChatButton from "@/app/components/TelegramChatButton";
+import AnalyticsProviderClient from "@/app/components/AnalyticsProviderClient";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { SiteFooter, SiteNav } from "../components/layout";
 
@@ -22,15 +24,19 @@ export async function generateStaticParams() {
 export default async function LangLayout(props: unknown) {
   const { children } = props as { children: React.ReactNode };
   return (
-      <LanguageProvider>
-        <SiteNav />
-          <>
-          {children}
-          {/* Telegram chat widget (client-only) */}
-          <TelegramChatButton />
-          </>
-        <SiteFooter />
-      </LanguageProvider> 
+    <LanguageProvider>
+      <SiteNav />
+      <>
+        {children}
+        {/* Analytics provider records UTM/referrer and emits page_view events */}
+        <Suspense fallback={null}>
+          <AnalyticsProviderClient />
+        </Suspense>
+        {/* Telegram chat widget (client-only) */}
+        <TelegramChatButton />
+      </>
+      <SiteFooter />
+    </LanguageProvider>
   );
 }
 

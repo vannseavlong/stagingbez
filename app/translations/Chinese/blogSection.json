@@ -1,0 +1,39 @@
+{
+  "header": {
+    "subtitle": "如何运作",
+    "title": "轻松清洁，尽在掌握",
+    "description": "通过我们的应用几步完成预订，轻松享受整洁的家居服务。"
+  },
+  "items": [
+    {
+      "id": "guestMode",
+      "title": "访客模式",
+      "description": "仅需几步即可预订，简单快捷。"
+    },
+    {
+      "id": "allServices",
+      "title": "一站式服务",
+      "description": "清洁、空调、除虫等服务，一应俱全。"
+    },
+    {
+      "id": "paymentOptions",
+      "title": "多种支付方式",
+      "description": "支持银行卡、移动钱包或现金支付。"
+    },
+    {
+      "id": "reschedule",
+      "title": "轻松改期",
+      "description": "随时更改预订，操作简单。"
+    },
+    {
+      "id": "dateTime",
+      "title": "选择日期与时间",
+      "description": "选择适合您的上午、下午或晚上时段。"
+    },
+    {
+      "id": "rating",
+      "title": "信赖的服务人员",
+      "description": "为您提供高评分的专业清洁人员。"
+    }
+  ]
+}

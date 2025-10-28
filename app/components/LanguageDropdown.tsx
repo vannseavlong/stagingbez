@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import { trackEvent } from "@/lib/analytics";
 
 interface LanguageDropdownProps {
   compact?: boolean;
@@ -20,6 +21,14 @@ export default function LanguageDropdown({
   );
 
   const handleLanguageChange = (langCode: string) => {
+    try {
+      trackEvent("language_change", {
+        from: currentLanguageCode,
+        to: langCode,
+      });
+    } catch {
+      // ignore
+    }
     changeLanguage(langCode);
     setIsOpen(false);
   };
