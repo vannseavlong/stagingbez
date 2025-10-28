@@ -1,0 +1,118 @@
+.scrollyContainer {
+  /* Set a max width similar to the UI image */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: #3b82f6; /* Example color */
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #6b7280; /* Example color */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contentArea {
+  display: flex;
+  justify-content: space-between;
+  /* The overall section will control height; keep content stretching */
+  position: relative; /* Context for children */
+}
+
+.itemsLeft {
+  width: 45%; /* Space for the scrolling text */
+  /* Each slide should fill the viewport so Swiper vertical behaves like page steps */
+  height: 100vh;
+  /* Position relative to allow centering the slide content */
+  position: relative;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  /* Swiper slides fill the available height */
+  display: flex;
+  align-items: center; /* Center the text vertically within the slide viewport */
+}
+
+.slideContent {
+  /* Ensures only the active item is clearly visible at the scroll point */
+  padding: 20px 0;
+  max-width: 400px;
+}
+
+.itemTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.itemDescription {
+  color: #4b5563;
+}
+
+.mockupRight {
+  width: 45%; /* Space for the fixed image */
+  /* This div should scroll with the page, but its content should stay fixed */
+  position: sticky;
+  top: 100px; /* Adjust based on your header/navbar height */
+  height: 100vh; /* Match the height of the itemsLeft for alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mockupImageWrapper {
+  /* Simulate the phone frame, if desired */
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  /* Add shadow/border to match the UI image phone mockup */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.mockupImage {
+  width: 100%;
+  height: auto;
+  /* Add a transition for a smooth visual switch when the activeIndex changes */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure Swiper fills its container and slides stretch so Image with fill covers fully */
+:global(.swiper) {
+  height: 100%;
+}
+:global(.swiper-wrapper) {
+  height: 100%;
+}
+:global(.swiper-slide) {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+:global(.swiper-slide) > * {
+  width: 100%;
+  height: 100%;
+}

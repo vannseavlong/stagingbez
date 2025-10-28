@@ -39,7 +39,7 @@ const Para = () => {
       {/* Header */}
       <div className="mb-4 mt-8">
         <div className="flex items-center text-black mb-3 lg:mb-0 md:mb-3">
-          <h5 className="text-[16px] font-semibold leading-[32px] tracking-[1.5px] text-beasy-gradient mr-3 whitespace-nowrap opacity-80 font-sans">
+          <h5 className="text-[16px] font-bold leading-[32px] tracking-[1.5px] text-beasy-gradient mr-3 whitespace-nowrap opacity-80 font-sans">
             {aboutSection.header?.subtitle}
           </h5>
         </div>
@@ -50,7 +50,7 @@ const Para = () => {
           {aboutSection.header?.title}
         </h1>
         <div className="flex justify-start w-full mb-6 md:justify-start lg:justify-end lg:w-[60%] lg:py-3">
-          <p className="text-[#3D3D3D] font-normal text-[16px] text-md-[18px] text-lg-[18px] md:text-base leading-[150%] lg:max-w-[560px] md:max-w-[520px] text-left font-sans">
+          <p className="text-[#3D3D3D] font-medium text-[16px] text-md-[18px] text-lg-[18px] md:text-base leading-[150%] lg:max-w-[560px] md:max-w-[520px] text-left font-sans">
             {aboutSection.header?.description}
           </p>
         </div>

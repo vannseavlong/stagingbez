@@ -1,176 +1,217 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useTranslate } from "@/app/hooks/useTranslate";
 import Image from "next/image";
-import { useTranslate } from "../../hooks/useTranslate";
-
-type Item = {
-  id: string;
-  title: string;
-  description: string;
-};
-
-const langSuffix = (lang: string) => {
-  // map app language code to image suffix conventions in public/images/blog
-  if (!lang) return "EN";
-  const code = lang.toLowerCase();
-  if (code.startsWith("en")) return "EN";
-  if (code.startsWith("km")) return "KM";
-  if (code.startsWith("zh") || code.startsWith("cn") || code.startsWith("ch"))
-    return "CN";
-  return "EN";
-};
 
 export default function HowItWorkBlog() {
-  const { getSection, currentLanguage } = useTranslate();
-  // translation shape: { header: {subtitle,title,description}, items: Item[] }
-  const data = (getSection("blogSection") as any) || {};
-  const header = data.header || {};
-  const items: Item[] = data.items || [];
+  const [activeIndex, setActiveIndex] = useState(0);
+  // main sticky state (used instead of JS-fixed to avoid overlap)
+  const [isSticky, setIsSticky] = useState(false);
+  const scrollyRef = useRef<HTMLDivElement | null>(null);
+  const topSentinelRef = useRef<HTMLDivElement | null>(null);
+  const activeIndexRef = useRef<number>(0);
+  const wheelLockRef = useRef<boolean>(false);
+  // whether the top sentinel has been scrolled past (used with activeIndex to decide stickiness)
+  const [topPassed, setTopPassed] = useState(false);
 
-  // fallback: if translations are missing, try to load a default set (safe-guard)
-  const fallbackIds = [
-    "guestMode",
-    "allServices",
-    "paymentOptions",
-    "reschedule",
-    "dateTime",
-    "rating",
-  ];
-  const effectiveItems = items.length
-    ? items
-    : fallbackIds.map((id) => ({ id, title: id, description: "" }));
+  const { getSection, languageFolder } = useTranslate();
+  const section = (getSection("blogSection") as any) || {};
+  const header = section.header || {};
+  const items = useMemo(
+    () => (section.items as Array<any>) || [],
+    [section.items]
+  );
 
-  const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const [active, setActive] = useState(0);
-  const rootRef = useRef<HTMLElement | null>(null);
-
+  // Use IntersectionObserver on a top sentinel to toggle `isSticky` only when the
+  // user has scrolled to the section (avoids being sticky on page refresh).
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const sentinel = topSentinelRef.current;
+    if (!sentinel) return;
+
+    const obs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          const idx = Number(entry.target.getAttribute("data-idx"));
-          if (entry.isIntersecting && entry.intersectionRatio > 0.45) {
-            setActive(idx);
-          }
-        });
+        const e = entries[0];
+        // rootMargin pushes the trigger down by 200px so sticky only starts after
+        // the section has scrolled near the top (mirrors previous offset)
+        setTopPassed(!e.isIntersecting);
       },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: [0.45, 0.5, 0.75],
-      }
+      { root: null, rootMargin: "-200px 0px 0px 0px", threshold: 0 }
     );
 
-    itemRefs.current.forEach((el) => {
-      if (el) observer.observe(el);
-    });
+    obs.observe(sentinel);
+    return () => obs.disconnect();
+  }, []);
 
-    return () => observer.disconnect();
-  }, [effectiveItems.length]);
+  // Decide actual stickiness: only sticky when we've scrolled past the sentinel
+  // AND we haven't reached the last slide yet. Once the last item is active,
+  // the section should stop being sticky so the parent can continue scrolling.
+  useEffect(() => {
+    const lastIndex = items.length > 0 ? items.length - 1 : 0;
+    setIsSticky(topPassed && activeIndex < lastIndex);
+  }, [topPassed, activeIndex, items.length]);
 
-  // get current locale suffix from translate hook internals if available
-  const locale =
-    (currentLanguage as string) ||
-    (typeof navigator !== "undefined" ? navigator.language : "en");
+  const currentStep =
+    items.length > 0
+      ? items[activeIndex] || items[0]
+      : { title: "", description: "" };
 
-  const suffix = langSuffix(locale);
+  // Keep a ref of activeIndex to use inside wheel handler without stale closures
+  useEffect(() => {
+    activeIndexRef.current = activeIndex;
+  }, [activeIndex]);
+
+  // Mousewheel control: when the pointer is over the scrolly section, use wheel to
+  // advance slides. We only intercept wheel events when there are more slides to
+  // navigate in the scroll direction; otherwise let the page scroll normally.
+  useEffect(() => {
+    const el = scrollyRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+      if (wheelLockRef.current) return;
+      if (!items || items.length === 0) return;
+
+      const lastIndex = items.length - 1;
+      const delta = e.deltaY;
+      // ignore very small deltas (touchpad noise)
+      if (Math.abs(delta) < 8) return;
+
+      // Scrolling down -> advance slides until last slide, then allow page scroll
+      if (delta > 0) {
+        if (activeIndexRef.current < lastIndex) {
+          e.preventDefault();
+          wheelLockRef.current = true;
+          setActiveIndex((i) => Math.min(i + 1, lastIndex));
+          setTimeout(() => (wheelLockRef.current = false), 600);
+        } else {
+          // at last slide: do not intercept — allow parent to scroll
+        }
+      } else {
+        // Scrolling up -> go to previous slide if possible
+        if (activeIndexRef.current > 0) {
+          e.preventDefault();
+          wheelLockRef.current = true;
+          setActiveIndex((i) => Math.max(i - 1, 0));
+          setTimeout(() => (wheelLockRef.current = false), 600);
+        } else {
+          // at first slide: allow parent to scroll
+        }
+      }
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel as EventListener);
+  }, [items]);
 
   return (
-    <section ref={rootRef as any} className="w-full bg-white py-12 md:py-16">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
-        <div className="text-center lg:text-left mb-8">
-          {header.subtitle && (
-            <p className="text-sm font-semibold text-primary-600 mb-2">
-              {header.subtitle}
-            </p>
-          )}
-          {header.title && (
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">
-              {header.title}
-            </h2>
-          )}
-          {header.description && (
-            <p className="text-base text-muted-600 max-w-2xl">
-              {header.description}
-            </p>
-          )}
-        </div>
+    <div className="bg-white" ref={scrollyRef}>
+      {/* Header */}
+      <header className="pt-16 pb-8 transition-all duration-300">
+        <div className="max-w-[1440px] mx-auto text-center overflow-x-hidden">
+          <div
+            className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
+            style={{
+              background: "linear-gradient(90deg,#1B4CFA,#102C90)",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            {header.subtitle || "HOW IT WORKS"}
+          </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Left: text items (on mobile this will stack under image) */}
-          <div className="order-2 lg:order-1">
-            <div className="space-y-8">
-              {effectiveItems.map((it, idx) => (
-                <div
-                  key={it.id}
-                  data-idx={idx}
-                  ref={(el) => {
-                    itemRefs.current[idx] = el;
-                  }}
-                  className={`transition-transform duration-500 ease-out p-4 rounded-md ${
-                    idx === active
-                      ? "bg-gray-50 scale-100"
-                      : "bg-transparent scale-95"
-                  }`}
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold">{it.title}</h3>
-                      <p className="mt-2 text-sm text-muted-600">
-                        {it.description}
-                      </p>
-                    </div>
-                    <div className="ml-4 flex-shrink-0">
-                      <div
-                        className={`w-8 h-8 rounded-full border flex items-center justify-center text-sm font-medium transition-all duration-300 ${
-                          idx === active
-                            ? "bg-primary-600 text-white border-primary-600"
-                            : "bg-white text-primary-600 border-gray-200"
-                        }`}
-                      >
-                        {String(idx + 1).padStart(2, "0")}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          <h1 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] mb-6 font-sans">
+            {header.title || "Effortless Clean, Every Time"}
+          </h1>
+
+          <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-sans">
+            {header.description ||
+              "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
+          </p>
+        </div>
+      </header>
+
+      {/* top sentinel: invisible element used to toggle sticky state */}
+      <div ref={topSentinelRef} />
+
+      {/* Main Section */}
+      <div
+        className={`max-w-[1440px] mx-auto py-12 ${
+          isSticky ? "sticky top-[200px] z-10" : ""
+        }`}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[600px]">
+          {/* Text section */}
+          <div className="flex items-center">
+            <div key={activeIndex} className="animate-fade-in max-w-md">
+              <h2 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] leading-tight mb-3 font-sans">
+                {currentStep.title}
+              </h2>
+              <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] leading-relaxed">
+                {currentStep.description}
+              </p>
             </div>
           </div>
 
-          {/* Right: mockup images */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="w-full max-w-md lg:max-w-lg relative">
-              {effectiveItems.map((it, idx) => {
-                // build path: /images/blog/<id>/<id>-<SUFFIX>.webp
-                const src = `/images/blog/${it.id}/${it.id}-${suffix}.webp`;
-                return (
-                  <div
-                    key={it.id}
-                    aria-hidden={idx !== active}
-                    className={`absolute inset-0 transition-opacity duration-600 ease-out transform ${
-                      idx === active
-                        ? "opacity-100 translate-y-0 z-10"
-                        : "opacity-0 -translate-y-2 z-0 pointer-events-none"
-                    }`}
-                    style={{ transitionDuration: "400ms" }}
-                  >
-                    <div className="relative w-full h-[420px] md:h-[520px] lg:h-[480px] rounded-xl overflow-hidden shadow-md bg-gray-50">
+          {/* Image carousel */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              <Carousel
+                axis="vertical"
+                infiniteLoop={false}
+                showThumbs={false}
+                showIndicators={false}
+                showStatus={false}
+                showArrows={false}
+                emulateTouch
+                swipeable
+                autoPlay={false}
+                selectedItem={activeIndex}
+                onChange={(index) => setActiveIndex(index)}
+                dynamicHeight={false}
+                interval={4000}
+              >
+                {items.map((item) => {
+                  const id = item.id;
+                  const sufMap: Record<string, string> = {
+                    English: "EN",
+                    Khmer: "KM",
+                    Chinese: "CN",
+                  };
+                  const suf = sufMap[languageFolder] || "EN";
+                  const imageSrc =
+                    item.image ||
+                    (item.imageName
+                      ? `/images/blog/${id}/${item.imageName}-${suf}.webp`
+                      : `/images/blog/${id}/${id}-${suf}.webp`);
+
+                  return (
+                    <div
+                      key={id}
+                      className="relative h-[600px] flex items-center justify-center p-6 md:p-8 lg:p-10"
+                    >
                       <Image
-                        src={src}
-                        alt={it.title}
+                        src={imageSrc}
+                        alt={item.name || item.title || id}
                         fill
-                        style={{ objectFit: "cover" }}
-                        sizes="(max-width: 1024px) 100vw, 480px"
+                        style={{
+                          objectFit: "contain",
+                          objectPosition: "center",
+                        }}
+                        sizes="(max-width: 1024px) 100vw, 35vw"
                       />
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </Carousel>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* No dynamic spacer needed: `position: sticky` keeps element in flow and avoids overlap */}
+    </div>
   );
 }

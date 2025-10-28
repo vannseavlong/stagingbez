@@ -24,13 +24,13 @@ export default function DownloadAppButton({
   const displayHoverText =
     hoverText || t("navbar.downloadButton.text", "Download App");
 
-  // Two-layer text for hover swap
+  // Two-layer text for hover swap. Use inline-flex centering to ensure vertical alignment.
   const inner = (
-    <span className="relative inline-block overflow-hidden">
-      <span className="block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[110%]">
+    <span className="relative inline-flex items-center justify-center overflow-hidden">
+      <span className="inline-block transition-transform duration-500 translate-y-0 group-hover:-translate-y-[110%]">
         {displayText}
       </span>
-      <span className="absolute left-0 top-[110%] block transition-transform duration-500 group-hover:translate-y-[-110%]">
+      <span className="absolute left-0 top-[110%] inline-block transition-transform duration-500 group-hover:translate-y-[-110%]">
         {displayHoverText}
       </span>
     </span>
@@ -86,7 +86,7 @@ export default function DownloadAppButton({
     <button
       type="button"
       onClick={onClick || handleDownload}
-      className={`group px-5 py-3 bg-[image:var(--beasy-gradient)] text-white text-[16px] font-medium ${className}`}
+      className={`group inline-flex items-center justify-center leading-7 px-5 py-3 bg-[image:var(--beasy-gradient)] text-white text-[16px] font-medium ${className}`}
     >
       {inner}
     </button>

@@ -111,7 +111,7 @@ export default function ContactSection() {
                   {find("location").title}
                 </h4>
               </div>
-              <p className="lg:text-lg text-[18px] text-[#1A1A1A] font-medium lg:w-[500px] ">
+              <p className="text-[16px] text-[#1A1A1A] font-medium lg:w-[500px] ">
                 {find("location").description}
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function ContactSection() {
                   {find("email").title}
                 </h4>
               </div>
-              <p className="text-lg  text-[#1A1A1A] font-medium">
+              <p className="text-[16px]  text-[#1A1A1A] font-medium">
                 {find("email").description}
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
                   {find("phone").title}
                 </h4>
               </div>
-              <p className="text-lg text-[#1A1A1A] font-medium mb-5 ">
+              <p className="text-[16px] text-[#1A1A1A] font-medium mb-5 ">
                 {find("phone").description}
               </p>
             </div>

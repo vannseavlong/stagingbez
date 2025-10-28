@@ -8,31 +8,37 @@
     {
       "id": "guestMode",
       "title": "Guest Mode",
+      "imageName": "guestMode",
       "description": "កក់សេវា ងាយស្រួល និងរហ័ស។"
     },
     {
       "id": "allServices",
       "title": "សេវាទាំងអស់",
+      "imageName": "allService",
       "description": "សេវាសំអាត, ប СО, រក្សាទុករួមគ្នា — ទាំងអស់នៅក្នុងកម្មវិធី។"
     },
     {
       "id": "paymentOptions",
       "title": "របៀបបង់ប្រាក់",
+      "imageName": "payment",
       "description": "បង់ប្រាក់ដោយកាត ឬ វ៉ុលឡែត ឬក៏ប្រាក់សុទ្ធ។"
     },
     {
       "id": "reschedule",
       "title": "ប្ដូរពេលវេលា",
+      "imageName": "reschedule",
       "description": "ប្ដូរការកក់បានយ៉ាងងាយស្រួល។"
     },
     {
       "id": "dateTime",
       "title": "ជ្រើសរើសថ្ងៃ និងម៉ោង",
+      "imageName": "dateTime",
       "description": "ជ្រើសរើសម៉ោងដែលសមស្របសម្រាប់អ្នក។"
     },
     {
       "id": "rating",
       "title": "អ្នកសំអាតបានទុកចិត្ត",
+      "imageName": "rating",
       "description": "ផ្តល់ពិន្ទុ និងជ្រើសរើសអ្នកសំអាតដែលមានការវាយតម្លៃល្អ។"
     }
   ]

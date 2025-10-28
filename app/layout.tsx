@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${geistMono.variable} antialiased font-inter`}
         suppressHydrationWarning
       >
         <ParallaxProviderClient>{children}</ParallaxProviderClient>
