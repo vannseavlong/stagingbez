@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Our Cleaning Services",
+      "description": "We offer a wide range of cleaning solutions...",
+      "date": "2025-10-20",
+      "image": "/images/cleaning1.jpg",
+      "images": ["/images/cleaning1.jpg", "/images/cleaning2.jpg"]
+    },
+    {
+      "id": 2,
+      "title": "Pest Control Updates",
+      "description": "Latest methods for effective pest control...",
+      "date": "2025-10-25",
+      "image": "/images/pest.jpg"
+    }
+  ]
+}
