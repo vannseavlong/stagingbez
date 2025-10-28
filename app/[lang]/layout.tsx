@@ -23,14 +23,19 @@ export async function generateStaticParams() {
 
 interface LangLayoutProps {
   children: React.ReactNode;
-  params: { lang: string };
+  // `params` can be a plain object or a Promise resolving to the object
+  // depending on how Next infers types for dynamic layouts. Accept both to
+  // satisfy the compiler's union mismatch.
+  params: { lang: string } | Promise<{ lang: string }>;
 }
 
-export default async function LangLayout({
-  children,
-  params,
-}: LangLayoutProps) {
-  const lang = params?.lang ?? "en";
+// This layout doesn't use any `await`, so keep it synchronous to match Next.js
+// Layout types which expect a Component returning `ReactNode` (not `Promise`).
+export default function LangLayout({ children, params }: LangLayoutProps) {
+  // `params` may be a Promise at the type level; at runtime Next provides the
+  // plain object. Cast to `any` to access `.lang` without forcing the layout
+  // to become `async` (which would change the return type to Promise<Element>).
+  const lang = (params as any)?.lang ?? "en";
   const fontWrapperClass = lang === "km" ? "font-kantumruy" : "font-inter";
 
   return (
