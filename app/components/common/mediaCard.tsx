@@ -28,7 +28,7 @@ export default function MediaCard({
         <img
           src={image}
           alt={title}
-          className="w-full h-full lg:w-[304px]  lg:h-[181px] object-cover"
+          className="w-full h-full lg:w-[304px] md:w-[304px] md:h-[181px] lg:h-[181px] object-cover"
         />
       </CardHeader>
 
@@ -38,11 +38,26 @@ export default function MediaCard({
           {date}
         </CardDescription>
 
-        <CardTitle className="h-[30px] md:lg-[60px] lg:h-[60px] text-black  items-end justify-items-end text-[20px] md:text-xl font-bold tracking-[1px] mb-4 line-clamp-2">
+        {/* <CardTitle className="h-[30px] md:w-[304px] md:h-[60px] lg:h-[60px] text-black  items-end justify-items-end font-[Inter] text-[20px] md:text-xl font-bold tracking-[1px] mb-4 line-clamp-2">
+          {title}
+        </CardTitle> */}
+
+         <CardTitle className=" md:w-[304px] 
+    h-[60px] 
+    text-black 
+    font-[Inter] 
+    text-[20px] 
+    md:text-xl 
+    font-bold 
+    tracking-[1px] 
+    mb-4 
+    line-clamp-2 
+    flex 
+    items-center">
           {title}
         </CardTitle>
 
-        <p className="text-[#1A1A1A] font-medium text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
+        <p className="text-[#1A1A1A] md:w-[304px] font-medium font-[Inter] text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
           {description}
         </p>
       </CardContent>
