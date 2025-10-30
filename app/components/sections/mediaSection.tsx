@@ -342,6 +342,10 @@
 //   );
 // }
 
+// 
+
+
+
 "use client";
 
 import { useState } from "react";
@@ -349,7 +353,7 @@ import Link from "next/link";
 import MediaCard from "../common/mediaCard";
 import { Button } from "../ui/button";
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
+import { mediaItems, mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
 export default function Media() {
@@ -374,10 +378,13 @@ export default function Media() {
     : mediaItemsFallback;
 
   const handleToggle = () => setExpanded(!expanded);
+
+  const itemsToShow = expanded ? mediaItems : mediaItems.slice(0, 4);
+
   return (
-    <section className="bg-white relative min-h-screen md:py-20 lg:py-4 py-15">
+    <section className="bg-white relative min-h-full md:py-20 lg:py-4 py-15">
       {/* Section Heading */}
-      <div className="text-left mb-12 lg:mb-16 md:mb-16 gap-1">
+      <div className="text-left mb-5 lg:mb-0 md:mb-0 gap-1">
         <div className="flex items-center mb-4 md:mb-4 lg:mb-4">
           <h5 className="text-base font-bold tracking-[2px] text-beasy-gradient opacity-80 mr-4">
             {mediaSection.header?.subtitle || "Media"}
@@ -388,13 +395,32 @@ export default function Media() {
         </h2>
       </div>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 md:gap-10">
-        {(expanded ? items : items.slice(0, 4)).map((item, index) => (
+      {/* Cards Grid (desktop) / Horizontal scroll (mobile+tablet) */}
+      {/* <div
+       className="
+          flex md:grid 
+          md:grid-cols-4 lg:grid-cols-4 
+          gap-6 lg:gap-8 md:gap-8 
+          overflow-x-auto 
+          scrollbar-hide
+        "
+      > */}
+
+
+      <div
+       className="
+          flex md:flex
+           lg:grid-cols-4 
+          gap-6 lg:gap-8 md:gap-8 
+          overflow-x-auto 
+         hide-scrollbar
+        "
+      >
+        {itemsToShow.map((item, index) => (
           <Link
             key={index}
             href={`/${currentLanguageCode}/media-detail/${index}`}
-            className="hover:opacity-90 transition"
+            className="hover:opacity-90 transition flex-shrink-0 w-[80%] sm:w-[60%] md:w-auto"
             data-aos="fade-up"
             data-aos-delay={index * 150}
           >
@@ -406,17 +432,6 @@ export default function Media() {
             />
           </Link>
         ))}
-      </div>
-
-      {/* Toggle Button */}
-      <div className="mt-16 mb-16 flex justify-center">
-        <Button
-          variant="outline"
-          className="px-8 py-3 text-[#1A1A1A] rounded-[30px] lg:h-[44px] hover:bg-blue-900 hover:text-white transition-all duration-300 font-medium"
-          onClick={handleToggle}
-        >
-          {expanded ? "Show Less" : "View More"}
-        </Button>
       </div>
     </section>
   );

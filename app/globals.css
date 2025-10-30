@@ -197,6 +197,15 @@
   right: 64px !important;
 }
 
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
 /* Responsive offsets for Swiper navigation buttons
    - Desktop (default): 64px
    - Tablet (<=1024px): 32px
