@@ -6,12 +6,14 @@ import { useLanguage } from "@/app/contexts/LanguageContext";
 import { ContactUsButton, DownloadAppButton, LanguageDropdown } from "..";
 // import { handleSmartDownload } from "@/lib/smartDownload";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 // Phase 2: Uncomment to restore navigation links
 // import { NAV_ITEMS } from "../navigation";
 
 export default function SiteNav() {
   const { currentLanguageCode } = useLanguage();
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   return (
     <nav className="w-full bg-white sticky top-0 z-50">
       <div className="max-w-full lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 py-3">
@@ -120,12 +122,10 @@ export default function SiteNav() {
                 className="w-full px-6 py-3 text-sm justify-center"
                 onClick={() => {
                   setOpen(false);
-                  // Scroll to contact section after menu closes
+                  // Navigate to the contact page for the current language
                   setTimeout(() => {
-                    const el = document.getElementById("contact");
-                    if (el)
-                      el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }, 200);
+                    router.push(`/${currentLanguageCode}/contact`);
+                  }, 120);
                 }}
               />
             </div>

@@ -42,10 +42,10 @@ export default function MediaCard({
           {title}
         </CardTitle> */}
 
-         <CardTitle className=" md:w-[304px] 
+        <CardTitle
+          className=" md:w-[304px] 
     h-[60px] 
     text-black 
-    font-[Inter] 
     text-[20px] 
     md:text-xl 
     font-bold 
@@ -53,11 +53,12 @@ export default function MediaCard({
     mb-4 
     line-clamp-2 
     flex 
-    items-center">
+    items-center"
+        >
           {title}
         </CardTitle>
 
-        <p className="text-[#1A1A1A] md:w-[304px] font-medium font-[Inter] text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
+        <p className="text-[#1A1A1A] md:w-[304px] font-medium text-[16px] md:text-base leading-relaxed opacity-80 line-clamp-3">
           {description}
         </p>
       </CardContent>

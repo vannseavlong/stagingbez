@@ -60,35 +60,20 @@ export default function ContactUsButton({
     } catch {}
 
     const lang = currentLanguageCode || "en";
-    const targetPath = `/${lang}`;
-
-    // If already on the language root page, just scroll
-    if (pathname === targetPath || pathname === `${targetPath}/`) {
-      const el = document.getElementById("contact");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-    }
-
-    // Otherwise navigate to the language home then scroll after mount
+    // Navigate to the dedicated contact page for the current language
+    const targetPath = `/${lang}/contact`;
     try {
       await router.push(targetPath);
       try {
         trackEvent("contact_navigate", { target: targetPath });
       } catch {}
-      // small delay to allow client to render the section
-      setTimeout(() => {
-        const el = document.getElementById("contact");
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 80);
-    } catch {
-      // fallback: open anchor on same page
+    } catch (err) {
       try {
-        trackEvent("contact_navigate_fail", { target: targetPath });
+        trackEvent("contact_navigate_fail", {
+          target: targetPath,
+          error: String(err),
+        });
       } catch {}
-      const el = document.getElementById("contact");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 

@@ -2,7 +2,7 @@
 
 // import { useParams } from "react-router-dom";
 // import { Clock } from "lucide-react";
-// import { useTranslate } from "@/app/hooks/useTranslate"; 
+// import { useTranslate } from "@/app/hooks/useTranslate";
 
 // export default function MediaDetail() {
 //   const { id } = useParams<{ id: string }>();
@@ -97,21 +97,38 @@
 //   );
 // }
 
-
 "use client";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import { useTranslate } from "@/app/hooks/useTranslate";
 
-import { mediaItems } from "../../../../data/mediaItem";
+import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
 import { Clock } from "lucide-react";
 import SimilarMedia from "@/app/components/sections/similarMedia";
 
 export default function MediaDetail() {
   const params = useParams();
+  const { getSection } = useTranslate();
 
-  const articleIndex = params?.id ? Number(params.id) : -1;
+  const idParam = params?.id;
+  const idNum = idParam ? Number(idParam) : NaN;
 
-  const article = mediaItems[articleIndex] as any;
+  // Try translations first
+  const mediaSection = getSection("media") as any;
+  const translatedArticles: any[] = Array.isArray(mediaSection?.articles)
+    ? mediaSection.articles
+    : [];
+
+  // Find article by numeric id, falling back to index if necessary
+  let article = translatedArticles.find((a) => Number(a?.id) === idNum);
+
+  // Fallback to data/mediaItem if no translated article found
+  if (!article) {
+    article =
+      (mediaItemsFallback.find((a) => Number(a?.id) === idNum) as any) ||
+      // last resort: treat id as zero-based index into fallback array
+      (Number.isFinite(idNum) ? (mediaItemsFallback[idNum] as any) : undefined);
+  }
 
   if (!article) {
     return (
@@ -119,9 +136,9 @@ export default function MediaDetail() {
     );
   }
 
-  const albumImages: string[] = Array.isArray(article.images)
+  const albumImages: string[] = Array.isArray(article?.images)
     ? article.images
-    : article.images
+    : article?.images
     ? [article.images]
     : [];
 
@@ -149,14 +166,10 @@ export default function MediaDetail() {
     //   </div>
     // </section>
 
-
     <div className={`bg-white relative text-black py-5 px-6 lg:px-15 `}>
       <div className=" max-w-[1440px] lg:px-10">
-
-
-
         <div className="flex flex-col md:flex-col md:mb-10 justify-between items-start lg:items-center lg:py-3 lg:flex-row mb-10 lg:mb-6 sm:mb-12">
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-black font-inter text-[24px] sm:text-[28px] md:text-[32px] leading-normal tracking-[2px] sm:tracking-[3px] md:tracking-[4px] mb-6 md:mb-8 sm:mb-0 lg:mb-0">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-black text-[24px] sm:text-[28px] md:text-[32px] leading-normal tracking-[2px] sm:tracking-[3px] md:tracking-[4px] mb-6 md:mb-8 sm:mb-0 lg:mb-0">
             {article.title}
           </h1>
           <div className="flex items-center gap-1 sm:gap-2 text-gray-500">
@@ -167,10 +180,9 @@ export default function MediaDetail() {
 
         {/* Main Content */}
         <div className="mb-12 " data-aos="fade-up">
-          <p className="text-black opacity-80 font-inter text-base not-italic font-normal  w-full">
+          <p className="text-black opacity-80 text-base not-italic font-normal  w-full">
             {article.description}
           </p>
-
         </div>
 
         {/* Image Album */}
@@ -179,10 +191,13 @@ export default function MediaDetail() {
             {/* Section Header */}
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-2xl font-semibold text-black mb-2">Gallery</h2>
-                <p className="text-gray-400 text-sm">{albumImages.length} images</p>
+                <h2 className="text-2xl font-semibold text-black mb-2">
+                  Gallery
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  {albumImages.length} images
+                </p>
               </div>
-
             </div>
 
             {/* Enhanced Image Grid */}
@@ -206,9 +221,7 @@ export default function MediaDetail() {
                   <div className="absolute  inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
                   {/* Hover Content */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-
-                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
 
                   {/* Image Number Badge */}
                   <div className="absolute top-3 left-3 bg-white backdrop-blur-sm text-black text-xs px-2 py-1 rounded-full font-medium">
@@ -218,8 +231,9 @@ export default function MediaDetail() {
                   {/* Bottom Info Bar */}
                   <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="flex items-center justify-between">
-                      <span className="text-white text-sm font-medium">Image {index + 1}</span>
-
+                      <span className="text-white text-sm font-medium">
+                        Image {index + 1}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -228,15 +242,10 @@ export default function MediaDetail() {
           </div>
         )}
 
-        <div className=" mt-10 lg:mt-20 mb-0"> 
-
-        <SimilarMedia/>
+        <div className=" mt-10 lg:mt-20 mb-0">
+          <SimilarMedia />
         </div>
       </div>
     </div>
-
-
   );
 }
-
-
