@@ -34,6 +34,10 @@ export default function TelegramChatButton({
     typeof _sectionAData === "object" && _sectionAData !== null
       ? (_sectionAData as { telegramButton?: { message?: string } })
       : {};
+
+  // Fallback message (prefer sectionA override if present)
+  const fallbackTelegramMessage =
+    sectionAData?.telegramButton?.message || "Got a question? Tap here!";
   const [isVisible, setIsVisible] = useState(true);
 
   // Auto-hide widget after 10 seconds on mount. Do NOT persist this state across
@@ -85,8 +89,7 @@ export default function TelegramChatButton({
       {/* Telegram Message Box (Hidden on small screens) */}
       <div className="block">
         <div className="relative bg-white text-[#102C90] p-3 rounded-xl shadow-lg text-sm max-w-[200px] sm:max-w-[260px] z-10">
-          {sectionAData?.telegramButton?.message ||
-            t("sectionA.telegramButton.message", "Got a question? Tap here!")}
+          {t("telegram.message", fallbackTelegramMessage)}
 
           {/* ARROW SIMULATION (Equivalent to ::after) */}
           <div

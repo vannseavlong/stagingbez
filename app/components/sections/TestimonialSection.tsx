@@ -258,7 +258,7 @@ function VideoRow() {
                     e.stopPropagation();
                     setPlayingIndex(null);
                   }}
-                  className="absolute top-3 right-3 z-30 bg-white/80 rounded-full p-2"
+                  className="absolute top-3 right-3 z-30 rounded-full p-2 text-white"
                 >
                   ✕
                 </button>
@@ -434,7 +434,7 @@ function VideoRow() {
                       } catch {}
                       setPlayingIndex(null);
                     }}
-                    className="absolute top-3 right-3 z-30 bg-white/80 rounded-full p-2"
+                    className="absolute top-3 right-3 z-30 rounded-full p-2 text-white"
                   >
                     ✕
                   </button>
