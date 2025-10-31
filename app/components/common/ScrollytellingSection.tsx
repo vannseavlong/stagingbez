@@ -63,8 +63,10 @@ export function ScrollytellingSection({
           });
         },
         {
-          threshold: 0.5,
-          rootMargin: "-20% 0px -20% 0px",
+          // Trigger earlier so the step changes with less scroll
+          threshold: 0.4,
+          // give a bit more top margin so items become active slightly sooner
+          rootMargin: "-30% 0px -30% 0px",
         }
       );
 
@@ -90,14 +92,15 @@ export function ScrollytellingSection({
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left side - Scrolling text content */}
-          <div className="space-y-[100vh]">
+          {/* Reduced vertical spacing and shorter panels so each step is reached sooner */}
+          <div className="space-y-12 lg:space-y-16">
             {data.map((item, index) => (
               <div
                 key={index}
                 ref={(el) => {
                   sectionRefs.current[index] = el;
                 }}
-                className="min-h-screen flex items-center"
+                className="min-h-[60vh] lg:min-h-[50vh] flex items-center"
               >
                 <div
                   className={`transition-all duration-700 ${

@@ -62,9 +62,10 @@ export function MobileScrollytelling({
           });
         },
         {
-          // trigger when sentinel crosses the viewport center area
-          threshold: 0,
-          rootMargin: "-35% 0px -35% 0px",
+          // Trigger earlier so mobile slides change with less scroll
+          threshold: 0.15,
+          // shift the top margin so the sentinel is considered intersecting sooner
+          rootMargin: "-15% 0px -35% 0px",
         }
       );
 
@@ -104,8 +105,8 @@ export function MobileScrollytelling({
           </div>
         </div>
 
-        {/* Image area with fixed height to reduce empty space */}
-        <div className="relative w-full h-[50vh]">
+        {/* Image area with slightly reduced fixed height to shorten scroll footprint */}
+        <div className="relative w-full h-[64vh]">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -133,12 +134,14 @@ export function MobileScrollytelling({
       {/* Sentinels used for scroll detection — each sentinel is positioned near viewport center */}
       <div>
         {slides.map((_, index) => (
-          <div key={index} className="h-[70vh]">
+          // Shorter sentinel blocks so the user reaches the next slide sooner
+          <div key={index} className="h-[55vh]">
             <div
               ref={(el) => {
                 sentinelRefs.current[index] = el;
               }}
-              className="w-full h-px mt-[35vh]"
+              // position sentinel a bit above center to activate earlier
+              className="w-full h-px mt-[28vh]"
               aria-hidden
             />
           </div>

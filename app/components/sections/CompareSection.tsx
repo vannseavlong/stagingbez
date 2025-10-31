@@ -11,11 +11,11 @@ export default function CompareSection() {
   const header = (compare && compare.header) || {};
 
   // Default images (public folder). Replace with real before/after images as needed.
-  const beforeImg = "/images/compare/before.webp";
-  const afterImg = "/images/compare/after.webp";
+  const beforeImg = "/images/compare/_Before_.webp";
+  const afterImg = "/images/compare/_After_.webp";
 
   return (
-    <section className="w-full bg-white py-12 md:py-16">
+    <section className="w-full bg-white py-12 md:py-16 mt-[50px]">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 items-center gap-12">
           {/* Left: header (on desktop left; on mobile/tablet shown on top) */}
