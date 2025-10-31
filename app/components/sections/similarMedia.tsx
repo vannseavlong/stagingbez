@@ -81,7 +81,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import MediaCard from "../common/mediaCard";
-import { Button } from "../ui/button";
+
 
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { useTranslate } from "@/app/hooks/useTranslate";
@@ -136,7 +136,7 @@ export default function SimilarMedia() {
         ))}
       </div>
       {/* Toggle Button */}
-      <div className="mt-6 mb-6 flex justify-center">
+      {/* <div className="mt-6 mb-6 flex justify-center">
         <Button
           variant="outline"
           className="px-6 py-2 text-black rounded-[30px]"
@@ -146,7 +146,7 @@ export default function SimilarMedia() {
             ? t("media.showLess", "Show Less")
             : t("media.viewMore", "View More")}
         </Button>
-      </div>
+      </div> */}
     </section>
   );
 }
