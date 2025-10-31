@@ -149,25 +149,8 @@ export default function MediaDetail() {
   // : [];
 
   return (
-    // <section className="bg-white text-black py-20 px-6 lg:px-10">
-    //   <div className="max-w-5xl mx-auto">
-    //     <h1 className="text-3xl md:text-4xl font-bold mb-4">{article.title}</h1>
-    //     <p className="text-gray-500 mb-6">{article.date}</p>
-    //     <Image
-    //       src={article.image}
-    //       alt={article.title}
-    //       width={800}
-    //       height={400}
-    //       className="rounded-lg object-cover mb-8"
-    //     />
-    //     <p className="text-gray-700 text-lg leading-relaxed">
-    //       {article.description}
-    //     </p>
-    //   </div>
-    // </section>
-
-    <div className={`bg-white relative text-black py-5 px-6 lg:px-15 `}>
-      <div className=" max-w-[1440px] lg:px-10">
+    <section className="bg-white relative text-black py-16">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex flex-col md:flex-col md:mb-10 justify-between items-start lg:items-center lg:py-3 lg:flex-row mb-10 lg:mb-6 sm:mb-12">
           <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-black text-[24px] sm:text-[28px] md:text-[32px] leading-normal tracking-[2px] sm:tracking-[3px] md:tracking-[4px] mb-6 md:mb-8 sm:mb-0 lg:mb-0">
             {article.title}
@@ -246,6 +229,6 @@ export default function MediaDetail() {
           <SimilarMedia />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
