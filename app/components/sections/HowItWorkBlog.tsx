@@ -18,7 +18,30 @@ export default function HowItWorkBlog() {
     <div className="bg-white">
       {/* Centered container to match other sections */}
       <div className="max-w-[1440px] mt-16">
-        {/* Header moved into the scrollytelling components (desktop & mobile) */}
+        {/* Header */}
+        <header className="pt-0 pb-8 transition-all duration-300 text-center overflow-x-hidden">
+          <div>
+            <div
+              className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
+              style={{
+                background: "linear-gradient(90deg,#1B4CFA,#102C90)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              {header.subtitle || "HOW IT WORKS"}
+            </div>
+
+            <h1 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] mb-6 font-sans">
+              {header.title || "Effortless Clean, Every Time"}
+            </h1>
+
+            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-sans">
+              {header.description ||
+                "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
+            </p>
+          </div>
+        </header>
 
         {/* Scrollytelling body (desktop and mobile variants) */}
         <section className="py-6">
@@ -49,12 +72,12 @@ export default function HowItWorkBlog() {
               <>
                 {/* Desktop: existing scrollytelling layout */}
                 <div className="hidden lg:block">
-                  <ScrollytellingSection items={slides} header={header} />
+                  <ScrollytellingSection items={slides} />
                 </div>
 
                 {/* Mobile/Tablet: simplified sticky scrollytelling */}
                 <div className="lg:hidden">
-                  <MobileScrollytelling slides={slides} header={header} />
+                  <MobileScrollytelling slides={slides} />
                 </div>
               </>
             );

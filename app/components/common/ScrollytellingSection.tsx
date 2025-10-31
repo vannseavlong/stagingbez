@@ -42,14 +42,8 @@ const scrollytellingData: ScrollytellingItem[] = [
 
 export function ScrollytellingSection({
   items,
-  header,
 }: {
   items?: ScrollytellingItem[];
-  header?: {
-    subtitle?: string;
-    title?: string;
-    description?: string;
-  };
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -94,30 +88,6 @@ export function ScrollytellingSection({
   return (
     <div className="relative min-h-screen from-slate-50 to-slate-100">
       <div className="container mx-auto px-4 py-16">
-        {/* Section header (moved here so header is part of the scrollytelling component) */}
-        <header className="pt-0 pb-8 transition-all duration-300 text-center overflow-x-hidden">
-          <div>
-            <div
-              className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
-              style={{
-                background: "linear-gradient(90deg,#1B4CFA,#102C90)",
-                WebkitBackgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              {header?.subtitle || "HOW IT WORKS"}
-            </div>
-
-            <h1 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] mb-6 font-sans">
-              {header?.title || "Effortless Clean, Every Time"}
-            </h1>
-
-            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-sans">
-              {header?.description ||
-                "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
-            </p>
-          </div>
-        </header>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left side - Scrolling text content */}
           <div className="space-y-[100vh]">
