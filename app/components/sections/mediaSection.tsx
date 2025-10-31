@@ -342,9 +342,7 @@
 //   );
 // }
 
-// 
-
-
+//
 
 "use client";
 
@@ -353,7 +351,7 @@ import Link from "next/link";
 import MediaCard from "../common/mediaCard";
 import { Button } from "../ui/button";
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { mediaItems, mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
+import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
 export default function Media() {
@@ -379,7 +377,8 @@ export default function Media() {
 
   const handleToggle = () => setExpanded(!expanded);
 
-  const itemsToShow = expanded ? mediaItems : mediaItems.slice(0, 4);
+  // Show items from translations if available, otherwise fall back to data/mediaItem
+  const itemsToShow = expanded ? items : items.slice(0, 4);
 
   return (
     <section className="bg-white relative min-h-full md:py-20 lg:py-4 py-15">
@@ -406,9 +405,8 @@ export default function Media() {
         "
       > */}
 
-
       <div
-       className="
+        className="
           flex md:flex
            lg:grid-cols-4 
           gap-6 lg:gap-8 md:gap-8 
@@ -418,8 +416,8 @@ export default function Media() {
       >
         {itemsToShow.map((item, index) => (
           <Link
-            key={index}
-            href={`/${currentLanguageCode}/media-detail/${index}`}
+            key={item?.id ?? index}
+            href={`/${currentLanguageCode}/media-detail/${item?.id ?? index}`}
             className="hover:opacity-90 transition flex-shrink-0 w-[80%] sm:w-[60%] md:w-auto"
             data-aos="fade-up"
             data-aos-delay={index * 150}

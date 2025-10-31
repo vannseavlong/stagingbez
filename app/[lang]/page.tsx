@@ -6,7 +6,6 @@ import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
-import ContactSection from "../components/sections/ContactSection";
 import Media from "../components/sections/mediaSection";
 import CompareSection from "../components/sections/CompareSection";
 import HowItWorkBlog from "../components/sections/HowItWorkBlog";
@@ -46,9 +45,7 @@ export default function Home() {
             <FAQSection />
           </section>
 
-          <section id="contact">
-            <ContactSection />
-          </section>
+          {/* Contact moved to dedicated page */}
 
           <section id="media-section">
             <Media />

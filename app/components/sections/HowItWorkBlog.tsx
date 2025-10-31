@@ -1,22 +1,10 @@
 "use client";
 
-import { useRef, useState, useEffect, useMemo } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useMemo, useRef, useEffect, useState } from "react";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import Image from "next/image";
 
 export default function HowItWorkBlog() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  // main sticky state (used instead of JS-fixed to avoid overlap)
-  const [isSticky, setIsSticky] = useState(false);
-  const scrollyRef = useRef<HTMLDivElement | null>(null);
-  const topSentinelRef = useRef<HTMLDivElement | null>(null);
-  const activeIndexRef = useRef<number>(0);
-  const wheelLockRef = useRef<boolean>(false);
-  // whether the top sentinel has been scrolled past (used with activeIndex to decide stickiness)
-  const [topPassed, setTopPassed] = useState(false);
-
   const { getSection, languageFolder } = useTranslate();
   const section = (getSection("blogSection") as any) || {};
   const header = section.header || {};
@@ -25,89 +13,8 @@ export default function HowItWorkBlog() {
     [section.items]
   );
 
-  // Use IntersectionObserver on a top sentinel to toggle `isSticky` only when the
-  // user has scrolled to the section (avoids being sticky on page refresh).
-  useEffect(() => {
-    const sentinel = topSentinelRef.current;
-    if (!sentinel) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const e = entries[0];
-        // rootMargin pushes the trigger down by 200px so sticky only starts after
-        // the section has scrolled near the top (mirrors previous offset)
-        setTopPassed(!e.isIntersecting);
-      },
-      { root: null, rootMargin: "-200px 0px 0px 0px", threshold: 0 }
-    );
-
-    obs.observe(sentinel);
-    return () => obs.disconnect();
-  }, []);
-
-  // Decide actual stickiness: only sticky when we've scrolled past the sentinel
-  // AND we haven't reached the last slide yet. Once the last item is active,
-  // the section should stop being sticky so the parent can continue scrolling.
-  useEffect(() => {
-    const lastIndex = items.length > 0 ? items.length - 1 : 0;
-    setIsSticky(topPassed && activeIndex < lastIndex);
-  }, [topPassed, activeIndex, items.length]);
-
-  const currentStep =
-    items.length > 0
-      ? items[activeIndex] || items[0]
-      : { title: "", description: "" };
-
-  // Keep a ref of activeIndex to use inside wheel handler without stale closures
-  useEffect(() => {
-    activeIndexRef.current = activeIndex;
-  }, [activeIndex]);
-
-  // Mousewheel control: when the pointer is over the scrolly section, use wheel to
-  // advance slides. We only intercept wheel events when there are more slides to
-  // navigate in the scroll direction; otherwise let the page scroll normally.
-  useEffect(() => {
-    const el = scrollyRef.current;
-    if (!el) return;
-
-    const onWheel = (e: WheelEvent) => {
-      if (wheelLockRef.current) return;
-      if (!items || items.length === 0) return;
-
-      const lastIndex = items.length - 1;
-      const delta = e.deltaY;
-      // ignore very small deltas (touchpad noise)
-      if (Math.abs(delta) < 8) return;
-
-      // Scrolling down -> advance slides until last slide, then allow page scroll
-      if (delta > 0) {
-        if (activeIndexRef.current < lastIndex) {
-          e.preventDefault();
-          wheelLockRef.current = true;
-          setActiveIndex((i) => Math.min(i + 1, lastIndex));
-          setTimeout(() => (wheelLockRef.current = false), 600);
-        } else {
-          // at last slide: do not intercept — allow parent to scroll
-        }
-      } else {
-        // Scrolling up -> go to previous slide if possible
-        if (activeIndexRef.current > 0) {
-          e.preventDefault();
-          wheelLockRef.current = true;
-          setActiveIndex((i) => Math.max(i - 1, 0));
-          setTimeout(() => (wheelLockRef.current = false), 600);
-        } else {
-          // at first slide: allow parent to scroll
-        }
-      }
-    };
-
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel as EventListener);
-  }, [items]);
-
   return (
-    <div className="bg-white" ref={scrollyRef}>
+    <div className="bg-white">
       {/* Header */}
       <header className="pt-16 pb-8 transition-all duration-300">
         <div className="max-w-[1440px] mx-auto text-center overflow-x-hidden">
@@ -133,85 +40,152 @@ export default function HowItWorkBlog() {
         </div>
       </header>
 
-      {/* top sentinel: invisible element used to toggle sticky state */}
-      <div ref={topSentinelRef} />
+      {/* Slides container: vertical scroll-snap for swipeable slides */}
+      <section className="max-w-[1440px] mx-auto py-6 px-4">
+        <Slides items={items} languageFolder={languageFolder} />
+      </section>
+    </div>
+  );
+}
 
-      {/* Main Section */}
-      <div
-        className={`max-w-[1440px] mx-auto py-12 ${
-          isSticky ? "sticky top-[200px] z-10" : ""
-        }`}
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[600px]">
-          {/* Text section */}
-          <div className="flex items-center">
-            <div key={activeIndex} className="animate-fade-in max-w-md">
-              <h2 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] leading-tight mb-3 font-sans">
-                {currentStep.title}
-              </h2>
-              <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] leading-relaxed">
-                {currentStep.description}
-              </p>
+function Slides({
+  items,
+  languageFolder,
+}: {
+  items: any[];
+  languageFolder: string;
+}) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  // Observe which slide is mostly visible to update activeIndex
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const slides = Array.from(el.querySelectorAll<HTMLElement>("[data-slide]"));
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            const idx = Number(entry.target.getAttribute("data-index") || 0);
+            setActiveIndex(idx);
+          }
+        });
+      },
+      { root: el, threshold: [0.5] }
+    );
+
+    slides.forEach((s) => obs.observe(s));
+    return () => obs.disconnect();
+  }, [items]);
+
+  // Hide native scrollbars and ensure touch/scroll chaining works so the
+  // user can continue scrolling past the last slide on mobile.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    // Hide scrollbars (Firefox / IE)
+    try {
+      (el.style as any).scrollbarWidth = "none"; // Firefox
+      (el.style as any).msOverflowStyle = "none"; // IE/Edge
+    } catch {}
+
+    // Allow parent scroll when reaching boundaries (scroll chaining)
+    el.style.overscrollBehavior = "auto";
+    el.style.touchAction = "pan-y";
+    el.style.setProperty("-webkit-overflow-scrolling", "touch");
+
+    // Inject a WebKit rule to hide the scrollbar visually
+    const style = document.createElement("style");
+    style.setAttribute("data-hide-scrollbar", "true");
+    style.innerHTML = `#howit-slides::-webkit-scrollbar{display:none;height:0;}
+      #howit-slides{ -webkit-overflow-scrolling: touch; }`;
+    document.head.appendChild(style);
+
+    // assign id so rule applies only here
+    el.id = "howit-slides";
+
+    return () => {
+      document.head.removeChild(style);
+      // cleanup id
+      if (el.id === "howit-slides") el.id = "";
+    };
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="overflow-x-hidden overflow-y-auto snap-y snap-mandatory touch-auto"
+      style={{
+        height: "calc(100vh - 200px)",
+        overflowX: "hidden",
+      }}
+    >
+      {items.map((item: any, idx: number) => {
+        const id = item.id;
+        const sufMap: Record<string, string> = {
+          English: "EN",
+          Khmer: "KM",
+          Chinese: "CN",
+        };
+        const suf = sufMap[languageFolder] || "EN";
+        const imageSrc =
+          item.image ||
+          (item.imageName
+            ? `/images/blog/${id}/${item.imageName}-${suf}.webp`
+            : `/images/blog/${id}/${id}-${suf}.webp`);
+        const isActive = idx === activeIndex;
+        const slideStyle: React.CSSProperties = {
+          transition:
+            "transform 640ms cubic-bezier(.19,.84,.29,1), opacity 420ms ease, box-shadow 560ms ease",
+          // smoother, subtler tilt and movement for a less aggressive flip
+          transform: isActive
+            ? "perspective(1200px) translate3d(0,0,0) rotateX(0deg) scale(1)"
+            : "perspective(1200px) translate3d(0,4px,0) rotateX(2deg) scale(0.998)",
+          transformOrigin: "center top",
+          backfaceVisibility: "hidden",
+          opacity: isActive ? 1 : 0.96,
+          boxShadow: isActive
+            ? "0 20px 40px rgba(16,28,48,0.06)"
+            : "0 6px 14px rgba(16,28,48,0.03)",
+          willChange: "transform, opacity, box-shadow",
+          overflowX: "hidden",
+        };
+
+        return (
+          <article
+            key={id}
+            data-slide
+            data-index={idx}
+            className="snap-start h-[calc(100vh-200px)] flex flex-col lg:flex-row items-center gap-8 p-6 bg-white"
+            style={slideStyle}
+          >
+            <div className="w-full lg:w-1/2 flex items-start">
+              <div className="max-w-xl">
+                <h2 className="text-[24px] md:text-[32px] font-bold text-[#1a1a1a] leading-tight mb-3 font-sans">
+                  {item.title}
+                </h2>
+                <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Image carousel */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              <Carousel
-                axis="vertical"
-                infiniteLoop={false}
-                showThumbs={false}
-                showIndicators={false}
-                showStatus={false}
-                showArrows={false}
-                emulateTouch
-                swipeable
-                autoPlay={false}
-                selectedItem={activeIndex}
-                onChange={(index) => setActiveIndex(index)}
-                dynamicHeight={false}
-                interval={4000}
-              >
-                {items.map((item) => {
-                  const id = item.id;
-                  const sufMap: Record<string, string> = {
-                    English: "EN",
-                    Khmer: "KM",
-                    Chinese: "CN",
-                  };
-                  const suf = sufMap[languageFolder] || "EN";
-                  const imageSrc =
-                    item.image ||
-                    (item.imageName
-                      ? `/images/blog/${id}/${item.imageName}-${suf}.webp`
-                      : `/images/blog/${id}/${id}-${suf}.webp`);
-
-                  return (
-                    <div
-                      key={id}
-                      className="relative h-[600px] flex items-center justify-center p-6 md:p-8 lg:p-10"
-                    >
-                      <Image
-                        src={imageSrc}
-                        alt={item.name || item.title || id}
-                        fill
-                        style={{
-                          objectFit: "contain",
-                          objectPosition: "center",
-                        }}
-                        sizes="(max-width: 1024px) 100vw, 35vw"
-                      />
-                    </div>
-                  );
-                })}
-              </Carousel>
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md h-[420px] md:h-[520px]">
+                <Image
+                  src={imageSrc}
+                  alt={item.name || item.title || id}
+                  fill
+                  style={{ objectFit: "contain", objectPosition: "center" }}
+                  sizes="(max-width: 1024px) 100vw, 35vw"
+                />
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* No dynamic spacer needed: `position: sticky` keeps element in flow and avoids overlap */}
+          </article>
+        );
+      })}
     </div>
   );
 }

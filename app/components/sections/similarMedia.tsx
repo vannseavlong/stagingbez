@@ -27,18 +27,18 @@
 //       {/* </div>  */}
 
 //        <div className="text-left mb-10 gap-1" data-aos="fade-down">
-       
+
 //         <h2 className="lg:text-[24px] text-xl md:text-xl font-bold text-beasy-gradient font-inter  leading-normal tracking-[4px]">
 //           You might also like
 //         </h2>
 //       </div>
-      
+
 // <div
 //        className="
 //           flex md:flex
-//            lg:grid-cols-4 
-//           gap-6 lg:gap-8 md:gap-8 
-//           overflow-x-auto 
+//            lg:grid-cols-4
+//           gap-6 lg:gap-8 md:gap-8
+//           overflow-x-auto
 //           scrollbar-hide
 //         "
 //       >
@@ -76,39 +76,41 @@
 //   );
 // }
 
-
-
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import MediaCard from "../common/mediaCard";
+import { Button } from "../ui/button";
 
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { mediaItems } from "../../../data/mediaItem";
+import { useTranslate } from "@/app/hooks/useTranslate";
+import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 
 export default function SimilarMedia() {
   const [expanded, setExpanded] = useState(false);
   const { currentLanguageCode } = useLanguage();
+  const { t, getSection } = useTranslate();
 
+  const mediaSection = getSection("media") as any;
+  const itemsSource: any[] = Array.isArray(mediaSection?.articles)
+    ? mediaSection.articles
+    : mediaItemsFallback;
 
-
-  const itemsToShow = expanded ? mediaItems : mediaItems.slice(0, 4);
+  const itemsToShow = expanded ? itemsSource : itemsSource.slice(0, 4);
 
   return (
     <section className="bg-white relative min-h-full md:py-5 lg:py-4 py-5">
       {/* Section Heading */}
-     
-       <div className="text-left mb-5 gap-1" data-aos="fade-down">
-       
+
+      <div className="text-left mb-5 gap-1" data-aos="fade-down">
         <h2 className="lg:text-[24px] text-xl md:text-xl font-bold text-beasy-gradient font-inter  leading-normal tracking-[4px]">
           You might also like
         </h2>
       </div>
 
-
       <div
-       className="
+        className="
           flex md:flex
            lg:grid-cols-4 
           gap-6 lg:gap-8 md:gap-8 
@@ -118,8 +120,8 @@ export default function SimilarMedia() {
       >
         {itemsToShow.map((item, index) => (
           <Link
-            key={index}
-            href={`/${currentLanguageCode}/media-detail/${index}`}
+            key={item?.id ?? index}
+            href={`/${currentLanguageCode}/media-detail/${item?.id ?? index}`}
             className="hover:opacity-90 transition flex-shrink-0 w-[80%] sm:w-[60%] md:w-auto"
             data-aos="fade-up"
             data-aos-delay={index * 150}
@@ -132,6 +134,18 @@ export default function SimilarMedia() {
             />
           </Link>
         ))}
+      </div>
+      {/* Toggle Button */}
+      <div className="mt-6 mb-6 flex justify-center">
+        <Button
+          variant="outline"
+          className="px-6 py-2 text-black rounded-[30px]"
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded
+            ? t("media.showLess", "Show Less")
+            : t("media.viewMore", "View More")}
+        </Button>
       </div>
     </section>
   );
