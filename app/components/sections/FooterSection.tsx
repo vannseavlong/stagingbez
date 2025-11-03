@@ -35,12 +35,10 @@ export default function FooterSection() {
 
   return (
     <footer
-      className="text-black font-sans py-20 pb-10 lg:py-20 lg:mt-20 relative overflow-hidden bg-white"
+      className="text-black font-sans py-5 pb-10  relative overflow-hidden bg-white"
       aria-label="Footer section"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-16">
-        {/* separator aligned to container width */}
-        <div className="border-t border-gray-200" />
         <div className="pt-6 grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">
           {/* Column 1: Logo & Company Info */}
           <div className="flex flex-col gap-6">

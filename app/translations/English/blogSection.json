@@ -8,31 +8,37 @@
     {
       "id": "guestMode",
       "title": "Guest Mode",
+      "imageName": "guestMode",
       "description": "Book your cleaning in just a few taps - simple, fast, and hassle-free."
     },
     {
       "id": "allServices",
       "title": "All Services in One Place",
+      "imageName": "allService",
       "description": "Find cleaning, AC service, pest control and more — all from the app."
     },
     {
       "id": "paymentOptions",
       "title": "Choose Way to Pay",
+      "imageName": "payment",
       "description": "Pay you way - bWallet, ABAKHQR, card, or cash on delivery. Every payment is secure, so you can book with confidence."
     },
     {
       "id": "reschedule",
       "title": "Easy Rescheduling",
+      "imageName": "reschedule",
       "description": "Change your booking in seconds without hassle."
     },
     {
       "id": "dateTime",
       "title": "Pick Date & Time",
+      "imageName": "dateTime",
       "description": "Choose a slot that works for you — morning, afternoon or evening."
     },
     {
       "id": "rating",
       "title": "Trusted Cleaners",
+      "imageName": "rating",
       "description": "Rate and choose our top-rated professionals for consistent results."
     }
   ]

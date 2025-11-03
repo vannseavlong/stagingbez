@@ -6,13 +6,22 @@ import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
-import ContactSection from "../components/sections/ContactSection";
-// import CompareSection from "../components/sections/CompareSection";
-// import HowItWorkBlog from "../components/sections/HowItWorkBlog";
+// import Media from "../components/sections/mediaSection";
+import CompareSection from "../components/sections/CompareSection";
+import HowItWorkBlog from "../components/sections/HowItWorkBlog";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen">
+    <div className="relative font-sans min-h-screen">
+      {/* Background container with max-width */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16">
+        {/* Mobile */}
+        <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
+        {/* Tablet */}
+        <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
+        {/* Desktop */}
+        <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
+      </div>
       <main>
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
@@ -20,40 +29,59 @@ export default function Home() {
         </section>
 
         {/* The rest of the page is constrained to a centered container */}
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-16">
+        <ContainWrapper>
           <section id="service">
             <ServiceSection />
           </section>
+        </ContainWrapper>
 
-          <section id="why-us">
-            <AboutUsSection />
-          </section>
+        <section id="why-us">
+          <AboutUsSection />
+        </section>
 
-          {/* <section id="compare">
+        <ContainWrapper>
+          <section id="compare">
             <CompareSection />
           </section>
-
+        </ContainWrapper>
+        <ContainWrapper>
           <section id="blog">
             <HowItWorkBlog />
-          </section> */}
-
+          </section>
+        </ContainWrapper>
+        <ContainWrapper>
           <section id="testimonials">
             <TestimonialSection />
           </section>
-
+        </ContainWrapper>
+        <ContainWrapper>
           <section id="faq">
             <FAQSection />
           </section>
+        </ContainWrapper>
 
-          <section id="contact">
-            <ContactSection />
-          </section>
+        {/* Contact moved to dedicated page */}
 
+        {/* <section id="media-section">
+            <Media />
+          </section> */}
+        {/* Parallax Image Section with max-width constraint */}
+        <ContainWrapper>
           <section id="install">
             <InstallSection />
           </section>
-        </div>
+        </ContainWrapper>
       </main>
     </div>
   );
 }
+
+const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="bg-white">
+      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
+        {children}
+      </div>
+    </div>
+  );
+};

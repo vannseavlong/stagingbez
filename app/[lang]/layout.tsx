@@ -21,21 +21,40 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "km" }, { lang: "zh" }];
 }
 
-export default async function LangLayout(props: unknown) {
-  const { children } = props as { children: React.ReactNode };
+interface LangLayoutProps {
+  children: React.ReactNode;
+  // `params` can be a plain object or a Promise resolving to the object
+  // depending on how Next infers types for dynamic layouts. Accept both to
+  // satisfy the compiler's union mismatch.
+  params: { lang: string } | Promise<{ lang: string }>;
+}
+
+// The layout may receive `params` typed as a Promise; await it to satisfy
+// Next.js's requirement to resolve dynamic params before accessing properties.
+export default async function LangLayout({
+  children,
+  params,
+}: LangLayoutProps) {
+  // Awaiting works for both a plain object and a Promise of the object.
+  const resolvedParams = await params;
+  const lang = (resolvedParams as any)?.lang ?? "en";
+  const fontWrapperClass = lang === "km" ? "font-kantumruy" : "font-inter";
+
   return (
     <LanguageProvider>
-      <SiteNav />
-      <>
-        {children}
-        {/* Analytics provider records UTM/referrer and emits page_view events */}
-        <Suspense fallback={null}>
-          <AnalyticsProviderClient />
-        </Suspense>
-        {/* Telegram chat widget (client-only) */}
-        <TelegramChatButton />
-      </>
-      <SiteFooter />
+      <div className={fontWrapperClass}>
+        <SiteNav />
+        <>
+          {children}
+          {/* Analytics provider records UTM/referrer and emits page_view events */}
+          <Suspense fallback={null}>
+            <AnalyticsProviderClient />
+          </Suspense>
+          {/* Telegram chat widget (client-only) */}
+          <TelegramChatButton />
+        </>
+        <SiteFooter />
+      </div>
     </LanguageProvider>
   );
 }

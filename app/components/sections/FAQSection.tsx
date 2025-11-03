@@ -114,7 +114,7 @@ const FAQSection: React.FC = () => {
         <div className="text-center mb-20 md:mb-24">
           <div className="flex items-center justify-center mb-4">
             <span
-              className="text-[14px] md:text-[16px] font-bold uppercase leading-[32px] tracking-wide font-sans"
+              className="text-[16px] md:text-[16px] font-bold uppercase leading-[32px] tracking-wide font-sans"
               style={{
                 background: "linear-gradient(90deg,#1B4CFA,#102C90)",
                 WebkitBackgroundClip: "text",
@@ -124,7 +124,7 @@ const FAQSection: React.FC = () => {
               {displayData.header.subtitle}
             </span>
           </div>
-          <h2 className="text-[24px] md:text-[32px] font-extrabold text-[#1A1A1A] leading-tight font-sans">
+          <h2 className="text-[24px] md:text-[32px] font-bold text-[#1A1A1A] leading-tight font-sans">
             {displayData.header.title}
           </h2>
           <div className="mx-auto mt-6 max-w-xl px-4">
@@ -178,10 +178,13 @@ const FAQSection: React.FC = () => {
                   {faqsToShow.length > 0 ? (
                     faqsToShow.map((faq: FAQTranslationItem, index: number) => {
                       const isOpen = openFAQs.includes(index);
+                      const isLast = index === faqsToShow.length - 1;
                       return (
                         <div
                           key={faq?.id || index}
-                          className="border-b border-gray-200 pb-4"
+                          className={`pb-4 ${
+                            isLast ? "" : "border-b border-gray-200"
+                          }`}
                         >
                           <button
                             className="w-full flex items-center justify-between gap-4 text-left bg-transparent border-0 p-0 cursor-pointer"

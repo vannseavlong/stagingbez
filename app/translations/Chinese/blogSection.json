@@ -8,31 +8,37 @@
     {
       "id": "guestMode",
       "title": "访客模式",
+      "imageName": "guestMode",
       "description": "仅需几步即可预订，简单快捷。"
     },
     {
       "id": "allServices",
       "title": "一站式服务",
+      "imageName": "allService",
       "description": "清洁、空调、除虫等服务，一应俱全。"
     },
     {
       "id": "paymentOptions",
       "title": "多种支付方式",
+      "imageName": "payment",
       "description": "支持银行卡、移动钱包或现金支付。"
     },
     {
       "id": "reschedule",
       "title": "轻松改期",
+      "imageName": "reschedule",
       "description": "随时更改预订，操作简单。"
     },
     {
       "id": "dateTime",
       "title": "选择日期与时间",
+      "imageName": "dateTime",
       "description": "选择适合您的上午、下午或晚上时段。"
     },
     {
       "id": "rating",
       "title": "信赖的服务人员",
+      "imageName": "rating",
       "description": "为您提供高评分的专业清洁人员。"
     }
   ]

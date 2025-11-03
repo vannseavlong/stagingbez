@@ -34,7 +34,7 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
               <h3 className="text-[18px] font-bold text-[#1A1A1A] mb-3 font-sans">
                 {item.title}
               </h3>
-              <p className="text-[#3D3D3D] text-sm leading-relaxed mx-auto max-w-[260px] h-[64px]">
+              <p className="text-[#3D3D3D] text-sm leading-relaxed mx-auto max-w-[260px] h-[80px]">
                 {item.description}
               </p>
             </div>

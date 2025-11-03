@@ -1,0 +1,58 @@
+{
+  "header": {
+    "subtitle": "媒體",
+    "title": "閱讀我們的最新文章"
+  },
+  "articles": [
+    {
+      "id": 1,
+      "image": "/images/media/makro/m1.webp",
+      "images": [
+        "/images/media/makro/m1.webp",
+        "/images/media/makro/m2.webp",
+        "/images/media/makro/m3.webp",
+        "/images/media/makro/m4.webp",
+        "/images/media/makro/m5.webp",
+        "/images/media/makro/m6.webp",
+        "/images/media/makro/m7.webp",
+        "/images/media/makro/m8.webp"
+      ],
+      "date": "May 24-25 2025",
+      "title": "bEasy 在 Makro 的活動",
+      "description": "感謝您參觀位於 Makro Sen Sok 的 bEasy 展位。2025 年 5 月 24–25 日，我們的銷售與行銷團隊在 Makro Sen Sok 前設置了展位（15:00–21:00），向社區積極介紹並展示 bEasy 應用。即使遇到大雨，許多來賓仍嘗試了應用、探索服務並分享他們的體驗，這些反饋對我們優化使用者體驗非常重要。"
+    },
+    {
+      "id": 2,
+      "image": "/images/media/axis/a1.webp",
+      "images": [
+        "/images/media/axis/a1.webp",
+        "/images/media/axis/a2.webp",
+        "/images/media/axis/a3.webp",
+        "/images/media/axis/a4.webp",
+        "/images/media/axis/a5.webp",
+        "/images/media/axis/a6.webp",
+        "/images/media/axis/a7.webp",
+        "/images/media/axis/a8.webp"
+      ],
+      "date": "May 17 2025",
+      "title": "bEasy 應用在 AXIS Residence 的推廣",
+      "description": "bEasy 將多種必要服務整合到一個平台上——無論您需要清潔、搬家或美容護理，都能輕鬆下單。只要下載應用，您即可瀏覽服務、下單並由服務提供者上門。上週在 AXIS Residence，我們的團隊向住戶展示應用，讓他們即時體驗到預訂服務的便捷。"
+    },
+    {
+      "id": 3,
+      "image": "/images/media/peng/p1.webp",
+      "images": [
+        "/images/media/peng/p1.webp",
+        "/images/media/peng/p2.webp",
+        "/images/media/peng/p3.webp",
+        "/images/media/peng/p4.webp",
+        "/images/media/peng/p5.webp",
+        "/images/media/peng/p6.webp",
+        "/images/media/peng/p7.webp"
+      ],
+      "date": "17 May 2025",
+      "title": "bEasy 在 Borey Peng Huoth Boeung Snor 的活動",
+      "description": "以下為 Suntel Technology Cambodia 在 Borey Peng Huoth Boeung Snor 舉辦國際母親節活動時展位的精彩片段（5 月 10–11 日）。活動期間，我們向社區介紹並示範 bEasy 應用，來賓還享用了免費冰淇淋並體驗免費美甲，使活動既有趣又具教育意義。"
+    }
+  ]
+}
