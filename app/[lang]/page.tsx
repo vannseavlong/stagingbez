@@ -13,14 +13,14 @@ import HowItWorkBlog from "../components/sections/HowItWorkBlog";
 export default function Home() {
   return (
     <div className="relative font-sans min-h-screen">
-      {/* <div className="absolute inset-0 w-full h-[250px] md:h-[400px] top-0 left-0 flex justify-center -z-10"> */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background container with max-width */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16">
         {/* Mobile */}
         <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
         {/* Tablet */}
-        <div className="hidden md:block lg:hidden bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
+        <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
         {/* Desktop */}
-        <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-screen"></div>
+        <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
       </div>
       <main>
         {/* Full-width hero stays unchanged so it can span the viewport */}
