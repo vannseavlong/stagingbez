@@ -178,10 +178,13 @@ const FAQSection: React.FC = () => {
                   {faqsToShow.length > 0 ? (
                     faqsToShow.map((faq: FAQTranslationItem, index: number) => {
                       const isOpen = openFAQs.includes(index);
+                      const isLast = index === faqsToShow.length - 1;
                       return (
                         <div
                           key={faq?.id || index}
-                          className="border-b border-gray-200 pb-4"
+                          className={`pb-4 ${
+                            isLast ? "" : "border-b border-gray-200"
+                          }`}
                         >
                           <button
                             className="w-full flex items-center justify-between gap-4 text-left bg-transparent border-0 p-0 cursor-pointer"
