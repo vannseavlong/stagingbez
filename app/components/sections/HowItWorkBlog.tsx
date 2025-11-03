@@ -17,7 +17,7 @@ export default function HowItWorkBlog() {
   return (
     <div className="bg-white">
       {/* Centered container to match other sections */}
-      <div className="max-w-[1440px] mt-16">
+      <div className="max-w-[1440px] pt-16">
         {/* Header */}
         <header className="pt-0 pb-8 transition-all duration-300 text-center overflow-x-hidden">
           <div>

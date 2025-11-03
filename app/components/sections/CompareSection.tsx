@@ -15,7 +15,7 @@ export default function CompareSection() {
   const afterImg = "/images/compare/_After_.webp";
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 mt-[50px]">
+    <section className="w-full bg-white py-12 md:py-16 pt-[50px]">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 items-center gap-12">
           {/* Left: header (on desktop left; on mobile/tablet shown on top) */}
