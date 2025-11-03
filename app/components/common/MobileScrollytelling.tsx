@@ -95,18 +95,18 @@ export function MobileScrollytelling({
           <div className="w-full max-w-3xl text-center">
             {/* Render only the active slide's text to ensure text always matches the active image index */}
             <div className="transition-all duration-300 ease-in-out opacity-100 translate-y-0">
-              <h3 className="text-lg font-semibold text-slate-900 mb-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
                 {slides[activeIndex]?.title}
               </h3>
-              <p className="text-sm text-slate-700 mb-16">
+              <p className="text-sm text-slate-700 mb-8">
                 {slides[activeIndex]?.description}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Image area with slightly reduced fixed height to shorten scroll footprint */}
-        <div className="relative w-full h-[64vh]">
+        {/* Image area - balanced size with shorter scroll steps */}
+        <div className="relative w-full h-[50vh]">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -131,17 +131,17 @@ export function MobileScrollytelling({
         </div>
       </div>
 
-      {/* Sentinels used for scroll detection — each sentinel is positioned near viewport center */}
+      {/* Sentinels used for scroll detection — very short steps for quick transitions */}
       <div>
         {slides.map((_, index) => (
-          // Shorter sentinel blocks so the user reaches the next slide sooner
-          <div key={index} className="h-[55vh]">
+          // Very short sentinel blocks for minimal scroll distance between slides
+          <div key={index} className="h-[30vh]">
             <div
               ref={(el) => {
                 sentinelRefs.current[index] = el;
               }}
-              // position sentinel a bit above center to activate earlier
-              className="w-full h-px mt-[28vh]"
+              // position sentinel high to activate very early
+              className="w-full h-px mt-[15vh]"
               aria-hidden
             />
           </div>
