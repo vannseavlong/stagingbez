@@ -45,7 +45,7 @@ const Para = () => {
         </div>
       </div>
       {/* Heading + Description */}
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-8 md:gap-6 text-left">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-8 md:gap-6 text-left mb-16">
         <h1 className="w-full lg:w-[420px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-wide leading-snug font-sans">
           {aboutSection.header?.title}
         </h1>
@@ -55,16 +55,16 @@ const Para = () => {
           </p>
         </div>
       </div>
-      {/* Parallax Image Section */}
-      <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden">
-        {/* Background layer (relative to this section only) */}
-        <div className="absolute inset-0">
+      {/* Parallax Image Section with max-width constraint */}
+      <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden flex justify-center">
+        {/* Background layer with max-width 1440px */}
+        <div className="absolute inset-0 max-w-[1440px] mx-auto left-0 right-0">
           {/* Mobile */}
           <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center h-full w-full"></div>
           {/* Tablet */}
           <div className="hidden md:block lg:hidden bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
           {/* Desktop */}
-          <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat  bg-center bg-contain bg-fixed h-full w-full"></div>
+          <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
         </div>
       </div>
 
