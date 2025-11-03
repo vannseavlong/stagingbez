@@ -23,8 +23,13 @@ export default function InstallSection() {
     }) || {};
 
   return (
-    <section className="bg-white border-t border-gray-200 py-16">
-      <div className=" mx-auto">
+    <section className="bg-white py-16">
+      {/* Border-top with max-width constraint */}
+      <div className="max-w-[1440px] mx-auto mb-16">
+        <div className="border-t border-gray-200" />
+      </div>
+
+      <div className="mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left: Title / Description / Buttons */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
@@ -137,6 +142,11 @@ export default function InstallSection() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Border-bottom with max-width constraint at the end of section */}
+      <div className="max-w-[1440px] mx-auto mt-16">
+        <div className="border-b border-gray-200" />
       </div>
     </section>
   );
