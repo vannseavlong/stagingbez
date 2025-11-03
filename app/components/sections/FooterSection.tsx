@@ -59,8 +59,8 @@ export default function FooterSection() {
             <h3 className="text-sm font-medium text-bllack mt-4 ">
               {socialLabel}
             </h3>
-            <div className="flex flex-row md:flex-row justify-start items-center gap-6">
-              <div className="flex space-x-6 ">
+            <div className="flex flex-row md:flex-row justify-left md:justify-start items-center gap-6">
+              <div className="flex space-x-3 md:space-x-6 ">
                 <a
                   href="https://t.me/bEasy_Cs"
                   aria-label="Telegram"
