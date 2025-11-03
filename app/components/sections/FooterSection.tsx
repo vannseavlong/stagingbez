@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTiktok, FaTelegram } from "react-icons/fa";
 
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { useTranslate } from "@/app/hooks/useTranslate";
@@ -65,17 +64,23 @@ export default function FooterSection() {
                 <a
                   href="https://t.me/bEasy_Cs"
                   aria-label="Telegram"
-                  className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
+                  className="flex justify-center items-center w-12 h-12 hover:opacity-80 transition-all duration-200"
                   onClick={() =>
                     handleSocialClick("Telegram", "https://t.me/bEasy_Cs")
                   }
                 >
-                  <FaTelegram size={16} />
+                  <Image
+                    src="/images/footer_icon/telegram.png"
+                    alt="Telegram"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </a>
                 <a
                   href="https://www.facebook.com/bEasy.apps"
                   aria-label="Facebook"
-                  className="flex justify-center items-center w-12 h-12 rounded-full border bg-white text-black hover:bg-gray-300 transition-all duration-200"
+                  className="flex justify-center items-center w-12 h-12 hover:opacity-80 transition-all duration-200"
                   onClick={() =>
                     handleSocialClick(
                       "Facebook",
@@ -83,13 +88,19 @@ export default function FooterSection() {
                     )
                   }
                 >
-                  <FaFacebookF size={16} />
+                  <Image
+                    src="/images/footer_icon/facebook.png"
+                    alt="Facebook"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </a>
 
                 <a
                   href="https://www.tiktok.com/@beasy_kh?_t=ZS-90hWgLOiOZu&_r=1"
                   aria-label="TikTok"
-                  className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
+                  className="flex justify-center items-center w-12 h-12 hover:opacity-80 transition-all duration-200"
                   onClick={() =>
                     handleSocialClick(
                       "TikTok",
@@ -97,12 +108,18 @@ export default function FooterSection() {
                     )
                   }
                 >
-                  <FaTiktok size={16} />
+                  <Image
+                    src="/images/footer_icon/tiktok.png"
+                    alt="TikTok"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </a>
                 <a
                   href="https://www.instagram.com/beasy.cambodia?igsh=MTB4Nm82bjN1enl2YQ=="
                   aria-label="Instagram"
-                  className="flex justify-center items-center w-12 h-12 rounded-full bg-white border text-black hover:bg-gray-300 transition-all duration-200"
+                  className="flex justify-center items-center w-12 h-12 hover:opacity-80 transition-all duration-200"
                   onClick={() =>
                     handleSocialClick(
                       "Instagram",
@@ -110,7 +127,32 @@ export default function FooterSection() {
                     )
                   }
                 >
-                  <FaInstagram size={16} />
+                  <Image
+                    src="/images/footer_icon/instagram.png"
+                    alt="Instagram"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                </a>
+                <a
+                  href="https://www.xiaohongshu.com/user/profile/68086663000000000d0099d2?xsec_token=YBHcAGxILC4VcSrFPUH1q1K6H17pJXIiIR78VD3yc0SWc%3D&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODk5MEhHPTk2NzUyOTgwNjdJOTg7OTpB&apptime=1762182553&share_id=d8f329dda0474128add3e2280ff373d3&share_channel=copy_link"
+                  aria-label="RedNote"
+                  className="flex justify-center items-center w-12 h-12 hover:opacity-80 transition-all duration-200"
+                  onClick={() =>
+                    handleSocialClick(
+                      "RedNote",
+                      "https://www.xiaohongshu.com/user/profile/68086663000000000d0099d2"
+                    )
+                  }
+                >
+                  <Image
+                    src="/images/footer_icon/xiaohongshu.png"
+                    alt="RedNote"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
                 </a>
               </div>
             </div>
