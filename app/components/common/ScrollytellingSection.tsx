@@ -1,63 +1,43 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
 interface ScrollytellingItem {
   title: string;
   description: string;
   imageUrl: string;
 }
 
-const scrollytellingData: ScrollytellingItem[] = [
-  {
-    title: "Mountains",
-    description:
-      "Towering peaks pierce the clouds, their snow-capped summits gleaming in the sunlight. These ancient giants stand as silent witnesses to the passage of time, offering breathtaking vistas and challenging adventures to those who dare to explore their heights.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1604223190546-a43e4c7f29d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwxfHx8fDE3NjE4NjkyNjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-  {
-    title: "Ocean",
-    description:
-      "The rhythmic dance of waves against the shore creates a timeless symphony. Deep blue waters stretch endlessly to the horizon, home to countless mysteries and teeming with life beneath the surface. The ocean's power and beauty inspire wonder and respect.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1514747975201-4715db583da9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHdhdmVzfGVufDF8fHx8MTc2MTg0MTExMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-  {
-    title: "Forest",
-    description:
-      "Sunlight filters through a canopy of emerald leaves, creating a cathedral of natural beauty. The forest floor is a tapestry of moss, ferns, and fallen leaves. Here, life flourishes in countless forms, each playing its part in the delicate balance of nature's ecosystem.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1759066914561-c1bde5bc924c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBuYXR1cmV8ZW58MXx8fHwxNzYxNzk1NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-  {
-    title: "Desert",
-    description:
-      "Golden sands stretch endlessly beneath a vast sky painted in hues of orange and purple. The desert is a place of extremes, where scorching days give way to cool nights. In this seemingly barren landscape, life adapts and thrives in remarkable ways.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1614935981447-893ce3858657?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBzdW5zZXR8ZW58MXx8fHwxNzYxODQ5NTAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-];
-
 export function ScrollytellingSection({
   items,
 }: {
-  items?: ScrollytellingItem[];
+  items: ScrollytellingItem[];
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const data = items && items.length > 0 ? items : scrollytellingData;
-
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const isAutoScrollRef = useRef<boolean>(false);
+  const data: ScrollytellingItem[] = items;
   useEffect(() => {
     const sections = sectionRefs.current.slice();
     const observers = sections.map((section, index) => {
       if (!section) return null;
-
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              // avoid triggering auto-scroll when we already initiated it
+              if (!isAutoScrollRef.current) {
+                isAutoScrollRef.current = true;
+                try {
+                  // smooth center this section
+                  (sections[index] as HTMLDivElement).scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                } catch {}
+                // release after animation time
+                setTimeout(() => (isAutoScrollRef.current = false), 700);
+              }
               setActiveIndex(index);
             }
           });
@@ -69,11 +49,9 @@ export function ScrollytellingSection({
           rootMargin: "-30% 0px -30% 0px",
         }
       );
-
       observer.observe(section);
       return observer;
     });
-
     return () => {
       observers.forEach((observer, index) => {
         if (observer && sections[index]) {
@@ -86,21 +64,75 @@ export function ScrollytellingSection({
       });
     };
   }, []);
+  // When the scrollytelling container first enters the viewport,
+  // make sure the initial text step is centered (so text appears in middle)
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const onEnter = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const first = sectionRefs.current[0];
+          if (first && typeof first.scrollIntoView === "function") {
+            if (!isAutoScrollRef.current) {
+              isAutoScrollRef.current = true;
+              try {
+                first.scrollIntoView({ behavior: "smooth", block: "center" });
+              } catch {}
+              setTimeout(() => (isAutoScrollRef.current = false), 700);
+            }
+            setActiveIndex(0);
+          }
+        }
+      });
+    };
 
+    // If the container is already visible on mount, center the first step immediately.
+    // Wait for refs to be populated (retry a few times) because refs may not be ready
+    // on the first paint.
+    const tryCenterFirst = (attempt = 0) => {
+      const first = sectionRefs.current[0];
+      if (first && typeof first.scrollIntoView === "function") {
+        try {
+          first.scrollIntoView({ behavior: "auto", block: "center" });
+        } catch {}
+        setActiveIndex(0);
+        return;
+      }
+      if (attempt < 5) {
+        setTimeout(() => tryCenterFirst(attempt + 1), 100);
+      }
+    };
+
+    try {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        tryCenterFirst();
+      }
+    } catch {}
+
+    const io = new IntersectionObserver(onEnter, { threshold: 0.2 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   return (
     <div className="relative min-h-screen from-slate-50 to-slate-100">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left side - Scrolling text content */}
           {/* Reduced vertical spacing and shorter panels so each step is reached sooner */}
-          <div className="space-y-12 lg:space-y-16">
+          {/* Add top padding so first item starts lower, preventing sticky overlap */}
+          <div
+            ref={containerRef}
+            className="space-y-12 lg:space-y-16 lg:pt-0 pb-32 lg:pb-40 min-[1200px]:pb-44 min-[1440px]:pb-48"
+          >
             {data.map((item, index) => (
               <div
                 key={index}
                 ref={(el) => {
                   sectionRefs.current[index] = el;
                 }}
-                className="min-h-[60vh] lg:min-h-[50vh] flex items-center"
+                className="min-h-[60vh] lg:min-h-[80vh] min-[1200px]:min-h-[75vh] flex items-center"
               >
                 <div
                   className={`transition-all duration-700 ${
@@ -119,10 +151,10 @@ export function ScrollytellingSection({
               </div>
             ))}
           </div>
-
           {/* Right side - Sticky image container */}
           <div className="hidden lg:block">
-            <div className="sticky top-35 h-[80vh] flex items-center justify-center">
+            {/* Vertically center using top-1/2 + -translate-y-1/2 so it's always middle-y */}
+            <div className="sticky py-[50px] top-1/2 -translate-y-1/2 h-[80vh] min-[1200px]:h-[68vh] flex items-center justify-center">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 {data.map((item, index) => (
                   <div
@@ -143,7 +175,6 @@ export function ScrollytellingSection({
                     <div className="absolute inset-0" />
                   </div>
                 ))}
-
                 {/* Image indicator */}
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
                   {data.map((_, index) => (
@@ -160,7 +191,6 @@ export function ScrollytellingSection({
               </div>
             </div>
           </div>
-
           {/* Mobile view - images inline */}
           <div className="lg:hidden space-y-8">
             {data.map((item, index) => (

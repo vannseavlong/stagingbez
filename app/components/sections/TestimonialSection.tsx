@@ -85,6 +85,13 @@ function VideoRow() {
       videoId: "xq0WCurantk",
       videoSi: "",
     },
+    // User-requested Shorts video
+    {
+      img: "/images/testimonial/FreshNews.webp",
+      caption: t("testimonial.captions.short_requested", "Fresh News"),
+      videoId: "ssgbc1iYKcQ",
+      videoSi: "",
+    },
   ];
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [centerIndex, setCenterIndex] = useState<number>(1); // focus middle by default (index 1 = Willow Coffee)

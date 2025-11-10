@@ -1,0 +1,61 @@
+{
+  "id": 6,
+  "banner": {
+    "title": "软垫家具清洁服务",
+    "description": "使用 bEasy 的软垫清洁服务翻新您的家具——我们去除污渍、灰尘和过敏原，让您的家居更清新。",
+    "landscape": "/images/hero/PC_Web_Luxury_Eng.webp",
+    "portrait": "/images/hero/Mobile_Luxury_EN.webp",
+    "downloadButton": true
+  },
+  "taskInfo": {
+    "imageSrc": "/images/services/uphol.webp",
+    "title": "什么是软垫家具清洁？",
+    "description": "软垫家具清洁是去除沙发、椅子和床垫等软垫家具上的污垢、污渍、过敏原和其他污染物​​的过程。随着时间的推移，软垫会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，影响家具的外观和卫生。专业的软垫清洁服务使用专用设备和清洁剂对您的家具进行深度清洁和焕新，有助于延长其使用寿命并改善室内空气质量。",
+    "subtitle": "操作步骤信息"
+  },
+  "taskList": {
+    "items": [
+      "吸尘所有沙发表面",
+      "在所有沙发表面喷洒专用清洁剂",
+      "使用刷子去除污渍和污垢",
+      "吸走残留物",
+      "冲洗并再次吸尘",
+      "吸干",
+      "整理工作区域"
+    ]
+  },
+  "serviceType": {
+    "subtitle": "服务价格",
+    "title": "寻找您的完美方案",
+    "items": [
+      {
+        "key": "Sofa",
+        "description": "沙发 (毛毡/布艺)",
+        "priceText": "起价：",
+        "price": "$15",
+        "imageSrc": "/images/serviceDetail/sofa.webp"
+      },
+      {
+        "key": "Rug",
+        "description": "小地毯/地垫",
+        "priceText": "起价：",
+        "price": "$15",
+        "imageSrc": "/images/serviceDetail/rug.webp"
+      },
+      {
+        "key": "Carpet",
+        "description": "地毯 (满铺)",
+        "priceText": "起价：",
+        "price": "$87",
+        "imageSrc": "/images/serviceDetail/carpet.webp"
+      },
+      {
+        "key": "Mattress",
+        "description": "床垫",
+        "priceText": "起价：",
+        "price": "$75",
+        "imageSrc": "/images/serviceDetail/mattress.webp"
+      }
+    ]
+  }
+}
