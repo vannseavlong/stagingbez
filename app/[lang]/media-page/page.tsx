@@ -1,15 +1,16 @@
 "use client";
 
-import HeroSection from "../components/sections/HeroSection";
-import InstallSection from "../components/sections/InstallAppSection";
-import FAQSection from "../components/sections/FAQSection";
-import ServiceSection from "../components/sections/ServiceSection";
-import AboutUsSection from "../components/sections/AboutUsSection";
-import TestimonialSection from "../components/sections/TestimonialSection";
-import CompareSection from "../components/sections/CompareSection";
-import HowItWorkBlog from "../components/sections/HowItWorkBlog";
+import AboutUsHero from "@/app/components/sections/AboutUsHero";
+import AboutUsSection from "@/app/components/sections/AboutUsSection";
+import CompareSection from "@/app/components/sections/CompareSection";
+import FAQSection from "@/app/components/sections/FAQSection";
+import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
+import InstallSection from "@/app/components/sections/InstallAppSection";
+import Media from "@/app/components/sections/mediaSection";
 
-export default function Home() {
+import TestimonialSection from "@/app/components/sections/TestimonialSection"
+
+export default function MediaPage() {
   return (
     <div className="relative font-sans min-h-screen">
       {/* Background container with max-width */}
@@ -24,12 +25,18 @@ export default function Home() {
       <main>
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
-          <HeroSection />
+          <AboutUsHero
+           backgroundMobile="/images/hero/About_Us_Hero_Tablet.webp"
+            backgroundTablet="/images/hero/About_Us_Hero_Tablet.webp"
+            backgroundDesktop="/images/hero/About_Us_Hero.webp"
+
+            title="Media"
+          />
         </section>
-        {/* The rest of the page is constrained to a centered container */}
+
         <ContainWrapper>
-          <section id="service">
-            <ServiceSection />
+          <section id="media">
+            <Media />
           </section>
         </ContainWrapper>
 
@@ -58,12 +65,7 @@ export default function Home() {
           </section>
         </ContainWrapper>
 
-        {/* Contact moved to dedicated page */}
 
-        {/* <section id="media-section">
-            <Media />
-          </section> */}
-        {/* Parallax Image Section with max-width constraint */}
         <ContainWrapper>
           <section id="install">
             <InstallSection />
