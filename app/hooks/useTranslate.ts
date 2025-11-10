@@ -56,6 +56,9 @@ import mediaZh from "@/app/translations/Chinese/media.json";
 import telegramEn from "@/app/translations/English/telegram.json";
 import telegramKm from "@/app/translations/Khmer/telegram.json";
 import telegramZh from "@/app/translations/Chinese/telegram.json";
+import serviceDetailEn from "@/app/translations/English/serviceDetail.json";
+import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
+import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
@@ -74,6 +77,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     contact: (contactEn as unknown as TranslationObject) || {},
     install: (installEn as unknown as TranslationObject) || {},
     footer: (footerEn as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailEn || {},
   },
   Khmer: {
     navbar: navbarKm,
@@ -89,6 +93,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     contact: (contactKm as unknown as TranslationObject) || {},
     install: (installKm as unknown as TranslationObject) || {},
     footer: (footerKm as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailKm || {},
   },
   Chinese: {
     navbar: navbarZh,
@@ -104,6 +109,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     contact: (contactZh as unknown as TranslationObject) || {},
     install: (installZh as unknown as TranslationObject) || {},
     footer: (footerZh as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailZh || {},
   },
 };
 

@@ -1,0 +1,61 @@
+{
+  "id": 6,
+  "banner": {
+    "title": "Upholstery Cleaning Service",
+    "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
+    "landscape": "/images/serviceDetail/PC_Uphold.webp",
+    "portrait": "/images/serviceDetail/Mobile_Uphold.webp",
+    "downloadButton": true
+  },
+  "taskInfo": {
+    "imageSrc": "/images/services/uphol.webp",
+    "title": "What is Upholstery Cleaning?",
+    "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
+    "subtitle": "Information of procedure"
+  },
+  "taskList": {
+    "items": [
+      "Vacuum all sofa surfaces",
+      "Spray specialized cleaning solution on all sofa surfaces",
+      "Use scrubber to remove stains and grime",
+      "Vacuum remaining residue",
+      "Rinse and vacuum again",
+      "Vacuum dry",
+      "Tidy work area"
+    ]
+  },
+  "serviceType": {
+    "subtitle": "SERVICE PRICES",
+    "title": "Find Your Perfect Plan",
+    "items": [
+      {
+        "key": "Sofa",
+        "description": "Sofa (Felt/Fabric)",
+        "priceText": "Start From:",
+        "price": "$15",
+        "imageSrc": "/images/serviceDetail/sofa.webp"
+      },
+      {
+        "key": "Rug",
+        "description": "Rug",
+        "priceText": "Start From:",
+        "price": "$15",
+        "imageSrc": "/images/serviceDetail/rug.webp"
+      },
+      {
+        "key": "Carpet",
+        "description": "Carpet (wall to wall)",
+        "priceText": "Start From:",
+        "price": "$87",
+        "imageSrc": "/images/serviceDetail/carpet.webp"
+      },
+      {
+        "key": "Mattress",
+        "description": "Bed Mattress",
+        "priceText": "Start From:",
+        "price": "$75",
+        "imageSrc": "/images/serviceDetail/mattress.webp"
+      }
+    ]
+  }
+}

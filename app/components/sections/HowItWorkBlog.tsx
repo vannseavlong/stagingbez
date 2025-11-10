@@ -19,7 +19,7 @@ export default function HowItWorkBlog() {
       {/* Centered container to match other sections */}
       <div className="max-w-[1440px] pt-16">
         {/* Header */}
-        <header className="pt-0 pb-8 transition-all duration-300 text-center overflow-x-hidden">
+        <header className="pt-0 pb-8 mb-0 lg:mb-20 min-[1200px]:mb-24 min-[1440px]:mb-28 transition-all duration-300 text-center overflow-x-hidden">
           <div>
             <div
               className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
@@ -44,7 +44,8 @@ export default function HowItWorkBlog() {
         </header>
 
         {/* Scrollytelling body (desktop and mobile variants) */}
-        <section className="py-6">
+        {/* Add top padding to prevent sticky mock from overlapping header */}
+        <section className="py-6 pt-0 lg:pt-32">
           {/* Prepare slides data once */}
           {(() => {
             const slides = items.map((item: any) => {
