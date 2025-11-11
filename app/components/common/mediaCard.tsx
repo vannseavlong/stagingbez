@@ -67,7 +67,7 @@ export default function MediaCard({
       <CardFooter className="p-0">
         <button
           type="button"
-          className="flex items-center text-[14px] gap-2 text-custom-gradient hover:text-blue-900 transition-colors font-medium"
+          className="flex items-center text-[14px] gap-2 view-more transition-colors font-medium"
         >
           {"Read More"}
           {/* <img 

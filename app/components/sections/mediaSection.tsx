@@ -349,7 +349,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import MediaCard from "../common/mediaCard";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 import { useTranslate } from "@/app/hooks/useTranslate";
@@ -375,7 +375,7 @@ export default function Media() {
     ? mediaSection.articles
     : mediaItemsFallback;
 
-  const handleToggle = () => setExpanded(!expanded);
+  // const handleToggle = () => setExpanded(!expanded);
 
   // Show items from translations if available, otherwise fall back to data/mediaItem
   const itemsToShow = expanded ? items : items.slice(0, 4);

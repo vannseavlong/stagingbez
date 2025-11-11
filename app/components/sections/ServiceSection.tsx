@@ -223,12 +223,13 @@ const Service = () => {
             className="w-full overflow-x-auto scrollbar-hidden scroll-smooth"
           >
             <div className="flex space-x-5 md:space-x-5 lg:space-x-8 snap-x snap-mandatory pb-4">
-              {mediaItems.map((item) => (
+              {mediaItems.map((item, idx) => (
                 <div
                   key={item.key}
                   className="flex-shrink-0 w-[250px] snap-start"
                 >
                   <ServiceCard
+                    id={idx + 1}
                     image={item.image}
                     title={item.title}
                     description={item.description}
