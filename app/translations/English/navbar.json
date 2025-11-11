@@ -21,5 +21,43 @@
   "contactButton": {
     "id": "navbar_contact_button",
     "text": "Contact Us"
+  },
+  "items": {
+    "aboutUs": "About us",
+    "OurServices": [
+      {
+        "id": 1,
+        "name": "General Cleaning"
+      },
+      {
+        "id": 2,
+        "name": "Deep Cleaning"
+      },
+      {
+        "id": 3,
+        "name": "Office Cleaning"
+      },
+      {
+        "id": 4,
+        "name": "Upholstery"
+      },
+      {
+        "id": 5,
+        "name": "Pest Control"
+      },
+      {
+        "id": 6,
+        "name": "Washing Machine"
+      },
+      {
+        "id": 7,
+        "name": "Post Renovation"
+      },
+      {
+        "id": 8,
+        "name": "AC Cleaning"
+      }
+    ],
+    "media": "Media"
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { notFound } from "next/navigation";
 import AboutUsSection from "@/app/components/sections/AboutUsSection";
 import Banner from "@/app/components/common/banner";
 import TaskInfo from "@/app/components/common/TaskInfo";
@@ -27,12 +28,24 @@ export default function ServiceDetailPage({ params }: { params: any }) {
     zh: serviceDetailZh,
   };
 
+  // Select the translation data for the route's language
   const serviceDetail = languageMap[languageCode] || serviceDetailEn;
   const currentId = Number(params?.id ?? NaN);
-  const detail =
-    serviceDetail && serviceDetail.id === currentId
-      ? serviceDetail
-      : serviceDetail;
+
+  // Determine the detail object for the requested id.
+  // The translations may be a single object (as in the current repo) or
+  // an array of objects. If the requested id isn't found, return a 404.
+  let detail: any = null;
+  if (Array.isArray(serviceDetail)) {
+    detail = serviceDetail.find((s: any) => Number(s.id) === currentId) ?? null;
+  } else if (serviceDetail && typeof serviceDetail === "object") {
+    detail = Number(serviceDetail.id) === currentId ? serviceDetail : null;
+  }
+
+  if (!detail) {
+    // No matching service detail for this id — show Next.js 404 page
+    notFound();
+  }
 
   return (
     <div className="font-sans min-h-screen">
