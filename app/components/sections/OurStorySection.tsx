@@ -1,5 +1,3 @@
-
-
 ////this one
 // import LabelText from "../common/labelText"
 
@@ -32,7 +30,6 @@
 //                         </div>
 //                     </div>
 
-
 //                     <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 md:gap-6 text-left">
 
 //                         <div className="flex justify-start w-full mb-6 md:justify-start lg:justify-start lg:w-[60%] lg:py-3 order-2 lg:order-1">
@@ -53,75 +50,83 @@
 //     );
 // };
 
-
-
-import LabelText from "../common/labelText"
+import LabelText from "../common/labelText";
+import { useTranslate } from "@/app/hooks/useTranslate";
 
 export default function OurStory() {
-    return (
-        <section className="text-white font-sans overflow-x-hidden">
-            <div className="bg-white">
-                <div className="lg:pt-40 md:pt-20 pt-10 lg:max-w-[1440px] lg:mx-auto  ">
+  const { getSection } = useTranslate();
+  const about = getSection("about-us") as any;
+  const items: Array<any> = Array.isArray(about?.items) ? about.items : [];
 
-                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left mb-12 md:mb-16">
+  const ourStory = items.find((i) => i.key === "our-story") || {};
+  const ourMission = items.find((i) => i.key === "our-mission") || {};
+  const ourVision = items.find((i) => i.key === "our-vision") || {};
 
-                        <div className="w-full lg:w-[45%]">
-                            <div className="flex items-center text-black mb-3 lg:mb-4">
-                                <h5 className="text-[14px] md:text-[16px] font-bold leading-[32px] tracking-[1.5px] text-beasy-gradient whitespace-nowrap opacity-80 font-sans">
-                                    Our Story
-                                </h5>
-                            </div>
-                            <div className="space-y-4 md:space-y-6">
-                                <p className="font-inter text-[24px]  md:text-[32px] lg:text-[32px] text-black font-semibold ">
-                                    It All Started with a Simple Idea
-                                </p>
-                                <p className="text-black font-inter font-normal leading-[150%] text-[14px] sm:text-[16px] md:text-[18px] opacity-80">
-                                   We understand that keeping your home or workplace spotless can be time-consuming and tiring. That’s why we created a one-stop cleaning service designed to take the hassle out of your hands. From General Cleaning, Deep Cleaning, Office Cleaning to AC cleaning and Pest Control, our professional team is here to make your environment shine.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="w-full lg:w-[50%]">
-                            <div className="relative w-full aspect-[4/3]">
-                                <img 
-                                    src="/images/services/ac.png" 
-                                    alt="Our Story" 
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left">
-
-                        <div className="w-full lg:w-[50%] order-2 lg:order-1">
-                            <div className="relative w-full aspect-[4/3]">
-                                <img 
-                                    src="/images/services/ac.png" 
-                                    alt="Our Story" 
-                                    className="absolute inset-0 w-full h-full object-cover "
-                                />
-                            </div>
-                        </div>
-
-                        <div className="w-full lg:w-[45%] order-1 lg:order-2">
-                            <div className="space-y-8 md:space-y-10">
-                              
-                                <LabelText 
-                                    title="Our Mission" 
-                                    description="Is to enhance life for every customer with reliable, affordable, and high-quality cleaning. From homes to offices, we treat your space as our own, giving you more time, peace of mind, and a healthier lifestyle." 
-                                />
-                                  <LabelText 
-                                    title="Our Vision" 
-                                    description="To become Cambodia’s most trusted and comprehensive cleaning service provider — creating cleaner, healthier, and happier living and working spaces for everyone." 
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+  return (
+    <section className="text-white overflow-x-hidden">
+      <div className="bg-white">
+        <div className="lg:pt-40 md:pt-20 pt-10 lg:max-w-[1440px] lg:mx-auto  ">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left mb-12 md:mb-16">
+            <div className="w-full lg:w-[45%]">
+              <div className="flex items-center text-black mb-3 lg:mb-4">
+                <h5 className="text-[14px] md:text-[16px] font-bold leading-[32px] tracking-[1.5px] text-beasy-gradient whitespace-nowrap opacity-80">
+                  {ourStory.title || "Our Story"}
+                </h5>
+              </div>
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-[24px]  md:text-[32px] lg:text-[32px] text-black font-semibold ">
+                  {ourStory.secondTitle || "It All Started with a Simple Idea"}
+                </p>
+                <p className="text-black font-normal leading-[150%] text-[14px] sm:text-[16px] md:text-[18px] opacity-80">
+                  {ourStory.description ||
+                    "We understand that keeping your home or workplace spotless can be time-consuming and tiring. That’s why we created a one-stop cleaning service designed to take the hassle out of your hands."}
+                </p>
+              </div>
             </div>
-        </section>
-    );
-};
+
+            <div className="w-full lg:w-[50%]">
+              <div className="relative w-full aspect-[4/3]">
+                <img
+                  src="/images/services/ac.png"
+                  alt={ourStory.title || "Our Story"}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left">
+            <div className="w-full lg:w-[50%] order-2 lg:order-1">
+              <div className="relative w-full aspect-[4/3]">
+                <img
+                  src="/images/services/ac.png"
+                  alt={ourStory.title || "Our Story"}
+                  className="absolute inset-0 w-full h-full object-cover "
+                />
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[45%] order-1 lg:order-2">
+              <div className="space-y-8 md:space-y-10">
+                <LabelText
+                  title={ourMission.title || "Our Mission"}
+                  description={
+                    ourMission.description ||
+                    "Is to enhance life for every customer with reliable, affordable, and high-quality cleaning."
+                  }
+                />
+                <LabelText
+                  title={ourVision.title || "Our Vision"}
+                  description={
+                    ourVision.description ||
+                    "To become Cambodia’s most trusted and comprehensive cleaning service provider."
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

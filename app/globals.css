@@ -137,6 +137,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* View more link: default gray, gradient text on hover */
+.view-more {
+  color: #6b7280; /* tailwind gray-500 */
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.view-more:hover {
+  background: var(--beasy-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 /* hide scrollbar */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
