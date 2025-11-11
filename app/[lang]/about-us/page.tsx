@@ -32,7 +32,7 @@ export default function AboutUs() {
                         backgroundDesktop="/images/hero/PC_Web_Luxury_Eng.webp"
 
                         title="About Us"
-                        description="At bEasy, we make cleaning simple and stress-free － so you can enjoy a spotless space with ease." />
+                        description="At bEasy, we believe a clean space leads to a clearer, healthier life. Our journey began with a simple goal — to make everyday living easier and more comfortable for people across Cambodia." />
                 </section>
 
                 <ContainWrapper>

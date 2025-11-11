@@ -76,7 +76,7 @@ export default function OurStory() {
                                     It All Started with a Simple Idea
                                 </p>
                                 <p className="text-black font-inter font-normal leading-[150%] text-[14px] sm:text-[16px] md:text-[18px] opacity-80">
-                                    bEasy began with a simple goal－to make professional cleaning accessible, reliable, and hassle－free for everyone. What started as a small service has grown into a trusted name dedicated to keeping your spaces fresh and comfortable.
+                                   We understand that keeping your home or workplace spotless can be time-consuming and tiring. That’s why we created a one-stop cleaning service designed to take the hassle out of your hands. From General Cleaning, Deep Cleaning, Office Cleaning to AC cleaning and Pest Control, our professional team is here to make your environment shine.
                                 </p>
                             </div>
                         </div>
@@ -107,13 +107,14 @@ export default function OurStory() {
 
                         <div className="w-full lg:w-[45%] order-1 lg:order-2">
                             <div className="space-y-8 md:space-y-10">
-                                <LabelText 
-                                    title="Our Vision" 
-                                    description="We aim to be Cambodia's leading cleaning service, helping people live easier, fresher, and more comfortable lives by providing professional cleaning that fits seamlessly into their everyday routines." 
-                                />
+                              
                                 <LabelText 
                                     title="Our Mission" 
-                                    description="At bEasy, we make cleaning effortless and worry－free. Our professional team brings care straight to your space, so you can enjoy a clean, comfortable environment that fits your lifestyle." 
+                                    description="Is to enhance life for every customer with reliable, affordable, and high-quality cleaning. From homes to offices, we treat your space as our own, giving you more time, peace of mind, and a healthier lifestyle." 
+                                />
+                                  <LabelText 
+                                    title="Our Vision" 
+                                    description="To become Cambodia’s most trusted and comprehensive cleaning service provider — creating cleaner, healthier, and happier living and working spaces for everyone." 
                                 />
                             </div>
                         </div>
