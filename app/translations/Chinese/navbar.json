@@ -2,16 +2,16 @@
   "id": "navbar",
   "logo": {
     "id": "navbar_logo",
-    "alt": "bEasy Logo"
+    "alt": "bEasy 标志"
   },
   "navigation": {
     "hero": "首页",
     "services": "服务",
-    "about": "关于我们",
+    "about": "关于",
     "testimonials": "客户评价",
     "faq": "常见问题",
     "install": "安装",
-    "contact": "联系我们",
+    "contact": "联系方式",
     "footer": "页脚"
   },
   "downloadButton": {
@@ -21,5 +21,43 @@
   "contactButton": {
     "id": "navbar_contact_button",
     "text": "联系我们"
+  },
+  "items": {
+    "aboutUs": "关于我们",
+    "OurServices": [
+      {
+        "id": 1,
+        "name": "日常清洁"
+      },
+      {
+        "id": 2,
+        "name": "深度清洁"
+      },
+      {
+        "id": 3,
+        "name": "办公室清洁"
+      },
+      {
+        "id": 4,
+        "name": "家具内饰清洁"
+      },
+      {
+        "id": 5,
+        "name": "虫害控制"
+      },
+      {
+        "id": 6,
+        "name": "洗衣机清洁"
+      },
+      {
+        "id": 7,
+        "name": "装修后清洁"
+      },
+      {
+        "id": 8,
+        "name": "空调清洁"
+      }
+    ],
+    "media": "媒体"
   }
 }
