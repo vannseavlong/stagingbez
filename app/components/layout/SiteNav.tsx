@@ -312,14 +312,24 @@ export default function SiteNav() {
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent className="w-48">
-                  {serviceItems.map((s) => (
-                    <DropdownMenuItem
-                      key={s.id}
-                      href={`/${currentLanguageCode}/service-detail/${s.id}`}
-                    >
-                      {s.name}
-                    </DropdownMenuItem>
-                  ))}
+                  {serviceItems.map((s) => {
+                    const itemHref = `/${currentLanguageCode}/service-detail/${s.id}`;
+                    const itemActive =
+                      pathname === itemHref || pathname.startsWith(itemHref);
+                    return (
+                      <DropdownMenuItem
+                        key={s.id}
+                        href={itemHref}
+                        className={
+                          itemActive
+                            ? "bg-blue-50 text-beasy-gradient font-semibold"
+                            : ""
+                        }
+                      >
+                        {s.name}
+                      </DropdownMenuItem>
+                    );
+                  })}
                 </DropdownMenuContent>
               </DropdownMenu>
 

@@ -17,10 +17,10 @@ export default function ServiceItem({
 }: Props) {
   return (
     <article
-      className={`bg-white rounded-2xl border border-gray-200 shadow-sm p-8 flex flex-col justify-between min-h-[240px] ${className}`}
+      className={`bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between min-h-[240px] ${className}`}
     >
       <div>
-        <div className="inline-block rounded-lg p-3 bg-white border border-gray-100">
+        <div className="inline-block rounded-lg p-2 bg-white border border-gray-100">
           {/* Use plain <img> to reliably load from /public; Next/Image sometimes needs static imports */}
           <Image
             src={imageSrc}
@@ -38,7 +38,7 @@ export default function ServiceItem({
 
       <>
         {/* make divider span the full card width including padded edges */}
-        <hr className="-mx-8 my-6 border-t border-gray-200" />
+        <hr className="-mx-6 my-6 border-t border-gray-200" />
 
         <div className="flex items-center justify-between">
           <div className="text-sm text-gray-500">Starts From:</div>

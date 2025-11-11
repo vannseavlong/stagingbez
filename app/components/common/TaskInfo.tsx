@@ -45,10 +45,10 @@ export default function TaskInfo({
           <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
             <div className="bg-white shadow-sm overflow-hidden">
               <div className="p-4 md:p-6 lg:p-8">
-                <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
+                <div className="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-4">
                   {/* Left - image (with heading above image) */}
                   <div className="w-full lg:w-1/2">
-                    <div className="mb-4 block">
+                    <div className="mb-2 block">
                       {/* heading above image on all sizes, underline sized to text */}
                       <h3 className="text-sm font-semibold text-[#0f4ac9] mb-2 inline-block pb-1 border-b-4 border-[#0f4ac9]">
                         Information of procedure
@@ -57,7 +57,7 @@ export default function TaskInfo({
 
                     {/* Use a 3:4 aspect ratio (portrait) so image height scales with width */}
                     {/* Slightly reduce image size with responsive max-widths; center on small screens */}
-                    <div className="border border-gray-100 p-1 bg-gray-50 relative w-full aspect-[4/3] max-w-[360px] lg:max-w-[420px] mx-auto lg:mx-0">
+                    <div className="border border-gray-100 p-0 bg-gray-50 relative w-full aspect-[4/3] overflow-hidden">
                       <Image
                         src={imageSrc}
                         alt={imageAlt}
@@ -69,8 +69,8 @@ export default function TaskInfo({
                   </div>
 
                   {/* Right - content */}
-                  <div className="w-full lg:w-1/2 flex flex-col justify-start pt-8 lg:pt-12">
-                    <ul className="space-y-4 mt-2">
+                  <div className="w-full lg:w-1/2 flex flex-col justify-start pt-6 md:pt-8 lg:pt-12">
+                    <ul className="space-y-4 mt-0">
                       {items.map((it, idx) => (
                         <li key={idx} className="flex items-start gap-4">
                           <span

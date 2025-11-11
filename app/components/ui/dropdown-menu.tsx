@@ -102,12 +102,16 @@ export function DropdownMenuItem({
   href,
   children,
   onSelect,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
   onSelect?: () => void;
+  className?: string;
 }) {
   const ctx = useContext(DropdownMenuContext);
+  const base =
+    "flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-beasy-gradient";
   return (
     <Link
       href={href}
@@ -115,7 +119,7 @@ export function DropdownMenuItem({
         ctx?.setOpen(false);
         onSelect?.();
       }}
-      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-beasy-gradient"
+      className={`${base} ${className}`}
     >
       {children}
     </Link>
