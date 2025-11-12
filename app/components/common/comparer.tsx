@@ -1,5 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState, useId } from "react";
+import { CompareHandle } from "../icons/svgs";
 import Image from "next/image";
 type ComparerProps = {
   beforeImg: string;
@@ -27,6 +28,8 @@ export default function Comparer({
   const posRef = useRef(clamp(initialPosition));
   const [, setTick] = useState(0); // used to force minimal re-render for ARIA updates
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
+  // unique id for SVG gradients to avoid id collisions when multiple instances render
+  const svgId = useId();
   const setOverlayPosition = useCallback(
     (ratio: number) => {
       const overlayInner = overlayInnerRef.current;
@@ -258,6 +261,7 @@ export default function Comparer({
         draggable={false}
         onError={() => console.error("Failed to load after image:", afterImg)}
         fill
+        unoptimized
         sizes="100vw"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />
@@ -301,6 +305,7 @@ export default function Comparer({
               console.error("Failed to load before image:", beforeImg)
             }
             fill
+            unoptimized
             sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "left center" }}
           />
@@ -351,89 +356,7 @@ export default function Comparer({
         className="select-none"
       >
         {/* Expand/Contract Icon */}
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ pointerEvents: "none" }}
-        >
-          <path
-            d="M20 17H4"
-            stroke="url(#paint0_linear_887_1663)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M17 14C17 14 19.9999 16.2095 19.9999 17C19.9999 17.7906 16.9999 20 16.9999 20"
-            stroke="url(#paint1_linear_887_1663)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M5 7H20"
-            stroke="url(#paint2_linear_887_1663)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M6.99997 4C6.99997 4 4 6.20947 4 7.00002C3.99999 7.79058 7 10 7 10"
-            stroke="url(#paint3_linear_887_1663)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_887_1663"
-              x1="20"
-              y1="18"
-              x2="19.7136"
-              y2="15.3205"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#1B4CFA" />
-              <stop offset="1" stopColor="#102C90" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_887_1663"
-              x1="19.9999"
-              y1="20"
-              x2="15.62"
-              y2="18.7194"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#1B4CFA" />
-              <stop offset="1" stopColor="#102C90" />
-            </linearGradient>
-            <linearGradient
-              id="paint2_linear_887_1663"
-              x1="20"
-              y1="8"
-              x2="19.695"
-              y2="5.32471"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#1B4CFA" />
-              <stop offset="1" stopColor="#102C90" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_887_1663"
-              x1="7"
-              y1="10"
-              x2="2.62011"
-              y2="8.71938"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#1B4CFA" />
-              <stop offset="1" stopColor="#102C90" />
-            </linearGradient>
-          </defs>
-        </svg>
+        <CompareHandle idSuffix={svgId} style={{ pointerEvents: "none" }} />
       </div>
     </div>
   );
