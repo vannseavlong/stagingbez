@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
     // If you rely on Next's optimization in production, consider
     // enabling it only for build-time/production pipelines or ensure
     // your CDN caches optimized images aggressively.
-    unoptimized: true,
+    unoptimized: false,
     // Provide explicit device and image sizes so Next generates stable
     // srcsets and avoids unnecessary reflows or re-fetches.
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
