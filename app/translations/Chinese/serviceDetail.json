@@ -1,0 +1,374 @@
+{
+  "1": {
+    "id": 1,
+    "banner": {
+      "title": "日常清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 1 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/general.webp",
+      "title": "您的清洁任务包括哪些？",
+      "description": "PLACEHOLDER - 请替换服务 ID 1 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": [
+        "家具除尘和擦拭",
+        "扫地、吸尘和拖地",
+        "清洁台面、水槽和浴室",
+        "倒垃圾和轻微整理"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "别墅",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "公寓及商铺",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "公寓",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
+  },
+  "2": {
+    "id": 2,
+    "banner": {
+      "title": "深度清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 2 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/deep.webp",
+      "title": "您的清洁任务包括哪些？",
+      "description": "PLACEHOLDER - 请替换服务 ID 2 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": [
+        "清洁家具和电器后部及底部",
+        "彻底刷洗浴室瓷砖、接缝和水槽",
+        "深度清洁空调通风口和冰箱内部",
+        "轻度清洁和吸尘床垫、沙发和地毯",
+        "专业清除顽固污渍、尘螨和细菌"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "别墅",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "公寓及商铺",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "公寓",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
+  },
+  "3": {
+    "id": 3,
+    "banner": {
+      "title": "办公室清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 3 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/office.webp",
+      "title": "您的清洁任务包括哪些？",
+      "description": "PLACEHOLDER - 请替换服务 ID 3 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": [
+        "清洁家具和电器后部及底部",
+        "彻底刷洗浴室瓷砖、接缝和水槽",
+        "深度清洁空调通风口和冰箱内部",
+        "轻度清洁和吸尘床垫、沙发和地毯",
+        "专业清除顽固污渍、尘螨和细菌"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "General",
+          "description": "日常清洁",
+          "priceText": "起价:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/general.webp"
+        },
+        {
+          "key": "Deep",
+          "description": "深度清洁",
+          "priceText": "起价:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/deep.webp"
+        }
+      ]
+    }
+  },
+  "4": {
+    "id": 4,
+    "banner": {
+      "title": "家具内饰清洁服务",
+      "description": "使用 bEasy 的家具内饰清洁服务焕新您的家具——我们清除污渍、灰尘和过敏原，让您的家更清新。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/uphol.webp",
+      "title": "什么是家具内饰清洁？",
+      "description": "家具内饰清洁是去除沙发、椅子、床垫等布艺家具上的污垢、污渍、过敏原和其他污染物。随着时间推移，布艺家具会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，影响家具的外观和卫生。专业的家具内饰清洁服务使用专用设备和清洁剂，对您的家具进行深度清洁和焕新，有助于延长其使用寿命并改善室内空气质量。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": [
+        "吸尘所有沙发表面",
+        "在所有沙发表面喷洒专用清洁剂",
+        "使用刷子去除污渍和污垢",
+        "吸走残留的清洁剂",
+        "漂洗并再次吸尘",
+        "吸干水分",
+        "整理工作区域"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Sofa",
+          "description": "沙发 (毛毡/布艺)",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/sofa.webp"
+        },
+        {
+          "key": "Rug",
+          "description": "小地毯",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/rug.webp"
+        },
+        {
+          "key": "Carpet",
+          "description": "地毯 (满铺)",
+          "priceText": "起价:",
+          "price": "$87",
+          "imageSrc": "/images/serviceDetail/Uphol/carpet.webp"
+        },
+        {
+          "key": "Mattress",
+          "description": "床垫",
+          "priceText": "起价:",
+          "price": "$75",
+          "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
+        }
+      ]
+    }
+  },
+  "5": {
+    "id": 5,
+    "banner": {
+      "title": "虫害控制服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 5 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/pest.webp",
+      "title": "您的虫害控制任务包括哪些？",
+      "description": "PLACEHOLDER - 请替换服务 ID 5 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Spray",
+          "description": "喷雾与熏蒸",
+          "priceText": "起价:",
+          "price": "$40",
+          "imageSrc": "/images/serviceDetail/Pest/spray.webp"
+        },
+        {
+          "key": "Termite",
+          "description": "白蚁灭治",
+          "priceText": "起价:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/termite.webp"
+        },
+        {
+          "key": "rat",
+          "description": "老鼠",
+          "priceText": "起价:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/rat.webp"
+        }
+      ]
+    }
+  },
+  "6": {
+    "id": 6,
+    "banner": {
+      "title": "洗衣机清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 6 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/washing.webp",
+      "title": "您的清洁任务包括哪些？",
+      "description": "PLACEHOLDER - 请替换服务 ID 6 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Wash",
+          "description": "洗衣机",
+          "priceText": "起价:",
+          "price": "$25",
+          "imageSrc": "/images/serviceDetail/Washing/wash_machine.webp"
+        }
+      ]
+    }
+  },
+  "7": {
+    "id": 7,
+    "banner": {
+      "title": "装修后清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 7 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/Post_Reno.webp",
+      "title": "PLACEHOLDER - 这项服务（ID 7）是什么？",
+      "description": "PLACEHOLDER - 请替换服务 ID 7 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "别墅",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "公寓及商铺",
+          "priceText": "起价:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "公寓",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        },
+        {
+          "key": "Office",
+          "description": "办公室清洁",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Renovate/office.webp"
+        }
+      ]
+    }
+  },
+  "8": {
+    "id": 8,
+    "banner": {
+      "title": "空调清洁服务",
+      "description": "PLACEHOLDER - 请替换服务 ID 8 的描述。",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "title": "PLACEHOLDER - 这项服务（ID 8）是什么？",
+      "description": "PLACEHOLDER - 请替换服务 ID 8 的完整描述。",
+      "subtitle": "流程信息"
+    },
+    "taskList": {
+      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
+    },
+    "serviceType": {
+      "subtitle": "服务价格",
+      "title": "找到您的完美方案",
+      "items": [
+        {
+          "key": "AC",
+          "description": "空调清洁",
+          "priceText": "起价:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/AC/AC.webp"
+        }
+      ]
+    }
+  }
+}

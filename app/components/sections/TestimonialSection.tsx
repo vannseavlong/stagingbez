@@ -85,6 +85,13 @@ function VideoRow() {
       videoId: "xq0WCurantk",
       videoSi: "",
     },
+    // User-requested Shorts video
+    {
+      img: "/images/testimonial/FreshNews.webp",
+      caption: t("testimonial.captions.short_requested", "Fresh News"),
+      videoId: "ssgbc1iYKcQ",
+      videoSi: "",
+    },
   ];
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [centerIndex, setCenterIndex] = useState<number>(1); // focus middle by default (index 1 = Willow Coffee)
@@ -153,13 +160,63 @@ function VideoRow() {
     );
     setTimeout(() => setDirection(null), 500);
   };
+
+  // Reusable navigation buttons (used for mobile/tablet and desktop)
+  const NavButtons = (
+    <>
+      <button
+        aria-label="Previous testimonial"
+        onClick={handlePrev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 18L9 12L15 6"
+            stroke="#111827"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      <button
+        aria-label="Next testimonial"
+        onClick={handleNext}
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 18L15 12L9 6"
+            stroke="#111827"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </>
+  );
   // ... (isDesktop logic remains the same)
 
   // Desktop: show three cards with center focus (no scrolling)
   if (isDesktop) {
     // ... (Desktop return block remains the same, but the transition class is already there)
     return (
-      <div className="hidden lg:flex items-center justify-center gap-8">
+      <div className="hidden lg:flex relative items-center justify-center gap-8">
+        {NavButtons}
         {rotatedItems.map((it, position) => {
           const isCenter = position === 1;
           const sizeClass = isCenter
@@ -274,52 +331,8 @@ function VideoRow() {
   return (
     <div className="lg:hidden">
       <div className="relative">
-        {/* Prev / Next buttons for tablet & mobile */}
-        <button
-          aria-label="Previous testimonial"
-          onClick={handlePrev} // 💡 Use new handler
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
-        >
-          {/* ... (SVG content) ... */}
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 18L9 12L15 6"
-              stroke="#111827"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button
-          aria-label="Next testimonial"
-          onClick={handleNext} // 💡 Use new handler
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-white/90 rounded-full p-2 shadow-md md:p-3"
-        >
-          {/* ... (SVG content) ... */}
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="#111827"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        {/* Prev / Next buttons for tablet & mobile (reused) */}
+        {NavButtons}
 
         {/* 💡 Apply transition to the inner container */}
         <div

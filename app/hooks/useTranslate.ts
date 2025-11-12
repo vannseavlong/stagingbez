@@ -56,6 +56,12 @@ import mediaZh from "@/app/translations/Chinese/media.json";
 import telegramEn from "@/app/translations/English/telegram.json";
 import telegramKm from "@/app/translations/Khmer/telegram.json";
 import telegramZh from "@/app/translations/Chinese/telegram.json";
+import serviceDetailEn from "@/app/translations/English/serviceDetail.json";
+import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
+import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
+import aboutUsEn from "@/app/translations/English/aboutUs.json";
+import aboutUsKm from "@/app/translations/Khmer/aboutUs.json";
+import aboutUsZh from "@/app/translations/Chinese/aboutUs.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
@@ -70,10 +76,13 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialEn?.testimonial || {},
     service: serviceEn || {},
     about: aboutEn || {},
+    // dedicated about-us page translations
+    "about-us": (aboutUsEn as unknown as TranslationObject) || {},
     compare: compareEn || {},
     contact: (contactEn as unknown as TranslationObject) || {},
     install: (installEn as unknown as TranslationObject) || {},
     footer: (footerEn as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailEn || {},
   },
   Khmer: {
     navbar: navbarKm,
@@ -85,10 +94,13 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialKm?.testimonial || {},
     service: serviceKm || {},
     about: aboutKm || {},
+    // dedicated about-us page translations
+    "about-us": (aboutUsKm as unknown as TranslationObject) || {},
     compare: compareKm || {},
     contact: (contactKm as unknown as TranslationObject) || {},
     install: (installKm as unknown as TranslationObject) || {},
     footer: (footerKm as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailKm || {},
   },
   Chinese: {
     navbar: navbarZh,
@@ -100,10 +112,13 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     testimonial: testimonialZh?.testimonial || {},
     service: serviceZh || {},
     about: aboutZh || {},
+    // dedicated about-us page translations
+    "about-us": (aboutUsZh as unknown as TranslationObject) || {},
     compare: compareZh || {},
     contact: (contactZh as unknown as TranslationObject) || {},
     install: (installZh as unknown as TranslationObject) || {},
     footer: (footerZh as unknown as TranslationObject) || {},
+    serviceDetail: serviceDetailZh || {},
   },
 };
 

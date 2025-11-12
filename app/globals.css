@@ -137,6 +137,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* View more link: default gray, gradient text on hover */
+.view-more {
+  color: #6b7280; /* tailwind gray-500 */
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.view-more:hover {
+  background: var(--beasy-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 /* hide scrollbar */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
@@ -256,4 +269,17 @@
   background: var(--beasy-gradient) !important;
   width: 24px !important;
   border-radius: 5px !important;
+}
+
+/* Ensure the internal react-compare-image container prefers vertical page pans
+   while still allowing the component to receive horizontal drags for the slider. */
+.image-compare-wrapper [data-testid="container"] {
+  touch-action: pan-y;
+  -ms-touch-action: pan-y; /* IE/Edge */
+  -webkit-user-drag: none; /* Disable image dragging on Safari which can interfere with gestures */
+}
+
+/* Also ensure the slider handle itself is touch-friendly */
+.image-compare-wrapper [data-testid="container"] * {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }

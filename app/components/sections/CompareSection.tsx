@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import ImageComparer from "@/app/components/common/image-compare";
+// import ImageComparer from "@/app/components/common/image-compare";
+import Comparer from "@/app/components/common/comparer";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
 export default function CompareSection() {
@@ -44,9 +45,16 @@ export default function CompareSection() {
           </div>
 
           {/* Right: compare image (on desktop right; on mobile/tablet placed under header) */}
-          <div className="order-2 lg:order-2 flex justify-center">
-            <div className="w-full max-w-[640px]">
-              <ImageComparer beforeImg={beforeImg} afterImg={afterImg} />
+          <div className="order-2 lg:order-2 flex justify-center px-4 lg:px-0">
+            <div className="w-full max-w-full sm:max-w-[400px] md:max-w-[500px] lg:max-w-[640px]">
+              {/* <ImageComparer beforeImg={beforeImg} afterImg={afterImg} /> */}
+              <Comparer
+                beforeImg={beforeImg}
+                afterImg={afterImg}
+                className="shadow-lg w-full"
+                initialPosition={0.5}
+                handleSize={32}
+              />
             </div>
           </div>
         </div>

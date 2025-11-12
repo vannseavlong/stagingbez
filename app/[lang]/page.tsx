@@ -6,9 +6,9 @@ import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
-// import Media from "../components/sections/mediaSection";
 import CompareSection from "../components/sections/CompareSection";
 import HowItWorkBlog from "../components/sections/HowItWorkBlog";
+import Media from "../components/sections/mediaSection";
 
 export default function Home() {
   return (
@@ -27,7 +27,6 @@ export default function Home() {
         <section id="hero">
           <HeroSection />
         </section>
-
         {/* The rest of the page is constrained to a centered container */}
         <ContainWrapper>
           <section id="service">
@@ -61,10 +60,13 @@ export default function Home() {
         </ContainWrapper>
 
         {/* Contact moved to dedicated page */}
-
-        {/* <section id="media-section">
+        {/* 
+        <ContainWrapper>
+          <section id="media-section">
             <Media />
-          </section> */}
+          </section>
+        </ContainWrapper> */}
+
         {/* Parallax Image Section with max-width constraint */}
         <ContainWrapper>
           <section id="install">

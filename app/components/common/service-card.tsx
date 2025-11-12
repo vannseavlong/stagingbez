@@ -1,18 +1,25 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 interface ServiceCardProps {
+  id: number | string;
   image: string;
   title: string;
   description: string;
   onClick?: () => void;
 }
 export default function ServiceCard({
+  id,
   image,
   title,
   description,
   onClick,
 }: ServiceCardProps) {
+  const { currentLanguageCode } = useLanguage();
   return (
     <div
       className="flex flex-col text-left w-[250px]  flex-shrink-0"
@@ -45,6 +52,20 @@ export default function ServiceCard({
       <p className="text-black text-[16px] md:text-[16px] leading-[28px] opacity-80 ">
         {description}
       </p>
+
+      {/* View More link */}
+      {/* <div className="mt-4">
+        <Link
+          href={`/${currentLanguageCode}/service-detail/${id}`}
+          onClick={(e) => {
+            // prevent parent click handlers (analytics/onClick) from also firing
+            e.stopPropagation();
+          }}
+          className="view-more text-sm"
+        >
+          View More
+        </Link>
+      </div> */}
     </div>
   );
 }

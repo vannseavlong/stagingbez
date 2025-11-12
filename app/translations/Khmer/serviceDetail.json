@@ -1,0 +1,374 @@
+{
+  "1": {
+    "id": 1,
+    "banner": {
+      "title": "សេវាសម្អាតទូទៅ",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 1។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/general.webp",
+      "title": "អ្វីខ្លះត្រូវបានបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 1។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": [
+        "ជូត និងសម្អាតធូលីដីលើគ្រឿងសង្ហារិម",
+        "បោស ជញ្ជក់ធូលី និងជូតកម្រាលឥដ្ឋ",
+        "សម្អាតតុ អាងលាង និងបន្ទប់ទឹក",
+        "វេចខ្ចប់សំរាម និងរៀបចំតិចតួច"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "វីឡា",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "ផ្ទះល្វែង និងហាង",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "ខុនដូ",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
+  },
+  "2": {
+    "id": 2,
+    "banner": {
+      "title": "សេវាសម្អាតស៊ីជម្រៅ",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 2។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/deep.webp",
+      "title": "អ្វីខ្លះត្រូវបានបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 2។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": [
+        "សម្អាតនៅពីក្រោយ និងក្រោមគ្រឿងសង្ហារិម និងឧបករណ៍ប្រើប្រាស់",
+        "ដុសលាងសម្អាតក្បឿងបន្ទប់ទឹក ស្នាមប្រឡាក់ និងអាងលាង",
+        "សម្អាតស៊ីជម្រៅម៉ាស៊ីនត្រជាក់ និងផ្នែកខាងក្នុងទូទឹកកក",
+        "សម្អាត និងជញ្ជក់ធូលីតិចតួចលើពូក សាឡុង និងកម្រាលព្រំ",
+        "ការកម្ចាត់ស្នាមប្រឡាក់ពិបាក ធូលីដី និងបាក់តេរីដោយអ្នកជំនាញ"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "វីឡា",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "ផ្ទះល្វែង និងហាង",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "ខុនដូ",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
+  },
+  "3": {
+    "id": 3,
+    "banner": {
+      "title": "សេវាសម្អាតការិយាល័យ",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 3។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/office.webp",
+      "title": "អ្វីខ្លះត្រូវបានបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 3។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": [
+        "សម្អាតនៅពីក្រោយ និងក្រោមគ្រឿងសង្ហារិម និងឧបករណ៍ប្រើប្រាស់",
+        "ដុសលាងសម្អាតក្បឿងបន្ទប់ទឹក ស្នាមប្រឡាក់ និងអាងលាង",
+        "សម្អាតស៊ីជម្រៅម៉ាស៊ីនត្រជាក់ និងផ្នែកខាងក្នុងទូទឹកកក",
+        "សម្អាត និងជញ្ក់ធូលីតិចតួចលើពូក សាឡុង និងកម្រាលព្រំ",
+        "ការកម្ចាត់ស្នាមប្រឡាក់ពិបាក ធូលីដី និងបាក់តេរីដោយអ្នកជំនាញ"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "General",
+          "description": "សម្អាតទូទៅ",
+          "priceText": "ចាប់ពី:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/general.webp"
+        },
+        {
+          "key": "Deep",
+          "description": "សម្អាតស៊ីជម្រៅ",
+          "priceText": "ចាប់ពី:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/deep.webp"
+        }
+      ]
+    }
+  },
+  "4": {
+    "id": 4,
+    "banner": {
+      "title": "សេវាសម្អាតគ្រឿងសង្ហារិម",
+      "description": "ធ្វើឱ្យគ្រឿងសង្ហារិមរបស់អ្នកថ្មីឡើងវិញជាមួយនឹងសេវាសម្អាតគ្រឿងសង្ហារិមរបស់ bEasy – យើងកម្ចាត់ស្នាមប្រឡាក់ ធូលី និងសារធាតុបង្កអាលែកហ្ស៊ី ដើម្បីឱ្យផ្ទះរបស់អ្នកស្រស់ថ្លា។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/uphol.webp",
+      "title": "តើអ្វីទៅជាការសម្អាតគ្រឿងសង្ហារិម?",
+      "description": "ការសម្អាតគ្រឿងសង្ហារិមគឺជាដំណើរការនៃការកម្ចាត់ធូលី ស្នាមប្រឡាក់ សារធាតុបង្កអាលែកហ្ស៊ី និងសារធាតុចម្លងផ្សេងទៀតពីគ្រឿងសង្ហារិមដូចជា សាឡុង កៅអី និងពូក។ យូរៗទៅ គ្រឿងសង្ហារិមអាចកកកុញធូលី សម្បកសត្វចិញ្ចឹម កាកសំណល់ចំណីអាហារ និងកំទេចកំទីផ្សេងៗទៀតដែលអាចប៉ះពាល់ដល់រូបរាង និងអនាម័យនៃគ្រឿងសង្ហារិមរបស់អ្នក។ សេវាសម្អាតគ្រឿងសង្ហារិមដោយអ្នកជំនាញប្រើប្រាស់ឧបករណ៍ឯកទេស និងដំណោះស្រាយសម្អាតដើម្បីសម្អាតស៊ីជម្រៅ និងធ្វើឱ្យគ្រឿងសង្ហារិមរបស់អ្នកស្រស់ថ្លាឡើងវិញ ដែលជួយពន្យារអាយុកាលរបស់វា និងធ្វើឱ្យគុណភាពខ្យល់ក្នុងផ្ទះប្រសើរឡើង។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": [
+        "ជញ្ជក់ធូលីលើផ្ទៃសាឡុងទាំងអស់",
+        "បាញ់ទឹកថ្នាំសម្អាតឯកទេសលើផ្ទៃសាឡុងទាំងអស់",
+        "ប្រើច្រាសដុសដើម្បីកម្ចាត់ស្នាមប្រឡាក់ និងភាពកខ្វក់",
+        "ជញ្ជក់ធូលីកាកសំណល់ដែលនៅសល់",
+        "លាងទឹក និងជញ្ជក់ធូលីម្តងទៀត",
+        "ជញ្ជក់ធូលីឱ្យស្ងួត",
+        "រៀបចំកន្លែងធ្វើការឱ្យមានសណ្ដាប់ធ្នាប់"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Sofa",
+          "description": "សាឡុង (សាច់ក្រណាត់)",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/sofa.webp"
+        },
+        {
+          "key": "Rug",
+          "description": "កម្រាលព្រំតូច",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/rug.webp"
+        },
+        {
+          "key": "Carpet",
+          "description": "កម្រាលព្រំ (ពេញបន្ទប់)",
+          "priceText": "ចាប់ពី:",
+          "price": "$87",
+          "imageSrc": "/images/serviceDetail/Uphol/carpet.webp"
+        },
+        {
+          "key": "Mattress",
+          "description": "ពូកគ្រែ",
+          "priceText": "ចាប់ពី:",
+          "price": "$75",
+          "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
+        }
+      ]
+    }
+  },
+  "5": {
+    "id": 5,
+    "banner": {
+      "title": "សេវាកម្ចាត់សត្វល្អិត",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 5។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/pest.webp",
+      "title": "អ្វីខ្លះត្រូវបានបញ្ចូលក្នុងកិច្ចការកម្ចាត់សត្វល្អិតរបស់អ្នក?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 5។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": ["ជំហានកិច្ចការទី 1", "ជំហានកិច្ចការទី 2", "ជំហានកិច្ចការទី 3"]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Spray",
+          "description": "បាញ់ថ្នាំ និងបំពុល",
+          "priceText": "ចាប់ពី:",
+          "price": "$40",
+          "imageSrc": "/images/serviceDetail/Pest/spray.webp"
+        },
+        {
+          "key": "Termite",
+          "description": "កម្ចាត់សត្វល្អិតចង្រៃ",
+          "priceText": "ចាប់ពី:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/termite.webp"
+        },
+        {
+          "key": "rat",
+          "description": "កណ្ដុរ",
+          "priceText": "ចាប់ពី:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/rat.webp"
+        }
+      ]
+    }
+  },
+  "6": {
+    "id": 6,
+    "banner": {
+      "title": "សេវាសម្អាតម៉ាស៊ីនបោកគក់",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 6។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/washing.webp",
+      "title": "អ្វីខ្លះត្រូវបានបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 6។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": ["ជំហានកិច្ចការទី 1", "ជំហានកិច្ចការទី 2", "ជំហានកិច្ចការទី 3"]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Wash",
+          "description": "ម៉ាស៊ីនបោកគក់",
+          "priceText": "ចាប់ពី:",
+          "price": "$25",
+          "imageSrc": "/images/serviceDetail/Washing/wash_machine.webp"
+        }
+      ]
+    }
+  },
+  "7": {
+    "id": 7,
+    "banner": {
+      "title": "សេវាសម្អាតក្រោយជួសជុល",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 7។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/Post_Reno.webp",
+      "title": "PLACEHOLDER - តើសេវាកម្មនេះ (លេខ 7) គឺជាអ្វី?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 7។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": ["ជំហានកិច្ចការទី 1", "ជំហានកិច្ចការទី 2", "ជំហានកិច្ចការទី 3"]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "វីឡា",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "ផ្ទះល្វែង និងហាង",
+          "priceText": "ចាប់ពី:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "ខុនដូ",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        },
+        {
+          "key": "Office",
+          "description": "សម្អាតការិយាល័យ",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Renovate/office.webp"
+        }
+      ]
+    }
+  },
+  "8": {
+    "id": 8,
+    "banner": {
+      "title": "សេវាសម្អាតម៉ាស៊ីនត្រជាក់",
+      "description": "PLACEHOLDER - ជំនួសការពិពណ៌នានេះសម្រាប់សេវាកម្មលេខ 8។",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "title": "PLACEHOLDER - តើសេវាកម្មនេះ (លេខ 8) គឺជាអ្វី?",
+      "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាកម្មលេខ 8។",
+      "subtitle": "ព័ត៌មាននៃនីតិវិធី"
+    },
+    "taskList": {
+      "items": ["ជំហានកិច្ចការទី 1", "ជំហានកិច្ចការទី 2", "ជំហានកិច្ចការទី 3"]
+    },
+    "serviceType": {
+      "subtitle": "តម្លៃសេវាកម្ម",
+      "title": "ស្វែងរកគម្រោងដ៏ល្អឥតខ្ចោះរបស់អ្នក",
+      "items": [
+        {
+          "key": "AC",
+          "description": "សម្អាតម៉ាស៊ីនត្រជាក់",
+          "priceText": "ចាប់ពី:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/AC/AC.webp"
+        }
+      ]
+    }
+  }
+}
