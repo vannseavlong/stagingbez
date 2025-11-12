@@ -8,7 +8,7 @@ import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
 import InstallSection from "@/app/components/sections/InstallAppSection";
 import Media from "@/app/components/sections/mediaSection";
 
-import TestimonialSection from "@/app/components/sections/TestimonialSection"
+import TestimonialSection from "@/app/components/sections/TestimonialSection";
 
 export default function MediaPage() {
   return (
@@ -26,10 +26,9 @@ export default function MediaPage() {
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
           <AboutUsHero
-           backgroundMobile="/images/hero/About_Us_Hero_Tablet.webp"
-            backgroundTablet="/images/hero/About_Us_Hero_Tablet.webp"
-            backgroundDesktop="/images/hero/About_Us_Hero.webp"
-
+            backgroundMobile="/images/serviceDetail/Uphol/portrait.jpg"
+            backgroundTablet="/images/serviceDetail/Uphol/portrait.jpg"
+            backgroundDesktop="/images/serviceDetail/Uphol/landscape.jpg"
             title="Media"
           />
         </section>
@@ -64,7 +63,6 @@ export default function MediaPage() {
             <FAQSection />
           </section>
         </ContainWrapper>
-
 
         <ContainWrapper>
           <section id="install">

@@ -33,13 +33,28 @@ export default function ServiceDetailPage({ params }: { params: any }) {
   const currentId = Number(params?.id ?? NaN);
 
   // Determine the detail object for the requested id.
-  // The translations may be a single object (as in the current repo) or
-  // an array of objects. If the requested id isn't found, return a 404.
+  // The translations may take one of three shapes:
+  // 1) an array of objects: [{ id: 1, ... }, ...]
+  // 2) a single object: { id: 4, ... }
+  // 3) a keyed object mapping id -> object: { "1": { id: 1, ... }, "2": { ... } }
+  // We support all three and return a 404 when there's no match.
   let detail: any = null;
   if (Array.isArray(serviceDetail)) {
     detail = serviceDetail.find((s: any) => Number(s.id) === currentId) ?? null;
   } else if (serviceDetail && typeof serviceDetail === "object") {
-    detail = Number(serviceDetail.id) === currentId ? serviceDetail : null;
+    // Prefer keyed lookup when present: serviceDetail["3"]
+    const key = String(currentId);
+    if (Object.prototype.hasOwnProperty.call(serviceDetail, key)) {
+      detail = serviceDetail[key];
+    } else if (
+      typeof (serviceDetail as any).id !== "undefined" &&
+      Number((serviceDetail as any).id) === currentId
+    ) {
+      // Backwards-compatible single-object shape
+      detail = serviceDetail;
+    } else {
+      detail = null;
+    }
   }
 
   if (!detail) {
@@ -100,7 +115,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
           </div>
 
           {/* Services carousel */}
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-30 lg:mt-40">
             <div className="pt-8">
               <ServiceCarouselWithHeader
                 subtitle={detail?.serviceType?.subtitle || "SERVICE PRICES"}

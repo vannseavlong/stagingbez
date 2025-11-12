@@ -122,9 +122,9 @@ export default function AboutUs() {
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
           <AboutUsHero
-            backgroundMobile="/images/hero/Mobile_Luxury_EN.webp"
-            backgroundTablet="/images/hero/Mobile_Luxury_EN.webp"
-            backgroundDesktop="/images/hero/PC_Web_Luxury_Eng.webp"
+            backgroundMobile="/images/serviceDetail/Uphol/portrait.jpg"
+            backgroundTablet="/images/serviceDetail/Uphol/portrait.jpg"
+            backgroundDesktop="/images/serviceDetail/Uphol/landscape.jpg"
             title={header?.title || "About Us"}
             description={
               header?.description ||

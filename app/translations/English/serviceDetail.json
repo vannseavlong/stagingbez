@@ -1,61 +1,374 @@
 {
-  "id": 4,
-  "banner": {
-    "title": "Upholstery Cleaning Service",
-    "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
-    "landscape": "/images/serviceDetail/PC_Uphold.webp",
-    "portrait": "/images/serviceDetail/Mobile_Uphold.webp",
-    "downloadButton": true
+  "1": {
+    "id": 1,
+    "banner": {
+      "title": "General Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 1.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/general.webp",
+      "title": "What’s Included in Your Cleaning Tasks?",
+      "description": "PLACEHOLDER - Replace with full description for service id 1.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": [
+        "Dusting and wiping furniture",
+        "Sweeping, vacuuming, and mopping floors",
+        "Cleaning countertops, sinks, and bathrooms",
+        "Taking out trash and light organization"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "Villa",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "Flat & Shop House",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "Condo",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
   },
-  "taskInfo": {
-    "imageSrc": "/images/services/uphol.webp",
-    "title": "What is Upholstery Cleaning?",
-    "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
-    "subtitle": "Information of procedure"
+  "2": {
+    "id": 2,
+    "banner": {
+      "title": "Deep Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 2.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/deep.webp",
+      "title": "What’s Included in Your Cleaning Tasks?",
+      "description": "PLACEHOLDER - Replace with full description for service id 2.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": [
+        "Cleaning behind and under furniture and appliances",
+        "Thorough scrubbing of bathroom tiles, grout, and sinks",
+        "Deep cleaning of AC vents and refrigerator interior",
+        "Light cleaning and vacuuming of mattresses, sofas, and carpets",
+        "Professional removal of stubborn stains, dust mites, and bacteria"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "Villa",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "Flat & Shop House",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "Condo",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        }
+      ]
+    }
   },
-  "taskList": {
-    "items": [
-      "Vacuum all sofa surfaces",
-      "Spray specialized cleaning solution on all sofa surfaces",
-      "Use scrubber to remove stains and grime",
-      "Vacuum remaining residue",
-      "Rinse and vacuum again",
-      "Vacuum dry",
-      "Tidy work area"
-    ]
+  "3": {
+    "id": 3,
+    "banner": {
+      "title": "Office Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 3.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/office.webp",
+      "title": "What’s Included in Your Cleaning Tasks?",
+      "description": "PLACEHOLDER - Replace with full description for service id 3.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": [
+        "Cleaning behind and under furniture and appliances",
+        "Thorough scrubbing of bathroom tiles, grout, and sinks",
+        "Deep cleaning of AC vents and refrigerator interior",
+        "Light cleaning and vacuuming of mattresses, sofas, and carpets",
+        "Professional removal of stubborn stains, dust mites, and bacteria"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "General",
+          "description": "General Cleaning",
+          "priceText": "Start From:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/general.webp"
+        },
+        {
+          "key": "Deep",
+          "description": "Deep Cleaning",
+          "priceText": "Start From:",
+          "price": "$38",
+          "imageSrc": "/images/serviceDetail/Office/deep.webp"
+        }
+      ]
+    }
   },
-  "serviceType": {
-    "subtitle": "SERVICE PRICES",
-    "title": "Find Your Perfect Plan",
-    "items": [
-      {
-        "key": "Sofa",
-        "description": "Sofa (Felt/Fabric)",
-        "priceText": "Start From:",
-        "price": "$15",
-        "imageSrc": "/images/serviceDetail/sofa.webp"
-      },
-      {
-        "key": "Rug",
-        "description": "Rug",
-        "priceText": "Start From:",
-        "price": "$15",
-        "imageSrc": "/images/serviceDetail/rug.webp"
-      },
-      {
-        "key": "Carpet",
-        "description": "Carpet (wall to wall)",
-        "priceText": "Start From:",
-        "price": "$87",
-        "imageSrc": "/images/serviceDetail/carpet.webp"
-      },
-      {
-        "key": "Mattress",
-        "description": "Bed Mattress",
-        "priceText": "Start From:",
-        "price": "$75",
-        "imageSrc": "/images/serviceDetail/mattress.webp"
-      }
-    ]
+  "4": {
+    "id": 4,
+    "banner": {
+      "title": "Upholstery Cleaning Service",
+      "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/uphol.webp",
+      "title": "What is Upholstery Cleaning?",
+      "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": [
+        "Vacuum all sofa surfaces",
+        "Spray specialized cleaning solution on all sofa surfaces",
+        "Use scrubber to remove stains and grime",
+        "Vacuum remaining residue",
+        "Rinse and vacuum again",
+        "Vacuum dry",
+        "Tidy work area"
+      ]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Sofa",
+          "description": "Sofa (Felt/Fabric)",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/sofa.webp"
+        },
+        {
+          "key": "Rug",
+          "description": "Rug",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Uphol/rug.webp"
+        },
+        {
+          "key": "Carpet",
+          "description": "Carpet (wall to wall)",
+          "priceText": "Start From:",
+          "price": "$87",
+          "imageSrc": "/images/serviceDetail/Uphol/carpet.webp"
+        },
+        {
+          "key": "Mattress",
+          "description": "Bed Mattress",
+          "priceText": "Start From:",
+          "price": "$75",
+          "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
+        }
+      ]
+    }
+  },
+  "5": {
+    "id": 5,
+    "banner": {
+      "title": "Pest Control Service",
+      "description": "PLACEHOLDER - Replace this description for service id 5.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/pest.webp",
+      "title": "What’s Included in Your Cleaning Tasks?",
+      "description": "PLACEHOLDER - Replace with full description for service id 5.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": ["Task step 1", "Task step 2", "Task step 3"]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Spray",
+          "description": "Pest Spray & Fog",
+          "priceText": "Start From:",
+          "price": "$40",
+          "imageSrc": "/images/serviceDetail/Pest/spray.webp"
+        },
+        {
+          "key": "Termite",
+          "description": "Termite Extermination",
+          "priceText": "Start From:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/termite.webp"
+        },
+        {
+          "key": "rat",
+          "description": "Rats",
+          "priceText": "Start From:",
+          "price": "$60",
+          "imageSrc": "/images/serviceDetail/Pest/rat.webp"
+        }
+      ]
+    }
+  },
+  "6": {
+    "id": 6,
+    "banner": {
+      "title": "Washing Machine Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 6.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/washing.webp",
+      "title": "What’s Included in Your Cleaning Tasks?",
+      "description": "PLACEHOLDER - Replace with full description for service id 6.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": ["Task step 1", "Task step 2", "Task step 3"]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Wash",
+          "description": "Washing Machine",
+          "priceText": "Start From:",
+          "price": "$25",
+          "imageSrc": "/images/serviceDetail/Washing/wash_machine.webp"
+        }
+      ]
+    }
+  },
+  "7": {
+    "id": 7,
+    "banner": {
+      "title": "Post Renovation Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 7.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/Post_Reno.webp",
+      "title": "PLACEHOLDER - What is this service (id 7)?",
+      "description": "PLACEHOLDER - Replace with full description for service id 7.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": ["Task step 1", "Task step 2", "Task step 3"]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "Villa",
+          "description": "Villa",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/villa.webp"
+        },
+        {
+          "key": "Flat",
+          "description": "Flat & Shop House",
+          "priceText": "Start From:",
+          "price": "$58",
+          "imageSrc": "/images/serviceDetail/General/flat.webp"
+        },
+        {
+          "key": "Condo",
+          "description": "Condo",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/General/condo.webp"
+        },
+        {
+          "key": "Office",
+          "description": "Office Cleaning",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/Renovate/office.webp"
+        }
+      ]
+    }
+  },
+  "8": {
+    "id": 8,
+    "banner": {
+      "title": "AC Cleaning Service",
+      "description": "PLACEHOLDER - Replace this description for service id 8.",
+      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
+      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "downloadButton": true
+    },
+    "taskInfo": {
+      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "title": "PLACEHOLDER - What is this service (id 8)?",
+      "description": "PLACEHOLDER - Replace with full description for service id 8.",
+      "subtitle": "Information of procedure"
+    },
+    "taskList": {
+      "items": ["Task step 1", "Task step 2", "Task step 3"]
+    },
+    "serviceType": {
+      "subtitle": "SERVICE PRICES",
+      "title": "Find Your Perfect Plan",
+      "items": [
+        {
+          "key": "AC",
+          "description": "Aircon Cleaning",
+          "priceText": "Start From:",
+          "price": "$15",
+          "imageSrc": "/images/serviceDetail/AC/AC.webp"
+        }
+      ]
+    }
   }
 }

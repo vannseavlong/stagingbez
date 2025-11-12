@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { ScrollytellingSection } from "@/app/components/common/ScrollytellingSection";
 import { MobileScrollytelling } from "@/app/components/common/MobileScrollytelling";
+// import { ScrollytellingSection } from "../common/ScrollytellingSection";
 
 export default function HowItWorkBlog() {
   const { getSection, languageFolder } = useTranslate();
@@ -71,8 +72,9 @@ export default function HowItWorkBlog() {
 
             return (
               <>
-                {/* Desktop: existing scrollytelling layout */}
+                {/* Desktop: flip-story teller (replaces ScrollytellingSection) */}
                 <div className="hidden lg:block">
+                  {/* Desktop: classic scrollytelling section */}
                   <ScrollytellingSection items={slides} />
                 </div>
 
