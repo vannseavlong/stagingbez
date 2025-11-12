@@ -1,7 +1,6 @@
 "use client";
-
 import React, { useCallback, useEffect, useRef, useState } from "react";
-
+import Image from "next/image";
 type ComparerProps = {
   beforeImg: string;
   afterImg: string;
@@ -9,9 +8,7 @@ type ComparerProps = {
   initialPosition?: number; // 0..1
   handleSize?: number;
 };
-
 const clamp = (v: number, a = 0, b = 1) => Math.min(Math.max(v, a), b);
-
 export default function Comparer({
   beforeImg,
   afterImg,
@@ -23,30 +20,27 @@ export default function Comparer({
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const overlayInnerRef = useRef<HTMLDivElement | null>(null);
   const handleRef = useRef<HTMLDivElement | null>(null);
-  const separatorLineRef = useRef<HTMLDivElement | null>(null);
-  const beforeImgRef = useRef<HTMLImageElement | null>(null);
+  const separatorLineRef = useRef<HTMLDivElement | null>(null); // Correct declaration
+  // beforeImgRef removed: next/image provides loading callbacks we can use
   const rafRef = useRef<number | null>(null);
   const draggingRef = useRef(false);
   const posRef = useRef(clamp(initialPosition));
   const [, setTick] = useState(0); // used to force minimal re-render for ARIA updates
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
-
   const setOverlayPosition = useCallback(
     (ratio: number) => {
       const overlayInner = overlayInnerRef.current;
       const handle = handleRef.current;
+      // 🚨 FIX APPLIED HERE: Changed separatorLineLineRef to separatorLineRef
       const separatorLine = separatorLineRef.current;
       const container = containerRef.current;
-
       if (!container) return;
       const rect = container.getBoundingClientRect();
-
       // Instead of scaleX, we'll use width to clip the overlay
       if (overlayInner) {
         const widthPx = ratio * rect.width;
         overlayInner.style.width = `${widthPx}px`;
       }
-
       if (handle) {
         const dpr =
           typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
@@ -58,7 +52,6 @@ export default function Comparer({
           px - handleSize / 2
         }px, -50%, 0)`;
       }
-
       // Update separator line position
       if (separatorLine) {
         const dpr =
@@ -70,7 +63,6 @@ export default function Comparer({
     },
     [handleSize]
   );
-
   // schedule RAF update (debounced to animation frame)
   const scheduleUpdate = useCallback(() => {
     if (rafRef.current) return;
@@ -81,7 +73,6 @@ export default function Comparer({
       setTick((t) => t + 1);
     });
   }, [setOverlayPosition]);
-
   const updateFromPointer = useCallback(
     (clientX: number) => {
       const el = containerRef.current;
@@ -94,20 +85,18 @@ export default function Comparer({
     },
     [scheduleUpdate]
   );
-
   useEffect(() => {
     // set initial position once images/layout loaded
     setOverlayPosition(posRef.current);
   }, [setOverlayPosition]);
-
   // when after image loads, capture aspect ratio so both images can be absolutely
-  // positioned and perfectly overlap without layout shifts.
+  // positioned and perfectly overlap without layout shifts. next/image calls
+  // onLoadingComplete with an object containing naturalWidth/naturalHeight.
   const onAfterLoad = useCallback(
-    (e: React.SyntheticEvent<HTMLImageElement>) => {
-      const img = e.currentTarget;
-      if (img.naturalWidth && img.naturalHeight) {
-        setAspectRatio(img.naturalHeight / img.naturalWidth);
-      }
+    (res: any) => {
+      const nw = res?.naturalWidth ?? res?.currentTarget?.naturalWidth;
+      const nh = res?.naturalHeight ?? res?.currentTarget?.naturalHeight;
+      if (nw && nh) setAspectRatio(nh / nw);
       // ensure overlay position recalculates after image load
       scheduleUpdate();
     },
@@ -118,14 +107,11 @@ export default function Comparer({
   const onBeforeLoad = useCallback(() => {
     scheduleUpdate();
   }, [scheduleUpdate]);
-
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-
     // Ensure container prefers vertical panning so page scroll is smooth
     el.style.touchAction = "pan-y";
-
     const onPointerDown = (e: PointerEvent) => {
       // Only left button or touch
       if ((e as any).button !== undefined && (e as any).button !== 0) return;
@@ -136,14 +122,12 @@ export default function Comparer({
       } catch {}
       updateFromPointer(e.clientX);
     };
-
     const onPointerMove = (e: PointerEvent) => {
       if (!draggingRef.current) return;
       // prevent default to avoid synthetic scrolls while dragging
       if (e.cancelable) e.preventDefault();
       updateFromPointer(e.clientX);
     };
-
     const onPointerUp = (e: PointerEvent) => {
       if (draggingRef.current) {
         draggingRef.current = false;
@@ -152,17 +136,14 @@ export default function Comparer({
         } catch {}
       }
     };
-
     el.addEventListener("pointerdown", onPointerDown as EventListener);
     // attach move on window to continue drag outside container; not passive because we may preventDefault
     window.addEventListener("pointermove", onPointerMove as EventListener);
     window.addEventListener("pointerup", onPointerUp as EventListener);
     window.addEventListener("pointercancel", onPointerUp as EventListener);
-
     // on resize, reapply overlay position (in case width changed)
     const ro = new ResizeObserver(() => scheduleUpdate());
     ro.observe(el);
-
     // Optional debug overlay (enable by adding ?compareDebug=1 or localStorage.compareDebug = '1')
     let debugEnabled = false;
     try {
@@ -173,7 +154,6 @@ export default function Comparer({
           localStorage.getItem("compareDebug") === "1";
       }
     } catch {}
-
     let debugDiv: HTMLElement | null = null;
     let dbgRaf: number | null = null;
     let lastPointerX: number | null = null;
@@ -190,7 +170,6 @@ export default function Comparer({
       debugDiv.style.borderRadius = "6px";
       debugDiv.style.pointerEvents = "none";
       el.appendChild(debugDiv);
-
       const update = () => {
         if (!debugDiv || !el) return;
         const rect = el.getBoundingClientRect();
@@ -209,7 +188,6 @@ export default function Comparer({
           lastPointerX ?? "-"
         }<br/>ratio: ${ratio ?? "-"}`;
       };
-
       const onDbgPointer = (ev: PointerEvent) => {
         lastPointerX = Math.round(ev.clientX - el.getBoundingClientRect().left);
         if (!dbgRaf) {
@@ -219,7 +197,6 @@ export default function Comparer({
           });
         }
       };
-
       el.addEventListener("pointermove", onDbgPointer as EventListener, {
         passive: true,
       });
@@ -227,7 +204,6 @@ export default function Comparer({
       window.addEventListener("resize", update);
       update();
     }
-
     return () => {
       el.removeEventListener("pointerdown", onPointerDown as EventListener);
       window.removeEventListener("pointermove", onPointerMove as EventListener);
@@ -239,7 +215,6 @@ export default function Comparer({
         debugDiv.parentNode.removeChild(debugDiv);
     };
   }, [scheduleUpdate, updateFromPointer]);
-
   // keyboard support (arrow keys)
   useEffect(() => {
     const el = containerRef.current;
@@ -258,42 +233,34 @@ export default function Comparer({
     el.addEventListener("keydown", onKey as EventListener);
     return () => el.removeEventListener("keydown", onKey as EventListener);
   }, [scheduleUpdate]);
-
   return (
     <div
       ref={containerRef}
-      className={`relative w-full overflow-hidden ${className || ""}`}
+      className={`relative w-full h-full overflow-hidden ${className || ""}`}
       // prefer vertical page scroll when starting touch here
       style={{
         touchAction: "pan-y",
         WebkitTapHighlightColor: "transparent",
-        // maintain aspect ratio if known (padding-top trick), otherwise use min-height
-        ...(aspectRatio
-          ? { paddingTop: `${aspectRatio * 100}%` }
-          : { minHeight: "400px" }),
+        // maintain aspect ratio if known (padding-top trick). The minHeight fallback
+        // is removed to rely fully on the image size for height before calculation.
+        ...(aspectRatio ? { paddingTop: `${aspectRatio * 100}%` } : {}),
       }}
       tabIndex={0}
       role="group"
       aria-label="Image comparison slider"
     >
       {/* base image (after) - absolutely positioned to perfectly overlap */}
-      <img
+      <Image
         src={afterImg}
         alt="After"
-        onLoad={onAfterLoad}
+        onLoadingComplete={onAfterLoad}
         className="block select-none"
         draggable={false}
         onError={() => console.error("Failed to load after image:", afterImg)}
-        style={{
-          position: aspectRatio ? "absolute" : "relative",
-          left: 0,
-          top: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
+        fill
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
-
       {/* overlay that reveals left/before image (we clip the width to reveal the image underneath) */}
       <div
         ref={overlayRef}
@@ -324,27 +291,21 @@ export default function Comparer({
             willChange: "width",
           }}
         >
-          <img
-            ref={beforeImgRef}
+          <Image
             src={beforeImg}
             alt="Before"
             className="block select-none"
             draggable={false}
-            onLoad={onBeforeLoad}
+            onLoadingComplete={onBeforeLoad}
             onError={() =>
               console.error("Failed to load before image:", beforeImg)
             }
-            style={{
-              display: "block",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "left center",
-            }}
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "left center" }}
           />
         </div>
       </div>
-
       {/* vertical separator line */}
       <div
         ref={separatorLineRef}
@@ -361,7 +322,6 @@ export default function Comparer({
           willChange: "transform",
         }}
       />
-
       {/* slider handle */}
       <div
         ref={handleRef}
