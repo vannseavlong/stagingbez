@@ -54,7 +54,7 @@ export default function ServiceCard({
       </p>
 
       {/* View More link */}
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <Link
           href={`/${currentLanguageCode}/service-detail/${id}`}
           onClick={(e) => {
@@ -65,7 +65,7 @@ export default function ServiceCard({
         >
           View More
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

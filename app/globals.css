@@ -270,3 +270,16 @@
   width: 24px !important;
   border-radius: 5px !important;
 }
+
+/* Ensure the internal react-compare-image container prefers vertical page pans
+   while still allowing the component to receive horizontal drags for the slider. */
+.image-compare-wrapper [data-testid="container"] {
+  touch-action: pan-y;
+  -ms-touch-action: pan-y; /* IE/Edge */
+  -webkit-user-drag: none; /* Disable image dragging on Safari which can interfere with gestures */
+}
+
+/* Also ensure the slider handle itself is touch-friendly */
+.image-compare-wrapper [data-testid="container"] * {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

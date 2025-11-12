@@ -225,11 +225,11 @@ import Link from "next/link";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { ContactUsButton, DownloadAppButton, LanguageDropdown } from "..";
 import { useTranslate } from "@/app/hooks/useTranslate";
-import DropdownMenu, {
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/app/components/ui/dropdown-menu";
+// import DropdownMenu, {
+//   DropdownMenuTrigger,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+// } from "@/app/components/ui/dropdown-menu";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
@@ -272,7 +272,7 @@ export default function SiteNav() {
 
             {/* Desktop links - only show on large screens */}
             <nav className="hidden lg:flex items-center gap-6">
-              <Link
+              {/* <Link
                 href={`/${currentLanguageCode}/about-us`}
                 className={`text-base transition-colors ${
                   isActive("/about-us")
@@ -281,24 +281,10 @@ export default function SiteNav() {
                 }`}
               >
                 {t("navbar.items.aboutUs", "About us")}
-              </Link>
-
-              {/*
-                Original link left commented per request:
-              <Link
-                href={`/${currentLanguageCode}/our-service`}
-                className={`text-base transition-colors ${
-                  isActive("/our-service")
-                    ? "text-beasy-gradient font-semibold"
-                    : "text-black font-medium hover:text-beasy-gradient"
-                }`}
-              >
-                Our Service
-              </Link>
-              */}
+              </Link> */}
 
               {/* Shadcn-style dropdown for Our Service */}
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 <DropdownMenuTrigger
                   className={`text-base transition-colors ${
                     // Consider service-detail pages (any id) as part of Services
@@ -331,9 +317,9 @@ export default function SiteNav() {
                     );
                   })}
                 </DropdownMenuContent>
-              </DropdownMenu>
+              </DropdownMenu> */}
 
-              <Link
+              {/* <Link
                 href={`/${currentLanguageCode}/media-page`}
                 className={`text-base transition-colors ${
                   isActive("/media-page")
@@ -342,7 +328,7 @@ export default function SiteNav() {
                 }`}
               >
                 {t("navbar.items.media", "Media")}
-              </Link>
+              </Link> */}
             </nav>
           </div>
 
@@ -448,7 +434,7 @@ export default function SiteNav() {
 
               {/* Navigation Links */}
               <nav className="flex flex-col gap-1 mb-2">
-                <Link
+                {/* <Link
                   href={`/${currentLanguageCode}/about-us`}
                   onClick={() => setOpen(false)}
                   className={`px-4 py-3 rounded-md text-base transition-colors ${
@@ -458,9 +444,9 @@ export default function SiteNav() {
                   }`}
                 >
                   {t("navbar.items.aboutUs", "About us")}
-                </Link>
+                </Link> */}
                 {/* Mobile collapsible our-service section */}
-                <div className="px-4">
+                {/* <div className="px-4">
                   <button
                     type="button"
                     onClick={() => setMobileServicesOpen((s) => !s)}
@@ -522,7 +508,7 @@ export default function SiteNav() {
                   }`}
                 >
                   Media
-                </Link>
+                </Link> */}
               </nav>
 
               <ContactUsButton
