@@ -30,7 +30,6 @@ export default function Comparer({
   const posRef = useRef(clamp(initialPosition));
   const [, setTick] = useState(0); // used to force minimal re-render for ARIA updates
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
-  const [containerWidth, setContainerWidth] = useState<number>(0);
 
   const setOverlayPosition = useCallback(
     (ratio: number) => {
@@ -41,9 +40,6 @@ export default function Comparer({
 
       if (!container) return;
       const rect = container.getBoundingClientRect();
-
-      // Update container width for image sizing
-      setContainerWidth(rect.width);
 
       // Instead of scaleX, we'll use width to clip the overlay
       if (overlayInner) {
@@ -102,13 +98,6 @@ export default function Comparer({
   useEffect(() => {
     // set initial position once images/layout loaded
     setOverlayPosition(posRef.current);
-
-    // Force update container width on mount
-    const container = containerRef.current;
-    if (container) {
-      const rect = container.getBoundingClientRect();
-      setContainerWidth(rect.width);
-    }
   }, [setOverlayPosition]);
 
   // when after image loads, capture aspect ratio so both images can be absolutely
@@ -119,30 +108,16 @@ export default function Comparer({
       if (img.naturalWidth && img.naturalHeight) {
         setAspectRatio(img.naturalHeight / img.naturalWidth);
       }
-      // Update container width when image loads
-      const container = containerRef.current;
-      if (container) {
-        const rect = container.getBoundingClientRect();
-        setContainerWidth(rect.width);
-      }
       // ensure overlay position recalculates after image load
       scheduleUpdate();
     },
     [scheduleUpdate]
   );
 
-  // Also handle before image load to ensure container width is set
-  const onBeforeLoad = useCallback(
-    (e: React.SyntheticEvent<HTMLImageElement>) => {
-      const container = containerRef.current;
-      if (container) {
-        const rect = container.getBoundingClientRect();
-        setContainerWidth(rect.width);
-      }
-      scheduleUpdate();
-    },
-    [scheduleUpdate]
-  );
+  // Also handle before image load to ensure proper layout
+  const onBeforeLoad = useCallback(() => {
+    scheduleUpdate();
+  }, [scheduleUpdate]);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -341,7 +316,9 @@ export default function Comparer({
             position: "absolute",
             left: 0,
             top: 0,
+            right: 0,
             bottom: 0,
+            width: "100%",
             height: "100%",
             overflow: "hidden",
             willChange: "width",
@@ -359,10 +336,7 @@ export default function Comparer({
             }
             style={{
               display: "block",
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: containerWidth > 0 ? `${containerWidth}px` : "100%",
+              width: "100%",
               height: "100%",
               objectFit: "cover",
               objectPosition: "left center",
