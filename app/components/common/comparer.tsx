@@ -102,6 +102,13 @@ export default function Comparer({
   useEffect(() => {
     // set initial position once images/layout loaded
     setOverlayPosition(posRef.current);
+
+    // Force update container width on mount
+    const container = containerRef.current;
+    if (container) {
+      const rect = container.getBoundingClientRect();
+      setContainerWidth(rect.width);
+    }
   }, [setOverlayPosition]);
 
   // when after image loads, capture aspect ratio so both images can be absolutely
@@ -112,7 +119,26 @@ export default function Comparer({
       if (img.naturalWidth && img.naturalHeight) {
         setAspectRatio(img.naturalHeight / img.naturalWidth);
       }
+      // Update container width when image loads
+      const container = containerRef.current;
+      if (container) {
+        const rect = container.getBoundingClientRect();
+        setContainerWidth(rect.width);
+      }
       // ensure overlay position recalculates after image load
+      scheduleUpdate();
+    },
+    [scheduleUpdate]
+  );
+
+  // Also handle before image load to ensure container width is set
+  const onBeforeLoad = useCallback(
+    (e: React.SyntheticEvent<HTMLImageElement>) => {
+      const container = containerRef.current;
+      if (container) {
+        const rect = container.getBoundingClientRect();
+        setContainerWidth(rect.width);
+      }
       scheduleUpdate();
     },
     [scheduleUpdate]
@@ -288,7 +314,7 @@ export default function Comparer({
           left: 0,
           top: 0,
           width: "100%",
-          height: aspectRatio ? "100%" : "auto",
+          height: "100%",
           objectFit: "cover",
         }}
       />
@@ -301,9 +327,10 @@ export default function Comparer({
           position: "absolute",
           left: 0,
           top: 0,
+          right: 0,
           bottom: 0,
+          width: "100%",
           height: "100%",
-          width: `100%`,
           overflow: "hidden",
           pointerEvents: "none",
         }}
@@ -314,6 +341,7 @@ export default function Comparer({
             position: "absolute",
             left: 0,
             top: 0,
+            bottom: 0,
             height: "100%",
             overflow: "hidden",
             willChange: "width",
@@ -325,11 +353,15 @@ export default function Comparer({
             alt="Before"
             className="block select-none"
             draggable={false}
+            onLoad={onBeforeLoad}
             onError={() =>
               console.error("Failed to load before image:", beforeImg)
             }
             style={{
               display: "block",
+              position: "absolute",
+              left: 0,
+              top: 0,
               width: containerWidth > 0 ? `${containerWidth}px` : "100%",
               height: "100%",
               objectFit: "cover",
