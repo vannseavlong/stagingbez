@@ -5,8 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useState } from 'react';
 import moment from 'moment';
 
-// const BASE_URL = "http://localhost:5002/api/";
-const BASE_URL = 'https://api.beasy.info/api/';
+const BASE_URL = 'http://localhost:5002/api/';
+// const BASE_URL = 'https://api.beasy.info/api/';
 // const BASE_URL = "https://api-dev.beasy.info/api/";
 // const BASE_URL = "https://api.beasy.info/api/";
 
@@ -66,7 +66,7 @@ function PurchaseCoupon() {
 
   const handlePayNow = () => {
     if (aba) {
-      window.open(aba);
+      window.open(aba, '_self');
     }
   };
 
