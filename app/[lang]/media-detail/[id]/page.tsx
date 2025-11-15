@@ -512,7 +512,6 @@ import { useTranslate } from "@/app/hooks/useTranslate";
 import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
 import SimilarMedia from "@/app/components/sections/similarMedia";
 import InstallSection from "@/app/components/sections/InstallAppSection";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 interface MediaArticle {
   id?: number;
@@ -543,7 +542,7 @@ export default function MediaDetail() {
     ? mediaSection.articles
     : [];
 
-  let article =
+  const article =
     translatedArticles.find((a) => Number(a?.id) === idNum) ||
     mediaItemsFallback.find((a: any) => Number(a?.id) === idNum) ||
     (Number.isFinite(idNum) ? (mediaItemsFallback[idNum] as any) : undefined);
@@ -619,7 +618,7 @@ export default function MediaDetail() {
         {/* Structured sections */}
         {Array.isArray(article.sections) && article.sections.length > 0 && (
           <div className="space-y-10 md:space-y-12 mb-16">
-            {article.sections.map((sec: { heading: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; bullet: any[]; quote: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
+            {article.sections.map((sec, idx) => (
               <div
                 key={idx}
                 data-aos="fade-up"
