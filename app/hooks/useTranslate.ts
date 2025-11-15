@@ -9,7 +9,9 @@ type TranslationValue =
   | number
   | boolean
   | TranslationObject
-  | TranslationArray;
+  | TranslationArray
+  | undefined
+  | null;
 type TranslationObject = { [key: string]: TranslationValue };
 type TranslationArray = TranslationValue[];
 
