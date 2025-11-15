@@ -272,7 +272,7 @@ export default function SiteNav() {
 
             {/* Desktop links - only show on large screens */}
             <nav className="hidden lg:flex items-center gap-6">
-              {/* <Link
+              <Link
                 href={`/${currentLanguageCode}/about-us`}
                 className={`text-base transition-colors ${
                   isActive("/about-us")
@@ -281,7 +281,7 @@ export default function SiteNav() {
                 }`}
               >
                 {t("navbar.items.aboutUs", "About us")}
-              </Link> */}
+              </Link> 
 
               {/* Shadcn-style dropdown for Our Service */}
               {/* <DropdownMenu>
@@ -319,7 +319,7 @@ export default function SiteNav() {
                 </DropdownMenuContent>
               </DropdownMenu> */}
 
-              {/* <Link
+             <Link
                 href={`/${currentLanguageCode}/media-page`}
                 className={`text-base transition-colors ${
                   isActive("/media-page")
@@ -328,7 +328,7 @@ export default function SiteNav() {
                 }`}
               >
                 {t("navbar.items.media", "Media")}
-              </Link> */}
+              </Link>
             </nav>
           </div>
 
