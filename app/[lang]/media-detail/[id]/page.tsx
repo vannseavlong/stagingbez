@@ -141,14 +141,6 @@
 
 
 
-"use client";
-import { useParams } from "next/navigation";
-import Image from "next/image";
-import { useTranslate } from "@/app/hooks/useTranslate";
-import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
-import SimilarMedia from "@/app/components/sections/similarMedia";
-import InstallSection from "@/app/components/sections/InstallAppSection";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 // interface MediaArticle {
 //   id?: number;
@@ -316,6 +308,14 @@ import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from
 // }
 
 
+
+"use client";
+import { useParams } from "next/navigation";
+import Image from "next/image";
+import { useTranslate } from "@/app/hooks/useTranslate";
+import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
+import SimilarMedia from "@/app/components/sections/similarMedia";
+import InstallSection from "@/app/components/sections/InstallAppSection";
 
 
 
