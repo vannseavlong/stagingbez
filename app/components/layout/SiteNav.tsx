@@ -225,11 +225,11 @@ import Link from "next/link";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { ContactUsButton, DownloadAppButton, LanguageDropdown } from "..";
 import { useTranslate } from "@/app/hooks/useTranslate";
-// import DropdownMenu, {
-//   DropdownMenuTrigger,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-// } from "@/app/components/ui/dropdown-menu";
+import DropdownMenu, {
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/app/components/ui/dropdown-menu";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
@@ -284,7 +284,7 @@ export default function SiteNav() {
               </Link> 
 
               {/* Shadcn-style dropdown for Our Service */}
-              {/* <DropdownMenu>
+              <DropdownMenu>
                 <DropdownMenuTrigger
                   className={`text-base transition-colors ${
                     // Consider service-detail pages (any id) as part of Services
@@ -317,7 +317,7 @@ export default function SiteNav() {
                     );
                   })}
                 </DropdownMenuContent>
-              </DropdownMenu> */}
+              </DropdownMenu>
 
              <Link
                 href={`/${currentLanguageCode}/media-page`}
