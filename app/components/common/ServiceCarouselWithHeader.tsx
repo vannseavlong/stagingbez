@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode, useRef, useEffect, useState } from "react";
 import ServiceCarousel, { ServiceCarouselHandle } from "./ServiceCarousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -15,6 +15,24 @@ export default function ServiceCarouselWithHeader({
   children,
 }: Props) {
   const ref = useRef<ServiceCarouselHandle | null>(null);
+  const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    const check = () => {
+      const isOverflow = ref.current?.isOverflowing() ?? false;
+      setShowNav(isOverflow);
+    };
+
+    // Check initially and on resize
+    check();
+    // also schedule a delayed check to allow children to render and measure
+    const t = setTimeout(check, 120);
+    window.addEventListener("resize", check);
+    return () => {
+      window.removeEventListener("resize", check);
+      clearTimeout(t);
+    };
+  }, []);
 
   return (
     <div>
@@ -26,22 +44,24 @@ export default function ServiceCarouselWithHeader({
           {title && <h3 className="text-2xl font-bold mt-2">{title}</h3>}
         </div>
 
-        <div className="flex gap-3 items-center">
-          <button
-            onClick={() => ref.current?.prev()}
-            aria-label="previous"
-            className="border rounded-full border-gray-400 p-1.5 md:p-2 hover:bg-gray-300 transition"
-          >
-            <ChevronLeft className="text-black" />
-          </button>
-          <button
-            onClick={() => ref.current?.next()}
-            aria-label="next"
-            className="border rounded-full border-gray-400 p-1.5 md:p-2 hover:bg-gray-300 transition"
-          >
-            <ChevronRight className="text-black" />
-          </button>
-        </div>
+        {showNav && (
+          <div className="flex gap-3 items-center">
+            <button
+              onClick={() => ref.current?.prev()}
+              aria-label="previous"
+              className="border rounded-full border-gray-400 p-1.5 md:p-2 hover:bg-gray-300 transition"
+            >
+              <ChevronLeft className="text-black" />
+            </button>
+            <button
+              onClick={() => ref.current?.next()}
+              aria-label="next"
+              className="border rounded-full border-gray-400 p-1.5 md:p-2 hover:bg-gray-300 transition"
+            >
+              <ChevronRight className="text-black" />
+            </button>
+          </div>
+        )}
       </div>
 
       <ServiceCarousel ref={ref}>{children}</ServiceCarousel>

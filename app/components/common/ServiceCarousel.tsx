@@ -16,6 +16,8 @@ export type ServiceCarouselHandle = {
   next: () => void;
   prev: () => void;
   scrollByAmount: (amt: number) => void;
+  // returns true when content overflows horizontally
+  isOverflowing: () => boolean;
 };
 
 const ServiceCarousel = forwardRef<ServiceCarouselHandle, Props>(
@@ -43,6 +45,12 @@ const ServiceCarousel = forwardRef<ServiceCarouselHandle, Props>(
       el.scrollBy({ left: amount, behavior: "smooth" });
     };
 
+    const isOverflowing = () => {
+      const el = containerRef.current;
+      if (!el) return false;
+      return el.scrollWidth > el.clientWidth + 1;
+    };
+
     const prev = () => {
       const el = containerRef.current;
       if (!el) return;
@@ -57,7 +65,12 @@ const ServiceCarousel = forwardRef<ServiceCarouselHandle, Props>(
       scrollBy(Math.round(w * 0.7));
     };
 
-    useImperativeHandle(ref, () => ({ next, prev, scrollByAmount: scrollBy }));
+    useImperativeHandle(ref, () => ({
+      next,
+      prev,
+      scrollByAmount: scrollBy,
+      isOverflowing,
+    }));
 
     return (
       <div>
