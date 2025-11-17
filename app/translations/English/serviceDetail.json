@@ -4,8 +4,8 @@
     "banner": {
       "title": "General Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 1.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/General/General_Hero.webp",
+      "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -55,8 +55,8 @@
     "banner": {
       "title": "Deep Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 2.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
+      "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -107,8 +107,8 @@
     "banner": {
       "title": "Office Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 3.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
+      "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -152,8 +152,8 @@
     "banner": {
       "title": "Upholstery Cleaning Service",
       "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
+      "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -213,8 +213,8 @@
     "banner": {
       "title": "Pest Control Service",
       "description": "PLACEHOLDER - Replace this description for service id 5.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
+      "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -224,7 +224,12 @@
       "subtitle": "Information of procedure"
     },
     "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
+      "items": [
+        "Notify customer to vacate the area to be treated.",
+        "Apply residual spray treatment to walls, baseboards, and entry points.",
+        "Targeted for crawling insects like ants, cockroaches, and bed bugs.",
+        "Use ultra-low volume (ULV) fogger to disperse fine mist of insecticide."
+      ]
     },
     "serviceType": {
       "subtitle": "SERVICE PRICES",
@@ -259,8 +264,8 @@
     "banner": {
       "title": "Washing Machine Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 6.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Washing/Wash_Hero.webp",
+      "portrait": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -270,7 +275,11 @@
       "subtitle": "Information of procedure"
     },
     "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
+      "items": [
+        "Disconnect machine from both electrical and water supply.",
+        "Pull out the detergent dwawer and soak in warm soapy water mixed with mild detergent for a few minutes.",
+        "Use a small brush to scrub away any soap residue or mold then dry it completely before reinstalling the drawer."
+      ]
     },
     "serviceType": {
       "subtitle": "SERVICE PRICES",
@@ -291,8 +300,8 @@
     "banner": {
       "title": "Post Renovation Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 7.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
+      "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -344,8 +353,8 @@
     "banner": {
       "title": "AC Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 8.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
+      "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {

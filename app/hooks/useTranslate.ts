@@ -61,6 +61,9 @@ import telegramZh from "@/app/translations/Chinese/telegram.json";
 import serviceDetailEn from "@/app/translations/English/serviceDetail.json";
 import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
 import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
+import serviceDetailAboutEn from "@/app/translations/English/serviceDetailAbout.json";
+import serviceDetailAboutKm from "@/app/translations/Khmer/serviceDetailAbout.json";
+import serviceDetailAboutZh from "@/app/translations/Chinese/serviceDetailAbout.json";
 import aboutUsEn from "@/app/translations/English/aboutUs.json";
 import aboutUsKm from "@/app/translations/Khmer/aboutUs.json";
 import aboutUsZh from "@/app/translations/Chinese/aboutUs.json";
@@ -85,6 +88,8 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     install: (installEn as unknown as TranslationObject) || {},
     footer: (footerEn as unknown as TranslationObject) || {},
     serviceDetail: serviceDetailEn || {},
+    // serviceDetailAbout contains per-service 'about' entries keyed by id
+    serviceDetailAbout: serviceDetailAboutEn || {},
   },
   Khmer: {
     navbar: navbarKm,
@@ -103,6 +108,8 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     install: (installKm as unknown as TranslationObject) || {},
     footer: (footerKm as unknown as TranslationObject) || {},
     serviceDetail: serviceDetailKm || {},
+    // serviceDetailAbout contains per-service 'about' entries keyed by id
+    serviceDetailAbout: serviceDetailAboutKm || {},
   },
   Chinese: {
     navbar: navbarZh,
@@ -121,6 +128,8 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     install: (installZh as unknown as TranslationObject) || {},
     footer: (footerZh as unknown as TranslationObject) || {},
     serviceDetail: serviceDetailZh || {},
+    // serviceDetailAbout contains per-service 'about' entries keyed by id
+    serviceDetailAbout: serviceDetailAboutZh || {},
   },
 };
 

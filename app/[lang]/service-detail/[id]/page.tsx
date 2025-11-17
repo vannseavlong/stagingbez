@@ -8,7 +8,8 @@ import ServiceItem from "@/app/components/common/ServiceItem";
 import serviceDetailEn from "@/app/translations/English/serviceDetail.json";
 import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
 import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
-import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
+import serviceDetailAboutEn from "@/app/translations/English/serviceDetailAbout.json";
+// import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
 import FAQSection from "@/app/components/sections/FAQSection";
 import InstallSection from "@/app/components/sections/InstallAppSection";
 
@@ -31,6 +32,18 @@ export default function ServiceDetailPage({ params }: { params: any }) {
   // Select the translation data for the route's language
   const serviceDetail = languageMap[languageCode] || serviceDetailEn;
   const currentId = Number(params?.id ?? NaN);
+
+  // Load the service-detail-specific 'about' translations for the route
+  const serviceDetailAboutMap: Record<string, any> = {
+    en: serviceDetailAboutEn,
+    // Fallback to English if other-language serviceDetailAbout files are not present
+    km: serviceDetailAboutEn,
+    zh: serviceDetailAboutEn,
+  };
+
+  const serviceDetailAbout =
+    serviceDetailAboutMap[languageCode] || serviceDetailAboutEn;
+  const aboutEntry = serviceDetailAbout?.[String(currentId)] ?? null;
 
   // Determine the detail object for the requested id.
   // The translations may take one of three shapes:
@@ -66,13 +79,45 @@ export default function ServiceDetailPage({ params }: { params: any }) {
     <div className="font-sans min-h-screen">
       <main>
         {/* Background container with max-width */}
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16">
-          {/* Mobile */}
-          <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-          {/* Tablet */}
-          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-          {/* Desktop */}
-          <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
+        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-6 md:px-8 lg:px-16">
+          {/* Use service-specific Imagebg fields when available; fall back to decorative defaults */}
+          {(() => {
+            const header = aboutEntry?.header ?? {};
+            const mobileBg =
+              header.ImagebgMobile ??
+              header.Imagebg ??
+              "/images/about/Why_Us_mini.jpg";
+            const tabletBg =
+              header.ImagebgTablet ??
+              header.Imagebg ??
+              "/images/Why_Choose_us_tablet.png";
+            const desktopBg =
+              header.ImagebgDesktop ??
+              header.Imagebg ??
+              "/images/about/Why_Us.webp";
+
+            return (
+              <>
+                {/* Mobile */}
+                <div
+                  className="block md:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${mobileBg}')` }}
+                />
+
+                {/* Tablet */}
+                <div
+                  className="hidden md:block lg:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${tabletBg}')` }}
+                />
+
+                {/* Desktop */}
+                <div
+                  className="hidden lg:block bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${desktopBg}')` }}
+                />
+              </>
+            );
+          })()}
         </div>
         {/* Banner (full-viewport sliding hero) - populated from translations */}
         <Banner
@@ -96,7 +141,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
         />
 
         {/* About section (top of page) */}
-        <AboutUsSection />
+        <AboutUsSection serviceId={currentId} />
 
         {/* Single full-width white band for the rest of the page sections so
             the decorative fixed background doesn't show through between them. */}
@@ -129,7 +174,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                   return (
                     <div
                       key={it?.key ?? idx}
-                      className="min-w-[360px] w-[360px] flex-shrink-0 mr-4"
+                      className="min-w-[310px] w-[310px] flex-shrink-0"
                     >
                       <ServiceItem
                         title={it?.description || it?.key || "Service"}
@@ -145,9 +190,9 @@ export default function ServiceDetailPage({ params }: { params: any }) {
           </div>
 
           {/* How it works */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          {/* <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
             <HowItWorkBlog />
-          </div>
+          </div> */}
 
           {/* FAQ */}
           <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">

@@ -5,6 +5,12 @@
     "title": "Don’t Worry, bEasy Have You Covered",
     "description": "Our on-demand cleaners are professionally trained, background-checked, and committed to delivering spotless results every time."
   },
+  "item-icons": [
+    "/images/about/Quick_Booking.webp",
+    "/images/about/Flexible_Schedule.webp",
+    "/images/about/Sefty.webp",
+    "/images/about/Professional_Cleaner.webp"
+  ],
   "items": [
     {
       "key": "quickBooking",

@@ -1,0 +1,298 @@
+{
+  "1": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our General Cleaning",
+      "description": "We clean every space with expert care - for results that look fresher, feel better, and last longer.",
+      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "reliable",
+        "title": "Reliable Every Time",
+        "description": "Our team follows a strict checklist to ensure no corner is missed."
+      },
+      {
+        "key": "friendly",
+        "title": "ECO-Friendly Products",
+        "description": "Safe, not toxic supplies that protect your family and environment."
+      },
+      {
+        "key": "expert",
+        "title": "Expert Care",
+        "description": "Every cleaner is vaetted, trained, and held to high quality standard."
+      },
+      {
+        "key": "quick",
+        "title": "Quick & Convenient",
+        "description": "Book in minutes and choose the time that works best for you."
+      }
+    ]
+  },
+  "2": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Deep Cleaning",
+      "description": "We clean every corner with expert care - for results that look deeper, feel fresher, and last longer",
+      "Imagebg": "/images/serviceDetail/Deep/Deep_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "thorough&detailed",
+        "title": "Thorough & Detailed",
+        "description": "We clean every corner, removing hidden dirt and grime."
+      },
+      {
+        "key": "safe&effective",
+        "title": "Safe & Effective",
+        "description": "Eco-friendly products keep your environment clean and healthy."
+      },
+      {
+        "key": "expert",
+        "title": "Expert Care",
+        "description": "Every cleaner is vaetted, trained, and held to high quality standard."
+      },
+      {
+        "key": "quick",
+        "title": "Quick & Convenient",
+        "description": "Book in minutes and choose the time that works best for you."
+      }
+    ]
+  },
+  "3": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Office Cleaning",
+      "description": "We clean every space with expert care - for results that look fresher, feel better, and last longer.",
+      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "reliable",
+        "title": "Reliable Every Time",
+        "description": "Our team follows a strict checklist to ensure no corner is missed."
+      },
+      {
+        "key": "friendly",
+        "title": "ECO-Friendly Products",
+        "description": "Safe, not toxic supplies that protect your family and environment."
+      },
+      {
+        "key": "expert",
+        "title": "Expert Care",
+        "description": "Every cleaner is vaetted, trained, and held to high quality standard."
+      },
+      {
+        "key": "quick",
+        "title": "Quick & Convenient",
+        "description": "Book in minutes and choose the time that works best for you."
+      }
+    ]
+  },
+  "4": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Upholstery Cleaning",
+      "description": "We treat every fabric with expert care - for results that look cleaner, feel softer, and last longer.",
+      "Imagebg": "/images/serviceDetail/Uphol/Uphol_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "deep&fresh",
+        "title": "Deep Clean, Fresh Look",
+        "description": "Remove dirt, stains, and allergens for renewed comfort and freshness."
+      },
+      {
+        "key": "friendly",
+        "title": "Safe & Eco-Friendly",
+        "description": "Non-toxic cleaning safe for your family, pets, and fabrics."
+      },
+      {
+        "key": "expert",
+        "title": "Expert Care",
+        "description": "Handled by skilled pros who treat every fabric with care."
+      },
+      {
+        "key": "quick",
+        "title": "Quick & Convenient",
+        "description": "Easy booking, fast service and ready-to-use result."
+      }
+    ]
+  },
+  "item-icons": [
+    "/images/about/Quick_Booking.webp",
+    "/images/about/Eco_Friendly.webp",
+    "/images/about/Expert_Cleaners.webp",
+    "/images/about/Reliable_Service.webp"
+  ],
+  "5": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Pest Control",
+      "description": "We treat every space with expert care - for results that keep pests away, protect your home, and last longer.",
+      "Imagebg": "/images/serviceDetail/Pest/Pest_Para.webp"
+    },
+    "items": [
+      {
+        "key": "effective&lasting",
+        "title": "Effective & Long-Lasting",
+        "description": "We eliminate pests and prevent them from returning."
+      },
+      {
+        "key": "professional",
+        "title": "Trained Professionals",
+        "description": "Experts handle treatments safely and efficiently."
+      },
+      {
+        "key": "family&petsafe",
+        "title": "Safe for Family & Pets",
+        "description": "Eco-friendly solutions protect your home without harm."
+      },
+      {
+        "key": "quick",
+        "title": "Quick & Convenient",
+        "description": "Easy booking, fast service and ready-to-use result."
+      }
+    ]
+  },
+  "6": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Washing Machine Cleaning",
+      "description": "We handle every machine with precision - for results that look spotless, run efficiently, and last longer.",
+      "Imagebg": "/images/serviceDetail/Washing/Wash_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "deep&hygiene",
+        "title": "Deep Clean & Hygiene",
+        "description": "Remove hidden, dirt, mold, and detergent build-up."
+      },
+      {
+        "key": "expert",
+        "title": "Trained Experts",
+        "description": "Professionals handle all types of washing machines safely."
+      },
+      {
+        "key": "performance",
+        "title": "Improves Performance",
+        "description": "Help your machine run efficiently and last longer."
+      },
+      {
+        "key": "safe",
+        "title": "Safe & Eco-Friendly",
+        "description": "Uses safe cleaning solutions that protect your home and machine."
+      }
+    ]
+  },
+  "7": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our Post Renovation ",
+      "description": "We clean every space thoroughly - for results that look flawless, feel fresh, and last longer.",
+      "Imagebg": "/images/serviceDetail/Renovate/Renovate_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "debrisRemoval",
+        "title": "Thorough Debris Removal",
+        "description": "Cleans dust, paint, and leftover construction mess."
+      },
+      {
+        "key": "skilledProfessionals",
+        "title": "Skilled Professionals",
+        "description": "Trained to handle tough post-renovation cleaning safely."
+      },
+      {
+        "key": "restores",
+        "title": "Restores Your Space",
+        "description": "Makes your home livable, fresh, and spotless"
+      },
+      {
+        "key": "safe",
+        "title": "Safe & Efficient",
+        "description": "Use safe products and quick methods for a hassle-free clean."
+      }
+    ]
+  },
+  "8": {
+    "id": 1,
+    "header": {
+      "subtitle": "WHY CHOOSE US",
+      "title": "Why You’ll Love Our AC Cleaning",
+      "description": "We treat every space with expert care - for results that keep pests away, protect your home, and last longer.",
+      "Imagebg": "/images/serviceDetail/AC/AC_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Quick_Booking.webp",
+      "/images/about/Eco_Friendly.webp",
+      "/images/about/Expert_Cleaners.webp",
+      "/images/about/Reliable_Service.webp"
+    ],
+    "items": [
+      {
+        "key": "efficiency",
+        "title": "Boost Efficiency",
+        "description": "Clean ACs run better and save energy."
+      },
+      {
+        "key": "technicians",
+        "title": "Expert Technicians",
+        "description": "Trained professionals ensure a thorough cleaning."
+      },
+      {
+        "key": "healthierAir",
+        "title": "Healthier Air",
+        "description": "Removes dust, allergens, and bacteria for fresher air."
+      },
+      {
+        "key": "safe",
+        "title": "Safe & Reliable",
+        "description": "We use safe methods to protect your AC and home."
+      }
+    ]
+  }
+}
