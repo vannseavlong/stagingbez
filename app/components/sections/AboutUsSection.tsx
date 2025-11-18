@@ -119,10 +119,26 @@ export default function AboutUsSection({ serviceId }: Props) {
     professionalTeam: "/images/about/Professional_Cleaner.webp",
   };
 
+  const DEFAULT_ICON = "/images/about/Quick_Booking.webp";
+
+  const itemIcons: string[] | null = Array.isArray(aboutSection["item-icons"])
+    ? aboutSection["item-icons"]
+    : null;
+
+  // If a serviceId is provided, strictly use the service's `item-icons` (by index).
+  // Otherwise, use the imageMap lookup by key if present, or fall back to DEFAULT_ICON.
+  const useServiceIcons =
+    typeof serviceId !== "undefined" &&
+    serviceId !== null &&
+    !!itemIcons &&
+    itemIcons.length > 0;
+
   const features = (
     Array.isArray(aboutSection.items) ? aboutSection.items : []
-  ).map((it: any) => ({
-    icon: imageMap[it.key] || "/images/about/Quick_Booking.webp",
+  ).map((it: any, idx: number) => ({
+    icon: useServiceIcons
+      ? itemIcons![idx] ?? DEFAULT_ICON
+      : imageMap[it?.key] ?? DEFAULT_ICON,
     title: it.title || "",
     description: it.description || "",
   }));
