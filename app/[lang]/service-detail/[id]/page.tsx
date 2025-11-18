@@ -154,7 +154,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                   // Prefer a service item image if present, otherwise fall back to banner
                   detail?.taskInfo?.imageSrc || detail?.banner?.landscape
                 }
-                items={detail?.taskList?.items}
+                taskList={detail?.taskList}
               />
             </div>
           </div>

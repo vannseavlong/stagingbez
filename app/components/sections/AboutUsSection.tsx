@@ -142,7 +142,7 @@ export default function AboutUsSection({ serviceId }: Props) {
             <h1 className="w-full lg:w-[420px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-wide leading-snug font-sans">
               {aboutSection.header?.title}
             </h1>
-            <div className="flex justify-start w-full mb-6 md:justify-start lg:justify-end lg:w-[60%] lg:py-3">
+            <div className="flex justify-start w-full mb-6 lg:mb-0 md:justify-start lg:justify-end lg:w-[60%] lg:py-0">
               <p className="text-[#3D3D3D] font-medium text-[16px] md:text-[18px] lg:text-[18px] md:text-base leading-[150%] lg:max-w-[560px] md:max-w-[520px] text-left font-sans">
                 {aboutSection.header?.description}
               </p>
