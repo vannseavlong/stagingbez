@@ -467,7 +467,7 @@
     },
     "taskInfo": {
       "imageSrc": "/images/services/Post_Reno.webp",
-      "title": "PLACEHOLDER - 这是什么服务 (id 7)?",
+      "title": "您的清洁任务包括什么？",
       "description": "PLACEHOLDER - 请替换服务ID 7的完整描述。",
       "subtitle": "程序信息"
     },
@@ -583,7 +583,7 @@
     },
     "taskInfo": {
       "imageSrc": "/images/services/AC_Cleaning.webp",
-      "title": "PLACEHOLDER - 这是什么服务 (id 8)?",
+      "title": "您的清洁任务包括什么？",
       "description": "PLACEHOLDER - 请替换服务ID 8的完整描述。",
       "subtitle": "程序信息"
     },

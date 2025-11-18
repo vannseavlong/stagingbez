@@ -236,7 +236,7 @@
     },
     "taskInfo": {
       "imageSrc": "/images/services/uphol.webp",
-      "title": "What is Upholstery Cleaning?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
       "subtitle": "Information of procedure"
     },
@@ -467,7 +467,7 @@
     },
     "taskInfo": {
       "imageSrc": "/images/services/Post_Reno.webp",
-      "title": "PLACEHOLDER - What is this service (id 7)?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 7.",
       "subtitle": "Information of procedure"
     },
@@ -583,7 +583,7 @@
     },
     "taskInfo": {
       "imageSrc": "/images/services/AC_Cleaning.webp",
-      "title": "PLACEHOLDER - What is this service (id 8)?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 8.",
       "subtitle": "Information of procedure"
     },
