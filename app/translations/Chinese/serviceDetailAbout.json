@@ -2,22 +2,22 @@
   "1": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们日常清洁服务的原因",
-      "description": "我们以专业的护理清洁每一个空间—带来更清新、更舒适、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们一般清洁服务的原因",
+      "description": "我们以专业的护理清洁每个空间——带来外观更清新、感觉更舒适、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/General/General_Para.webp"
     },
     "item-icons": [
       "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
     ],
     "items": [
       {
         "key": "reliable",
-        "title": "始终可靠",
-        "description": "我们的团队遵循严格的清单，确保不遗漏任何角落。"
+        "title": "每次都可靠",
+        "description": "我们的团队遵循严格的检查清单，确保不遗漏任何角落。"
       },
       {
         "key": "friendly",
@@ -27,71 +27,71 @@
       {
         "key": "expert",
         "title": "专业护理",
-        "description": "每位清洁工人都经过审查、培训，并遵守高质量标准。"
+        "description": "每位清洁人员都经过审查、培训并遵守高标准的质量要求。"
       },
       {
         "key": "quick",
         "title": "快速便捷",
-        "description": "几分钟内即可预订，并选择最适合您的时间。"
+        "description": "只需几分钟即可预订，并选择最适合您的时间。"
       }
     ]
   },
   "2": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们深度清洁服务的原因",
-      "description": "我们以专业的护理清洁每一个角落—带来更深层、更清新、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们深度清洁服务的原因",
+      "description": "我们以专业的护理清洁每个角落——带来外观更深入、感觉更清新、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/Deep/Deep_Para.webp"
     },
     "item-icons": [
       "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
     ],
     "items": [
       {
         "key": "thorough&detailed",
-        "title": "彻底细致",
-        "description": "我们清洁每一个角落，清除隐藏的污垢和污秽。"
+        "title": "彻底且详细",
+        "description": "我们清洁每个角落，清除隐藏的污垢和污垢。"
       },
       {
         "key": "safe&effective",
         "title": "安全有效",
-        "description": "环保产品，让您的环境保持清洁健康。"
+        "description": "环保产品使您的环境保持清洁和健康。"
       },
       {
         "key": "expert",
         "title": "专业护理",
-        "description": "每位清洁工人都经过审查、培训，并遵守高质量标准。"
+        "description": "每位清洁人员都经过审查、培训并遵守高标准的质量要求。"
       },
       {
         "key": "quick",
         "title": "快速便捷",
-        "description": "几分钟内即可预订，并选择最适合您的时间。"
+        "description": "只需几分钟即可预订，并选择最适合您的时间。"
       }
     ]
   },
   "3": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们办公室清洁服务的原因",
-      "description": "我们以专业的护理清洁每一个空间—带来更清新、更舒适、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们办公室清洁服务的原因",
+      "description": "我们以专业的护理清洁每个空间——带来外观更清新、感觉更舒适、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/General/General_Para.webp"
     },
     "item-icons": [
       "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
     ],
     "items": [
       {
         "key": "reliable",
-        "title": "始终可靠",
-        "description": "我们的团队遵循严格的清单，确保不遗漏任何角落。"
+        "title": "每次都可靠",
+        "description": "我们的团队遵循严格的检查清单，确保不遗漏任何角落。"
       },
       {
         "key": "friendly",
@@ -101,113 +101,107 @@
       {
         "key": "expert",
         "title": "专业护理",
-        "description": "每位清洁工人都经过审查、培训，并遵守高质量标准。"
+        "description": "每位清洁人员都经过审查、培训并遵守高标准的质量要求。"
       },
       {
         "key": "quick",
         "title": "快速便捷",
-        "description": "几分钟内即可预订，并选择最适合您的时间。"
+        "description": "只需几分钟即可预订，并选择最适合您的时间。"
       }
     ]
   },
   "4": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们布艺清洁服务的原因",
-      "description": "我们以专业的护理对待每一种布料—带来更清洁、更柔软、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们软垫清洁服务的原因",
+      "description": "我们以专业的护理对待每种织物——带来外观更干净、手感更柔软、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/Uphol/Uphol_Para.webp"
     },
     "item-icons": [
       "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
     ],
     "items": [
       {
         "key": "deep&fresh",
-        "title": "深层清洁，焕然一新",
-        "description": "去除污垢、污渍和过敏原，重获舒适与清新。"
+        "title": "深度清洁，焕然一新",
+        "description": "清除污垢、污渍和过敏原，恢复舒适和清新。"
       },
       {
         "key": "friendly",
         "title": "安全环保",
-        "description": "无毒清洁，对您的家人、宠物和布料都安全。"
+        "description": "无毒清洁，对您的家人、宠物和织物都安全。"
       },
       {
         "key": "expert",
         "title": "专业护理",
-        "description": "由熟练的专业人员处理，他们细心对待每一种布料。"
+        "description": "由熟练的专业人员处理，他们细心对待每种织物。"
       },
       {
         "key": "quick",
         "title": "快速便捷",
-        "description": "轻松预订，快速服务，立即可用的效果。"
+        "description": "轻松预订、快速服务和立即可用的结果。"
       }
     ]
   },
-  "item-icons": [
-    "/images/about/Quick_Booking.webp",
-    "/images/about/Eco_Friendly.webp",
-    "/images/about/Expert_Cleaners.webp",
-    "/images/about/Reliable_Service.webp"
-  ],
   "5": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们害虫防治服务的原因",
-      "description": "我们以专业的护理对待每一个空间—带来驱除害虫、保护您的家园、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们害虫防治服务的原因",
+      "description": "我们以专业的护理处理每个空间——带来驱除害虫、保护您的家园并持续更久的效果。",
       "Imagebg": "/images/serviceDetail/Pest/Pest_Para.webp"
     },
     "item-icons": [
       "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Quick_Booking.webp"
     ],
     "items": [
       {
         "key": "effective&lasting",
-        "title": "高效持久",
-        "description": "我们消灭害虫并防止它们卷土重来。"
+        "title": "有效且持久",
+        "description": "我们消除害虫并阻止它们返回。"
       },
       {
         "key": "professional",
         "title": "训练有素的专业人员",
-        "description": "专家安全高效地处理防治工作。"
+        "description": "专家安全有效地处理治疗。"
       },
       {
         "key": "family&petsafe",
         "title": "对家人和宠物安全",
-        "description": "环保解决方案，保护您的家园不受伤害。"
+        "description": "环保解决方案在不造成伤害的情况下保护您的家园。"
       },
       {
         "key": "quick",
         "title": "快速便捷",
-        "description": "轻松预订，快速服务，立即可用的效果。"
+        "description": "轻松预订、快速服务和立即可用的结果。"
       }
     ]
   },
   "6": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们洗衣机清洁服务的原因",
-      "description": "我们精确地处理每一台机器—带来一尘不染、高效运行、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们洗衣机清洁服务的原因",
+      "description": "我们以精确度处理每台机器——带来一尘不染、运行高效、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/Washing/Wash_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Missing.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Missing.webp",
+      "/images/about/Sefty.webp"
     ],
     "items": [
       {
         "key": "deep&hygiene",
-        "title": "深层清洁和卫生",
+        "title": "深度清洁和卫生",
         "description": "清除隐藏的污垢、霉菌和洗涤剂堆积物。"
       },
       {
@@ -217,66 +211,66 @@
       },
       {
         "key": "performance",
-        "title": "提升性能",
-        "description": "帮助您的机器高效运行，使用寿命更长。"
+        "title": "提高性能",
+        "description": "帮助您的机器高效运行并持续更久。"
       },
       {
         "key": "safe",
         "title": "安全环保",
-        "description": "使用安全的清洁解决方案，保护您的家和机器。"
+        "description": "使用安全的清洁溶液来保护您的家和机器。"
       }
     ]
   },
   "7": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们装修后清洁服务的原因",
-      "description": "我们彻底清洁每一个空间—带来完美无瑕、清新舒适、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们装修后清洁服务的原因",
+      "description": "我们彻底清洁每个空间——带来完美无瑕、感觉清新、持续时间更长的效果。",
       "Imagebg": "/images/serviceDetail/Renovate/Renovate_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Missing.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Missing.webp",
+      "/images/about/Sefty.webp"
     ],
     "items": [
       {
         "key": "debrisRemoval",
-        "title": "彻底清除杂物",
-        "description": "清洁灰尘、油漆和剩余的建筑垃圾。"
+        "title": "彻底清除碎屑",
+        "description": "清除灰尘、油漆和剩余的建筑杂物。"
       },
       {
         "key": "skilledProfessionals",
         "title": "熟练的专业人员",
-        "description": "经过培训，可以安全地处理艰巨的装修后清洁工作。"
+        "description": "经过培训，可以安全地处理艰难的装修后清洁工作。"
       },
       {
         "key": "restores",
         "title": "恢复您的空间",
-        "description": "让您的家变得宜居、清新、一尘不染。"
+        "description": "使您的家变得宜居、清新、一尘不染"
       },
       {
         "key": "safe",
         "title": "安全高效",
-        "description": "使用安全的产品和快速的方法，让清洁无忧。"
+        "description": "使用安全的产品和快速的方法进行轻松清洁。"
       }
     ]
   },
   "8": {
     "id": 1,
     "header": {
-      "subtitle": "选择我们的理由",
-      "title": "爱上我们空调清洁服务的原因",
-      "description": "我们以专业的护理对待每一个空间—带来更高效、更健康、更持久的效果。",
+      "subtitle": "为什么选择我们",
+      "title": "您会喜欢我们空调清洁服务的原因",
+      "description": "我们以专业的护理处理每个空间——带来驱除害虫、保护您的家园并持续更久的效果。",
       "Imagebg": "/images/serviceDetail/AC/AC_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
-      "/images/about/Eco_Friendly.webp",
-      "/images/about/Expert_Cleaners.webp",
-      "/images/about/Reliable_Service.webp"
+      "/images/about/Missing.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Missing.webp",
+      "/images/about/Sefty.webp"
     ],
     "items": [
       {
@@ -292,7 +286,7 @@
       {
         "key": "healthierAir",
         "title": "更健康的空气",
-        "description": "清除灰尘、过敏原和细菌，让空气更清新。"
+        "description": "清除灰尘、过敏原和细菌，使空气更清新。"
       },
       {
         "key": "safe",
