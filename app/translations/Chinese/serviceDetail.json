@@ -2,48 +2,89 @@
   "1": {
     "id": 1,
     "banner": {
-      "title": "日常清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 1.",
+      "title": "一般清洁服务",
+      "description": "PLACEHOLDER - 请替换服务ID 1的描述。",
       "landscape": "/images/serviceDetail/General/General_Hero.webp",
       "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/general.webp",
-      "title": "您的清洁任务包含哪些内容？",
-      "description": "PLACEHOLDER - Replace with full description for service id 1.",
-      "subtitle": "流程信息"
+      "title": "您的清洁任务包括什么？",
+      "description": "PLACEHOLDER - 请替换服务ID 1的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": [
-        "家具除尘和擦拭",
-        "扫地、吸尘和拖地",
-        "清洁台面、水槽和浴室",
-        "倒垃圾和轻微整理"
-      ]
-    },
+    "taskList": [
+      {
+        "title": "厨房",
+        "items": [
+          "清洗和整理餐具",
+          "擦拭所有可触及的表面灰尘",
+          "擦拭厨柜和电器的表面",
+          "擦拭所有开关和把手",
+          "擦拭和刷洗厨房炉灶",
+          "清洁厨房岛台和桌面",
+          "清洁水槽",
+          "清理垃圾",
+          "扫地和拖地",
+          "所有表面必须是可接触和可触及的"
+        ]
+      },
+      {
+        "title": "浴室",
+        "items": [
+          "清洁马桶、淋浴间、浴缸、水槽",
+          "擦拭和清洁橱柜、镜子和所有固定装置",
+          "擦拭所有开关和把手",
+          "清理垃圾",
+          "扫地和拖地",
+          "所有表面必须是可接触和可触及的"
+        ]
+      },
+      {
+        "title": "客厅/公共区域",
+        "items": [
+          "掸除和擦拭所有可触及和可接触的表面灰尘",
+          "擦拭所有开关和把手",
+          "清理垃圾",
+          "扫地和拖地",
+          "所有表面必须是可接触和可触及的"
+        ]
+      },
+      {
+        "title": "卧室",
+        "items": [
+          "掸除和擦拭所有可触及和可接触的表面灰尘",
+          "擦拭所有开关和把手",
+          "清洁镜子",
+          "整理床铺（如果您希望我们更换床单，请将新床单放在一旁）",
+          "扫地和拖地",
+          "所有表面必须是可接触和可触及的"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Villa",
           "description": "别墅",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
-          "description": "平房和店屋",
-          "priceText": "起始价格：",
+          "description": "公寓与店屋",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "公寓",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         }
@@ -54,48 +95,83 @@
     "id": 2,
     "banner": {
       "title": "深度清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 2.",
+      "description": "PLACEHOLDER - 请替换服务ID 2的描述。",
       "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
       "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/deep.webp",
-      "title": "您的清洁任务包含哪些内容？",
-      "description": "PLACEHOLDER - Replace with full description for service id 2.",
-      "subtitle": "流程信息"
+      "title": "您的清洁任务包括什么？",
+      "description": "PLACEHOLDER - 请替换服务ID 2的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": [
-        "清洁家具和电器后面及下方",
-        "彻底刷洗浴室瓷砖、瓷砖缝和水槽",
-        "深度清洁空调通风口和冰箱内部",
-        "轻微清洁和吸尘床垫、沙发和地毯",
-        "专业去除顽固污渍、尘螨和细菌"
-      ]
-    },
+    "taskList": [
+      {
+        "title": "一般工作",
+        "items": [
+          "清洁吊扇、家具表面、蜘蛛网",
+          "清洁和擦拭镜子和玻璃",
+          "扫地和拖地",
+          "清理垃圾",
+          "轻便家具"
+        ]
+      },
+      {
+        "title": "厨房",
+        "items": [
+          "清洁和擦拭所有家具表面",
+          "清洁和擦拭厨房台面和通风设备",
+          "清洁岛台、桌面、台面",
+          "清洁和擦拭电器",
+          "刷洗和清洁水槽",
+          "吸尘和拖地",
+          "清洁电器内部（微波炉、烤箱、冰箱等）"
+        ]
+      },
+      {
+        "title": "卧室",
+        "items": [
+          "掸除和擦拭所有可触及的表面灰尘",
+          "清洁所有开关和把手",
+          "清洁和擦拭镜子和玻璃",
+          "整理床铺（如果您希望我们更换床单，请将新床单放在一旁）",
+          "扫地和拖地"
+        ]
+      },
+      {
+        "title": "浴室",
+        "items": [
+          "清洁和消毒马桶、淋浴间、水槽、排水盖和浴缸",
+          "清洁橱柜、镜子和家具的表面",
+          "清洁所有开关和把手",
+          "清洁橱柜、储物柜和抽屉的内部",
+          "扫地和拖地"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Villa",
           "description": "别墅",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
-          "description": "平房和店屋",
-          "priceText": "起始价格：",
+          "description": "公寓与店屋",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "公寓",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         }
@@ -106,41 +182,43 @@
     "id": 3,
     "banner": {
       "title": "办公室清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 3.",
+      "description": "PLACEHOLDER - 请替换服务ID 3的描述。",
       "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
       "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/office.webp",
-      "title": "您的清洁任务包含哪些内容？",
-      "description": "PLACEHOLDER - Replace with full description for service id 3.",
-      "subtitle": "流程信息"
+      "title": "您的清洁任务包括什么？",
+      "description": "PLACEHOLDER - 请替换服务ID 3的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": [
-        "清洁家具和电器后面及下方",
-        "彻底刷洗浴室瓷砖、瓷砖缝和水槽",
-        "深度清洁空调通风口和冰箱内部",
-        "轻微清洁和吸尘床垫、沙发和地毯",
-        "专业去除顽固污渍、尘螨和细菌"
-      ]
-    },
+    "taskList": [
+      {
+        "items": [
+          "清洁家具和电器后面和下面",
+          "彻底刷洗浴室瓷砖、灌浆和水槽",
+          "深度清洁空调通风口和冰箱内部",
+          "轻度清洁和吸尘床垫、沙发和地毯",
+          "专业清除顽固污渍、尘螨和细菌"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "General",
-          "description": "日常清洁",
-          "priceText": "起始价格：",
+          "description": "一般清洁",
+          "priceText": "起始价:",
           "price": "$38",
           "imageSrc": "/images/serviceDetail/Office/general.webp"
         },
         {
           "key": "Deep",
           "description": "深度清洁",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$38",
           "imageSrc": "/images/serviceDetail/Office/deep.webp"
         }
@@ -150,58 +228,60 @@
   "4": {
     "id": 4,
     "banner": {
-      "title": "布艺清洁服务",
-      "description": "使用 bEasy 的布艺清洁服务让您的家具焕然一新 — 我们去除污渍、灰尘和过敏原，让您的家更清新。",
+      "title": "软垫清洁服务",
+      "description": "使用 bEasy 的软垫清洁服务，让您的家具焕然一新——我们去除污渍、灰尘和过敏原，让您的家更清新。",
       "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
       "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/uphol.webp",
-      "title": "什么是布艺清洁？",
-      "description": "布艺清洁是去除布艺家具（如沙发、椅子和床垫）上的污垢、污渍、过敏原和其他污染物。随着时间的推移，布艺家具会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，影响家具的外观和卫生。专业的布艺清洁服务使用专门的设备和清洁剂对您的家具进行深层清洁和焕新，有助于延长其使用寿命并改善室内空气质量。",
-      "subtitle": "流程信息"
+      "title": "什么是软垫清洁？",
+      "description": "软垫清洁是指清除沙发、椅子和床垫等软垫家具上的污垢、污渍、过敏原和其他污染物。随着时间的推移，软垫会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，影响家具的外观和卫生。专业的软垫清洁服务使用专门的设备和清洁溶液来深度清洁和清新您的家具，有助于延长其使用寿命并改善室内空气质量。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": [
-        "吸尘所有沙发表面",
-        "在所有沙发表面喷洒专用清洁剂",
-        "使用刷子去除污渍和污垢",
-        "吸走残留物",
-        "再次冲洗和吸尘",
-        "吸干",
-        "整理工作区域"
-      ]
-    },
+    "taskList": [
+      {
+        "items": [
+          "吸尘所有沙发表面",
+          "在所有沙发表面喷洒专用清洁溶液",
+          "使用刷子去除污渍和污垢",
+          "吸除残留物",
+          "冲洗并再次吸尘",
+          "吸干",
+          "整理工作区域"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Sofa",
-          "description": "沙发（毛毡/布料）",
-          "priceText": "起始价格：",
+          "description": "沙发 (毡/布艺)",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/Uphol/sofa.webp"
         },
         {
           "key": "Rug",
           "description": "小地毯",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/Uphol/rug.webp"
         },
         {
           "key": "Carpet",
-          "description": "地毯（满铺）",
-          "priceText": "起始价格：",
+          "description": "地毯 (墙到墙)",
+          "priceText": "起始价:",
           "price": "$87",
           "imageSrc": "/images/serviceDetail/Uphol/carpet.webp"
         },
         {
           "key": "Mattress",
           "description": "床垫",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$75",
           "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
         }
@@ -212,42 +292,68 @@
     "id": 5,
     "banner": {
       "title": "害虫防治服务",
-      "description": "PLACEHOLDER - Replace this description for service id 5.",
+      "description": "PLACEHOLDER - 请替换服务ID 5的描述。",
       "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
       "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/pest.webp",
-      "title": "您的清洁任务包含哪些内容？",
-      "description": "PLACEHOLDER - Replace with full description for service id 5.",
-      "subtitle": "流程信息"
+      "title": "您的清洁任务包括什么？",
+      "description": "PLACEHOLDER - 请替换服务ID 5的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
-    },
+    "taskList": [
+      {
+        "title": "服务前准备",
+        "items": [
+          "通知客户在服务期间和完成后1-2小时内撤离该区域。",
+          "覆盖或移除食物和暴露的表面。",
+          "确定关键的虫害点和入口区域。"
+        ]
+      },
+      {
+        "title": "杀虫剂喷洒",
+        "items": [
+          "在地面、墙壁、家具后面、角落、裂缝、排水管和高风险区域喷洒残留杀虫剂。",
+          "针对蟑螂、蚂蚁、臭虫等爬行昆虫。"
+        ]
+      },
+      {
+        "title": "冷雾（ULV 喷雾）",
+        "items": [
+          "使用超低容量（ULV）喷雾器喷洒杀虫剂细雾。",
+          "重点关注开放空间、天花板、黑暗角落、储藏区。",
+          "有效对付蚊子、苍蝇等飞虫。"
+        ]
+      },
+      {
+        "title": "处理后",
+        "items": ["在重新进入前，让处理剂静置 1-2 小时。"]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Spray",
-          "description": "害虫喷雾和熏蒸",
-          "priceText": "起始价格：",
+          "description": "害虫喷洒和喷雾",
+          "priceText": "起始价:",
           "price": "$40",
           "imageSrc": "/images/serviceDetail/Pest/spray.webp"
         },
         {
           "key": "Termite",
-          "description": "白蚁灭除",
-          "priceText": "起始价格：",
+          "description": "白蚁清除",
+          "priceText": "起始价:",
           "price": "$60",
           "imageSrc": "/images/serviceDetail/Pest/termite.webp"
         },
         {
           "key": "rat",
           "description": "老鼠",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$60",
           "imageSrc": "/images/serviceDetail/Pest/rat.webp"
         }
@@ -258,28 +364,92 @@
     "id": 6,
     "banner": {
       "title": "洗衣机清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 6.",
+      "description": "PLACEHOLDER - 请替换服务ID 6的描述。",
       "landscape": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "portrait": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/washing.webp",
-      "title": "您的清洁任务包含哪些内容？",
-      "description": "PLACEHOLDER - Replace with full description for service id 6.",
-      "subtitle": "流程信息"
+      "title": "您的清洁任务包括什么？",
+      "description": "PLACEHOLDER - 请替换服务ID 6的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
-    },
+    "taskList": [
+      {
+        "title": "准备工作",
+        "items": [
+          "拔掉洗衣机的电源插头。",
+          "关闭两个供水进水阀。",
+          "确保滚筒完全清空。",
+          "准备以下清洁材料:",
+          "洗衣机清洁剂/肥皂",
+          "软布或海绵",
+          "小刷子或旧牙刷",
+          "水桶和毛巾"
+        ]
+      },
+      {
+        "title": "清洁洗涤剂抽屉",
+        "items": [
+          "完全拉出洗涤剂抽屉。",
+          "将其浸泡在混合了温和洗涤剂的温水中几分钟。",
+          "使用小刷子刷掉残留物或霉菌。",
+          "彻底冲洗并完全擦干，然后重新安装抽屉。"
+        ]
+      },
+      {
+        "title": "清洁橡胶门封（前置式洗衣机）",
+        "items": [
+          "打开门，轻轻拉回橡胶密封圈。",
+          "使用湿布清除污垢、绒毛和滞留的碎屑。",
+          "用温和的清洁溶液或消毒剂擦拭。",
+          "用毛巾彻底擦干，以防止霉菌滋生。"
+        ]
+      },
+      {
+        "title": "深度清洁滚筒",
+        "items": [
+          "将洗衣机清洁剂加入洗涤剂托盘或直接加入滚筒。",
+          "运行滚筒清洁或桶清洁程序（如果可用）。",
+          "如果没有清洁周期，则在滚筒为空的情况下运行热水循环（60-90°C）。"
+        ]
+      },
+      {
+        "title": "清洁排水泵过滤器",
+        "items": [
+          "找到排水泵过滤器（通常在底部前面板）。",
+          "在下面放置毛巾或浅盘以接水。",
+          "打开过滤器盖，清除绒毛、硬币或碎屑。",
+          "用流水冲洗过滤器并牢固地重新安装。"
+        ]
+      },
+      {
+        "title": "清洁外部",
+        "items": [
+          "使用蘸有温和洗涤剂的软布擦拭所有外部表面。",
+          "仔细清洁控制面板、盖子、侧面和底部。",
+          "避免将水直接喷洒在按钮或通风区域。"
+        ]
+      },
+      {
+        "title": "最后步骤",
+        "items": [
+          "将门打开数小时，让内部完全风干。",
+          "重新连接水和电源。",
+          "运行一次短时漂洗循环，确保所有清洁剂都已冲洗干净。",
+          "在维护日志上记录清洁日期和首字母。"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Wash",
           "description": "洗衣机",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$25",
           "imageSrc": "/images/serviceDetail/Washing/wash_machine.webp"
         }
@@ -290,49 +460,112 @@
     "id": 7,
     "banner": {
       "title": "装修后清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 7.",
+      "description": "PLACEHOLDER - 请替换服务ID 7的描述。",
       "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
       "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/Post_Reno.webp",
-      "title": "PLACEHOLDER - What is this service (id 7)?",
-      "description": "PLACEHOLDER - Replace with full description for service id 7.",
-      "subtitle": "流程信息"
+      "title": "PLACEHOLDER - 这是什么服务 (id 7)?",
+      "description": "PLACEHOLDER - 请替换服务ID 7的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
-    },
+    "taskList": [
+      {
+        "title": "初步除尘和碎屑清除",
+        "items": [
+          "清除所有建筑碎屑、包装和剩余材料。",
+          "扫地和吸尘，清除细微灰尘。",
+          "擦拭墙壁和踢脚板，清除灰尘和油漆飞溅物。"
+        ]
+      },
+      {
+        "title": "详细表面清洁",
+        "items": [
+          "清洁所有水平和垂直表面（墙壁、壁架、台面、架子）。",
+          "掸除和擦拭灯具、开关和插座。",
+          "清除新表面上的胶粘剂、贴纸或保护塑料。"
+        ]
+      },
+      {
+        "titel": "窗户和玻璃清洁",
+        "items": [
+          "清洗和擦亮窗户内外。",
+          "清洁窗框、轨道和窗台。",
+          "清除玻璃上的油漆、灰尘或水泥飞溅物。"
+        ]
+      },
+      {
+        "title": "地板护理",
+        "items": [
+          "吸尘地毯和地垫（如有必要，进行深度清洁）。",
+          "拖地和擦亮硬质地板（瓷砖、木材、层压板等）。",
+          "清除地板上的油漆、胶水或水泥残留物。"
+        ]
+      },
+      {
+        "title": "厨房清洁",
+        "items": [
+          "擦拭橱柜（内部和外部）。",
+          "清洁台面、水槽、水龙头和防溅板。",
+          "清洁新电器（内部和外部）。"
+        ]
+      },
+      {
+        "titel": "浴室清洁",
+        "items": [
+          "刷洗瓷砖、灌浆，并清除建筑灰尘。",
+          "清洁镜子、淋浴玻璃、水槽、浴缸和马桶。",
+          "擦亮水龙头和不锈钢配件。"
+        ]
+      },
+      {
+        "titel": "门、固定装置和家具",
+        "items": [
+          "掸除和擦拭门、把手和铰链。",
+          "清洁衣柜、内置架子和家具。",
+          "擦亮金属、木材或玻璃固定装置。"
+        ]
+      },
+      {
+        "titel": "最后润饰",
+        "items": [
+          "清除保护胶带、贴纸和标记。",
+          "擦拭通风口、吊扇和空调机组。",
+          "处理所有垃圾，确保场地准备就绪可入住。"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "Villa",
           "description": "别墅",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
-          "description": "平房和店屋",
-          "priceText": "起始价格：",
+          "description": "公寓与店屋",
+          "priceText": "起始价:",
           "price": "$58",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "公寓",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         },
         {
           "key": "Office",
           "description": "办公室清洁",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/Renovate/office.webp"
         }
@@ -343,28 +576,76 @@
     "id": 8,
     "banner": {
       "title": "空调清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 8.",
+      "description": "PLACEHOLDER - 请替换服务ID 8的描述。",
       "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
       "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/AC_Cleaning.webp",
-      "title": "PLACEHOLDER - What is this service (id 8)?",
-      "description": "PLACEHOLDER - Replace with full description for service id 8.",
-      "subtitle": "流程信息"
+      "title": "PLACEHOLDER - 这是什么服务 (id 8)?",
+      "description": "PLACEHOLDER - 请替换服务ID 8的完整描述。",
+      "subtitle": "程序信息"
     },
-    "taskList": {
-      "items": ["任务步骤 1", "任务步骤 2", "任务步骤 3"]
-    },
+    "taskList": [
+      {
+        "title": "安全准备",
+        "items": [
+          "关闭空调机组并切断电源",
+          "在机组下方放置防水布以接住灰尘和水。"
+        ]
+      },
+      {
+        "title": "室内机清洁（蒸发器和过滤器）",
+        "items": [
+          "取下空气过滤器并用温和的肥皂水清洗。让它们完全干燥。",
+          "使用软刷或盘管清洁剂清洁蒸发器盘管。",
+          "擦拭鼓风轮和翅片以清除积聚的灰尘。",
+          "对排水盘进行消毒，并确保排水管没有堵塞。"
+        ]
+      },
+      {
+        "title": "室外机清洁（冷凝器）",
+        "items": [
+          "关闭电源并打开室外机盖。",
+          "使用刷子或盘管清洁剂清洁冷凝器盘管。",
+          "清除机组周围的树叶、污垢和碎屑。",
+          "检查风扇叶片并进行清洁。",
+          "确保适当的气流间隙（2-3 英尺内无障碍物）。"
+        ]
+      },
+      {
+        "title": "排水管维护",
+        "items": [
+          "用水或清洁溶液冲洗排水管，以清除堵塞物并防止泄漏。",
+          "确保排水顺畅。"
+        ]
+      },
+      {
+        "title": "电气和性能检查",
+        "items": [
+          "检查接线、连接和恒温器。",
+          "检查制冷性能和制冷剂压力（需要技术人员）。",
+          "运行系统以确保其正常运行。"
+        ]
+      },
+      {
+        "title": "最后步骤",
+        "items": [
+          "正确重新安装所有部件。",
+          "擦拭外壳和周围区域。",
+          "恢复电源并测试空调。"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "找到您的完美计划",
+      "title": "寻找您的完美计划",
       "items": [
         {
           "key": "AC",
           "description": "空调清洁",
-          "priceText": "起始价格：",
+          "priceText": "起始价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/AC/AC.webp"
         }

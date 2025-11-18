@@ -87,7 +87,7 @@ export default function OurStory() {
             <div className="w-full lg:w-[50%]">
               <div className="relative w-full aspect-[4/3]">
                 <img
-                  src="/images/services/ac.png"
+                  src="/images/about/about1.webp"
                   alt={ourStory.title || "Our Story"}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -99,7 +99,7 @@ export default function OurStory() {
             <div className="w-full lg:w-[50%] order-2 lg:order-1">
               <div className="relative w-full aspect-[4/3]">
                 <img
-                  src="/images/services/ac.png"
+                  src="/images/about/about2.webp"
                   alt={ourStory.title || "Our Story"}
                   className="absolute inset-0 w-full h-full object-cover "
                 />
