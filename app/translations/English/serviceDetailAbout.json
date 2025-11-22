@@ -8,7 +8,7 @@
       "Imagebg": "/images/serviceDetail/General/General_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
+      "/images/about/Reliable_Everytime.webp",
       "/images/about/Sefty.webp",
       "/images/about/Professional_Cleaner.webp",
       "/images/about/Quick_Booking.webp"
@@ -45,7 +45,7 @@
       "Imagebg": "/images/serviceDetail/Deep/Deep_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
+      "/images/about/Thorough_Detail.webp",
       "/images/about/Sefty.webp",
       "/images/about/Professional_Cleaner.webp",
       "/images/about/Quick_Booking.webp"
@@ -82,7 +82,7 @@
       "Imagebg": "/images/serviceDetail/General/General_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
+      "/images/about/Reliable_Everytime.webp",
       "/images/about/Sefty.webp",
       "/images/about/Professional_Cleaner.webp",
       "/images/about/Quick_Booking.webp"
@@ -119,7 +119,7 @@
       "Imagebg": "/images/serviceDetail/Uphol/Uphol_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
+      "/images/about/Deep_Clean_Fresh_Look.webp",
       "/images/about/Sefty.webp",
       "/images/about/Professional_Cleaner.webp",
       "/images/about/Quick_Booking.webp"
@@ -156,7 +156,7 @@
       "Imagebg": "/images/serviceDetail/Pest/Pest_Para.webp"
     },
     "item-icons": [
-      "/images/about/Quick_Booking.webp",
+      "/images/about/Effective_Long_Lasting.webp",
       "/images/about/Professional_Cleaner.webp",
       "/images/about/Sefty.webp",
       "/images/about/Quick_Booking.webp"
@@ -193,9 +193,9 @@
       "Imagebg": "/images/serviceDetail/Washing/Wash_Para.webp"
     },
     "item-icons": [
-      "/images/about/Missing.webp",
+      "/images/about/Deep_Clean_hygiene.webp",
       "/images/about/Professional_Cleaner.webp",
-      "/images/about/Missing.webp",
+      "/images/about/Improve_Performance.webp",
       "/images/about/Sefty.webp"
     ],
     "items": [
@@ -230,9 +230,9 @@
       "Imagebg": "/images/serviceDetail/Renovate/Renovate_Para.webp"
     },
     "item-icons": [
-      "/images/about/Missing.webp",
+      "/images/about/Thorough_Debris_Removal.webp",
       "/images/about/Professional_Cleaner.webp",
-      "/images/about/Missing.webp",
+      "/images/about/Restore_ur_Space.webp",
       "/images/about/Sefty.webp"
     ],
     "items": [
@@ -267,9 +267,9 @@
       "Imagebg": "/images/serviceDetail/AC/AC_Para.webp"
     },
     "item-icons": [
-      "/images/about/Missing.webp",
+      "/images/about/Boost_Effieincy.webp",
       "/images/about/Professional_Cleaner.webp",
-      "/images/about/Missing.webp",
+      "/images/about/Healthier_Air.webp",
       "/images/about/Sefty.webp"
     ],
     "items": [

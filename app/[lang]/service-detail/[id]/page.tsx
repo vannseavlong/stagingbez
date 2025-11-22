@@ -12,6 +12,7 @@ import serviceDetailAboutEn from "@/app/translations/English/serviceDetailAbout.
 // import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
 import FAQSection from "@/app/components/sections/FAQSection";
 import InstallSection from "@/app/components/sections/InstallAppSection";
+import { ContainWrapper } from "@/app/components/layout";
 
 // Accept the route params prop to satisfy Next.js App Router type checks for
 // dynamic routes (this route lives in `[id]`). Using a permissive `any` keeps
@@ -79,7 +80,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
     <div className="font-sans min-h-screen">
       <main>
         {/* Background container with max-width */}
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-6 md:px-8 lg:px-16">
+        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-6 md:px-8 lg:px-16 ">
           {/* Use service-specific Imagebg fields when available; fall back to decorative defaults */}
           {(() => {
             const header = aboutEntry?.header ?? {};
@@ -138,16 +139,19 @@ export default function ServiceDetailPage({ params }: { params: any }) {
             "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home."
           }
           showDownloadButton={Boolean(detail?.banner?.downloadButton)}
+          className="bg-white"
         />
+
+        <div className="hidden lg:block bg-white h-16" />
 
         {/* About section (top of page) */}
         <AboutUsSection serviceId={currentId} />
 
-        {/* Single full-width white band for the rest of the page sections so
+        {/* Single ful-width white band for the rest of the page sections so
             the decorative fixed background doesn't show through between them. */}
         <div className="w-full bg-white">
-          <div className="pt-12 lg:pt-24 overflow-visible">
-            <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="overflow-visible">
+            <ContainWrapper>
               <TaskInfo
                 title={detail?.taskInfo?.title}
                 imageSrc={
@@ -156,11 +160,11 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                 }
                 taskList={detail?.taskList}
               />
-            </div>
+            </ContainWrapper>
           </div>
 
           {/* Services carousel */}
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-30 lg:mt-40">
+          <ContainWrapper>
             <div className="pt-8">
               <ServiceCarouselWithHeader
                 subtitle={detail?.serviceType?.subtitle || "SERVICE PRICES"}
@@ -187,22 +191,22 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                 })}
               </ServiceCarouselWithHeader>
             </div>
-          </div>
+          </ContainWrapper>
 
           {/* How it works */}
-          {/* <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          {/* <ContainWrapper>
             <HowItWorkBlog />
-          </div> */}
+          </ContainWrapper> */}
 
           {/* FAQ */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          <ContainWrapper>
             <FAQSection />
-          </div>
+          </ContainWrapper>
 
           {/* Install app section */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          <ContainWrapper>
             <InstallSection />
-          </div>
+          </ContainWrapper>
         </div>
       </main>
     </div>

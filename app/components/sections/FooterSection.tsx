@@ -34,7 +34,7 @@ export default function FooterSection() {
 
   return (
     <footer
-      className="text-black font-sans py-5 pb-10  relative overflow-hidden bg-white"
+      className="text-black font-sans py-30 pb-10  relative overflow-hidden bg-white"
       aria-label="Footer section"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-16">

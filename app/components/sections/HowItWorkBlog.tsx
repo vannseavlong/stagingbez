@@ -18,7 +18,7 @@ export default function HowItWorkBlog() {
   return (
     <div className="bg-white">
       {/* Centered container to match other sections */}
-      <div className="max-w-[1440px] pt-16">
+      <div className="max-w-[1440px]">
         {/* Header */}
         <header className="pt-0 pb-8 mb-0 lg:mb-20 min-[1200px]:mb-24 min-[1440px]:mb-28 transition-all duration-300 text-center overflow-x-hidden">
           <div>
@@ -37,7 +37,7 @@ export default function HowItWorkBlog() {
               {header.title || "Effortless Clean, Every Time"}
             </h1>
 
-            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-10 font-sans">
+            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-24 font-sans">
               {header.description ||
                 "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
             </p>

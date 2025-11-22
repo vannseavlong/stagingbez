@@ -174,7 +174,7 @@ const Service = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 lg:py-20 text-white relative overflow-hidden">
+    <section className="bg-white py-0 lg:pt-16 text-white relative overflow-hidden">
       <div className="max-w-full lg:max-w-[1440px] lg:mx-auto">
         {/* Header */}
         <div className="mb-5 mt-10">

@@ -86,7 +86,7 @@ export default function DownloadAppButton({
     <button
       type="button"
       onClick={onClick || handleDownload}
-      className={`group inline-flex items-center justify-center leading-7 px-5 py-3 bg-[image:var(--beasy-gradient)] text-white text-[16px] font-medium ${className}`}
+      className={`group inline-flex items-center justify-center leading-7 px-5 py-3 bg-[image:var(--beasy-gradient)] text-white text-[16px] font-bold ${className}`}
     >
       {inner}
     </button>
