@@ -65,8 +65,8 @@ export default function OurStory() {
   return (
     <section className="text-white overflow-x-hidden">
       <div className="bg-white">
-        <div className="lg:pt-40 md:pt-20 pt-10 lg:max-w-[1440px] lg:mx-auto  ">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left mb-12 md:mb-16">
+        <div className="lg:pt-16 lg:max-w-[1440px] lg:mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 text-left mb-30 lg:mb-40">
             <div className="w-full lg:w-[45%]">
               <div className="flex items-center text-black mb-3 lg:mb-4">
                 <h5 className="text-[14px] md:text-[16px] font-bold leading-[32px] tracking-[1.5px] text-beasy-gradient whitespace-nowrap opacity-80">

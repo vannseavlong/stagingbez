@@ -146,15 +146,15 @@ export default function AboutUsSection({ serviceId }: Props) {
   return (
     <section className="text-white font-sans overflow-x-hidden">
       <div className="bg-white">
-        <div className="md:py-20 lg:py-5 lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
-          <div className="mb-4 pt-8">
+        <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 pb-16">
+          <div className="mb-4 pt-30 lg:pt-40">
             <div className="flex items-center text-black mb-3 lg:mb-0 md:mb-3">
               <h5 className="text-[16px] font-bold leading-[32px] tracking-[1.5px] text-beasy-gradient mr-3 whitespace-nowrap opacity-80 font-sans">
                 {aboutSection.header?.subtitle}
               </h5>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-8 md:gap-6 text-left mb-16">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-8 md:gap-6 text-left">
             <h1 className="w-full lg:w-[420px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-wide leading-snug font-sans">
               {aboutSection.header?.title}
             </h1>
