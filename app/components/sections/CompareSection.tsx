@@ -1,25 +1,22 @@
 "use client";
 
 import React from "react";
-// import ImageComparer from "@/app/components/common/image-compare";
 import Comparer from "@/app/components/common/comparer";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
+// Static imports ensure caching
+import beforeImgFile from "../../../public/images/compare/_Before_.webp";
+import afterImgFile from "../../../public/images/compare/_After_.webp";
+
 export default function CompareSection() {
-  // Translations
   const { getSection } = useTranslate();
   const compare = getSection("compare") as any;
   const header = (compare && compare.header) || {};
 
-  // Default images (public folder). Replace with real before/after images as needed.
-  const beforeImg = "/images/compare/_Before_.webp";
-  const afterImg = "/images/compare/_After_.webp";
-
   return (
-    <section className="w-full bg-white py-12 md:py-16 pt-[50px]">
+    <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 items-center gap-12">
-          {/* Left: header (on desktop left; on mobile/tablet shown on top) */}
           <div className="order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
             <div className="mb-4">
               <span
@@ -44,13 +41,11 @@ export default function CompareSection() {
             </p>
           </div>
 
-          {/* Right: compare image (on desktop right; on mobile/tablet placed under header) */}
           <div className="order-2 lg:order-2 flex justify-center px-4 lg:px-0">
             <div className="w-full max-w-full sm:max-w-[400px] md:max-w-[600px] lg:max-w-[650px]">
-              {/* <ImageComparer beforeImg={beforeImg} afterImg={afterImg} /> */}
               <Comparer
-                beforeImg={beforeImg}
-                afterImg={afterImg}
+                beforeImg={beforeImgFile}
+                afterImg={afterImgFile}
                 className="shadow-lg w-full"
                 initialPosition={0.5}
                 handleSize={32}

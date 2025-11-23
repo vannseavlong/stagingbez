@@ -1,0 +1,298 @@
+{
+  "1": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們一般清潔服務的原因",
+      "description": "我們以專業護理清潔每個空間 — 讓清潔結果更清新、感覺更好、持續更久。",
+      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Reliable_Everytime.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
+    ],
+    "items": [
+      {
+        "key": "reliable",
+        "title": "始終可靠",
+        "description": "我們的團隊遵循嚴格的清單，確保不遺漏任何角落。"
+      },
+      {
+        "key": "friendly",
+        "title": "環保產品",
+        "description": "安全、無毒的用品，保護您的家人和環境。"
+      },
+      {
+        "key": "expert",
+        "title": "專業護理",
+        "description": "每位清潔人員都經過審核、培訓，並維持高質量標準。"
+      },
+      {
+        "key": "quick",
+        "title": "快速便捷",
+        "description": "幾分鐘內即可預訂，並選擇最適合您的時間。"
+      }
+    ]
+  },
+  "2": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們深度清潔服務的原因",
+      "description": "我們以專業護理清潔每個角落 — 讓清潔結果更深入、感覺更清新、持續更久。",
+      "Imagebg": "/images/serviceDetail/Deep/Deep_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Thorough_Detail.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
+    ],
+    "items": [
+      {
+        "key": "thorough&detailed",
+        "title": "徹底而細緻",
+        "description": "我們清潔每個角落，去除隱藏的污垢和污漬。"
+      },
+      {
+        "key": "safe&effective",
+        "title": "安全有效",
+        "description": "環保產品讓您的環境保持清潔和健康。"
+      },
+      {
+        "key": "expert",
+        "title": "專業護理",
+        "description": "每位清潔人員都經過審核、培訓，並維持高質量標準。"
+      },
+      {
+        "key": "quick",
+        "title": "快速便捷",
+        "description": "幾分鐘內即可預訂，並選擇最適合您的時間。"
+      }
+    ]
+  },
+  "3": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們辦公室清潔服務的原因",
+      "description": "我們以專業護理清潔每個空間 — 讓清潔結果更清新、感覺更好、持續更久。",
+      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Reliable_Everytime.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
+    ],
+    "items": [
+      {
+        "key": "reliable",
+        "title": "始終可靠",
+        "description": "我們的團隊遵循嚴格的清單，確保不遺漏任何角落。"
+      },
+      {
+        "key": "friendly",
+        "title": "環保產品",
+        "description": "安全、無毒的用品，保護您的家人和環境。"
+      },
+      {
+        "key": "expert",
+        "title": "專業護理",
+        "description": "每位清潔人員都經過審核、培訓，並維持高質量標準。"
+      },
+      {
+        "key": "quick",
+        "title": "快速便捷",
+        "description": "幾分鐘內即可預訂，並選擇最適合您的時間。"
+      }
+    ]
+  },
+  "4": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們家具清潔服務的原因",
+      "description": "我們以專業護理對待每種布料 — 讓清潔結果看起來更乾淨、感覺更柔軟、持續更久。",
+      "Imagebg": "/images/serviceDetail/Uphol/Uphol_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Deep_Clean_Fresh_Look.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Quick_Booking.webp"
+    ],
+    "items": [
+      {
+        "key": "deep&fresh",
+        "title": "深度清潔，煥然一新",
+        "description": "去除污垢、污漬和過敏原，帶來全新的舒適感和清新度。"
+      },
+      {
+        "key": "friendly",
+        "title": "安全與環保",
+        "description": "無毒清潔，對您的家人、寵物和布料都是安全的。"
+      },
+      {
+        "key": "expert",
+        "title": "專業護理",
+        "description": "由熟練的專業人員處理，他們細心對待每一種布料。"
+      },
+      {
+        "key": "quick",
+        "title": "快速便捷",
+        "description": "輕鬆預訂、快速服務，並提供可立即使用的結果。"
+      }
+    ]
+  },
+  "5": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們害蟲防治服務的原因",
+      "description": "我們以專業護理對待每個空間 — 讓清潔結果驅趕害蟲、保護您的家居、持續更久。 (注意：此描述翻譯與害蟲防治更為相關)",
+      "Imagebg": "/images/serviceDetail/Pest/Pest_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Effective_Long_Lasting.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Sefty.webp",
+      "/images/about/Quick_Booking.webp"
+    ],
+    "items": [
+      {
+        "key": "effective&lasting",
+        "title": "有效且持久",
+        "description": "我們消除害蟲並防止牠們再次出現。"
+      },
+      {
+        "key": "professional",
+        "title": "訓練有素的專業人員",
+        "description": "專家們安全有效地處理防治措施。"
+      },
+      {
+        "key": "family&petsafe",
+        "title": "對家人和寵物安全",
+        "description": "環保解決方案保護您的家居，不會造成傷害。"
+      },
+      {
+        "key": "quick",
+        "title": "快速便捷",
+        "description": "輕鬆預訂、快速服務，並提供可立即使用的結果。"
+      }
+    ]
+  },
+  "6": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們洗衣機清潔服務的原因",
+      "description": "我們精確處理每台機器 — 讓清潔結果看起來一塵不染、運行高效、持續更久。",
+      "Imagebg": "/images/serviceDetail/Washing/Wash_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Deep_Clean_hygiene.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Improve_Performance.webp",
+      "/images/about/Sefty.webp"
+    ],
+    "items": [
+      {
+        "key": "deep&hygiene",
+        "title": "深度清潔與衛生",
+        "description": "清除隱藏的污垢、黴菌和洗滌劑堆積物。"
+      },
+      {
+        "key": "expert",
+        "title": "訓練有素的專家",
+        "description": "專業人員安全處理所有類型的洗衣機。"
+      },
+      {
+        "key": "performance",
+        "title": "提高性能",
+        "description": "幫助您的機器高效運行並持續更久。"
+      },
+      {
+        "key": "safe",
+        "title": "安全與環保",
+        "description": "使用安全的清潔解決方案，保護您的家居和機器。"
+      }
+    ]
+  },
+  "7": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們裝修後清潔服務的原因",
+      "description": "我們徹底清潔每個空間 — 讓清潔結果看起來完美無瑕、感覺清新、持續更久。",
+      "Imagebg": "/images/serviceDetail/Renovate/Renovate_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Thorough_Debris_Removal.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Restore_ur_Space.webp",
+      "/images/about/Sefty.webp"
+    ],
+    "items": [
+      {
+        "key": "debrisRemoval",
+        "title": "徹底清除碎屑",
+        "description": "清除灰塵、油漆和剩餘的建築殘渣。"
+      },
+      {
+        "key": "skilledProfessionals",
+        "title": "熟練的專業人員",
+        "description": "經過培訓，能夠安全處理困難的裝修後清潔。"
+      },
+      {
+        "key": "restores",
+        "title": "恢復您的空間",
+        "description": "讓您的家居變得宜居、清新、一塵不染。"
+      },
+      {
+        "key": "safe",
+        "title": "安全有效",
+        "description": "使用安全產品和快速方法進行輕鬆清潔。"
+      }
+    ]
+  },
+  "8": {
+    "id": 1,
+    "header": {
+      "subtitle": "為何選擇我們",
+      "title": "您會愛上我們空調清潔服務的原因",
+      "description": "我們以專業護理對待每個空間 — 讓清潔結果驅趕害蟲、保護您的家居、持續更久。 (注意：此描述翻譯與害蟲防治服務的原文相同，可能需要調整。)",
+      "Imagebg": "/images/serviceDetail/AC/AC_Para.webp"
+    },
+    "item-icons": [
+      "/images/about/Boost_Effieincy.webp",
+      "/images/about/Professional_Cleaner.webp",
+      "/images/about/Healthier_Air.webp",
+      "/images/about/Sefty.webp"
+    ],
+    "items": [
+      {
+        "key": "efficiency",
+        "title": "提高效率",
+        "description": "清潔的空調運行更好，節省能源。"
+      },
+      {
+        "key": "technicians",
+        "title": "專家技術人員",
+        "description": "訓練有素的專業人員確保徹底清潔。"
+      },
+      {
+        "key": "healthierAir",
+        "title": "更健康的空氣",
+        "description": "去除灰塵、過敏原和細菌，提供更清新的空氣。"
+      },
+      {
+        "key": "safe",
+        "title": "安全可靠",
+        "description": "我們使用安全的方法來保護您的空調和家居。"
+      }
+    ]
+  }
+}

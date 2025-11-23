@@ -281,7 +281,7 @@ export default function SiteNav() {
                 }`}
               >
                 {t("navbar.items.aboutUs", "About us")}
-              </Link> 
+              </Link>
 
               {/* Shadcn-style dropdown for Our Service */}
               <DropdownMenu>
@@ -319,7 +319,7 @@ export default function SiteNav() {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-             <Link
+              <Link
                 href={`/${currentLanguageCode}/media-page`}
                 className={`text-base transition-colors ${
                   isActive("/media-page")
@@ -434,7 +434,7 @@ export default function SiteNav() {
 
               {/* Navigation Links */}
               <nav className="flex flex-col gap-1 mb-2">
-                {/* <Link
+                <Link
                   href={`/${currentLanguageCode}/about-us`}
                   onClick={() => setOpen(false)}
                   className={`px-4 py-3 rounded-md text-base transition-colors ${
@@ -444,9 +444,9 @@ export default function SiteNav() {
                   }`}
                 >
                   {t("navbar.items.aboutUs", "About us")}
-                </Link> */}
+                </Link>
                 {/* Mobile collapsible our-service section */}
-                {/* <div className="px-4">
+                <div className="px-4">
                   <button
                     type="button"
                     onClick={() => setMobileServicesOpen((s) => !s)}
@@ -466,16 +466,18 @@ export default function SiteNav() {
                     </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-4 w-4 transition-transform duration-200 ${
+                      className={`h-3.5 w-3.5 transition-transform duration-200 ${
                         mobileServicesOpen ? "rotate-180" : "rotate-0"
                       }`}
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                      viewBox="0 0 14 10"
+                      fill="none"
                     >
                       <path
-                        fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-                        clipRule="evenodd"
+                        d="M1 1.5L7 7.5L13 1.5"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </button>
@@ -508,7 +510,7 @@ export default function SiteNav() {
                   }`}
                 >
                   Media
-                </Link> */}
+                </Link>
               </nav>
 
               <ContactUsButton

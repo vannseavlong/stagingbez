@@ -81,7 +81,7 @@ export default function ContactUsButton({
     <button
       type="button"
       onClick={handleGoToContact}
-      className={`group inline-flex items-center justify-center leading-[28px] px-8 py-3 border-[1px] border-[#E8E8E8] text-gray-800 text-[16px] font-medium hover:bg-gray-50 transition-colors ${className}`}
+      className={`group inline-flex items-center justify-center leading-[28px] px-8 py-3 border-[1px] border-[#E8E8E8] text-gray-800 text-[16px] font-bold hover:bg-gray-50 transition-colors ${className}`}
     >
       {inner}
     </button>

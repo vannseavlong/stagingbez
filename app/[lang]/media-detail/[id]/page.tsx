@@ -1,5 +1,3 @@
-
-
 // "use client";
 // import { useParams } from "next/navigation";
 // import Image from "next/image";
@@ -45,8 +43,6 @@
 //     : article?.images
 //     ? [article.images]
 //     : [];
-
-
 
 //   return (
 //     <section className="bg-white relative text-black py-16">
@@ -136,11 +132,14 @@
 //   );
 // }
 
-
-
-
-
-
+"use client";
+import { useParams } from "next/navigation";
+import Image from "next/image";
+import { useTranslate } from "@/app/hooks/useTranslate";
+import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
+import SimilarMedia from "@/app/components/sections/similarMedia";
+import InstallSection from "@/app/components/sections/InstallAppSection";
+import { ReactNode } from "react";
 
 // interface MediaArticle {
 //   id?: number;
@@ -149,12 +148,12 @@
 //   date?: string;
 //   title?: string;
 //   description?: string;
-//   body?: string;              
-//   sections?: Array<{          
+//   body?: string;
+//   sections?: Array<{
 //     heading?: string;
 //     content?: string;
 //   }>;
-//   highlight?: string;         
+//   highlight?: string;
 // }
 
 // export default function MediaDetail() {
@@ -182,7 +181,6 @@
 //     );
 //   }
 
-  
 //   // Build paragraphs: prefer body, fall back to description
 //   const rawBody = article.body || article.description || "";
 //   const paragraphs = rawBody
@@ -215,13 +213,11 @@
 //           </h1>
 //           {article.date && (
 //             <div className="flex items-center gap-2 text-gray-500 text-sm">
-             
+
 //               <span>{article.date}</span>
 //             </div>
 //           )}
 //         </header>
-
-        
 
 //         {/* Body paragraphs */}
 //         <div className="space-y-6 md:space-y-7 mb-12 md:mb-16">
@@ -288,16 +284,13 @@
 //           </div>
 //         )}
 
-        
-       
-
 //         {/* Similar Articles */}
 //         <div className="mb-16 md:mb-24" data-aos="fade-up">
 //           <SimilarMedia excludeId={Number(article.id)} />
 //         </div>
 
 //         {/* Install Section */}
-        
+
 //       </div>
 
 //       <section id="install" data-aos="fade-up" className="lg:mx-auto px-6 lg:px-20">
@@ -306,213 +299,6 @@
 //     </section>
 //   );
 // }
-
-
-//this
-
-
-// "use client";
-// import { useParams } from "next/navigation";
-// import Image from "next/image";
-// import { useTranslate } from "@/app/hooks/useTranslate";
-// import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
-// import SimilarMedia from "@/app/components/sections/similarMedia";
-// import InstallSection from "@/app/components/sections/InstallAppSection";
-// import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
-
-
-
-// interface MediaArticle {
-//   id?: number;
-//   image?: string;
-//   images?: string[] | string;
-//   date?: string;
-//   title?: string;
-//   description?: string;
-//   body?: string;              
-//   sections?: Array<{          
-//     heading?: string;
-//     content?: string;
-//   }>;
-//   highlight?: string;         
-// }
-
-// export default function MediaDetail() {
-//   const params = useParams();
-//   const { getSection } = useTranslate();
-
-//   const idParam = params?.id;
-//   const idNum = idParam ? Number(idParam) : NaN;
-
-//   const mediaSection = getSection("media") as any;
-//   const translatedArticles: MediaArticle[] = Array.isArray(mediaSection?.articles)
-//     ? mediaSection.articles
-//     : [];
-
-//   let article =
-//     translatedArticles.find((a) => Number(a?.id) === idNum) ||
-//     mediaItemsFallback.find((a: any) => Number(a?.id) === idNum) ||
-//     (Number.isFinite(idNum) ? (mediaItemsFallback[idNum] as any) : undefined);
-
-//   if (!article) {
-//     return (
-//       <div className="text-center py-24">
-//         <p className="text-gray-600">Article not found.</p>
-//       </div>
-//     );
-//   }
-
-  
-//   // Build paragraphs: prefer body, fall back to description
-//   const rawBody = article.body || article.description || "";
-//   const paragraphs = rawBody
-//     .split(/\n+/)
-//     .map((p: string) => p.trim())
-//     .filter(Boolean);
-
-//   return (
-//     <section className="bg-white text-black py-12 lg:py-20 md:py-16 pt-20">
-//       <div className="max-w-[1440px] mx-auto px-6 md:px-30 lg:px-75">
-//         {/* Hero Image */}
-//         {article.image && (
-//           <div className="mb-10 md:mb-12 items-center justify-center flex" >
-//             <div className="relative lg:w-[900px] lg:h-[340px] w-[400px] h-[234px] md:w-[528px] md:h-[240px] spect-[16/9] overflow-hidden bg-gray-100">
-//               <Image
-//                 src={article.image}
-//                 alt={article.title || "Media Image"}
-//                 fill
-//                 priority
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-//         )}
-
-//         {/* Title + Date */}
-//         <header className="mb-8 md:mb-10 flex flex-col gap-4" data-aos="fade-up">
-//           <h1 className="text-[24px] lg:text-[24px] md:text-[24px] font-bold leading-tight ">
-//             {article.title || "Untitled"}
-//           </h1>
-//           {article.date && (
-//             <div className="flex items-center gap-2 text-gray-500 text-base">
-             
-//               <span>{article.date}</span>
-//             </div>
-//           )}
-//         </header>
-
-        
-
-//         {/* Body paragraphs */}
-//         <div className="space-y-6 md:space-y-7 mb-12 md:mb-16">
-//           {paragraphs.map((p: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, i: number) => (
-//             <p
-//               key={i}
-//               className={`text-base  md:text-lg leading-relaxed ${
-//                 i === 0 ? "font-normal" : "font-normal"
-//               }`}
-//               data-aos="fade-up"
-//               data-aos-delay={i * 60}
-//             >
-//               {p}
-//             </p>
-//           ))}
-//         </div>
-
-//         {/* Highlight sentence */}
-//         {article.highlight && (
-//           <p
-//             className="font-semibold text-base md:text-lg mb-6 md:mb-8"
-//             data-aos="fade-up"
-//           >
-//             {article.highlight}
-//           </p>
-//         )}
-
-//         {/* Structured sections (optional) */}
-//         {Array.isArray(article.sections) && article.sections.length > 0 && (
-//           <div className="space-y-10 md:space-y-12 mb-16">
-//             {article.sections.map((sec: { heading: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; bullet: any[]; quote: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
-//               <div
-//                 key={idx}
-//                 data-aos="fade-up"
-//                 data-aos-delay={idx * 80}
-//                 className="space-y-4"
-//               >
-//                 {sec.heading && (
-//                   <h2 className="lg:text-[18px] text-[18px] font-semibold ">
-//                     {idx + 1}. {sec.heading}
-//                   </h2>
-//                 )}
-//                 {sec.content && (
-//                   <p className="text-base md:text-lg leading-relaxed text-black/80">
-//                     {sec.content}
-//                   </p>
-//                 )}
-
-//                 {sec.bullet && (
-//                   <ul className="list-disc list-inside text-base  md:text-lg leading-relaxed text-black/80">
-//                     {sec.bullet.map((item, i) => (
-//                       <li key={i}>{item}</li>
-//                     ))}
-//                   </ul>
-//                 )}
-
-//                 {sec.quote && (
-//                   <blockquote className="italic text-base md:text-lg leading-relaxed text-black/80">
-//                     {sec.quote}
-//                   </blockquote>
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         )}
-
-        
-       
-
-//         {/* Similar Articles */}
-//         <div className="mb-16 md:mb-24" data-aos="fade-up">
-//           <SimilarMedia excludeId={Number(article.id)} />
-//         </div>
-
-       
-        
-//       </div>
-       
-
-       
-
-//         <ContainWrapper>
-//           <section id="install">
-//             <InstallSection />
-//           </section>
-//         </ContainWrapper>
-      
-//     </section>
-//   );
-// }
-
-// const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
-//   return (
-//     <div className="bg-white">
-//       <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
-//         {children}
-//       </div>
-//     </div>
-//   );
-// };
-
-
-
-"use client";
-import { useParams } from "next/navigation";
-import Image from "next/image";
-import { useTranslate } from "@/app/hooks/useTranslate";
-import { mediaItems as mediaItemsFallback } from "../../../../data/mediaItem";
-import SimilarMedia from "@/app/components/sections/similarMedia";
-import InstallSection from "@/app/components/sections/InstallAppSection";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 interface MediaArticle {
   id?: number;
@@ -539,11 +325,13 @@ export default function MediaDetail() {
   const idNum = idParam ? Number(idParam) : NaN;
 
   const mediaSection = getSection("media") as any;
-  const translatedArticles: MediaArticle[] = Array.isArray(mediaSection?.articles)
+  const translatedArticles: MediaArticle[] = Array.isArray(
+    mediaSection?.articles
+  )
     ? mediaSection.articles
     : [];
 
-  const article =
+  const article: MediaArticle | any =
     translatedArticles.find((a) => Number(a?.id) === idNum) ||
     mediaItemsFallback.find((a: any) => Number(a?.id) === idNum) ||
     (Number.isFinite(idNum) ? (mediaItemsFallback[idNum] as any) : undefined);
@@ -556,11 +344,12 @@ export default function MediaDetail() {
     );
   }
 
-  const rawBody = article.body || article.description || "";
+  // Build paragraphs: prefer body, fall back to description
+  const rawBody: string = String(article.body || article.description || "");
   const paragraphs = rawBody
     .split(/\n+/)
     .map((p: string) => p.trim())
-    .filter(Boolean);
+    .filter(Boolean) as string[];
 
   return (
     <section className="bg-white text-black py-12 lg:py-20 md:py-16 pt-20">
@@ -568,7 +357,7 @@ export default function MediaDetail() {
         {/* Hero Image */}
         {article.image && (
           <div className="mb-10 md:mb-12 items-center justify-center flex">
-            <div className="relative lg:w-[900px] lg:h-[340px] w-[400px] h-[234px] md:w-[528px] md:h-[240px] aspect-[16/9] overflow-hidden bg-gray-100">
+            <div className="relative lg:w-[900px] lg:h-[340px] w-[400px] h-[234px] md:w-[528px] md:h-[240px] spect-[16/9] overflow-hidden bg-gray-100">
               <Image
                 src={article.image}
                 alt={article.title || "Media Image"}
@@ -581,8 +370,11 @@ export default function MediaDetail() {
         )}
 
         {/* Title + Date */}
-        <header className="mb-8 md:mb-10 flex flex-col gap-4" data-aos="fade-up">
-          <h1 className="text-[24px] lg:text-[24px] md:text-[24px] font-bold leading-tight">
+        <header
+          className="mb-8 md:mb-10 flex flex-col gap-4"
+          data-aos="fade-up"
+        >
+          <h1 className="text-[24px] lg:text-[24px] md:text-[24px] font-bold leading-tight ">
             {article.title || "Untitled"}
           </h1>
           {article.date && (
@@ -619,7 +411,7 @@ export default function MediaDetail() {
         {/* Structured sections */}
         {Array.isArray(article.sections) && article.sections.length > 0 && (
           <div className="space-y-10 md:space-y-12 mb-16">
-            {article.sections.map((sec: { heading: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; bullet: any[]; quote: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
+            {article.sections.map((sec: any, idx: number) => (
               <div
                 key={idx}
                 data-aos="fade-up"
@@ -637,9 +429,9 @@ export default function MediaDetail() {
                   </p>
                 )}
 
-                {sec.bullet && Array.isArray(sec.bullet) && (
-                  <ul className="list-disc list-inside text-base md:text-lg leading-relaxed text-black/80">
-                    {sec.bullet.map((item, i) => (
+                {sec.bullet && (
+                  <ul className="list-disc list-inside text-base  md:text-lg leading-relaxed text-black/80">
+                    {sec.bullet.map((item: any, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
@@ -670,7 +462,7 @@ export default function MediaDetail() {
   );
 }
 
-const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
+const ContainWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <div className="bg-white">
       <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">

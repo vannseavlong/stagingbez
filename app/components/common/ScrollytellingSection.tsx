@@ -169,7 +169,6 @@ export function ScrollytellingSection({
                         alt={item.title}
                         fill
                         className="object-contain"
-                        unoptimized
                       />
                     </div>
                     <div className="absolute inset-0" />
@@ -204,7 +203,6 @@ export function ScrollytellingSection({
                     alt={item.title}
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
               </div>

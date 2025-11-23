@@ -17,7 +17,8 @@ export default function ServiceItem({
 }: Props) {
   return (
     <article
-      className={`bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between min-h-[240px] ${className}`}
+      className={`bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col justify-between max-h-[226px] max-w-[310px] w-full ${className}`}
+      style={{ boxSizing: "border-box" }}
     >
       <div>
         <div className="inline-block rounded-lg p-2 bg-white border border-gray-100">

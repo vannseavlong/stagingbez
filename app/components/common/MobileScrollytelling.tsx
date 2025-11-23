@@ -123,7 +123,6 @@ export function MobileScrollytelling({
                   alt={slide.title}
                   fill
                   className="object-contain"
-                  unoptimized
                 />
               </div>
             </div>

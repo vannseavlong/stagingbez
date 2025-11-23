@@ -5,6 +5,12 @@
     "title": "别担心，bEasy 为您护航",
     "description": "我们的按需清洁人员经过专业培训、背景审查，并致力于每次都提供无可挑剔的服务。"
   },
+  "item-icons": [
+    "/images/about/Quick_Booking.webp",
+    "/images/about/Flexible_Schedule.webp",
+    "/images/about/Sefty.webp",
+    "/images/about/Professional_Cleaner.webp"
+  ],
   "items": [
     {
       "key": "quickBooking",

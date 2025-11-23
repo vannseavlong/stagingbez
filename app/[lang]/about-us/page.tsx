@@ -122,9 +122,9 @@ export default function AboutUs() {
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
           <AboutUsHero
-            backgroundMobile="/images/serviceDetail/Uphol/portrait.jpg"
-            backgroundTablet="/images/serviceDetail/Uphol/portrait.jpg"
-            backgroundDesktop="/images/serviceDetail/Uphol/landscape.jpg"
+            backgroundMobile="/images/about/aboutHero.webp"
+            backgroundTablet="/images/about/aboutHero.webp"
+            backgroundDesktop="/images/about/aboutHero.webp"
             title={header?.title || "About Us"}
             description={
               header?.description ||
@@ -183,7 +183,7 @@ export default function AboutUs() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
         {children}
       </div>
     </div>
