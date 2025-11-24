@@ -140,7 +140,7 @@
 //   );
 // }
 
-
+// push to staging
 
 "use client";
 
@@ -155,7 +155,10 @@ interface SimilarMediaProps {
   limit?: number;
 }
 
-export default function SimilarMedia({ excludeId, limit = 4 }: SimilarMediaProps) {
+export default function SimilarMedia({
+  excludeId,
+  limit = 4,
+}: SimilarMediaProps) {
   const { currentLanguageCode } = useLanguage();
   const { getSection } = useTranslate();
 
