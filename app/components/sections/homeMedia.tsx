@@ -16,13 +16,14 @@ export default function HomeMedia() {
 
 
   const mediaSection = getSection("media") as {
-    header?: { subtitle?: string; title?: string };
+    header?: { subtitle?: string; title?: string,media?:string,ReadLatest?:string };
     articles?: Array<{
       id?: number;
       image?: string;
       date?: string;
       title?: string;
       body?: string;
+      
     }>;
   };
 
@@ -37,12 +38,12 @@ export default function HomeMedia() {
       {/* Section Heading */}
       <div className="text-left mb-5 lg:mb-0 md:mb-0 gap-1">
         <div className="flex items-center mb-4 md:mb-4 lg:mb-4">
-          <h5 className="text-base font-bold tracking-[2px] text-beasy-gradient opacity-80 mr-4">
-            {mediaSection.header?.subtitle || "Media"}
+          <h5 className="text-base font-bold tracking-[4px] text-beasy-gradient opacity-80 mr-4">
+            {mediaSection.header?.media || "Media"}
           </h5>
         </div>
-        <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-[4px]">
-          {mediaSection.header?.title || "Read Our Latest Articles"}
+        <h2 className="text-[24px] md:text-[32px] font-bold text-black ">
+          {mediaSection.header?.ReadLatest || "Read Our Latest Articles"}
         </h2>
       </div>
 

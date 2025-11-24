@@ -337,13 +337,13 @@ export default function Media() {
     <section className="bg-white relative md:py-20 py-12">
       {/* Heading */}
       <div className="max-w-4xl mx-auto text-center px-6 mb-12 md:mb-16" data-aos="fade-down">
-        <h5 className="text-base md:text-lg font-bold tracking-[2px] text-beasy-gradient opacity-80 mb-4">
+        <h5 className="text-base md:text-lg font-bold tracking-[3px] text-beasy-gradient opacity-80 mb-4">
           {mediaSection?.header?.subtitle || "Media"}
         </h5>
-        <h2 className="text-[24px] md:text-[32px] font-semibold tracking-[2px] md:tracking-[4px] text-black">
-          {mediaSection?.header?.title || "Read Our Latest Articles"}
+        <h2 className="text-[24px] md:text-[32px] font-bold text-black">
+          {mediaSection?.header?.title }
         </h2>
-        <p className="mt-4 text-sm md:text-base text-black/70">
+        <p className="mt-4 text-sm md:text-base text-black/90">
           {mediaSection?.header?.description || ""}
         </p>
       </div>

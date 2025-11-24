@@ -385,11 +385,11 @@ export default function MediaDetail() {
         </header>
 
         {/* Body paragraphs */}
-        <div className="space-y-6 md:space-y-7 mb-12 md:mb-16">
+        <div className="space-y-6 md:space-y-7 mb-12 ">
           {paragraphs.map((p: string, i: number) => (
             <p
               key={i}
-              className="text-base md:text-lg leading-relaxed font-normal"
+              className="text-base  leading-relaxed font-normal"
               data-aos="fade-up"
               data-aos-delay={i * 60}
             >
@@ -401,7 +401,7 @@ export default function MediaDetail() {
         {/* Highlight sentence */}
         {article.highlight && (
           <p
-            className="font-semibold text-base md:text-lg mb-6 md:mb-8"
+            className="font-semibold text-base  mb-6 md:mb-8"
             data-aos="fade-up"
           >
             {article.highlight}
@@ -424,13 +424,13 @@ export default function MediaDetail() {
                   </h2>
                 )}
                 {sec.content && (
-                  <p className="text-base md:text-lg leading-relaxed text-black/80">
+                  <p className="text-base  leading-relaxed text-black/80">
                     {sec.content}
                   </p>
                 )}
 
                 {sec.bullet && (
-                  <ul className="list-disc list-inside text-base  md:text-lg leading-relaxed text-black/80">
+                  <ul className="list-disc list-inside text-base   leading-relaxed text-black/80">
                     {sec.bullet.map((item: any, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -438,7 +438,7 @@ export default function MediaDetail() {
                 )}
 
                 {sec.quote && (
-                  <blockquote className="italic text-base md:text-lg leading-relaxed text-black/80">
+                  <blockquote className="italic text-base  leading-relaxed text-black/80">
                     {sec.quote}
                   </blockquote>
                 )}
