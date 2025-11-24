@@ -115,7 +115,13 @@ export default function TaskInfo({
     <section className="w-full font-sans">
       {/* Blue header background */}
       <div className="relative w-full">
-        <div className="bg-gradient-to-r from-[#0b3ea8] to-[#1a5ff8]">
+        <div
+          className="bg-gradient-to-r from-[#0b3ea8] to-[#1a5ff8]"
+          style={{
+            background:
+              "url('/images/taskinfo-bg.svg') center/cover no-repeat, linear-gradient(to right, #0b3ea8, #1a5ff8)",
+          }}
+        >
           <div className="max-w-[1440px] h-[450px] mx-auto px-6 sm:px-8 lg:px-16">
             <div className="pt-12 md:pt-16 lg:pt-24 pb-6 md:pb-8 lg:pb-10 relative">
               <h2 className="text-white font-sans font-bold text-[24px] md:text-[32px] leading-tight lg:leading-tight">
@@ -126,7 +132,7 @@ export default function TaskInfo({
         </div>
 
         {/* White card overlapping the blue area */}
-        <div className="-mt-[220px] md:-mt-[240px] lg:-mt-[260px]">
+        <div className="-mt-[300px] md:-mt-[240px] lg:-mt-[260px]">
           <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
             <div className="bg-white shadow-sm overflow-hidden">
               <div className="p-4 md:p-6 lg:p-8">

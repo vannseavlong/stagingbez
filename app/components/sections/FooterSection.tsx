@@ -56,7 +56,7 @@ export default function FooterSection() {
               {header.description}
             </p>
 
-            <h3 className="text-sm font-medium text-bllack mt-4 ">
+            <h3 className="text-[16px] font-medium text-bllack mt-4 ">
               {socialLabel}
             </h3>
             <div className="flex flex-row md:flex-row justify-left md:justify-start items-center gap-6">
@@ -171,7 +171,7 @@ export default function FooterSection() {
                     <li>
                       <Link
                         href={`/${currentLanguageCode}/term-of-condition`}
-                        className="hover:underline text-sm transition-colors"
+                        className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[0]?.title
                           ? links.company[0].title
@@ -181,7 +181,7 @@ export default function FooterSection() {
                     <li>
                       <Link
                         href={`/${currentLanguageCode}/privacy-policy`}
-                        className="hover:underline text-sm transition-colors"
+                        className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[1]?.title
                           ? links.company[1].title
@@ -202,7 +202,7 @@ export default function FooterSection() {
                         <li key={s.key}>
                           <Link
                             href="#service"
-                            className="hover:underline text-sm  transition-colors"
+                            className="hover:underline text-[16px]  transition-colors"
                           >
                             {s.title}
                           </Link>
@@ -217,7 +217,7 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Bar */}
-        <div className=" border-t mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-[#1A1A1A] font-medium space-y-4 sm:space-y-0">
+        <div className=" border-t mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-[16px] text-[#1A1A1A] font-medium space-y-4 sm:space-y-0">
           <p>{ti("footer.bottomText", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 ">
