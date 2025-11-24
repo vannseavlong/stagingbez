@@ -109,7 +109,3 @@ export function CompareHandle({
     </svg>
   );
 }
-
-// Add more exported SVG components below as needed.
-
-// No default export; use named exports so it's easy to import specific icons.
