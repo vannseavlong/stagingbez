@@ -369,7 +369,7 @@ export default function Media() {
                       alt={article.title || "Media image"}
                       width={444}
                       height={250}
-                      className="w-full md:w-[444px] h-[250px] object-cover rounded-md transition-transform duration-300 group-hover:scale-[1.03]"
+                      className="w-full md:w-[444px] h-[250px] object-cover  transition-transform duration-300 group-hover:scale-[1.03]"
                       loading="lazy"
                     />
                   </div>
