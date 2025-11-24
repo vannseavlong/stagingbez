@@ -17,13 +17,14 @@ import { ContainWrapper } from "@/app/components/layout";
 // Accept the route params prop to satisfy Next.js App Router type checks for
 // dynamic routes (this route lives in `[id]`). Using a permissive `any` keeps
 // this change low-risk; you can tighten the shape later (e.g. `{ id: string }`).
-export default function ServiceDetailPage({ params }: { params: any }) {
-  // mark params as used to avoid unused variable lint errors; it's intentionally permissive
-  void params;
+export default async function ServiceDetailPage({ params }: { params: any }) {
+  // Await params per Next.js App Router guidance for sync dynamic APIs.
+  // This ensures `params` is resolved before accessing its properties.
+  const awaitedParams = await params;
   // The page is a server component. Load translations directly on the server
   // by importing the JSON translation files for each language and selecting
   // the right one based on the route `lang` param.
-  const languageCode = String(params?.lang || "en");
+  const languageCode = String(awaitedParams?.lang || "en");
   const languageMap: Record<string, any> = {
     en: serviceDetailEn,
     km: serviceDetailKm,
@@ -32,7 +33,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
 
   // Select the translation data for the route's language
   const serviceDetail = languageMap[languageCode] || serviceDetailEn;
-  const currentId = Number(params?.id ?? NaN);
+  const currentId = Number(awaitedParams?.id ?? NaN);
 
   // Load the service-detail-specific 'about' translations for the route
   const serviceDetailAboutMap: Record<string, any> = {
