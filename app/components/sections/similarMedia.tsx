@@ -177,12 +177,12 @@ export default function SimilarMedia({ excludeId, limit = 4 }: SimilarMediaProps
   return (
     <section className="bg-white md:py-5 py-5">
       <div className="mb-5" data-aos="fade-down">
-        <h2 className="lg:text-[24px] text-xl font-bold text-beasy-gradient font-inter tracking-[4px]">
-          You might also like
+        <h2 className="lg:text-[24px] text-xl font-bold text-black font-inter ">
+          You Might Also Like
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {itemsToShow.map((item, index) => (
           <Link
             key={item?.id ?? index}
