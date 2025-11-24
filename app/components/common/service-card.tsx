@@ -33,7 +33,7 @@ export default function ServiceCard({
       tabIndex={onClick ? 0 : undefined}
     >
       {/* Image */}
-      <div className="w-[250px] h-[250px] overflow-hidden  mb-5">
+      <div className="w-[250px] h-[250px] overflow-hidden  mb-6">
         <Image
           src={image}
           alt={title}
@@ -44,7 +44,7 @@ export default function ServiceCard({
       </div>
 
       {/* Title */}
-      <h3 className="text-black text-[18px] md:text-lg font-bold tracking-wide mb-5 font-sans">
+      <h3 className="text-black text-[18px] md:text-lg font-bold tracking-wide mb-4 font-sans">
         {title}
       </h3>
 

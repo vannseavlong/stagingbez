@@ -8,7 +8,7 @@ import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import CompareSection from "../components/sections/CompareSection";
 import HowItWorkBlog from "../components/sections/HowItWorkBlog";
-// import Media from "../components/sections/mediaSection";
+import Media from "../components/sections/mediaSection";
 
 export default function Home() {
   return (
@@ -60,12 +60,12 @@ export default function Home() {
         </ContainWrapper>
 
         {/* Contact moved to dedicated page */}
-        {/* 
+
         <ContainWrapper>
           <section id="media-section">
             <Media />
           </section>
-        </ContainWrapper> */}
+        </ContainWrapper>
 
         {/* Parallax Image Section with max-width constraint */}
         <ContainWrapper>
