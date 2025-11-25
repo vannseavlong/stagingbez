@@ -26,7 +26,7 @@ export default function MediaPage() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="lg:max-w-[1440px] lg:mx-auto px-0 sm:px-8 lg:px-16">
         {children}
       </div>
     </div>

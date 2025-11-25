@@ -158,21 +158,21 @@
           "key": "Villa",
           "description": "Villa",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$320",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
           "description": "Flat & Shop House",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$115",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "Condo",
           "priceText": "Start From:",
-          "price": "$15",
+          "price": "$35",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         }
       ]
@@ -219,7 +219,7 @@
           "key": "Deep",
           "description": "Deep Cleaning",
           "priceText": "Start From:",
-          "price": "$38",
+          "price": "$75",
           "imageSrc": "/images/serviceDetail/Office/deep.webp"
         }
       ]
@@ -283,7 +283,7 @@
           "key": "Mattress",
           "description": "Bed Mattress",
           "priceText": "Start From:",
-          "price": "$75",
+          "price": "$25",
           "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
         }
       ]
