@@ -227,7 +227,7 @@ export default function FooterSection() {
               aria-label="About Us"
             >
               {links.company && links.company[0]?.title
-                ? links.company[0].title
+                ? links.company[2].title
                 : "About Us"}
             </Link>
             <span className=" text-black">•</span>
@@ -237,7 +237,7 @@ export default function FooterSection() {
               aria-label="Media"
             >
               {links.company && links.company[1]?.title
-                ? links.company[1].title
+                ? links.company[3].title
                 : "Media"}
             </Link>
           </div>

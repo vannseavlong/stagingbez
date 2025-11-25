@@ -8,14 +8,24 @@
   "links": {
     "company": [
       {
-        "key": "terms",
+        "key": "about",
         "title": "About Us",
         "href": "/{lang}/about-us"
       },
       {
-        "key": "privacy",
+        "key": "media",
         "title": "Media",
         "href": "/{lang}/media-page"
+      },
+      {
+        "key": "terms",
+        "title": "Terms of Service",
+        "href": "/{lang}/terms-of-service"
+      },
+      {
+        "key": "privacy",
+        "title": "Privacy Policy",
+        "href": "/{lang}/privacy-policy"
       }
     ],
     "services": [

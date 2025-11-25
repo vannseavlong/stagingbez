@@ -8,14 +8,24 @@
   "links": {
     "company": [
       {
-        "key": "terms",
+        "key": "about",
         "title": "អំពីយើង",
         "href": "/{lang}/about-us"
       },
       {
-        "key": "privacy",
+        "key": "media",
         "title": "ប្រព័ន្ធផ្សព្វផ្សាយ",
         "href": "/{lang}/media-page"
+      },
+      {
+        "key": "terms",
+        "title": "Terms of Service",
+        "href": "/{lang}/terms-of-service"
+      },
+      {
+        "key": "privacy",
+        "title": "Privacy Policy",
+        "href": "/{lang}/privacy-policy"
       }
     ],
     "services": [
