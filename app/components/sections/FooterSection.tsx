@@ -170,22 +170,22 @@ export default function FooterSection() {
                   <ul className="text-base font-medium text-black space-y-4">
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/term-of-condition`}
+                        href={`/${currentLanguageCode}/about-us`}
                         className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[0]?.title
                           ? links.company[0].title
-                          : "Terms & Conditions"}
+                          : "About Us"}
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/privacy-policy`}
+                        href={`/${currentLanguageCode}/media-page`}
                         className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[1]?.title
                           ? links.company[1].title
-                          : "Privacy Policy"}
+                          : "Media"}
                       </Link>
                     </li>
                   </ul>
@@ -222,23 +222,23 @@ export default function FooterSection() {
 
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 ">
             <Link
-              href={`/${currentLanguageCode}/term-of-condition`}
+              href={`/${currentLanguageCode}/about-us`}
               className=" hover:underline text-sm transition-colors "
-              aria-label="Terms of Service"
+              aria-label="About Us"
             >
               {links.company && links.company[0]?.title
                 ? links.company[0].title
-                : "Terms of Service"}
+                : "About Us"}
             </Link>
             <span className=" text-black">•</span>
             <Link
-              href={`/${currentLanguageCode}/privacy-policy`}
+              href={`/${currentLanguageCode}/media-page`}
               className=" hover:underline text-sm  transition-colors "
-              aria-label="Privacy Policy"
+              aria-label="Media"
             >
               {links.company && links.company[1]?.title
                 ? links.company[1].title
-                : "Privacy Policy"}
+                : "Media"}
             </Link>
           </div>
         </div>

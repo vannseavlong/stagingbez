@@ -9,13 +9,13 @@
     "company": [
       {
         "key": "terms",
-        "title": "Terms & Conditions",
-        "href": "/{lang}/term-of-condition"
+        "title": "关于我们",
+        "href": "/{lang}/about-us"
       },
       {
         "key": "privacy",
-        "title": "Privacy Policy",
-        "href": "/{lang}/privacy-policy"
+        "title": "媒体",
+        "href": "/{lang}/media-page"
       }
     ],
     "services": [
