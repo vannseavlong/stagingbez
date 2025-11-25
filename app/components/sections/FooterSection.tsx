@@ -34,11 +34,11 @@ export default function FooterSection() {
 
   return (
     <footer
-      className="text-black font-sans py-30 pb-10  relative overflow-hidden bg-white"
+      className="text-black font-sans py-20 pb-10  relative overflow-hidden bg-white"
       aria-label="Footer section"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-16">
-        <div className="pt-6 grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">
           {/* Column 1: Logo & Company Info */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
@@ -170,22 +170,22 @@ export default function FooterSection() {
                   <ul className="text-base font-medium text-black space-y-4">
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/term-of-condition`}
+                        href={`/${currentLanguageCode}/about-us`}
                         className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[0]?.title
                           ? links.company[0].title
-                          : "Terms & Conditions"}
+                          : "About Us"}
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/privacy-policy`}
+                        href={`/${currentLanguageCode}/media-page`}
                         className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[1]?.title
                           ? links.company[1].title
-                          : "Privacy Policy"}
+                          : "Media"}
                       </Link>
                     </li>
                   </ul>
@@ -222,23 +222,23 @@ export default function FooterSection() {
 
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 ">
             <Link
-              href={`/${currentLanguageCode}/term-of-condition`}
+              href={`/${currentLanguageCode}/about-us`}
               className=" hover:underline text-sm transition-colors "
-              aria-label="Terms of Service"
+              aria-label="About Us"
             >
               {links.company && links.company[0]?.title
                 ? links.company[0].title
-                : "Terms of Service"}
+                : "About Us"}
             </Link>
             <span className=" text-black">•</span>
             <Link
-              href={`/${currentLanguageCode}/privacy-policy`}
+              href={`/${currentLanguageCode}/media-page`}
               className=" hover:underline text-sm  transition-colors "
-              aria-label="Privacy Policy"
+              aria-label="Media"
             >
               {links.company && links.company[1]?.title
                 ? links.company[1].title
-                : "Privacy Policy"}
+                : "Media"}
             </Link>
           </div>
         </div>

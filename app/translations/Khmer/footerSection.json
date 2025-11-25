@@ -9,13 +9,13 @@
     "company": [
       {
         "key": "terms",
-        "title": "Terms & Conditions",
-        "href": "/{lang}/term-of-condition"
+        "title": "អំពីយើង",
+        "href": "/{lang}/about-us"
       },
       {
         "key": "privacy",
-        "title": "Privacy Policy",
-        "href": "/{lang}/privacy-policy"
+        "title": "ប្រព័ន្ធផ្សព្វផ្សាយ",
+        "href": "/{lang}/media-page"
       }
     ],
     "services": [
