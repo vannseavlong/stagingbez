@@ -385,7 +385,7 @@ export default function Media() {
                     {article.date}
                   </span>
                 )}
-                <h3 className="text-lg lg:text-[20px] font-semibold tracking-[1px] md:tracking-[2px] text-black group-hover:text-beasy-gradient transition-colors">
+                <h3 className="text-lg lg:text-[20px] font-semibold  text-black group-hover:text-beasy-gradient transition-colors">
                   {article.title || "Untitled"}
                 </h3>
                 <p className="text-sm lg:text-base text-black/70 line-clamp-3">
