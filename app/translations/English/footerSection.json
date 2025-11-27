@@ -20,7 +20,7 @@
       {
         "key": "terms",
         "title": "Terms of Service",
-        "href": "/{lang}/terms-of-service"
+        "href": "/{lang}/term-of-condition"
       },
       {
         "key": "privacy",
