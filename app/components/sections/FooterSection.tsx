@@ -222,23 +222,31 @@ export default function FooterSection() {
 
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 ">
             <Link
-              href={`/${currentLanguageCode}/about-us`}
+              href={
+                links.company && links.company[2]?.href
+                  ? links.company[2].href.replace("{lang}", currentLanguageCode)
+                  : `/${currentLanguageCode}/term-of-condition`
+              }
               className=" hover:underline text-sm transition-colors "
-              aria-label="About Us"
+              aria-label="Terms of Service"
             >
-              {links.company && links.company[0]?.title
+              {links.company && links.company[2]?.title
                 ? links.company[2].title
-                : "About Us"}
+                : "Terms of Service"}
             </Link>
             <span className=" text-black">•</span>
             <Link
-              href={`/${currentLanguageCode}/media-page`}
+              href={
+                links.company && links.company[3]?.href
+                  ? links.company[3].href.replace("{lang}", currentLanguageCode)
+                  : `/${currentLanguageCode}/privacy-policy`
+              }
               className=" hover:underline text-sm  transition-colors "
-              aria-label="Media"
+              aria-label="Privacy Policy"
             >
-              {links.company && links.company[1]?.title
+              {links.company && links.company[3]?.title
                 ? links.company[3].title
-                : "Media"}
+                : "Privacy Policy"}
             </Link>
           </div>
         </div>
