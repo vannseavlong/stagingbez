@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import { useState } from "react";
@@ -13,7 +12,6 @@
 //   const [expanded, setExpanded] = useState(false);
 //   const { currentLanguageCode } = useLanguage();
 //   const { getSection } = useTranslate();
-
 
 //   const mediaSection = getSection("media") as {
 //     header?: { subtitle?: string; title?: string };
@@ -46,14 +44,12 @@
 //         </h2>
 //       </div>
 
-
-
 //       <div
 //         className="
 //           flex md:flex
-//            lg:grid-cols-4 
-//           gap-6 lg:gap-8 md:gap-8 
-//           overflow-x-auto 
+//            lg:grid-cols-4
+//           gap-6 lg:gap-8 md:gap-8
+//           overflow-x-auto
 //          hide-scrollbar
 //         "
 //       >
@@ -78,10 +74,6 @@
 //   );
 // }
 
-
-
-
-
 // "use client";
 
 // import { useState } from "react";
@@ -96,7 +88,6 @@
 //   const [expanded, setExpanded] = useState(false);
 //   const { currentLanguageCode } = useLanguage();
 //   const { getSection } = useTranslate();
-
 
 //   const mediaSection = getSection("media") as {
 //     header?: { subtitle?: string; title?: string };
@@ -136,14 +127,12 @@
 
 //       </div>
 
-
-
 //       {/* <div
 //         className="
 //           flex md:flex
-//            lg:grid-cols-4 
-//           gap-6 lg:gap-8 md:gap-8 
-//           overflow-x-auto 
+//            lg:grid-cols-4
+//           gap-6 lg:gap-8 md:gap-8
+//           overflow-x-auto
 //          hide-scrollbar
 //         "
 //       >
@@ -165,8 +154,6 @@
 //         ))}
 //       </div> */}
 
-
-
 //       <div className="flex flex-col gap-16">
 //         {Array.isArray(articles) &&
 //           articles.slice(0, visibleCount).map((article, index) => (
@@ -174,7 +161,7 @@
 //               key={index}
 //               to={`/media/article/${index}`}
 //               className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-8 md:pt-0 cursor-pointer hover:opacity-90 transition"
-             
+
 //             >
 //               {/* Text */}
 //               <div className="flex flex-col gap-4 md:gap-1 order-2 md:order-1">
@@ -196,14 +183,9 @@
 //           ))}
 //       </div>
 
-
-
 //     </section>
 //   );
 // }
-
-
-
 
 //this
 
@@ -222,7 +204,7 @@
 //   date?: string;
 //   title?: string;
 //   description?: string;
-  
+
 // }
 
 // export default function Media() {
@@ -299,7 +281,7 @@
 //                 </p>
 //                 <span className="text-beasy-gradient text-sm font-medium mt-2 inline-flex items-center gap-1">
 //                   Read more
-                  
+
 //                 </span>
 //               </div>
 //             </Link>
@@ -307,12 +289,9 @@
 //         })}
 //       </div>
 
-      
 //     </section>
 //   );
 // }
-
-
 
 "use client";
 
@@ -336,14 +315,17 @@ export default function Media() {
   return (
     <section className="bg-white relative md:py-20 py-12">
       {/* Heading */}
-      <div className="max-w-4xl mx-auto text-center px-6 mb-12 md:mb-16" data-aos="fade-down">
-        <h5 className="text-base md:text-lg font-bold tracking-[3px] text-beasy-gradient opacity-80 mb-4">
+      <div
+        className="max-w-4xl mx-auto text-center px-6 mb-12 md:mb-16"
+        data-aos="fade-down"
+      >
+        <h5 className="text-[16px] md:text-[16px] font-bold tracking-[3px] text-beasy-gradient opacity-80 mb-4">
           {mediaSection?.header?.subtitle || "Media"}
         </h5>
         <h2 className="text-[24px] md:text-[32px] font-bold text-black">
-          {mediaSection?.header?.title }
+          {mediaSection?.header?.title}
         </h2>
-        <p className="mt-4 text-sm md:text-base text-black/90">
+        <p className="mt-4 text-[16px] md:text-[18px] text-black/90">
           {mediaSection?.header?.description || ""}
         </p>
       </div>
@@ -353,7 +335,9 @@ export default function Media() {
       {/* Article list */}
       <div className="flex flex-col gap-12 max-w-6xl mx-auto px-6">
         {itemsToShow.map((article, index) => {
-          const href = `/${currentLanguageCode}/media-detail/${article.id ?? index}`;
+          const href = `/${currentLanguageCode}/media-detail/${
+            article.id ?? index
+          }`;
           return (
             <Link
               key={article.id ?? index}
@@ -381,14 +365,14 @@ export default function Media() {
               {/* Text */}
               <div className="flex flex-col order-2 md:order-1 justify-center space-y-3">
                 {article.date && (
-                  <span className="text-sm md:text-sm font-medium text-black/50">
+                  <span className="text-[16px] md:text-[16px] font-medium text-black/50">
                     {article.date}
                   </span>
                 )}
-                <h3 className="text-lg lg:text-[20px] font-semibold  text-black group-hover:text-beasy-gradient transition-colors">
+                <h3 className="text-[20px] md:text-[24px] font-semibold text-black group-hover:text-beasy-gradient transition-colors">
                   {article.title || "Untitled"}
                 </h3>
-                <p className="text-sm lg:text-base text-black/70 line-clamp-3">
+                <p className="text-[16px] md:text-[18px] text-black/70 line-clamp-3">
                   {article.body || "No description available."}
                 </p>
                 <span className="text-beasy-gradient text-sm font-medium inline-flex items-center gap-1">

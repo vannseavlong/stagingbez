@@ -374,11 +374,11 @@ export default function MediaDetail() {
           className="mb-8 md:mb-10 flex flex-col gap-4"
           data-aos="fade-up"
         >
-          <h1 className="text-[24px] lg:text-[24px] md:text-[24px] font-bold leading-tight ">
+          <h1 className="text-[24px] md:text-[32px] font-bold leading-tight tracking-[2px] md:tracking-[3px]">
             {article.title || "Untitled"}
           </h1>
           {article.date && (
-            <div className="flex items-center gap-2 text-gray-500 text-base">
+            <div className="flex items-center gap-2 text-gray-500 text-[16px] md:text-[16px]">
               <span>{article.date}</span>
             </div>
           )}
@@ -389,7 +389,7 @@ export default function MediaDetail() {
           {paragraphs.map((p: string, i: number) => (
             <p
               key={i}
-              className="text-base  leading-relaxed font-normal"
+              className="text-[16px] md:text-[18px] leading-relaxed font-normal"
               data-aos="fade-up"
               data-aos-delay={i * 60}
             >
@@ -401,7 +401,7 @@ export default function MediaDetail() {
         {/* Highlight sentence */}
         {article.highlight && (
           <p
-            className="font-semibold text-base  mb-6 md:mb-8"
+            className="font-semibold text-[16px] md:text-[18px] mb-6 md:mb-8"
             data-aos="fade-up"
           >
             {article.highlight}
@@ -419,18 +419,18 @@ export default function MediaDetail() {
                 className="space-y-4"
               >
                 {sec.heading && (
-                  <h2 className="lg:text-[18px] text-[18px] font-semibold">
+                  <h2 className="text-[20px] md:text-[24px] font-semibold">
                     {idx + 1}. {sec.heading}
                   </h2>
                 )}
                 {sec.content && (
-                  <p className="text-base  leading-relaxed text-black/80">
+                  <p className="text-[16px] md:text-[18px] leading-relaxed text-black/80">
                     {sec.content}
                   </p>
                 )}
 
                 {sec.bullet && (
-                  <ul className="list-disc list-inside text-base   leading-relaxed text-black/80">
+                  <ul className="list-disc list-inside text-[16px] md:text-[18px] leading-relaxed text-black/80">
                     {sec.bullet.map((item: any, i: number) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -438,7 +438,7 @@ export default function MediaDetail() {
                 )}
 
                 {sec.quote && (
-                  <blockquote className="italic text-base  leading-relaxed text-black/80">
+                  <blockquote className="italic text-[16px] md:text-[18px] leading-relaxed text-black/80">
                     {sec.quote}
                   </blockquote>
                 )}
