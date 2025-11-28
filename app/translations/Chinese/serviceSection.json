@@ -7,42 +7,50 @@
   },
   "items": [
     {
+      "id": 1,
       "key": "generalCleaning",
       "title": "一般清洁",
       "description": "使用 bEasy 让您回到一个清新的空间——我们负责处理杂乱，让您享受最重要的事情。"
     },
     {
+      "id": 2,
       "key": "deepCleaning",
       "title": "深度清洁",
       "description": "使用 bEasy 的深度清洁获得全新开始——我们解决隐藏的污垢和污垢，让您的空间恢复最佳状态。"
     },
     {
+      "id": 3,
       "key": "officeCleaning",
       "title": "办公室清洁",
       "description": "使用 bEasy 的办公室清洁来点亮您的工作场所——回到一个清新的空间，让每个人都能集中精力，做到最好。"
     },
     {
+      "id": 4,
       "key": "upholstery",
       "title": "软装清洁",
       "description": "使用 bEasy 的软装清洁服务让您的家具焕然一新——我们清除污渍、灰尘和过敏原，让您的家更清新。"
     },
     {
+      "id": 5,
       "key": "pestControl",
       "title": "虫害控制",
       "description": "使用我们安全、强效的喷雾和烟雾剂，告别蚊子——保护您和您所爱的人免受登革热和其他病毒的侵害。"
     },
 
     {
+      "id": 6,
       "key": "washingMachine",
       "title": "洗衣机清洗",
       "description": "预订洗衣机清洗服务，去除霉菌和污垢。通过我们的应用程式让您的洗衣机保持卫生、无异味、使用寿命更长。"
     },
     {
+      "id": 7,
       "key": "postRenovation",
       "title": "装修后清洁",
       "description": "刚装修完？通过我们的应用程式在金边预订装修后清洁服务。我们清除灰尘、油漆和碎屑，让您的空间做好入住准备。"
     },
     {
+      "id": 8,
       "key": "acCleaning",
       "title": "空调清洗",
       "description": "通过我们在金边的空调清洗服务，保持凉爽和能源效率。通过我们的应用程式按需获取更清洁的空气、更快的制冷和更低的电费。"

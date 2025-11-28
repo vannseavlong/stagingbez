@@ -23,6 +23,10 @@ export default function FooterSection() {
   };
   const header = footer?.header || {};
   const links = footer?.links || {};
+  const serviceSection = getSection("service") as any;
+  const serviceItems: Array<any> = Array.isArray(serviceSection?.items)
+    ? serviceSection.items
+    : [];
   const socialLabel = footer?.social || "Find us on";
   const handleSocialClick = (platform: string, href?: string) => {
     try {
@@ -198,16 +202,26 @@ export default function FooterSection() {
                   </h4>
                   <ul className="text-base font-medium text-black space-y-4 hover:text-beasy-gradient">
                     {(links.services || []).map(
-                      (s: { key: string; title: string }) => (
-                        <li key={s.key}>
-                          <Link
-                            href="#service"
-                            className="hover:underline text-[16px]  transition-colors"
-                          >
-                            {s.title}
-                          </Link>
-                        </li>
-                      )
+                      (s: {
+                        id?: number | string;
+                        key?: string;
+                        title: string;
+                      }) => {
+                        const resolvedId =
+                          s.id ??
+                          serviceItems.find((si) => si?.key === s.key)?.id ??
+                          s.key;
+                        return (
+                          <li key={s.key ?? String(s.id)}>
+                            <Link
+                              href={`/${currentLanguageCode}/service-detail/${resolvedId}`}
+                              className="hover:underline text-[16px]  transition-colors"
+                            >
+                              {s.title}
+                            </Link>
+                          </li>
+                        );
+                      }
                     )}
                   </ul>
                 </div>
