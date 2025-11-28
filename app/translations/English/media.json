@@ -1,58 +1,163 @@
 {
   "header": {
-    "subtitle": "Media",
-    "title": "Read Our Latest Articles"
+    "media": "MEDIA",
+    "ReadLatest": "Read Our Latest Articles",
+    "subtitle": "ARTICLES",
+    "title": "Latest Articles",
+    "description": "Stay updated with the latest news, tips, and insights from bEasy. Explore our articles to learn more about our services, industry trends, and how we can help make your life easier."
   },
   "articles": [
-    {
-      "id": 1,
-      "image": "/images/media/makro/m1.webp",
-      "images": [
-        "/images/media/makro/m1.webp",
-        "/images/media/makro/m2.webp",
-        "/images/media/makro/m3.webp",
-        "/images/media/makro/m4.webp",
-        "/images/media/makro/m5.webp",
-        "/images/media/makro/m6.webp",
-        "/images/media/makro/m7.webp",
-        "/images/media/makro/m8.webp"
-      ],
-      "date": "May 24-25 2025",
-      "title": "bEasy Event at Makro",
-      "description": "Thank You for Visiting the bEasy Booth at Makro Sen Sok. On May 24–25, 2025, our Sales and Marketing Team set up a booth in front of Makro Sen Sok from 3 PM to 9 PM to actively introduce and demonstrate the bEasy App to the community. The event provided the perfect opportunity to test the app in a real-world setting, gather valuable feedback from users, and observe how people interact with its features. Even with the heavy rain, many attendees tried the app, explored its services, and shared their impressions—helping us identify ways to make the experience even more seamless and user-friendly. These hands-on interactions are essential to refining bEasy, ensuring it meets the needs of households and businesses across Cambodia. As we continue to host similar events, every test and conversation brings us closer to delivering the most convenient and reliable service platform possible."
-    },
-    {
-      "id": 2,
-      "image": "/images/media/axis/a1.webp",
-      "images": [
-        "/images/media/axis/a1.webp",
-        "/images/media/axis/a2.webp",
-        "/images/media/axis/a3.webp",
-        "/images/media/axis/a4.webp",
-        "/images/media/axis/a5.webp",
-        "/images/media/axis/a6.webp",
-        "/images/media/axis/a7.webp",
-        "/images/media/axis/a8.webp"
-      ],
-      "date": "May 17 2025",
-      "title": "bEasy app promotion at AXIS Residence",
-      "description": "Our bEasy App brings multiple essential services together on one platform—whether you need cleaning, moving assistance, or beauty care, everything is just a few taps away. By simply downloading the app to your smartphone, you can explore services, place a request, and have providers come straight to your home—anytime, anywhere. Last week at AXIS Residence, our Suntel Technology Cambodia team actively demonstrated the app to residents, allowing them to try out its features in real-time and experience firsthand how simple and convenient it is to book reliable services through bEasy."
-    },
-    {
-      "id": 3,
-      "image": "/images/media/peng/p1.webp",
-      "images": [
-        "/images/media/peng/p1.webp",
-        "/images/media/peng/p2.webp",
-        "/images/media/peng/p3.webp",
-        "/images/media/peng/p4.webp",
-        "/images/media/peng/p5.webp",
-        "/images/media/peng/p6.webp",
-        "/images/media/peng/p7.webp"
-      ],
-      "date": "17 May 2025",
-      "title": "bEasy Event at Borey Peng Huoth Boeung Snor",
-      "description": "Here’s a look at memorable moments from Suntel Technology Cambodia’s booth during the International Mother’s Day event at Borey Peng Huoth Boeung Snor on May 10–11. The event provided a great opportunity for our team to introduce and demonstrate the bEasy App to the community. Attendees explored the app’s features, enjoyed complimentary ice cream, and experienced free nail art—making the celebration both engaging and informative."
+
+  {
+    "id": 1,
+    "title": "What is bEasy?",
+    "date": "11 Nov 2025",
+    "image": "/images/media/What_is_bEasy.png",
+    
+    "body": "In today’s fast-paced life, keeping your home or office clean can feel overwhelming. That’s where the bEasy App comes in – Cambodia’s all-in-one platform for professional cleaning and maintenance services.",
+    "highlight": "with bEasy, you can easily book trusted service providers for your home, office, or business, all from your smartphone, whether it’s AC cleaning, sofa and mattress washing, pest control, or general cleaning, bEasy connects you with verified professionals who deliver quality results - fast, safe, and reliable.",
+    
+    "sections": [
+      {
+        "heading": "Cleaning",
+        
+        "content": "With the help of our general cleaning service, keep your house hygienic, liveable, and inviting. Our skilled experts take care of every little thing, from mopping and dusting to thorough sanitization, so your family may live in a more secure, hygienic, and cozy environment. We give you peace of mind while transforming your house with dependable service, reasonable prices, and unwavering quality."
+      },
+      {
+        "heading": "Deep Cleaning",
+        "content": "An in-depth cleaning service for anyone if they have been living in the residence for years and want to restore it to its original state, making the place feel fresh again.A deep clean will help you manage the dust, dirt, grime and bacteria in the residence and it will also help with any unpleasant odours. So, if yo have pets, a deep clean can completely rid your residence of smells and help you prevent them from returning. The more pets you have, the more beneficial it is to engage in our deep cleaning service."
+      },
+      {
+        "heading": "Office Cleaning",
+        "content": "The cornerstone of a professional, productive, and healthy work environment is a clean office. Our general cleaning service gives your company the everyday orderly appearance it needs to stay presentable. By addressing high-traffic areas and hidden debris, our office cleaning service goes above and beyond to return your business to its immaculate state."
+      },
+
+      {
+        "heading": "Upholstery",
+        "bullet": [
+          "Food and drink stains",
+          "Pet odours and fur",
+          "Dust mites and allergens",
+          "Sweat and body oils"
+        ],
+        "content": "Our upholstery cleaning service restores the beauty and extends the life of your furniture and rugs. Our professional cleaning process lifts embedded dirt, allergens, and stains from sofas, mattresses, and rugs, leaving them fresh and revitalized. We used specialized, non-toxic solutions and equipment tailored to the specific fabric, ensuring a deep clean without causing any damage. We help you get rid of:"
+      },
+
+      {
+        "heading": "AC Cleaning",
+        "bullet": [
+          "minimized odours, mould spores, and allergies",
+          "lower energy bills by boosting system efficiency",
+          "prolongs the lifespan of your device",
+          "maintains a breathable, healthful, and freshness of your air"
+        ],
+        "content": "Our expert air conditioning cleaning service enhance energy efficiency, eliminate hidden pollutants, and improve the quality of the air in your house or place of business. We help you stay healthy by removing mouldy ductwork and dusty filters while improving the condition of your AC."
+      },
+      {
+        "heading": "Pest Control",
+        "content": "Pest control is an essential part of maintaining a safe, healthy, and hygienic environment for both homes and businesses. Our pest control service provides comprehensive solutions to identify, treat, and prevent a wide range of common pests, including insects, rodents, and others. We use a combination of targeted treatments and preventative measures to ensure long-term protection, with a focus on solutions that are safe for your family, pets, and employees."
+      }
+
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "bEasy Events",
+    "date": "4-5 Oct 2025",
+    "image": "/images/media/beasy_event.png",
+    
+    "body": "Phnom Penh, Cambodia – [4-5.Oct.2025] – bEasy, Cambodia’s leading on-demand cleaning service app, proudly participated in the Kids & Families Fair, bringing professional cleaning solutions closer to families and homeowners across the city.",
+    "highlight": "The event attracted hundreds of visitors, including parents, families, and local business owners, providing the perfect opportunity for bEasy to showcase its innovative app and cleaning services.",
+    
+    "sections": [
+      {
+      "content": " The Kids & Families Fair allowed bEasy to strengthen its brand presence and connect with its target audience directly. Many families expressed excitement about the convenience of the app, the professionalism of our cleaning staff, and the peace of mind that comes from using trusted services.",
+    "quote": "“It was amazing to meet so many families and show them how easy and reliable our cleaning services are, Events like this help us build trust and demonstrate the value bEasy brings to everyday life.”"
     }
+
+    ]
+  },
+
+
+
+  {
+    "id": 3,
+    "title": "General Cleaning vs Deep Cleaning – Keep Your Home Fresh with bEasy",
+    "date": "11 Nov 2025",
+    "image": "/images/media/gc_dc.png",
+    
+    "body": "Keeping your home clean is not just about appearances — it’s about health, comfort, and peace of mind. At bEasy, we understand that every home has different cleaning needs, which is why we offer both General Cleaning and Deep Cleaning services to suit your lifestyle.",
+    
+   
+    "sections": [
+      {
+        
+      "bullet":[
+        "Dusting and wiping furniture",
+        "Sweeping, vacuuming, and mopping floors",
+        "Cleaning countertops, sinks, and bathrooms",
+        "Taking out trash and light organization"
+
+      ],
+        "heading": "General Cleaning – Maintain Everyday Cleanliness Keep your home tidy and organized with regular upkeep",
+        "content": "General cleaning is perfect for weekly or biweekly upkeep. It focuses on maintaining your home’s cleanliness and organization, ensuring that dust, dirt, and clutter don’t build up over time. Typical tasks include:"
+      },
+
+
+      {
+        "heading": "Deep Cleaning – A Thorough Refresh Eliminate hidden dirt and allergens, improve hygiene, and restore your home to a pristine condition",
+        "content": "Deep cleaning goes beyond the surface. Recommended every 3–6 months, or after renovations, parties, or moving, it targets areas that general cleaning cannot reach. Typical tasks include:",
+        "bullet":[
+          "Cleaning behind and under furniture and appliances",
+          "Scrubbing bathroom tiles, grout, and sinks",
+          "AC vent cleaning and refrigerator interior cleaning",
+          "Light cleaning of mattresses, sofas, and carpets",
+          "Removing stubborn stains, dust mites, and bacteria"
+        ]
+      }
+    ],
+    "last": "Deep cleaning is perfect for families with children, elderly members, or anyone looking to maintain a healthy and fresh living environment."
+  },
+
+
+{
+    "id": 4,
+    "title": "5 tips to keep your sofa clean",
+    "date": "11 Nov 2025",
+    "image": "/images/media/tip.png",
+    
+    "body": "Your sofa is one of the most used pieces of furniture in your home — and unfortunately, it also collects dust, dirt, stains, and allergens. Keeping it clean not only looks better but also protects your family’s health. Here are 5 easy tips to keep your sofa spotless:",
+    
+   
+    "sections": [
+      {
+        
+      
+        "heading": "Vacuum Regularly",
+        "content": " Dust, crumbs, and pet hair accumulate quickly on sofas. Use a vacuum cleaner with a soft brush attachment at least once a week to remove dirt from cushions, seams, and corners. This prevents buildup and keeps the fabric fresh."
+      },
+
+
+      {
+        "heading": "Clean Spills Immediately",
+        "content": "Accidents happen! Blot spills immediately with a clean cloth or paper towel — don’t rub, as this can spread the stain. For tougher stains, use a mild soap solution suitable for your sofa’s material. Quick action prevents stains from setting in."
+      },
+      {
+        "heading": "Use Sofa Covers or Throws",
+        "content": "Protect your sofa with removable covers or throws, especially in high-traffic areas or if you have kids or pets. These can be washed regularly, keeping the sofa itself cleaner for longer."
+      },
+      {
+        "heading": "Avoid Eating on the Sofa",
+        "content": "Food and drinks are the main causes of stains. Try to limit eating and drinking while sitting on the sofa. If spills occur, follow tip #2 immediately to prevent permanent damage."
+      },
+      {
+        "heading": "Schedule Professional Cleaning",
+        "content": "Even with regular maintenance, sofas need a deep clean every 3–6 months. Professional cleaning services like bEasy Sofa Cleaning remove dust mites, allergens, and deep stains, leaving your sofa hygienic, fresh, and like new."
+      }
+    ]
+   
+  }
+
   ]
 }

@@ -109,7 +109,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-white py-12 md:py-16">
+    <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-20 md:mb-24">
           <div className="flex items-center justify-center mb-4">

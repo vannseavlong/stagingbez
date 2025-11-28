@@ -8,7 +8,8 @@ import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import CompareSection from "../components/sections/CompareSection";
 import HowItWorkBlog from "../components/sections/HowItWorkBlog";
-import Media from "../components/sections/mediaSection";
+import HomeMedia from "../components/sections/homeMedia";
+// import Media from "../components/sections/mediaSection";
 
 export default function Home() {
   return (
@@ -60,12 +61,14 @@ export default function Home() {
         </ContainWrapper>
 
         {/* Contact moved to dedicated page */}
-        {/* 
+
+        
         <ContainWrapper>
           <section id="media-section">
-            <Media />
+            <HomeMedia />
           </section>
-        </ContainWrapper> */}
+        </ContainWrapper>
+       
 
         {/* Parallax Image Section with max-width constraint */}
         <ContainWrapper>
@@ -81,7 +84,7 @@ export default function Home() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
         {children}
       </div>
     </div>

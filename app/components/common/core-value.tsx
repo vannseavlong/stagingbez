@@ -18,11 +18,11 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
           {items.map((item, i) => (
             <div
               key={i}
-              className={`flex-1 p-6 text-center ${
+              className={`flex-1 px-6 py-8 text-center ${
                 i === 0 ? "border-l border-gray-200" : ""
               } ${i === items.length - 1 ? "border-r border-gray-200" : ""}`}
             >
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-4">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -31,10 +31,10 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
                   className="w-[44px] h-[44px]"
                 />
               </div>
-              <h3 className="text-[18px] font-bold text-[#1A1A1A] mb-3 font-sans">
+              <h3 className="text-[18px] font-bold text-[#1A1A1A] mb-4 font-sans">
                 {item.title}
               </h3>
-              <p className="text-[#3D3D3D] text-sm leading-relaxed mx-auto max-w-[260px] h-[80px]">
+              <p className="text-[#3D3D3D] text-sm leading-relaxed mx-auto max-w-[260px]">
                 {item.description}
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
         <div className="hidden md:grid md:grid-cols-2 md:gap-0 lg:hidden">
           {items.map((item, i) => (
             <div key={i} className="p-4 text-center border">
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-4">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -68,7 +68,7 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
         <div className="grid grid-cols-1 gap-4 mt-4 md:hidden">
           {items.map((item, i) => (
             <div key={i} className="p-4 text-center">
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-4">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -77,7 +77,7 @@ export default function CoreValue({ items }: { items: CoreItem[] }) {
                   className="w-[44px] h-[44px]"
                 />
               </div>
-              <h3 className="text-base font-semibold text-gray-900 mb-1">
+              <h3 className="text-base font-semibold text-gray-900 mb-4">
                 {item.title}
               </h3>
               <p className="text-gray-600 mx-auto text-sm text-center leading-relaxed max-w-[220px]">

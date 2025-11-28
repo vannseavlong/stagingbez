@@ -29,10 +29,12 @@ export function DropdownMenuTrigger({
   children,
   className = "",
   showChevron = true,
+  chevronGradient = false,
 }: {
   children: React.ReactNode;
   className?: string;
   showChevron?: boolean;
+  chevronGradient?: boolean;
 }) {
   const ctx = useContext(DropdownMenuContext);
   if (!ctx) return null;
@@ -48,17 +50,27 @@ export function DropdownMenuTrigger({
       {showChevron ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`h-4 w-4 transition-transform duration-200 ${
+          className={`h-3.5 w-3.5 transition-transform duration-200 ${
             ctx.open ? "rotate-180" : "rotate-0"
           }`}
-          viewBox="0 0 20 20"
-          fill="currentColor"
+          viewBox="0 0 14 10"
+          fill="none"
           aria-hidden
         >
+          {chevronGradient ? (
+            <defs>
+              <linearGradient id="beasyChevronGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#1B4CFA" />
+                <stop offset="100%" stopColor="#102C90" />
+              </linearGradient>
+            </defs>
+          ) : null}
           <path
-            fillRule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-            clipRule="evenodd"
+            d="M1 1.5L7 7.5L13 1.5"
+            stroke={chevronGradient ? "url(#beasyChevronGrad)" : "currentColor"}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : null}
@@ -90,10 +102,10 @@ export function DropdownMenuContent({
   return ctx.open ? (
     <div
       ref={ref}
-      className={`absolute left-0 mt-2 z-50 w-auto min-w-[12rem] overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black/5 ${className}`}
+      className={`absolute left-0 mt-4 z-50 w-auto min-w-[12rem] overflow-hidden rounded-[6px] bg-white shadow-lg border border-[#E8E8E8] ${className}`}
       role="menu"
     >
-      <div className="py-1">{children}</div>
+      <div className="flex flex-col gap-4 py-4">{children}</div>
     </div>
   ) : null;
 }
@@ -110,8 +122,7 @@ export function DropdownMenuItem({
   className?: string;
 }) {
   const ctx = useContext(DropdownMenuContext);
-  const base =
-    "flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-beasy-gradient";
+  const base = "flex items-center gap-2 px-6 py-0 text-[16px] font-medium";
   return (
     <Link
       href={href}

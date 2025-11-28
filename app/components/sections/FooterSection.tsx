@@ -23,6 +23,10 @@ export default function FooterSection() {
   };
   const header = footer?.header || {};
   const links = footer?.links || {};
+  const serviceSection = getSection("service") as any;
+  const serviceItems: Array<any> = Array.isArray(serviceSection?.items)
+    ? serviceSection.items
+    : [];
   const socialLabel = footer?.social || "Find us on";
   const handleSocialClick = (platform: string, href?: string) => {
     try {
@@ -34,11 +38,11 @@ export default function FooterSection() {
 
   return (
     <footer
-      className="text-black font-sans py-5 pb-10  relative overflow-hidden bg-white"
+      className="text-black font-sans py-20 pb-10  relative overflow-hidden bg-white"
       aria-label="Footer section"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-16">
-        <div className="pt-6 grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 lg:gap-30 md:grid-cols-1 lg:grid-cols-2">
           {/* Column 1: Logo & Company Info */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
@@ -56,7 +60,7 @@ export default function FooterSection() {
               {header.description}
             </p>
 
-            <h3 className="text-sm font-medium text-bllack mt-4 ">
+            <h3 className="text-[16px] font-medium text-bllack mt-4 ">
               {socialLabel}
             </h3>
             <div className="flex flex-row md:flex-row justify-left md:justify-start items-center gap-6">
@@ -170,22 +174,22 @@ export default function FooterSection() {
                   <ul className="text-base font-medium text-black space-y-4">
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/term-of-condition`}
-                        className="hover:underline text-sm transition-colors"
+                        href={`/${currentLanguageCode}/about-us`}
+                        className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[0]?.title
                           ? links.company[0].title
-                          : "Terms & Conditions"}
+                          : "About Us"}
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href={`/${currentLanguageCode}/privacy-policy`}
-                        className="hover:underline text-sm transition-colors"
+                        href={`/${currentLanguageCode}/media-page`}
+                        className="hover:underline text-[16px] transition-colors"
                       >
                         {links.company && links.company[1]?.title
                           ? links.company[1].title
-                          : "Privacy Policy"}
+                          : "Media"}
                       </Link>
                     </li>
                   </ul>
@@ -198,16 +202,26 @@ export default function FooterSection() {
                   </h4>
                   <ul className="text-base font-medium text-black space-y-4 hover:text-beasy-gradient">
                     {(links.services || []).map(
-                      (s: { key: string; title: string }) => (
-                        <li key={s.key}>
-                          <Link
-                            href="#service"
-                            className="hover:underline text-sm  transition-colors"
-                          >
-                            {s.title}
-                          </Link>
-                        </li>
-                      )
+                      (s: {
+                        id?: number | string;
+                        key?: string;
+                        title: string;
+                      }) => {
+                        const resolvedId =
+                          s.id ??
+                          serviceItems.find((si) => si?.key === s.key)?.id ??
+                          s.key;
+                        return (
+                          <li key={s.key ?? String(s.id)}>
+                            <Link
+                              href={`/${currentLanguageCode}/service-detail/${resolvedId}`}
+                              className="hover:underline text-[16px]  transition-colors"
+                            >
+                              {s.title}
+                            </Link>
+                          </li>
+                        );
+                      }
                     )}
                   </ul>
                 </div>
@@ -217,27 +231,35 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Bar */}
-        <div className=" border-t mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-[#1A1A1A] font-medium space-y-4 sm:space-y-0">
+        <div className=" border-t mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-[16px] text-[#1A1A1A] font-medium space-y-4 sm:space-y-0">
           <p>{ti("footer.bottomText", { year: new Date().getFullYear() })}</p>
 
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 ">
             <Link
-              href={`/${currentLanguageCode}/term-of-condition`}
+              href={
+                links.company && links.company[2]?.href
+                  ? links.company[2].href.replace("{lang}", currentLanguageCode)
+                  : `/${currentLanguageCode}/term-of-condition`
+              }
               className=" hover:underline text-sm transition-colors "
               aria-label="Terms of Service"
             >
-              {links.company && links.company[0]?.title
-                ? links.company[0].title
+              {links.company && links.company[2]?.title
+                ? links.company[2].title
                 : "Terms of Service"}
             </Link>
             <span className=" text-black">•</span>
             <Link
-              href={`/${currentLanguageCode}/privacy-policy`}
+              href={
+                links.company && links.company[3]?.href
+                  ? links.company[3].href.replace("{lang}", currentLanguageCode)
+                  : `/${currentLanguageCode}/privacy-policy`
+              }
               className=" hover:underline text-sm  transition-colors "
               aria-label="Privacy Policy"
             >
-              {links.company && links.company[1]?.title
-                ? links.company[1].title
+              {links.company && links.company[3]?.title
+                ? links.company[3].title
                 : "Privacy Policy"}
             </Link>
           </div>

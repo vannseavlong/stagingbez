@@ -174,11 +174,11 @@ const Service = () => {
   };
 
   return (
-    <section className="bg-white md:py-20 lg:py-20 text-white relative overflow-hidden">
+    <section className="bg-white py-0 lg:pt-16 text-white relative overflow-hidden">
       <div className="max-w-full lg:max-w-[1440px] lg:mx-auto">
         {/* Header */}
         <div className="mb-5 mt-10">
-          <div className="flex items-center text-beasy-gradient mb-5 lg:mb-0 md:mb-5">
+          <div className="flex items-center text-beasy-gradient mb-4 lg:mb-4 md:mb-4">
             <h5 className="text-base font-bold leading-[32px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
               {serviceSection.header?.subtitle}
             </h5>
@@ -191,7 +191,7 @@ const Service = () => {
             {serviceSection.header?.title}
           </h1>
 
-          <div className="hidden md:flex gap-3 items-center justify-center mt-5">
+          <div className="hidden md:flex gap-3 items-center justify-center mt-16">
             <button
               onClick={handlePrev}
               className="border rounded-full border-gray-400 p-2 hover:bg-gray-300 transition"
@@ -222,7 +222,7 @@ const Service = () => {
             ref={scrollRef}
             className="w-full overflow-x-auto scrollbar-hidden scroll-smooth"
           >
-            <div className="flex space-x-5 md:space-x-5 lg:space-x-8 snap-x snap-mandatory pb-4">
+            <div className="flex space-x-12 snap-x snap-mandatory pb-4">
               {mediaItems.map((item, idx) => (
                 <div
                   key={item.key}

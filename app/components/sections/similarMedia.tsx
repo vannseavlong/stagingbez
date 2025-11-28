@@ -76,77 +76,133 @@
 //   );
 // }
 
+//this
+// "use client";
+
+// import Link from "next/link";
+// import MediaCard from "../common/mediaCard";
+// import { useLanguage } from "@/app/contexts/LanguageContext";
+// import { useTranslate } from "@/app/hooks/useTranslate";
+// import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
+
+// interface SimilarMediaProps {
+//   excludeId?: number;
+//   limit?: number;
+// }
+
+// export default function SimilarMedia({ excludeId, limit = 4 }: SimilarMediaProps) {
+//   const { currentLanguageCode } = useLanguage();
+//   const { getSection } = useTranslate();
+
+//   const mediaSection = getSection("media") as any;
+//   const itemsSource: any[] = Array.isArray(mediaSection?.articles)
+//     ? mediaSection.articles
+//     : mediaItemsFallback;
+
+//   // Filter out current article
+//   const filtered = itemsSource.filter((item) => {
+//     const idNum = Number(item?.id);
+//     const exNum = Number(excludeId);
+//     return !Number.isFinite(exNum) || idNum !== exNum;
+//   });
+
+//   const itemsToShow = filtered.slice(0, limit);
+
+//   if (!itemsToShow.length) return null;
+
+//   return (
+//     <section className="bg-white md:py-0 lg:py-5 ">
+//       <div className="mb-5" data-aos="fade-down">
+//         <h2 className="lg:text-[24px] text-xl font-bold text-beasy-gradient font-inter tracking-[4px]">
+//           You might also like
+//         </h2>
+//       </div>
+
+//       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+//         {itemsToShow.map((item, index) => (
+//           <Link
+//             key={item?.id ?? index}
+//             href={`/${currentLanguageCode}/media-detail/${item?.id ?? index}`}
+//             className="hover:opacity-90 transition block"
+//             data-aos="fade-up"
+//             data-aos-delay={index * 120}
+//           >
+//             <MediaCard
+//               image={item.image}
+//               date={item.date}
+//               title={item.title}
+//               body={item.body}
+//             />
+//           </Link>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+// push to staging
+
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import MediaCard from "../common/mediaCard";
-
-
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 
-export default function SimilarMedia() {
-  const [expanded, setExpanded] = useState(false);
+interface SimilarMediaProps {
+  excludeId?: number;
+  limit?: number;
+}
+
+export default function SimilarMedia({
+  excludeId,
+  limit = 4,
+}: SimilarMediaProps) {
   const { currentLanguageCode } = useLanguage();
-  const { t, getSection } = useTranslate();
+  const { getSection } = useTranslate();
 
   const mediaSection = getSection("media") as any;
   const itemsSource: any[] = Array.isArray(mediaSection?.articles)
     ? mediaSection.articles
     : mediaItemsFallback;
 
-  const itemsToShow = expanded ? itemsSource : itemsSource.slice(0, 4);
+  const filtered = itemsSource.filter((item) => {
+    const idNum = Number(item?.id);
+    const exNum = Number(excludeId);
+    return !Number.isFinite(exNum) || idNum !== exNum;
+  });
+
+  const itemsToShow = filtered.slice(0, limit);
+
+  if (!itemsToShow.length) return null;
 
   return (
-    <section className="bg-white relative min-h-full md:py-5 lg:py-4 py-5">
-      {/* Section Heading */}
-
-      <div className="text-left mb-5 gap-1" data-aos="fade-down">
-        <h2 className="lg:text-[24px] text-xl md:text-xl font-bold text-beasy-gradient font-inter  leading-normal tracking-[4px]">
-          You might also like
+    <section className="bg-white md:py-5 py-5">
+      <div className="mb-5" data-aos="fade-down">
+        <h2 className="lg:text-[24px] text-xl font-bold text-black font-inter ">
+          You Might Also Like
         </h2>
       </div>
 
-      <div
-        className="
-          flex md:flex
-           lg:grid-cols-4 
-          gap-6 lg:gap-8 md:gap-8 
-          overflow-x-auto hide-scrollbar
-          
-        "
-      >
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {itemsToShow.map((item, index) => (
           <Link
             key={item?.id ?? index}
             href={`/${currentLanguageCode}/media-detail/${item?.id ?? index}`}
-            className="hover:opacity-90 transition flex-shrink-0 w-[80%] sm:w-[60%] md:w-auto"
+            className="hover:opacity-90 transition block"
             data-aos="fade-up"
-            data-aos-delay={index * 150}
+            data-aos-delay={index * 120}
           >
             <MediaCard
               image={item.image}
               date={item.date}
               title={item.title}
-              description={item.description}
+              body={item.body}
             />
           </Link>
         ))}
       </div>
-      {/* Toggle Button */}
-      {/* <div className="mt-6 mb-6 flex justify-center">
-        <Button
-          variant="outline"
-          className="px-6 py-2 text-black rounded-[30px]"
-          onClick={() => setExpanded(!expanded)}
-        >
-          {expanded
-            ? t("media.showLess", "Show Less")
-            : t("media.viewMore", "View More")}
-        </Button>
-      </div> */}
     </section>
   );
 }

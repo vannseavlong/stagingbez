@@ -23,7 +23,7 @@ export default function InstallSection() {
     }) || {};
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white ">
       {/* Border-top with max-width constraint */}
       <div className="max-w-[1440px] mx-auto mb-16">
         <div className="border-t border-gray-200" />

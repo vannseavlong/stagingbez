@@ -20,6 +20,27 @@ export const mediaItems = [
     description:
       "Thank You for Visiting the bEasy Booth at Makro Sen Sok. On May 24–25, 2025, our Sales and Marketing Team set up a booth in front of Makro Sen Sok from 3 PM to 9 PM to actively introduce and demonstrate the bEasy App to the community. The event provided the perfect opportunity to test the app in a real-world setting, gather valuable feedback from users, and observe how people interact with its features. Even with the heavy rain, many attendees tried the app, explored its services, and shared their impressions—helping us identify ways to make the experience even more seamless and user-friendly. These hands-on interactions are essential to refining bEasy, ensuring it meets the needs of households and businesses across Cambodia. As we continue to host similar events, every test and conversation brings us closer to delivering the most convenient and reliable service platform possible.",
   },
+
+  {
+    id: 1,
+    title: "What is bEasy?",
+    date: "11 Nov 2025",
+    image: "/images/beasy-cover.png",
+    highlight: "In today’s fast-paced life, keeping your home or office clean can feel overwhelming.",
+    body: `In today’s fast-paced life, keeping your home or office clean can feel overwhelming. 
+That’s where the bEasy App comes in – Cambodia’s all-in-one platform for professional cleaning and maintenance services.`,
+    sections: [
+      {
+        heading: "1. Cleaning",
+        content: "With the help of our general cleaning service..."
+      },
+      {
+        heading: "2. Deep Cleaning",
+        content: "An in-depth cleaning service for anyone..."
+      },
+      // etc.
+    ],
+  },
   {
     id: 2,
     image: "/images/media/axis/a1.webp",

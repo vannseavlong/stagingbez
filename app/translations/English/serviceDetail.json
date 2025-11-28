@@ -4,8 +4,8 @@
     "banner": {
       "title": "General Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 1.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/General/General_Hero.webp",
+      "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -14,14 +14,55 @@
       "description": "PLACEHOLDER - Replace with full description for service id 1.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": [
-        "Dusting and wiping furniture",
-        "Sweeping, vacuuming, and mopping floors",
-        "Cleaning countertops, sinks, and bathrooms",
-        "Taking out trash and light organization"
-      ]
-    },
+    "taskList": [
+      {
+        "title": "Kitchen",
+        "items": [
+          "Wash and Organize the dishes",
+          "Wipe dust off all surfaces within reach",
+          "Wipe the surface of kitchen cabinets and appliances",
+          "Wipe all switches and handles",
+          "Wipe and scrub kitchen stoves",
+          "Clean kitchen islands and table tops",
+          "Clean the sink",
+          "Clearing of thrash",
+          "Sweep and mop the floor",
+          "All surfaces must be accesible and reachable"
+        ]
+      },
+      {
+        "title": "Bathroom",
+        "items": [
+          "Cleaning of toilet, shower, bathtub, sink",
+          "Wiping and cleaning of cabinets, mirrors, and all fixtures",
+          "Wipe all switches and handles",
+          "Clearing of thrash",
+          "Sweep and mop the floor",
+          "All surfaces must be accesible and reachable"
+        ]
+      },
+      {
+        "title": "Living room/Communal area",
+        "items": [
+          "Dust and wipe all reachable and accessible surfaces",
+          "Wipe all switches and handles",
+          "Clearing of thrash",
+          "Sweep and mop the floor",
+          "All surfaces must be accesible and reachable"
+        ]
+      },
+      {
+        "title": "Bedroom",
+        "items": [
+          "Dust and wipe all accessible and reachable surfaces",
+          "Wipe all swithches and handles",
+          "Cleaning of mirrors",
+          "Tidy the bed (place new sheets aside if you'd like us to change it for you)",
+          "Sweep and mop the floor",
+          "All surfaces must be accesible and reachable"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -55,8 +96,8 @@
     "banner": {
       "title": "Deep Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 2.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
+      "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -65,15 +106,50 @@
       "description": "PLACEHOLDER - Replace with full description for service id 2.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": [
-        "Cleaning behind and under furniture and appliances",
-        "Thorough scrubbing of bathroom tiles, grout, and sinks",
-        "Deep cleaning of AC vents and refrigerator interior",
-        "Light cleaning and vacuuming of mattresses, sofas, and carpets",
-        "Professional removal of stubborn stains, dust mites, and bacteria"
-      ]
-    },
+    "taskList": [
+      {
+        "title": "General Work",
+        "items": [
+          "Cleaning ceiling fans, furniture surfaces, spider cobweb",
+          "Clean and wipe mirrors and glasses",
+          "Sweep and mop the floor",
+          "Clear the thrash",
+          "Lightweight furniture"
+        ]
+      },
+      {
+        "title": "Kitchen",
+        "items": [
+          "Clean and wipe all furniture surfaces",
+          "Clean and wipe kitchen counter and ventilation",
+          "Clean table island, tabletops, countertops",
+          "Clean and wipe electrical appliances",
+          "Scrub and clean the sink",
+          "Vacuum and mop the floor",
+          "Clean the inside of eletrical appliances (microwave, oven, refrigerator etc)"
+        ]
+      },
+      {
+        "title": "Bedroom",
+        "items": [
+          "Wipe dust and all accessible surfaces",
+          "Clean all switches and handles",
+          "Clean and wipe the mirrors and glass",
+          "Tidy the bed (place new sheets aside if you'd like us to change it for you)",
+          "Sweep and mop the floor"
+        ]
+      },
+      {
+        "title": "Bathroom",
+        "items": [
+          "Clean and disinfect the toilet, showers, sinks, drainage cover and bathtub",
+          "Clean the surface of cabinets, mirrors, and furniture",
+          "Clean all switches and handles",
+          "Clean the inside of the cabinets, lockers, and drawers",
+          "Sweep and mop the floor"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -82,21 +158,21 @@
           "key": "Villa",
           "description": "Villa",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$320",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
           "description": "Flat & Shop House",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$115",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "Condo",
           "priceText": "Start From:",
-          "price": "$15",
+          "price": "$35",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         }
       ]
@@ -107,8 +183,8 @@
     "banner": {
       "title": "Office Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 3.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
+      "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -117,15 +193,17 @@
       "description": "PLACEHOLDER - Replace with full description for service id 3.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": [
-        "Cleaning behind and under furniture and appliances",
-        "Thorough scrubbing of bathroom tiles, grout, and sinks",
-        "Deep cleaning of AC vents and refrigerator interior",
-        "Light cleaning and vacuuming of mattresses, sofas, and carpets",
-        "Professional removal of stubborn stains, dust mites, and bacteria"
-      ]
-    },
+    "taskList": [
+      {
+        "items": [
+          "Cleaning behind and under furniture and appliances",
+          "Thorough scrubbing of bathroom tiles, grout, and sinks",
+          "Deep cleaning of AC vents and refrigerator interior",
+          "Light cleaning and vacuuming of mattresses, sofas, and carpets",
+          "Professional removal of stubborn stains, dust mites, and bacteria"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -141,7 +219,7 @@
           "key": "Deep",
           "description": "Deep Cleaning",
           "priceText": "Start From:",
-          "price": "$38",
+          "price": "$75",
           "imageSrc": "/images/serviceDetail/Office/deep.webp"
         }
       ]
@@ -152,27 +230,30 @@
     "banner": {
       "title": "Upholstery Cleaning Service",
       "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
+      "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/uphol.webp",
-      "title": "What is Upholstery Cleaning?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": [
-        "Vacuum all sofa surfaces",
-        "Spray specialized cleaning solution on all sofa surfaces",
-        "Use scrubber to remove stains and grime",
-        "Vacuum remaining residue",
-        "Rinse and vacuum again",
-        "Vacuum dry",
-        "Tidy work area"
-      ]
-    },
+    "taskList": [
+      {
+        "title": "Information of procedure",
+        "items": [
+          "Vacuum all sofa surfaces",
+          "Spray specialized cleaning solution on all sofa surfaces",
+          "Use scrubber to remove stains and grime",
+          "Vacuum remaining residue",
+          "Rinse and vacuum again",
+          "Vacuum dry",
+          "Tidy work area"
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -202,7 +283,7 @@
           "key": "Mattress",
           "description": "Bed Mattress",
           "priceText": "Start From:",
-          "price": "$75",
+          "price": "$25",
           "imageSrc": "/images/serviceDetail/Uphol/mattress.webp"
         }
       ]
@@ -213,8 +294,8 @@
     "banner": {
       "title": "Pest Control Service",
       "description": "PLACEHOLDER - Replace this description for service id 5.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
+      "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -223,9 +304,35 @@
       "description": "PLACEHOLDER - Replace with full description for service id 5.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
-    },
+    "taskList": [
+      {
+        "title": "Pre-Service Preparation",
+        "items": [
+          "Notify customer to vacate the area during and up to 1-2 hours post-service.",
+          "Cover or remove food items, and exposed surfaces.",
+          "Identify key infestation point and entry areas."
+        ]
+      },
+      {
+        "title": "Insecticide Spray",
+        "items": [
+          "Apply residual spray treatment on floors, walls, behind furniture, corners, cracks, drais, and high-risk areas.",
+          "Targeted for crawling insects like cockroaches, ants, bed bugs."
+        ]
+      },
+      {
+        "title": "Cold Fogging (ULV Fogging)",
+        "items": [
+          "Use ultra-low volume (ULV) fogger to disperse fine mist of insecticide.",
+          "Focus on open spaces, ceilings, dark corners, storage areas.",
+          "Effective against flying insects like mosquitoes and flies."
+        ]
+      },
+      {
+        "title": "Post-Treatment",
+        "items": ["Allow 1-2 hours for treatment to settle before re-entry."]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -259,8 +366,8 @@
     "banner": {
       "title": "Washing Machine Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 6.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Washing/Wash_Hero.webp",
+      "portrait": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "downloadButton": true
     },
     "taskInfo": {
@@ -269,9 +376,73 @@
       "description": "PLACEHOLDER - Replace with full description for service id 6.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
-    },
+    "taskList": [
+      {
+        "title": "Preparation",
+        "items": [
+          "Unplug the washing machine from the power source.",
+          "Turn off both water supply inlet valves.",
+          "Ensure the drum is completely empty.",
+          "Prepare the following cleaning materials:",
+          "Washing machine cleaner soap",
+          "Soft cloth or sponge",
+          "Small brush or old toothbrush",
+          "Bucket and towel"
+        ]
+      },
+      {
+        "title": "Clean the Detergent Drawer",
+        "items": [
+          "Pull out the detergent drawer completely.",
+          "Soak it in warm water mixed with mild detergent for a few miniutes.",
+          "Use a small brush to scrub away any residue or mold.",
+          "Rinse thoroughly and dry completely before reinstalling the drawer."
+        ]
+      },
+      {
+        "title": "Clean the Rubber Door Seal (Front Loaders)",
+        "items": [
+          "Open the door and gently pull back the rubber seal.",
+          "Use a damp cloth to remove dirt, lint, and trapped debris.",
+          "Wipe with a mild cleaning solution or disinfectant.",
+          "Dry thoroughly with a towel to prevent mold growth."
+        ]
+      },
+      {
+        "title": "Deep Clean the Drum",
+        "items": [
+          "Add the washing machine cleaner to the detergent tray or directly into the drum.",
+          "Run the Drum Clean or Tub Clean program (if available).",
+          "If no cleaning cycle is available, run a hot water cycle (60-90°C) with drum empty."
+        ]
+      },
+      {
+        "title": "Clean the Drain Pump Filter",
+        "items": [
+          "Locate the drain pump filter (usually at the bottom front panel).",
+          "Place a towel or shallow tray underneath to catch water.",
+          "Open the filter cover and remove lint, coins, or debris.",
+          "Rinse the filter under running water and reinstall it securely."
+        ]
+      },
+      {
+        "title": "Clean the Exterior",
+        "items": [
+          "Wipe all exterior surfaces using a soft cloth dampened with mild detergent.",
+          "Clean the control panel, lid, sides, and base carefully.",
+          "Avoid spraying water directly on buttons or ventilation areas."
+        ]
+      },
+      {
+        "title": "Final Steps",
+        "items": [
+          "Leave the door open for several hours to allow the interior to air dry completely.",
+          "Reconnect the water and power supply.",
+          "Run one short rinse cycle to ensure all cleaner is flushed out.",
+          "Record the cleaning date and initials on the maintenance log."
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -291,19 +462,82 @@
     "banner": {
       "title": "Post Renovation Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 7.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
+      "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/Post_Reno.webp",
-      "title": "PLACEHOLDER - What is this service (id 7)?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 7.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
-    },
+    "taskList": [
+      {
+        "title": "Initial Dust & Debris Removal",
+        "items": [
+          "Remove all construction debris, packaging, and leftover materials.",
+          "Sweep and vacuum floors to clear fine dust.",
+          "Wipe down walls and baseboards to remove dust and paint splatters."
+        ]
+      },
+      {
+        "title": "Detailed Surface Cleaning",
+        "items": [
+          "Clean all horizontal and vertical surfaces (walls, ledges, counters, shelves).",
+          "Dust and wipe light fixtures, switches, and outlets.",
+          "Remove adhesive, stickers, or protective plastic from new surfaces."
+        ]
+      },
+      {
+        "titel": "Window & Glass Cleaning",
+        "items": [
+          "Wash and polish windows inside and outside.",
+          "Clean window frames, tracks, and sills.",
+          "Remove paint, dust, or cement splashes on glass."
+        ]
+      },
+      {
+        "title": "Floor Care",
+        "items": [
+          "Vacuum carpets and rugs (deep clean if necessary).",
+          "Mop and polish hard floors (tile, wood, laminate, etc.).",
+          "Remove paint, glue, or cement residue on flooring."
+        ]
+      },
+      {
+        "title": "Kitchen Cleaning",
+        "items": [
+          "Wipe down cabinets (inside & outside).",
+          "Clean countertops, sinks, faucets, and backsplash.",
+          "Clean new appliances (inside & outside)."
+        ]
+      },
+      {
+        "titel": "Bathroom Cleaning",
+        "items": [
+          "Scrub tiles, grout, and remove construction dust.",
+          "Clean mirrors, shower glass, sinks, tubs, and toilets.",
+          "Polish faucets and stainless-steel fittings."
+        ]
+      },
+      {
+        "titel": "Doors, Fixtures & Furniture",
+        "items": [
+          "Dust and wipe doors, handles, and hinges.",
+          "Clean wardrobes, built-in shelves, and furniture.",
+          "Polish metal, wood, or glass fixtures."
+        ]
+      },
+      {
+        "titel": "Final Touches",
+        "items": [
+          "Remove protective tape, stickers, and marks.",
+          "Wipe air vents, ceiling fans, and AC units.",
+          "Dispose of all trash and ensure site is move-in ready."
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",
@@ -344,19 +578,67 @@
     "banner": {
       "title": "AC Cleaning Service",
       "description": "PLACEHOLDER - Replace this description for service id 8.",
-      "landscape": "/images/serviceDetail/Uphol/landscape.jpg",
-      "portrait": "/images/serviceDetail/Uphol/portrait.jpg",
+      "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
+      "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
       "imageSrc": "/images/services/AC_Cleaning.webp",
-      "title": "PLACEHOLDER - What is this service (id 8)?",
+      "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 8.",
       "subtitle": "Information of procedure"
     },
-    "taskList": {
-      "items": ["Task step 1", "Task step 2", "Task step 3"]
-    },
+    "taskList": [
+      {
+        "title": "Safety Preparation",
+        "items": [
+          "Turn off the AC unit and disconnect the power supply",
+          "Place a waterproof sheet under the unit to catch dust and water."
+        ]
+      },
+      {
+        "title": "Indoor Unit Cleaning (Evaporator & Filters)",
+        "items": [
+          "Remove and wash air filters with mild soap and water. Let them dry completely.",
+          "Clean evaporator coils using a soft brush or coil cleaner.",
+          "Wipe the blower wheel and fins to remove dust buildup.",
+          "Disinfect the drain pan and ensure the drain pipe is not clogged."
+        ]
+      },
+      {
+        "title": "Outdoor Unit Cleaning (Condenser)",
+        "items": [
+          "Turn off power and open the outdoor unit cover.",
+          "Clean condenser coils with a brush or coil cleaner.",
+          "Remove leaves, dirt, and debris around the unit.",
+          "Check fan blades and clean them.",
+          "Ensure proper airflow clearance (no obstructions within 2-3 feet)."
+        ]
+      },
+      {
+        "title": "Drain Line Maintenance",
+        "items": [
+          "Flush the drain pipe with water or a cleaning solution to remove clogs and prevent leaks.",
+          "Ensure proper drainage flow."
+        ]
+      },
+      {
+        "title": "Electrical & Performance Check",
+        "items": [
+          "Inspect wiring, connections, and thermostat.",
+          "Check cooling performance and refrigerant pressure (technician required).",
+          "Run the system to ensure it operates normally."
+        ]
+      },
+      {
+        "title": "Final Steps",
+        "items": [
+          "Reinstall all parts properly.",
+          "Wipe the outer casing and surrounding area.",
+          "Restore power and test the AC."
+        ]
+      }
+    ],
     "serviceType": {
       "subtitle": "SERVICE PRICES",
       "title": "Find Your Perfect Plan",

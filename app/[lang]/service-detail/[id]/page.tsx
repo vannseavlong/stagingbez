@@ -8,20 +8,23 @@ import ServiceItem from "@/app/components/common/ServiceItem";
 import serviceDetailEn from "@/app/translations/English/serviceDetail.json";
 import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
 import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
-import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
+import serviceDetailAboutEn from "@/app/translations/English/serviceDetailAbout.json";
+// import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
 import FAQSection from "@/app/components/sections/FAQSection";
 import InstallSection from "@/app/components/sections/InstallAppSection";
+import { ContainWrapper } from "@/app/components/layout";
 
 // Accept the route params prop to satisfy Next.js App Router type checks for
 // dynamic routes (this route lives in `[id]`). Using a permissive `any` keeps
 // this change low-risk; you can tighten the shape later (e.g. `{ id: string }`).
-export default function ServiceDetailPage({ params }: { params: any }) {
-  // mark params as used to avoid unused variable lint errors; it's intentionally permissive
-  void params;
+export default async function ServiceDetailPage({ params }: { params: any }) {
+  // Await params per Next.js App Router guidance for sync dynamic APIs.
+  // This ensures `params` is resolved before accessing its properties.
+  const awaitedParams = await params;
   // The page is a server component. Load translations directly on the server
   // by importing the JSON translation files for each language and selecting
   // the right one based on the route `lang` param.
-  const languageCode = String(params?.lang || "en");
+  const languageCode = String(awaitedParams?.lang || "en");
   const languageMap: Record<string, any> = {
     en: serviceDetailEn,
     km: serviceDetailKm,
@@ -30,7 +33,19 @@ export default function ServiceDetailPage({ params }: { params: any }) {
 
   // Select the translation data for the route's language
   const serviceDetail = languageMap[languageCode] || serviceDetailEn;
-  const currentId = Number(params?.id ?? NaN);
+  const currentId = Number(awaitedParams?.id ?? NaN);
+
+  // Load the service-detail-specific 'about' translations for the route
+  const serviceDetailAboutMap: Record<string, any> = {
+    en: serviceDetailAboutEn,
+    // Fallback to English if other-language serviceDetailAbout files are not present
+    km: serviceDetailAboutEn,
+    zh: serviceDetailAboutEn,
+  };
+
+  const serviceDetailAbout =
+    serviceDetailAboutMap[languageCode] || serviceDetailAboutEn;
+  const aboutEntry = serviceDetailAbout?.[String(currentId)] ?? null;
 
   // Determine the detail object for the requested id.
   // The translations may take one of three shapes:
@@ -66,13 +81,45 @@ export default function ServiceDetailPage({ params }: { params: any }) {
     <div className="font-sans min-h-screen">
       <main>
         {/* Background container with max-width */}
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16">
-          {/* Mobile */}
-          <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-          {/* Tablet */}
-          <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-          {/* Desktop */}
-          <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
+        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-6 md:px-8 lg:px-16 ">
+          {/* Use service-specific Imagebg fields when available; fall back to decorative defaults */}
+          {(() => {
+            const header = aboutEntry?.header ?? {};
+            const mobileBg =
+              header.ImagebgMobile ??
+              header.Imagebg ??
+              "/images/about/Why_Us_mini.jpg";
+            const tabletBg =
+              header.ImagebgTablet ??
+              header.Imagebg ??
+              "/images/Why_Choose_us_tablet.png";
+            const desktopBg =
+              header.ImagebgDesktop ??
+              header.Imagebg ??
+              "/images/about/Why_Us.webp";
+
+            return (
+              <>
+                {/* Mobile */}
+                <div
+                  className="block md:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${mobileBg}')` }}
+                />
+
+                {/* Tablet */}
+                <div
+                  className="hidden md:block lg:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${tabletBg}')` }}
+                />
+
+                {/* Desktop */}
+                <div
+                  className="hidden lg:block bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"
+                  style={{ backgroundImage: `url('${desktopBg}')` }}
+                />
+              </>
+            );
+          })()}
         </div>
         {/* Banner (full-viewport sliding hero) - populated from translations */}
         <Banner
@@ -93,29 +140,32 @@ export default function ServiceDetailPage({ params }: { params: any }) {
             "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home."
           }
           showDownloadButton={Boolean(detail?.banner?.downloadButton)}
+          className="bg-white"
         />
 
-        {/* About section (top of page) */}
-        <AboutUsSection />
+        <div className="hidden lg:block bg-white h-16" />
 
-        {/* Single full-width white band for the rest of the page sections so
+        {/* About section (top of page) */}
+        <AboutUsSection serviceId={currentId} />
+
+        {/* Single ful-width white band for the rest of the page sections so
             the decorative fixed background doesn't show through between them. */}
         <div className="w-full bg-white">
-          <div className="pt-12 lg:pt-24 overflow-visible">
-            <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="overflow-visible">
+            <ContainWrapper>
               <TaskInfo
                 title={detail?.taskInfo?.title}
                 imageSrc={
                   // Prefer a service item image if present, otherwise fall back to banner
                   detail?.taskInfo?.imageSrc || detail?.banner?.landscape
                 }
-                items={detail?.taskList?.items}
+                taskList={detail?.taskList}
               />
-            </div>
+            </ContainWrapper>
           </div>
 
           {/* Services carousel */}
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-30 lg:mt-40">
+          <ContainWrapper>
             <div className="pt-8">
               <ServiceCarouselWithHeader
                 subtitle={detail?.serviceType?.subtitle || "SERVICE PRICES"}
@@ -129,7 +179,7 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                   return (
                     <div
                       key={it?.key ?? idx}
-                      className="min-w-[360px] w-[360px] flex-shrink-0 mr-4"
+                      className="min-w-[310px] w-[310px] flex-shrink-0"
                     >
                       <ServiceItem
                         title={it?.description || it?.key || "Service"}
@@ -142,22 +192,22 @@ export default function ServiceDetailPage({ params }: { params: any }) {
                 })}
               </ServiceCarouselWithHeader>
             </div>
-          </div>
+          </ContainWrapper>
 
           {/* How it works */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          {/* <ContainWrapper>
             <HowItWorkBlog />
-          </div>
+          </ContainWrapper> */}
 
           {/* FAQ */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          <ContainWrapper>
             <FAQSection />
-          </div>
+          </ContainWrapper>
 
           {/* Install app section */}
-          <div className="lg:max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 mt-8">
+          <ContainWrapper>
             <InstallSection />
-          </div>
+          </ContainWrapper>
         </div>
       </main>
     </div>

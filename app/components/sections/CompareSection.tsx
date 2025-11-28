@@ -14,7 +14,7 @@ export default function CompareSection() {
   const header = (compare && compare.header) || {};
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 pt-[50px]">
+    <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 items-center gap-12">
           <div className="order-1 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start justify-center">

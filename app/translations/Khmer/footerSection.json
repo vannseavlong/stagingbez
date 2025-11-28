@@ -8,8 +8,18 @@
   "links": {
     "company": [
       {
+        "key": "about",
+        "title": "អំពីយើង",
+        "href": "/{lang}/about-us"
+      },
+      {
+        "key": "media",
+        "title": "ប្រព័ន្ធផ្សព្វផ្សាយ",
+        "href": "/{lang}/media-page"
+      },
+      {
         "key": "terms",
-        "title": "Terms & Conditions",
+        "title": "Terms of Service",
         "href": "/{lang}/term-of-condition"
       },
       {

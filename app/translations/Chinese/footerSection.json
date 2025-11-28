@@ -8,8 +8,18 @@
   "links": {
     "company": [
       {
+        "key": "about",
+        "title": "关于我们",
+        "href": "/{lang}/about-us"
+      },
+      {
+        "key": "media",
+        "title": "媒体",
+        "href": "/{lang}/media-page"
+      },
+      {
         "key": "terms",
-        "title": "Terms & Conditions",
+        "title": "Terms of Service",
         "href": "/{lang}/term-of-condition"
       },
       {

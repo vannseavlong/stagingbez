@@ -16,11 +16,11 @@ export default function TestimonialSection() {
   );
 
   return (
-    <section className="py-16 overflow-x-hidden">
+    <section className="overflow-x-hidden">
       <div className="max-w-[1440px] mx-auto text-center px-6 sm:px-8 lg:px-16 overflow-x-hidden">
         {/* Subtitle */}
         <div
-          className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
+          className="font-bold text-[16px] md:text-[16px] leading-[32px] font-sans"
           style={{
             background: "linear-gradient(90deg,#1B4CFA,#102C90)",
             WebkitBackgroundClip: "text",
