@@ -7,41 +7,49 @@
   },
   "items": [
     {
+      "id": 1,
       "key": "generalCleaning",
       "title": "General Cleaning",
       "description": "Come home to a fresh space with bEasy - we handle the mess so you can enjoy what matters most."
     },
     {
+      "id": 2,
       "key": "deepCleaning",
       "title": "Deep Cleaning",
       "description": "Get a fresh start with bEasy’s deep cleaning — we tackle hidden dirt and grime to restore your space to its best."
     },
     {
+      "id": 3,
       "key": "officeCleaning",
       "title": "Office Cleaning",
       "description": "Brighten your workplace with bEasy’s office cleaning — return to a fresh space where everyone can focus and do their best."
     },
     {
+      "id": 4,
       "key": "upholstery",
       "title": "Upholstery",
       "description": "Renew your furniture with bEasy’s upholstery cleaning — we remove stains, dust, and allergens for a fresher home."
     },
     {
+      "id": 5,
       "key": "pestControl",
       "title": "Pest Control",
       "description": "Say goodbye to mosquitoes with our safe, powerful spray and fogging — protecting you and your loved ones from dengue and other viruses."
     },
     {
+      "id": 6,
       "key": "washingMachine",
       "title": "Washing Machine",
       "description": "Book washing machine cleaning to remove mold and dirt. Keep your washer hygienic, odor-free, and lasting longer—all via our app."
     },
     {
+      "id": 7,
       "key": "postRenovation",
       "title": "Post Renovation",
       "description": "Just renovated? Book a post-renovation cleaning in Phnom Penh through our app. We clear dust, paint, and debris to make your space move-in ready."
     },
     {
+      "id": 8,
       "key": "acCleaning",
       "title": "AC Cleaning",
       "description": "Stay cool and energy-efficient with our AC cleaning service in Phnom Penh. Get cleaner air, faster cooling, and lower bills—on-demand through our app."
