@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "suntel-tech"
+  },
+  "targets": {
+    "suntel-tech": {
+      "hosting": {
+        "beasy-page": [
+          "."
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
