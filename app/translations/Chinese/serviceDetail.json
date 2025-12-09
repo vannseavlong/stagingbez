@@ -3,7 +3,7 @@
     "id": 1,
     "banner": {
       "title": "一般清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 1.",
+      "description": "回家享受一个干净、无压力的空间。bEasy 处理杂乱，让您专注于最重要的事情。",
       "landscape": "/images/serviceDetail/General/General_Hero.webp",
       "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
       "downloadButton": true
@@ -11,8 +11,8 @@
     "taskInfo": {
       "imageSrc": "/images/services/general.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 1.",
-      "subtitle": "服务流程信息"
+      "description": "回家享受一个干净、无压力的空间。bEasy 处理杂乱，让您专注于最重要的事情。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
@@ -20,52 +20,52 @@
         "items": [
           "清洗和整理餐具",
           "擦拭所有可触及表面的灰尘",
-          "擦拭厨房橱柜和电器表面",
+          "擦拭厨房橱柜和电器的表面",
           "擦拭所有开关和把手",
-          "擦拭和刷洗厨房灶台",
-          "清洁中岛和桌面",
+          "擦拭和刷洗厨房炉灶",
+          "清洁厨房岛台和桌面",
           "清洁水槽",
           "清理垃圾",
           "扫地和拖地",
-          "所有表面必须易于触及"
+          "所有表面必须易于接触和触及"
         ]
       },
       {
         "title": "浴室",
         "items": [
-          "清洁马桶、淋浴间、浴缸、水槽",
-          "擦拭和清洁所有橱柜、镜子和固定装置",
+          "清洁马桶、淋浴、浴缸、水槽",
+          "擦拭和清洁橱柜、镜子和所有固定装置",
           "擦拭所有开关和把手",
           "清理垃圾",
           "扫地和拖地",
-          "所有表面必须易于触及"
+          "所有表面必须易于接触和触及"
         ]
       },
       {
         "title": "客厅/公共区域",
         "items": [
-          "除尘并擦拭所有可触及和易于接近的表面",
+          "掸去并擦拭所有可触及的表面",
           "擦拭所有开关和把手",
           "清理垃圾",
           "扫地和拖地",
-          "所有表面必须易于触及"
+          "所有表面必须易于接触和触及"
         ]
       },
       {
         "title": "卧室",
         "items": [
-          "除尘并擦拭所有可触及和易于接近的表面",
+          "掸去并擦拭所有可触及的表面",
           "擦拭所有开关和把手",
           "清洁镜子",
           "整理床铺（如果您希望我们更换床单，请将新床单放在一旁）",
           "扫地和拖地",
-          "所有表面必须易于触及"
+          "所有表面必须易于接触和触及"
         ]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Villa",
@@ -95,7 +95,7 @@
     "id": 2,
     "banner": {
       "title": "深度清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 2.",
+      "description": "用 bEasy 的深度清洁开始全新生活——我们处理隐藏的污垢和污垢，让您的空间恢复最佳状态。",
       "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
       "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
       "downloadButton": true
@@ -103,8 +103,8 @@
     "taskInfo": {
       "imageSrc": "/images/services/deep.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 2.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 2 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
@@ -121,8 +121,8 @@
         "title": "厨房",
         "items": [
           "清洁和擦拭所有家具表面",
-          "清洁和擦拭厨房台面和通风口",
-          "清洁中岛、桌子、台面",
+          "清洁和擦拭厨房台面和通风设备",
+          "清洁岛台、桌面、台面",
           "清洁和擦拭电器",
           "刷洗和清洁水槽",
           "吸尘和拖地",
@@ -132,7 +132,7 @@
       {
         "title": "卧室",
         "items": [
-          "擦拭灰尘和所有可触及表面",
+          "掸去灰尘和所有可触及的表面",
           "清洁所有开关和把手",
           "清洁和擦拭镜子和玻璃",
           "整理床铺（如果您希望我们更换床单，请将新床单放在一旁）",
@@ -142,7 +142,7 @@
       {
         "title": "浴室",
         "items": [
-          "清洁和消毒马桶、淋浴间、水槽、排水盖和浴缸",
+          "清洁和消毒马桶、淋浴、水槽、排水盖和浴缸",
           "清洁橱柜、镜子和家具表面",
           "清洁所有开关和把手",
           "清洁橱柜、储物柜和抽屉内部",
@@ -152,7 +152,7 @@
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Villa",
@@ -182,7 +182,7 @@
     "id": 3,
     "banner": {
       "title": "办公室清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 3.",
+      "description": "用 bEasy 的办公室清洁让您的工作场所焕发光彩——回到一个清新的空间，让每个人都能集中精力，做到最好。",
       "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
       "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
       "downloadButton": true
@@ -190,23 +190,23 @@
     "taskInfo": {
       "imageSrc": "/images/services/office.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 3.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 3 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
         "items": [
-          "清洁家具和电器后面及下方",
-          "彻底刷洗浴室瓷砖、瓷砖缝和水槽",
+          "清洁家具和电器后面及下面",
+          "彻底刷洗浴室瓷砖、灌浆和水槽",
           "深度清洁空调通风口和冰箱内部",
           "轻度清洁和吸尘床垫、沙发和地毯",
-          "专业清除顽固污渍、尘螨和细菌"
+          "专业去除顽固污渍、尘螨和细菌"
         ]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "General",
@@ -228,8 +228,8 @@
   "4": {
     "id": 4,
     "banner": {
-      "title": "布艺家具清洁服务",
-      "description": "使用 bEasy 的布艺家具清洁服务，让您的家具焕然一新——我们清除污渍、灰尘和过敏原，让您的家更清新。",
+      "title": "软垫清洁服务",
+      "description": "用 bEasy 的软垫清洁更新您的家具——我们去除污渍、灰尘和过敏原，让您的家更清新。",
       "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
       "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
       "downloadButton": true
@@ -237,44 +237,44 @@
     "taskInfo": {
       "imageSrc": "/images/services/uphol.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "布艺家具清洁是指清除沙发、椅子和床垫等布艺家具上的污垢、污渍、过敏原和其他污染物。随着时间的推移，布艺家具会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，这些都会影响家具的外观和卫生。专业的布艺家具清洁服务使用专门的设备和清洁溶液来深度清洁和刷新您的家具，有助于延长其使用寿命并改善室内空气质量。",
-      "subtitle": "服务流程信息"
+      "description": "软垫清洁是从沙发、椅子和床垫等软垫家具中去除污垢、污渍、过敏原和其他污染物。随着时间的推移，软垫会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，这些都会影响家具的外观和卫生。专业的软垫清洁服务使用专门的设备和清洁溶液来深层清洁和焕新您的家具，有助于延长其使用寿命并改善室内空气质量。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
-        "title": "服务流程信息",
+        "title": "流程信息",
         "items": [
           "吸尘所有沙发表面",
-          "向所有沙发表面喷洒专用清洁溶液",
+          "在所有沙发表面喷洒专用清洁溶液",
           "使用刷子去除污渍和污垢",
-          "吸尘残留物",
+          "吸除剩余残留物",
           "冲洗并再次吸尘",
-          "吸干水分",
+          "吸干",
           "整理工作区域"
         ]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Sofa",
-          "description": "沙发 (毛毡/布料)",
+          "description": "沙发（毛毡/布艺）",
           "priceText": "起价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/Uphol/sofa.webp"
         },
         {
           "key": "Rug",
-          "description": "小地毯",
+          "description": "地毯",
           "priceText": "起价:",
           "price": "$15",
           "imageSrc": "/images/serviceDetail/Uphol/rug.webp"
         },
         {
           "key": "Carpet",
-          "description": "地毯 (满铺)",
+          "description": "地毯（满铺）",
           "priceText": "起价:",
           "price": "$87",
           "imageSrc": "/images/serviceDetail/Uphol/carpet.webp"
@@ -292,8 +292,8 @@
   "5": {
     "id": 5,
     "banner": {
-      "title": "害虫防治服务",
-      "description": "PLACEHOLDER - Replace this description for service id 5.",
+      "title": "害虫控制服务",
+      "description": "用我们安全、强力的喷洒和烟雾告别蚊子——保护您和您所爱的人免受登革热和其他病毒的侵害。",
       "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
       "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
       "downloadButton": true
@@ -301,45 +301,45 @@
     "taskInfo": {
       "imageSrc": "/images/services/pest.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 5.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 5 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
         "title": "服务前准备",
         "items": [
-          "通知客户在服务期间及服务后1-2小时内撤离该区域。",
-          "盖好或移走食物和暴露的表面。",
-          "确定关键感染点和进入区域。"
+          "通知客户在服务期间和之后 1-2 小时内撤离该区域。",
+          "覆盖或移除食物和暴露的表面。",
+          "确定关键的虫害点和进入区域。"
         ]
       },
       {
         "title": "杀虫剂喷洒",
         "items": [
-          "在地板、墙壁、家具后面、角落、裂缝、排水管和高风险区域喷洒残留杀虫剂。",
-          "针对蟑螂、蚂蚁、臭虫等爬行昆虫。"
+          "在地板、墙壁、家具后面、角落、裂缝、排水管和高风险区域应用残留喷雾处理。",
+          "针对爬行昆虫，如蟑螂、蚂蚁、臭虫。"
         ]
       },
       {
-        "title": "冷雾喷洒 (ULV Fogging)",
+        "title": "冷雾化 (ULV Fogging)",
         "items": [
-          "使用超低容量 (ULV) 喷雾器分散杀虫剂细雾。",
-          "重点作用于开放空间、天花板、黑暗角落、储存区。",
-          "有效对抗蚊子和苍蝇等飞行昆虫。"
+          "使用超低容量 (ULV) 雾化器分散杀虫剂的细雾。",
+          "重点关注开放空间、天花板、黑暗角落、存储区域。",
+          "有效对抗飞行昆虫，如蚊子和苍蝇。"
         ]
       },
       {
         "title": "处理后",
-        "items": ["等待 1-2 小时，让处理药剂沉降后再重新进入。"]
+        "items": ["允许 1-2 小时让处理剂沉降，然后才能重新进入。"]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Spray",
-          "description": "害虫喷洒和喷雾",
+          "description": "害虫喷洒和烟雾",
           "priceText": "起价:",
           "price": "$40",
           "imageSrc": "/images/serviceDetail/Pest/spray.webp"
@@ -365,7 +365,7 @@
     "id": 6,
     "banner": {
       "title": "洗衣机清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 6.",
+      "description": "预约洗衣机清洁以去除霉菌和污垢。让您的洗衣机保持卫生、无异味、使用寿命更长——全部通过我们的应用程序。",
       "landscape": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "portrait": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "downloadButton": true
@@ -373,18 +373,18 @@
     "taskInfo": {
       "imageSrc": "/images/services/washing.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 6.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 6 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
         "title": "准备工作",
         "items": [
-          "拔掉洗衣机电源。",
-          "关闭两个进水阀。",
+          "拔下洗衣机的电源插头。",
+          "关闭两个供水入口阀。",
           "确保滚筒完全清空。",
           "准备以下清洁材料：",
-          "洗衣机清洁剂皂",
+          "洗衣机清洁剂/肥皂",
           "软布或海绵",
           "小刷子或旧牙刷",
           "水桶和毛巾"
@@ -394,33 +394,33 @@
         "title": "清洁洗涤剂抽屉",
         "items": [
           "完全拉出洗涤剂抽屉。",
-          "将其浸泡在温水和温和洗涤剂的混合物中几分钟。",
-          "使用小刷子刷去任何残留物或霉菌。",
-          "彻底冲洗并完全擦干，然后重新安装抽屉。"
+          "将其浸泡在混合了温和洗涤剂的温水中几分钟。",
+          "使用小刷子刷掉任何残留物或霉菌。",
+          "彻底冲洗并完全干燥后再重新安装抽屉。"
         ]
       },
       {
-        "title": "清洁橡胶门封（前置式洗衣机）",
+        "title": "清洁橡胶门密封圈（前置式洗衣机）",
         "items": [
-          "打开门，轻轻拉回橡胶密封圈。",
-          "使用湿布清除污垢、绒毛和滞留的碎屑。",
+          "打开门并轻轻拉回橡胶密封圈。",
+          "使用湿布清除污垢、绒毛和被困的碎屑。",
           "用温和的清洁溶液或消毒剂擦拭。",
-          "用毛巾彻底擦干，以防止霉菌滋生。"
+          "用毛巾彻底擦干以防止霉菌滋生。"
         ]
       },
       {
         "title": "深度清洁滚筒",
         "items": [
           "将洗衣机清洁剂加入洗涤剂托盘或直接倒入滚筒。",
-          "运行滚筒清洁（Drum Clean）或筒清洁（Tub Clean）程序（如果可用）。",
-          "如果没有清洁周期，则在滚筒为空的情况下运行热水循环（60-90°C）。"
+          "运行滚筒清洁或筒清洁程序（如果可用）。",
+          "如果没有清洁周期，请在滚筒清空的情况下运行热水周期（60-90°C）。"
         ]
       },
       {
         "title": "清洁排水泵过滤器",
         "items": [
           "找到排水泵过滤器（通常位于底部前面板）。",
-          "在下方放置毛巾或浅盘以接住水。",
+          "在下面放一条毛巾或浅托盘以接住水。",
           "打开过滤器盖，清除绒毛、硬币或碎屑。",
           "在流水下冲洗过滤器并牢固地重新安装。"
         ]
@@ -428,24 +428,25 @@
       {
         "title": "清洁外部",
         "items": [
-          "使用蘸有温和洗涤剂的软布擦拭所有外部表面。",
-          "小心清洁控制面板、盖子、侧面和底座。",
+          "使用沾有温和洗涤剂的软布擦拭所有外部表面。",
+          "仔细清洁控制面板、盖子、侧面和底部。",
           "避免将水直接喷洒在按钮或通风区域。"
         ]
       },
       {
         "title": "最后步骤",
         "items": [
-          "将门打开数小时，让内部彻底风干。",
+          "将所有部件正确重新安装。",
+          "打开门数小时，让内部完全风干。",
           "重新连接水和电源。",
-          "运行一次短时漂洗循环，以确保所有清洁剂都被冲洗干净。",
-          "在维护日志上记录清洁日期和首字母。"
+          "运行一个短冲洗周期以确保所有清洁剂都被冲洗干净。",
+          "在维护日志上记录清洁日期和首字母缩写。"
         ]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Wash",
@@ -460,8 +461,8 @@
   "7": {
     "id": 7,
     "banner": {
-      "title": "装修后清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 7.",
+      "title": "翻新后清洁服务",
+      "description": "刚翻新完？通过我们的应用程序在金边预订翻新后清洁服务。我们清除灰尘、油漆和碎屑，让您的空间准备就绪，可以入住。",
       "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
       "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
@@ -469,40 +470,40 @@
     "taskInfo": {
       "imageSrc": "/images/services/Post_Reno.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 7.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 7 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
-        "title": "初步除尘和清除碎屑",
+        "title": "初步除尘和碎屑清除",
         "items": [
           "清除所有建筑碎屑、包装和剩余材料。",
-          "扫地和吸尘，清除细微灰尘。",
-          "擦拭墙壁和踢脚板，清除灰尘和油漆飞溅物。"
+          "扫地和吸尘地板以清除细尘。",
+          "擦拭墙壁和踢脚板以去除灰尘和油漆飞溅物。"
         ]
       },
       {
         "title": "详细表面清洁",
         "items": [
           "清洁所有水平和垂直表面（墙壁、壁架、台面、架子）。",
-          "除尘并擦拭照明设备、开关和插座。",
-          "清除新表面上的粘合剂、贴纸或保护塑料。"
+          "掸去并擦拭灯具、开关和插座。",
+          "从新表面去除粘合剂、贴纸或保护塑料。"
         ]
       },
       {
         "titel": "窗户和玻璃清洁",
         "items": [
-          "清洗和擦亮窗户内外两侧。",
+          "清洗和抛光窗户内部和外部。",
           "清洁窗框、轨道和窗台。",
-          "清除玻璃上的油漆、灰尘或水泥飞溅物。"
+          "去除玻璃上的油漆、灰尘或水泥飞溅物。"
         ]
       },
       {
-        "title": "地板护理",
+        "title": "地板保养",
         "items": [
           "吸尘地毯和地垫（如有必要，进行深度清洁）。",
-          "拖地和擦亮硬地板（瓷砖、木地板、复合地板等）。",
-          "清除地板上的油漆、胶水或水泥残留物。"
+          "拖地和抛光硬地板（瓷砖、木材、层压板等）。",
+          "去除地板上的油漆、胶水或水泥残留物。"
         ]
       },
       {
@@ -516,31 +517,31 @@
       {
         "titel": "浴室清洁",
         "items": [
-          "刷洗瓷砖、瓷砖缝，清除建筑灰尘。",
+          "刷洗瓷砖、灌浆，去除建筑灰尘。",
           "清洁镜子、淋浴玻璃、水槽、浴缸和马桶。",
-          "擦亮水龙头和不锈钢配件。"
+          "抛光水龙头和不锈钢配件。"
         ]
       },
       {
         "titel": "门、固定装置和家具",
         "items": [
-          "除尘并擦拭门、把手和铰链。",
-          "清洁衣柜、嵌入式货架和家具。",
-          "擦亮金属、木制或玻璃固定装置。"
+          "掸去并擦拭门、把手和铰链。",
+          "清洁衣柜、内置搁架和家具。",
+          "抛光金属、木材或玻璃固定装置。"
         ]
       },
       {
         "titel": "最后润饰",
         "items": [
-          "清除保护胶带、贴纸和标记。",
+          "去除保护胶带、贴纸和标记。",
           "擦拭通风口、吊扇和空调机组。",
-          "处理所有垃圾，确保场地准备好入住。"
+          "处理所有垃圾，确保现场可供入住。"
         ]
       }
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "Villa",
@@ -577,7 +578,7 @@
     "id": 8,
     "banner": {
       "title": "空调清洁服务",
-      "description": "PLACEHOLDER - Replace this description for service id 8.",
+      "description": "通过我们在金边的空调清洁服务，保持凉爽和能源效率。通过我们的应用程序按需获取更清洁的空气、更快的制冷和更低的账单。",
       "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
       "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
       "downloadButton": true
@@ -585,48 +586,48 @@
     "taskInfo": {
       "imageSrc": "/images/services/AC_Cleaning.webp",
       "title": "您的清洁任务包括哪些？",
-      "description": "PLACEHOLDER - Replace with full description for service id 8.",
-      "subtitle": "服务流程信息"
+      "description": "PLACEHOLDER - 替换为服务 ID 8 的完整描述。",
+      "subtitle": "流程信息"
     },
     "taskList": [
       {
         "title": "安全准备",
         "items": [
           "关闭空调机组并断开电源",
-          "在机组下方放置防水布，以接住灰尘和水。"
+          "在机组下方放置防水布以接住灰尘和水。"
         ]
       },
       {
         "title": "室内机清洁（蒸发器和过滤器）",
         "items": [
-          "拆下并用温和的肥皂和水清洗空气过滤器。让它们完全干燥。",
+          "取出并用温和的肥皂和水清洗空气过滤器。让它们完全干燥。",
           "使用软刷或盘管清洁剂清洁蒸发器盘管。",
-          "擦拭鼓风机叶轮和翅片，清除积聚的灰尘。",
-          "消毒排水盘，并确保排水管没有堵塞。"
+          "擦拭鼓风机叶轮和翅片以去除积聚的灰尘。",
+          "对排水盘进行消毒，并确保排水管没有堵塞。"
         ]
       },
       {
         "title": "室外机清洁（冷凝器）",
         "items": [
           "关闭电源并打开室外机盖。",
-          "使用刷子或盘管清洁剂清洁冷凝器盘管。",
+          "用刷子或盘管清洁剂清洁冷凝器盘管。",
           "清除机组周围的树叶、污垢和碎屑。",
-          "检查并清洁风扇叶片。",
-          "确保适当的气流间隙（2-3英尺内没有障碍物）。"
+          "检查风扇叶片并清洁它们。",
+          "确保适当的气流间隙（2-3 英尺内没有障碍物）。"
         ]
       },
       {
         "title": "排水管维护",
         "items": [
-          "用水或清洁溶液冲洗排水管，以清除堵塞物并防止泄漏。",
-          "确保排水顺畅。"
+          "用水或清洁溶液冲洗排水管，以清除堵塞并防止泄漏。",
+          "确保适当的排水流量。"
         ]
       },
       {
         "title": "电气和性能检查",
         "items": [
           "检查接线、连接和恒温器。",
-          "检查制冷性能和制冷剂压力（需要技术人员）。",
+          "检查冷却性能和制冷剂压力（需要技术人员）。",
           "运行系统以确保其正常运行。"
         ]
       },
@@ -641,7 +642,7 @@
     ],
     "serviceType": {
       "subtitle": "服务价格",
-      "title": "寻找您的完美方案",
+      "title": "找到您的完美方案",
       "items": [
         {
           "key": "AC",

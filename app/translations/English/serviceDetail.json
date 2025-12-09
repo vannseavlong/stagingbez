@@ -3,7 +3,7 @@
     "id": 1,
     "banner": {
       "title": "General Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 1.",
+      "description": "Come home to a clean, stress-free space. bEasy handles the mess so you can focus on what matters most.",
       "landscape": "/images/serviceDetail/General/General_Hero.webp",
       "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
       "downloadButton": true
@@ -11,7 +11,7 @@
     "taskInfo": {
       "imageSrc": "/images/services/general.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
-      "description": "PLACEHOLDER - Replace with full description for service id 1.",
+      "description": "Come home to a clean, stress-free space. bEasy handles the mess so you can focus on what matters most.",
       "subtitle": "Information of procedure"
     },
     "taskList": [
@@ -95,7 +95,7 @@
     "id": 2,
     "banner": {
       "title": "Deep Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 2.",
+      "description": "Get a fresh start with bEasy’s deep cleaning — we tackle hidden dirt and grime to restore your space to its best.",
       "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
       "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
       "downloadButton": true
@@ -182,7 +182,7 @@
     "id": 3,
     "banner": {
       "title": "Office Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 3.",
+      "description": "Brighten your workplace with bEasy’s office cleaning — return to a fresh space where everyone can focus and do their best.",
       "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
       "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
       "downloadButton": true
@@ -293,7 +293,7 @@
     "id": 5,
     "banner": {
       "title": "Pest Control Service",
-      "description": "PLACEHOLDER - Replace this description for service id 5.",
+      "description": "Say goodbye to mosquitoes with our safe, powerful spray and fogging — protecting you and your loved ones from dengue and other viruses.",
       "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
       "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
       "downloadButton": true
@@ -365,7 +365,7 @@
     "id": 6,
     "banner": {
       "title": "Washing Machine Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 6.",
+      "description": "Book washing machine cleaning to remove mold and dirt. Keep your washer hygienic, odor-free, and lasting longer—all via our app.",
       "landscape": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "portrait": "/images/serviceDetail/Washing/Wash_Hero.webp",
       "downloadButton": true
@@ -461,7 +461,7 @@
     "id": 7,
     "banner": {
       "title": "Post Renovation Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 7.",
+      "description": "Just renovated? Book a post-renovation cleaning in Phnom Penh through our app. We clear dust, paint, and debris to make your space move-in ready.",
       "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
       "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
@@ -577,7 +577,7 @@
     "id": 8,
     "banner": {
       "title": "AC Cleaning Service",
-      "description": "PLACEHOLDER - Replace this description for service id 8.",
+      "description": "Stay cool and energy-efficient with our AC cleaning service in Phnom Penh. Get cleaner air, faster cooling, and lower bills—on-demand through our app.",
       "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
       "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
       "downloadButton": true

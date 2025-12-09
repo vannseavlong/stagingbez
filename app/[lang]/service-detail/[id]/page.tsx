@@ -135,10 +135,10 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
             },
           ]}
           title={detail?.banner?.title || "Upholstery Cleaning Service"}
-          // description={
-          //   detail?.banner?.description ||
-          //   "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home."
-          // }
+          description={
+            detail?.banner?.description ||
+            "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home."
+          }
           showDownloadButton={Boolean(detail?.banner?.downloadButton)}
           className="bg-white"
         />
