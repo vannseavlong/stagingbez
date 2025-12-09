@@ -2,13 +2,14 @@
   "hosting": {
     "site": "beasy-page",
     "source": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
-      "region": "asia-east1"
+      "region": "asia-east1",
+      "memory": "2GiB",
+      "timeoutSeconds": 300,
+      "minInstances": 0,
+      "maxInstances": 100,
+      "concurrency": 80
     }
   }
 }
