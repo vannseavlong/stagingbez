@@ -548,28 +548,28 @@
           "key": "Villa",
           "description": "វីឡា",
           "priceText": "ចាប់ពី:",
-          "price": "$58",
+          "price": "$400",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
           "description": "ផ្ទះល្វែង និងហាងលក់ទំនិញ",
           "priceText": "ចាប់ពី:",
-          "price": "$58",
+          "price": "$200",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "ខុនដូ",
           "priceText": "ចាប់ពី:",
-          "price": "$15",
+          "price": "$60",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         },
         {
           "key": "Office",
           "description": "សម្អាតការិយាល័យ",
           "priceText": "ចាប់ពី:",
-          "price": "$15",
+          "price": "$150",
           "imageSrc": "/images/serviceDetail/Renovate/office.webp"
         }
       ]

@@ -546,28 +546,28 @@
           "key": "Villa",
           "description": "Villa",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$400",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
           "description": "Flat & Shop House",
           "priceText": "Start From:",
-          "price": "$58",
+          "price": "$200",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "Condo",
           "priceText": "Start From:",
-          "price": "$15",
+          "price": "$60",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         },
         {
           "key": "Office",
           "description": "Office Cleaning",
           "priceText": "Start From:",
-          "price": "$15",
+          "price": "$150",
           "imageSrc": "/images/serviceDetail/Renovate/office.webp"
         }
       ]

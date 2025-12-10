@@ -547,28 +547,28 @@
           "key": "Villa",
           "description": "别墅",
           "priceText": "起价:",
-          "price": "$58",
+          "price": "$400",
           "imageSrc": "/images/serviceDetail/General/villa.webp"
         },
         {
           "key": "Flat",
           "description": "公寓及店屋",
           "priceText": "起价:",
-          "price": "$58",
+          "price": "$200",
           "imageSrc": "/images/serviceDetail/General/flat.webp"
         },
         {
           "key": "Condo",
           "description": "公寓",
           "priceText": "起价:",
-          "price": "$15",
+          "price": "$60",
           "imageSrc": "/images/serviceDetail/General/condo.webp"
         },
         {
           "key": "Office",
           "description": "办公室清洁",
           "priceText": "起价:",
-          "price": "$15",
+          "price": "$150",
           "imageSrc": "/images/serviceDetail/Renovate/office.webp"
         }
       ]
