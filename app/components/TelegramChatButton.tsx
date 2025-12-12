@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { useTranslate } from "@/app/hooks/useTranslate";
 
@@ -38,20 +38,94 @@ export default function TelegramChatButton({
   // Fallback message (prefer sectionA override if present)
   const fallbackTelegramMessage =
     sectionAData?.telegramButton?.message || "Got a question? Tap here!";
-  const [isVisible, setIsVisible] = useState(true);
 
-  // Auto-hide widget after 10 seconds on mount. Do NOT persist this state across
-  // page reloads so a refresh will show the widget again.
+  const [isVisible, setIsVisible] = useState(false); // Start hidden
+  const [shouldShow, setShouldShow] = useState(false); // Controls when to show
+  const [isInContactSection, setIsInContactSection] = useState(false);
+  const hideTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Detect scroll percentage
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      if (scrollPercent >= 20) {
+        setShouldShow(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Initial 5-second delay to show button (if not already triggered by scroll)
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false);
-      try {
-        trackEvent("telegram_auto_hide", { source: "floating_widget" });
-      } catch {}
-    }, 10000); // 10 seconds
+      setShouldShow(true);
+    }, 5000); // 5 seconds
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Detect if user is in ContactSection
+  useEffect(() => {
+    const checkContactSection = () => {
+      const contactSection = document.querySelector('[data-section="contact"]');
+      if (!contactSection) return;
+
+      const rect = contactSection.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+      setIsInContactSection(isInView);
+    };
+
+    checkContactSection();
+    window.addEventListener("scroll", checkContactSection);
+    window.addEventListener("resize", checkContactSection);
+
+    return () => {
+      window.removeEventListener("scroll", checkContactSection);
+      window.removeEventListener("resize", checkContactSection);
+    };
+  }, []);
+
+  // Show/hide logic based on shouldShow and ContactSection
+  useEffect(() => {
+    if (!shouldShow) return;
+
+    if (isInContactSection) {
+      // In ContactSection: show forever, clear any hide timer
+      setIsVisible(true);
+      if (hideTimerRef.current) {
+        clearTimeout(hideTimerRef.current);
+        hideTimerRef.current = null;
+      }
+    } else {
+      // Not in ContactSection: show and start 10-second timer
+      setIsVisible(true);
+
+      // Clear any existing timer
+      if (hideTimerRef.current) {
+        clearTimeout(hideTimerRef.current);
+      }
+
+      // Start new 10-second hide timer
+      hideTimerRef.current = setTimeout(() => {
+        setIsVisible(false);
+        try {
+          trackEvent("telegram_auto_hide", { source: "floating_widget" });
+        } catch {}
+      }, 10000); // 10 seconds
+    }
+
+    return () => {
+      if (hideTimerRef.current) {
+        clearTimeout(hideTimerRef.current);
+      }
+    };
+  }, [shouldShow, isInContactSection]);
 
   // Set the gradient style for the button
   const buttonStyle: React.CSSProperties = {
@@ -85,7 +159,7 @@ export default function TelegramChatButton({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-5 right-5 z-[1000] flex items-center space-x-3">
+    <div className="fixed bottom-5 right-5 z-[1000] flex items-center space-x-3 animate-in slide-in-from-right-5 duration-500">
       {/* Telegram Message Box (Hidden on small screens) */}
       <div className="block">
         <div className="relative bg-white text-[#102C90] p-3 rounded-xl shadow-lg text-sm max-w-[200px] sm:max-w-[260px] z-10">

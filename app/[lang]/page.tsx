@@ -1,6 +1,7 @@
 "use client";
 
 import HeroSection from "../components/sections/HeroSection";
+import SeenOnSection from "../components/sections/SeenOnSection";
 import InstallSection from "../components/sections/InstallAppSection";
 import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
@@ -14,20 +15,13 @@ import HomeMedia from "../components/sections/homeMedia";
 export default function Home() {
   return (
     <div className="relative font-sans min-h-screen">
-      {/* Background container with max-width */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16">
-        {/* Mobile */}
-        <div className="block md:hidden bg-[url('/images/about/Why_Us_mini.jpg')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-        {/* Tablet */}
-        <div className="hidden md:block lg:hidden bg-[url('/images/Why_Choose_us_tablet.png')] bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"></div>
-        {/* Desktop */}
-        <div className="hidden lg:block bg-[url('/images/about/Why_Us.webp')] bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"></div>
-      </div>
+      {/* ...background image now handled in AboutUsSection... */}
       <main>
         {/* Full-width hero stays unchanged so it can span the viewport */}
         <section id="hero">
           <HeroSection />
         </section>
+        <SeenOnSection />
         {/* The rest of the page is constrained to a centered container */}
         <ContainWrapper>
           <section id="service">
@@ -62,13 +56,11 @@ export default function Home() {
 
         {/* Contact moved to dedicated page */}
 
-        
         <ContainWrapper>
           <section id="media-section">
             <HomeMedia />
           </section>
         </ContainWrapper>
-       
 
         {/* Parallax Image Section with max-width constraint */}
         <ContainWrapper>
