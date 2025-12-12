@@ -1,0 +1,18 @@
+{
+  "id": "seenOn",
+  "header": {
+    "title": "媒体报道"
+  },
+  "links": [
+    {
+      "href": "https://www.postkhmer.com/gallery/2025-10-25-1016-257424?fbclid=IwY2xjawNpLOVleHRuA2FlbQIxMQBicmlkETFBV0xHUkNVWTRSZmU1ZjBoAR6lfM-4nqHOm5dKnHkH3OngmTHfF3Y4PsRhVn98wyfjsA3xR9TmJ81A7vmXCA_aem_aCtRLUJAi7w_i1o5uK6c5w",
+      "img": "/images/Seen/PP-post.webp",
+      "alt": "Post Khmer"
+    },
+    {
+      "href": "https://plus.freshnewsasia.com/freshnewsplus/406065-2025-10-25-11-13-04",
+      "img": "/images/Seen/FreshNews.webp",
+      "alt": "Fresh News"
+    }
+  ]
+}
