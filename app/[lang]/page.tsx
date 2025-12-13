@@ -1,7 +1,7 @@
 "use client";
 
 import HeroSection from "../components/sections/HeroSection";
-import SeenOnSection from "../components/sections/SeenOnSection";
+// import SeenOnSection from "../components/sections/SeenOnSection";
 import InstallSection from "../components/sections/InstallAppSection";
 import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
@@ -21,7 +21,9 @@ export default function Home() {
         <section id="hero">
           <HeroSection />
         </section>
-        <SeenOnSection />
+        {/* <section id="seen-on">
+          <SeenOnSection />
+        </section> */}
         {/* The rest of the page is constrained to a centered container */}
         <ContainWrapper>
           <section id="service">
