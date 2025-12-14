@@ -127,9 +127,12 @@ export default function ContactSection() {
                   {find("email").title}
                 </h4>
               </div>
-              <p className="text-[16px]  text-[#1A1A1A] font-medium">
+              <a
+                href={`mailto:${find("email").description}`}
+                className="text-[16px]  text-[#1A1A1A] font-medium hover:underline block"
+              >
                 {find("email").description}
-              </p>
+              </a>
             </div>
 
             {/* Phone */}
@@ -140,9 +143,12 @@ export default function ContactSection() {
                   {find("phone").title}
                 </h4>
               </div>
-              <p className="text-[16px] text-[#1A1A1A] font-medium mb-5 ">
+              <a
+                href={`tel:${find("phone").description}`}
+                className="text-[16px] text-[#1A1A1A] font-medium mb-5 hover:underline block"
+              >
                 {find("phone").description}
-              </p>
+              </a>
             </div>
           </div>
         </div>
