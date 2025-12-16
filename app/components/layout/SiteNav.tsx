@@ -248,6 +248,9 @@ export default function SiteNav() {
   // Helper to check if link is active
   const isActive = (path: string) => pathname.includes(path);
 
+  const homeHref = `/${currentLanguageCode}`;
+  const isHomeActive = pathname === homeHref;
+
   const { t, getSection } = useTranslate();
 
   const navbar = getSection("navbar") as any;
@@ -275,6 +278,16 @@ export default function SiteNav() {
 
             {/* Desktop links - only show on large screens */}
             <nav className="hidden lg:flex items-center gap-6">
+              <Link
+                href={`/${currentLanguageCode}`}
+                className={`text-base transition-colors ${
+                  isHomeActive
+                    ? "text-beasy-gradient font-medium"
+                    : "text-black font-medium hover:text-beasy-gradient"
+                }`}
+              >
+                {t("navbar.items.home", "Home")}
+              </Link>
               {/* About us link */}
               <Link
                 href={`/${currentLanguageCode}/about-us`}
@@ -428,6 +441,15 @@ export default function SiteNav() {
 
                 {/* Navigation Links */}
                 <nav className="flex flex-col gap-6 mb-6">
+                  <Link
+                    href={`/${currentLanguageCode}`}
+                    onClick={() => setOpen(false)}
+                    className={`text-base font-medium transition-colors ${
+                      isHomeActive ? "text-beasy-gradient" : "text-[#1A1A1A]"
+                    }`}
+                  >
+                    {t("navbar.items.home", "Home")}
+                  </Link>
                   <Link
                     href={`/${currentLanguageCode}/about-us`}
                     onClick={() => setOpen(false)}
