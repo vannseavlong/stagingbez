@@ -280,7 +280,7 @@ export default function SiteNav() {
             <nav className="hidden lg:flex items-center gap-6">
               <Link
                 href={`/${currentLanguageCode}`}
-                className={`text-base transition-colors ${
+                className={`text-base leading-[2] transition-colors ${
                   isHomeActive
                     ? "text-beasy-gradient font-medium"
                     : "text-black font-medium hover:text-beasy-gradient"
@@ -291,7 +291,7 @@ export default function SiteNav() {
               {/* About us link */}
               <Link
                 href={`/${currentLanguageCode}/about-us`}
-                className={`text-base transition-colors ${
+                className={`text-base leading-[2] transition-colors ${
                   isActive("/about-us")
                     ? "text-beasy-gradient font-medium"
                     : "text-black font-medium hover:text-beasy-gradient"
@@ -308,7 +308,7 @@ export default function SiteNav() {
                     isActive("/our-service") ||
                     pathname.includes("/service-detail")
                   }
-                  className={`text-base transition-colors ${
+                  className={`text-base leading-[2] transition-colors ${
                     // Consider service-detail pages (any id) as part of Services
                     isActive("/our-service") ||
                     pathname.includes("/service-detail")
@@ -343,7 +343,7 @@ export default function SiteNav() {
 
               <Link
                 href={`/${currentLanguageCode}/media-page`}
-                className={`text-base transition-colors ${
+                className={`text-base leading-[2] transition-colors ${
                   isActive("/media-page")
                     ? "text-beasy-gradient font-medium"
                     : "text-black font-medium hover:text-beasy-gradient"
@@ -444,7 +444,7 @@ export default function SiteNav() {
                   <Link
                     href={`/${currentLanguageCode}`}
                     onClick={() => setOpen(false)}
-                    className={`text-base font-medium transition-colors ${
+                    className={`text-base leading-[2] font-medium transition-colors ${
                       isHomeActive ? "text-beasy-gradient" : "text-[#1A1A1A]"
                     }`}
                   >
@@ -453,7 +453,7 @@ export default function SiteNav() {
                   <Link
                     href={`/${currentLanguageCode}/about-us`}
                     onClick={() => setOpen(false)}
-                    className={`text-base font-medium transition-colors ${
+                    className={`text-base leading-[2] font-medium transition-colors ${
                       isActive("/about-us")
                         ? "text-beasy-gradient"
                         : "text-[#1A1A1A]"
