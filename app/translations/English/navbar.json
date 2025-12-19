@@ -23,6 +23,7 @@
     "text": "Contact Us"
   },
   "items": {
+    "home": "Home",
     "aboutUs": "About us",
     "OurServices": [
       {
