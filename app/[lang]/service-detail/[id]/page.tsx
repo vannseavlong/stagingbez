@@ -14,16 +14,8 @@ import FAQSection from "@/app/components/sections/FAQSection";
 import InstallSection from "@/app/components/sections/InstallAppSection";
 import { ContainWrapper } from "@/app/components/layout";
 
-// Accept the route params prop to satisfy Next.js App Router type checks for
-// dynamic routes (this route lives in `[id]`). Using a permissive `any` keeps
-// this change low-risk; you can tighten the shape later (e.g. `{ id: string }`).
 export default async function ServiceDetailPage({ params }: { params: any }) {
-  // Await params per Next.js App Router guidance for sync dynamic APIs.
-  // This ensures `params` is resolved before accessing its properties.
   const awaitedParams = await params;
-  // The page is a server component. Load translations directly on the server
-  // by importing the JSON translation files for each language and selecting
-  // the right one based on the route `lang` param.
   const languageCode = String(awaitedParams?.lang || "en");
   const languageMap: Record<string, any> = {
     en: serviceDetailEn,
@@ -46,13 +38,6 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
   const serviceDetailAbout =
     serviceDetailAboutMap[languageCode] || serviceDetailAboutEn;
   const aboutEntry = serviceDetailAbout?.[String(currentId)] ?? null;
-
-  // Determine the detail object for the requested id.
-  // The translations may take one of three shapes:
-  // 1) an array of objects: [{ id: 1, ... }, ...]
-  // 2) a single object: { id: 4, ... }
-  // 3) a keyed object mapping id -> object: { "1": { id: 1, ... }, "2": { ... } }
-  // We support all three and return a 404 when there's no match.
   let detail: any = null;
   if (Array.isArray(serviceDetail)) {
     detail = serviceDetail.find((s: any) => Number(s.id) === currentId) ?? null;
@@ -146,10 +131,8 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
         <div className="hidden lg:block bg-white h-16" />
 
         {/* About section (top of page) */}
-        <AboutUsSection serviceId={currentId} />
+        <AboutUsSection serviceId={currentId} suppressBackground={true} />
 
-        {/* Single ful-width white band for the rest of the page sections so
-            the decorative fixed background doesn't show through between them. */}
         <div className="w-full bg-white">
           <div className="overflow-visible">
             <ContainWrapper>

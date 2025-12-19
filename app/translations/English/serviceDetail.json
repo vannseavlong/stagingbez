@@ -4,12 +4,12 @@
     "banner": {
       "title": "General Cleaning Service",
       "description": "Come home to a clean, stress-free space. bEasy handles the mess so you can focus on what matters most.",
-      "landscape": "/images/serviceDetail/General/General_Hero.webp",
-      "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/General/GenCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/General/GenCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/general.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "Come home to a clean, stress-free space. bEasy handles the mess so you can focus on what matters most.",
       "subtitle": "Information of procedure"
@@ -96,12 +96,12 @@
     "banner": {
       "title": "Deep Cleaning Service",
       "description": "Get a fresh start with bEasy’s deep cleaning — we tackle hidden dirt and grime to restore your space to its best.",
-      "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
-      "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Deep/DeepCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/Deep/DeepCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/deep.webp",
+      "imageSrc": "/images/serviceDetail/Deep/DeepCLN-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 2.",
       "subtitle": "Information of procedure"
@@ -188,7 +188,7 @@
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/office.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 3.",
       "subtitle": "Information of procedure"
@@ -230,12 +230,12 @@
     "banner": {
       "title": "Upholstery Cleaning Service",
       "description": "Renew your furniture with bEasy's upholstery cleaning - we remove stains, dust, and allergens for a fresher home.",
-      "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
-      "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Uphol/Up-Hero.webp",
+      "portrait": "/images/serviceDetail/Uphol/Up-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/uphol.webp",
+      "imageSrc": "/images/serviceDetail/Uphol/Up-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "Upholstery cleaning is the process of removing dirt, stains, allergens, and other contaminants from upholstered furniture such as sofas, chairs, and mattresses. Over time, upholstery can accumulate dust, pet dander, food spills, and other debris that can affect the appearance and hygiene of your furniture. Professional upholstery cleaning services use specialized equipment and cleaning solutions to deep clean and refresh your furniture, helping to extend its lifespan and improve indoor air quality.",
       "subtitle": "Information of procedure"
@@ -294,12 +294,12 @@
     "banner": {
       "title": "Pest Control Service",
       "description": "Say goodbye to mosquitoes with our safe, powerful spray and fogging — protecting you and your loved ones from dengue and other viruses.",
-      "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
-      "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Pest/Pest-Hero.webp",
+      "portrait": "/images/serviceDetail/Pest/Pest-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/pest.webp",
+      "imageSrc": "/images/serviceDetail/Pest/Pest-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 5.",
       "subtitle": "Information of procedure"
@@ -578,12 +578,12 @@
     "banner": {
       "title": "AC Cleaning Service",
       "description": "Stay cool and energy-efficient with our AC cleaning service in Phnom Penh. Get cleaner air, faster cooling, and lower bills—on-demand through our app.",
-      "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
-      "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/AC/AC-Hero.webp",
+      "portrait": "/images/serviceDetail/AC/AC-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "imageSrc": "/images/serviceDetail/AC/AC-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 8.",
       "subtitle": "Information of procedure"

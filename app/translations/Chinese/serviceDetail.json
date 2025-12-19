@@ -4,12 +4,12 @@
     "banner": {
       "title": "一般清洁服务",
       "description": "回家享受一个干净、无压力的空间。bEasy 处理杂乱，让您专注于最重要的事情。",
-      "landscape": "/images/serviceDetail/General/General_Hero.webp",
-      "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/General/GenCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/General/GenCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/general.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "回家享受一个干净、无压力的空间。bEasy 处理杂乱，让您专注于最重要的事情。",
       "subtitle": "流程信息"
@@ -96,12 +96,12 @@
     "banner": {
       "title": "深度清洁服务",
       "description": "用 bEasy 的深度清洁开始全新生活——我们处理隐藏的污垢和污垢，让您的空间恢复最佳状态。",
-      "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
-      "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Deep/DeepCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/Deep/DeepCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/deep.webp",
+      "imageSrc": "/images/serviceDetail/Deep/DeepCLN-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "PLACEHOLDER - 替换为服务 ID 2 的完整描述。",
       "subtitle": "流程信息"
@@ -188,7 +188,7 @@
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/office.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "PLACEHOLDER - 替换为服务 ID 3 的完整描述。",
       "subtitle": "流程信息"
@@ -230,12 +230,12 @@
     "banner": {
       "title": "软垫清洁服务",
       "description": "用 bEasy 的软垫清洁更新您的家具——我们去除污渍、灰尘和过敏原，让您的家更清新。",
-      "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
-      "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Uphol/Up-Hero.webp",
+      "portrait": "/images/serviceDetail/Uphol/Up-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/uphol.webp",
+      "imageSrc": "/images/serviceDetail/Uphol/Up-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "软垫清洁是从沙发、椅子和床垫等软垫家具中去除污垢、污渍、过敏原和其他污染物。随着时间的推移，软垫会积聚灰尘、宠物皮屑、食物溢出物和其他碎屑，这些都会影响家具的外观和卫生。专业的软垫清洁服务使用专门的设备和清洁溶液来深层清洁和焕新您的家具，有助于延长其使用寿命并改善室内空气质量。",
       "subtitle": "流程信息"
@@ -294,12 +294,12 @@
     "banner": {
       "title": "害虫控制服务",
       "description": "用我们安全、强力的喷洒和烟雾告别蚊子——保护您和您所爱的人免受登革热和其他病毒的侵害。",
-      "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
-      "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Pest/Pest-Hero.webp",
+      "portrait": "/images/serviceDetail/Pest/Pest-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/pest.webp",
+      "imageSrc": "/images/serviceDetail/Pest/Pest-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "PLACEHOLDER - 替换为服务 ID 5 的完整描述。",
       "subtitle": "流程信息"
@@ -579,12 +579,12 @@
     "banner": {
       "title": "空调清洁服务",
       "description": "通过我们在金边的空调清洁服务，保持凉爽和能源效率。通过我们的应用程序按需获取更清洁的空气、更快的制冷和更低的账单。",
-      "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
-      "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/AC/AC-Hero.webp",
+      "portrait": "/images/serviceDetail/AC/AC-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "imageSrc": "/images/serviceDetail/AC/AC-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "PLACEHOLDER - 替换为服务 ID 8 的完整描述。",
       "subtitle": "流程信息"

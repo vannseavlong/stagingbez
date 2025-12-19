@@ -7,9 +7,13 @@ import CoreValue from "@/app/components/common/core-value";
 
 type Props = {
   serviceId?: string | number;
+  suppressBackground?: boolean;
 };
 
-export default function AboutUsSection({ serviceId }: Props) {
+export default function AboutUsSection({
+  serviceId,
+  suppressBackground,
+}: Props) {
   const { getSection } = useTranslate();
 
   const defaultAbout = getSection("about") as {
@@ -74,8 +78,6 @@ export default function AboutUsSection({ serviceId }: Props) {
     ? aboutSection["item-icons"]
     : null;
 
-  // If a serviceId is provided, strictly use the service's `item-icons` (by index).
-  // Otherwise, use the imageMap lookup by key if present, or fall back to DEFAULT_ICON.
   const useServiceIcons =
     typeof serviceId !== "undefined" &&
     serviceId !== null &&
@@ -94,24 +96,26 @@ export default function AboutUsSection({ serviceId }: Props) {
 
   return (
     <section className="text-white font-sans overflow-x-hidden relative">
-      {/* Responsive background image inside AboutUsSection */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16 pointer-events-none select-none">
-        {/* Mobile */}
-        <div
-          className="block md:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
-          style={{ backgroundImage: `url('${backgrounds.mobile}')` }}
-        ></div>
-        {/* Tablet */}
-        <div
-          className="hidden md:block lg:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
-          style={{ backgroundImage: `url('${backgrounds.tablet}')` }}
-        ></div>
-        {/* Desktop */}
-        <div
-          className="hidden lg:block bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"
-          style={{ backgroundImage: `url('${backgrounds.desktop}')` }}
-        ></div>
-      </div>
+      {/* Responsive background image inside AboutUsSection (optional) */}
+      {!suppressBackground && (
+        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-16 pointer-events-none select-none">
+          {/* Mobile */}
+          <div
+            className="block md:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+            style={{ backgroundImage: `url('${backgrounds.mobile}')` }}
+          ></div>
+          {/* Tablet */}
+          <div
+            className="hidden md:block lg:hidden bg-no-repeat bg-contain bg-center bg-fixed h-full w-full"
+            style={{ backgroundImage: `url('${backgrounds.tablet}')` }}
+          ></div>
+          {/* Desktop */}
+          <div
+            className="hidden lg:block bg-no-repeat bg-center bg-contain bg-fixed h-full w-full"
+            style={{ backgroundImage: `url('${backgrounds.desktop}')` }}
+          ></div>
+        </div>
+      )}
       <div className="bg-white">
         <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 pb-16">
           <div className="mb-4 pt-30 lg:pt-40">
