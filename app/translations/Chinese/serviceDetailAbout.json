@@ -5,7 +5,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們一般清潔服務的原因",
       "description": "我們以專業護理清潔每個空間 — 讓清潔結果更清新、感覺更好、持續更久。",
-      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+      "Imagebg": "/images/serviceDetail/General/GenCLN-bg.webp"
     },
     "item-icons": [
       "/images/about/Reliable_Everytime.webp",
@@ -42,7 +42,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們深度清潔服務的原因",
       "description": "我們以專業護理清潔每個角落 — 讓清潔結果更深入、感覺更清新、持續更久。",
-      "Imagebg": "/images/serviceDetail/Deep/Deep_Para.webp"
+      "Imagebg": "/images/serviceDetail/Deep/DeepCLN-bg.webp"
     },
     "item-icons": [
       "/images/about/Thorough_Detail.webp",
@@ -79,7 +79,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們辦公室清潔服務的原因",
       "description": "我們以專業護理清潔每個空間 — 讓清潔結果更清新、感覺更好、持續更久。",
-      "Imagebg": "/images/serviceDetail/General/General_Para.webp"
+      "Imagebg": "/images/serviceDetail/General/GenCLN-bg.webp"
     },
     "item-icons": [
       "/images/about/Reliable_Everytime.webp",
@@ -116,7 +116,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們家具清潔服務的原因",
       "description": "我們以專業護理對待每種布料 — 讓清潔結果看起來更乾淨、感覺更柔軟、持續更久。",
-      "Imagebg": "/images/serviceDetail/Uphol/Uphol_Para.webp"
+      "Imagebg": "/images/serviceDetail/Uphol/Up-bg.webp"
     },
     "item-icons": [
       "/images/about/Deep_Clean_Fresh_Look.webp",
@@ -153,7 +153,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們害蟲防治服務的原因",
       "description": "我們以專業護理對待每個空間 — 讓清潔結果驅趕害蟲、保護您的家居、持續更久。 (注意：此描述翻譯與害蟲防治更為相關)",
-      "Imagebg": "/images/serviceDetail/Pest/Pest_Para.webp"
+      "Imagebg": "/images/serviceDetail/Pest/Pest-bg.webp"
     },
     "item-icons": [
       "/images/about/Effective_Long_Lasting.webp",
@@ -264,7 +264,7 @@
       "subtitle": "為何選擇我們",
       "title": "您會愛上我們空調清潔服務的原因",
       "description": "我們以專業護理對待每個空間 — 讓清潔結果驅趕害蟲、保護您的家居、持續更久。 (注意：此描述翻譯與害蟲防治服務的原文相同，可能需要調整。)",
-      "Imagebg": "/images/serviceDetail/AC/AC_Para.webp"
+      "Imagebg": "/images/serviceDetail/AC/AC-bg.webp"
     },
     "item-icons": [
       "/images/about/Boost_Effieincy.webp",

@@ -4,12 +4,12 @@
     "banner": {
       "title": "សេវាសម្អាតទូទៅ",
       "description": "ត្រលប់មកផ្ទះប្រកបដោយផាសុកភាព គ្មានភាពតានតឹង។ bEasy ដោះស្រាយភាពរញ៉េរញ៉ៃ ដូច្នេះអ្នកអាចផ្តោតលើអ្វីដែលសំខាន់បំផុត។",
-      "landscape": "/images/serviceDetail/General/General_Hero.webp",
-      "portrait": "/images/serviceDetail/General/General_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/General/GenCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/General/GenCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/general.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "ត្រលប់មកផ្ទះប្រកបដោយផាសុកភាព គ្មានភាពតានតឹង។ bEasy ដោះស្រាយភាពរញ៉េរញ៉ៃ ដូច្នេះអ្នកអាចផ្តោតលើអ្វីដែលសំខាន់បំផុត។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
@@ -96,12 +96,12 @@
     "banner": {
       "title": "សេវាសម្អាតស៊ីជម្រៅ",
       "description": "ចាប់ផ្តើមជីវិតថ្មីជាមួយនឹងការសម្អាតស៊ីជម្រៅរបស់ bEasy—យើងដោះស្រាយធូលី និងភាពកខ្វក់ដែលលាក់កំបាំង ដើម្បីស្តារកន្លែងរបស់អ្នកឱ្យល្អបំផុត។",
-      "landscape": "/images/serviceDetail/Deep/Deep_Hero.webp",
-      "portrait": "/images/serviceDetail/Deep/Deep_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Deep/DeepCLN-Hero.webp",
+      "portrait": "/images/serviceDetail/Deep/DeepCLN-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/deep.webp",
+      "imageSrc": "/images/serviceDetail/Deep/DeepCLN-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាលេខសម្គាល់ 2។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
@@ -188,7 +188,7 @@
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/office.webp",
+      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាលេខសម្គាល់ 3។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
@@ -230,12 +230,12 @@
     "banner": {
       "title": "សេវាសម្អាតគ្រឿងក្នុង",
       "description": "ធ្វើឲ្យគ្រឿងសង្ហារឹមរបស់អ្នកថ្មីឡើងវិញជាមួយនឹងការសម្អាតគ្រឿងក្នុងរបស់ bEasy - យើងកម្ចាត់ស្នាមប្រឡាក់ ធូលី និងសារធាតុអាឡែហ្ស៊ី សម្រាប់គេហដ្ឋានស្រស់ស្រាយ។",
-      "landscape": "/images/serviceDetail/Uphol/Uphol_Hero.webp",
-      "portrait": "/images/serviceDetail/Uphol/Uphol_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Uphol/Up-Hero.webp",
+      "portrait": "/images/serviceDetail/Uphol/Up-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/uphol.webp",
+      "imageSrc": "/images/serviceDetail/Uphol/Up-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "ការសម្អាតគ្រឿងក្នុងគឺជាដំណើរការនៃការកម្ចាត់ភាពកខ្វក់ ស្នាមប្រឡាក់ សារធាតុអាឡែហ្ស៊ី និងសារធាតុកខ្វក់ផ្សេងទៀតពីគ្រឿងសង្ហារឹមដែលមានគ្រឿងក្នុង ដូចជាសាឡុង កៅអី និងពូក។ យូរៗទៅ គ្រឿងក្នុងអាចប្រមូលផ្តុំធូលី សម្បកសត្វចិញ្ចឹម ការកំពប់អាហារ និងកម្ទេចកំទីផ្សេងទៀតដែលអាចប៉ះពាល់ដល់រូបរាង និងអនាម័យនៃគ្រឿងសង្ហារឹមរបស់អ្នក។ សេវាសម្អាតគ្រឿងក្នុងប្រកបដោយវិជ្ជាជីវៈប្រើប្រាស់ឧបករណ៍ និងដំណោះស្រាយសម្អាតឯកទេសដើម្បីសម្អាតស៊ីជម្រៅ និងធ្វើឲ្យគ្រឿងសង្ហារឹមរបស់អ្នកស្រស់ស្រាយឡើងវិញ ជួយពន្យារអាយុកាលរបស់វា និងធ្វើឲ្យគុណភាពខ្យល់ក្នុងផ្ទះប្រសើរឡើង។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
@@ -294,12 +294,12 @@
     "banner": {
       "title": "សេវាកម្មកំចាត់សត្វល្អិត",
       "description": "និយាយលាទៅកាន់មូសជាមួយនឹងការបាញ់ថ្នាំ និងបាញ់អ័ព្ទដែលមានសុវត្ថិភាព និងមានប្រសិទ្ធភាពរបស់យើង—ការពារអ្នក និងមនុស្សជាទីស្រលាញ់របស់អ្នកពីជំងឺគ្រុនឈាម និងមេរោគផ្សេងៗទៀត។",
-      "landscape": "/images/serviceDetail/Pest/Pest_Hero.webp",
-      "portrait": "/images/serviceDetail/Pest/Pest_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Pest/Pest-Hero.webp",
+      "portrait": "/images/serviceDetail/Pest/Pest-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/pest.webp",
+      "imageSrc": "/images/serviceDetail/Pest/Pest-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាលេខសម្គាល់ 5។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
@@ -580,12 +580,12 @@
     "banner": {
       "title": "សេវាសម្អាតម៉ាស៊ីនត្រជាក់",
       "description": "រក្សាភាពត្រជាក់ និងប្រសិទ្ធភាពថាមពលជាមួយនឹងសេវាសម្អាតម៉ាស៊ីនត្រជាក់របស់យើងនៅភ្នំពេញ។ ទទួលបានខ្យល់ស្អាតជាង ការត្រជាក់លឿនជាង និងវិក័យប័ត្រទាបជាង—តាមតម្រូវការតាមរយៈកម្មវិធីរបស់យើង។",
-      "landscape": "/images/serviceDetail/AC/AC_Hero.webp",
-      "portrait": "/images/serviceDetail/AC/AC_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/AC/AC-Hero.webp",
+      "portrait": "/images/serviceDetail/AC/AC-Hero-Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/AC_Cleaning.webp",
+      "imageSrc": "/images/serviceDetail/AC/AC-Task.webp",
       "title": "តើអ្វីខ្លះត្រូវបានរួមបញ្ចូលក្នុងកិច្ចការសម្អាតរបស់អ្នក?",
       "description": "PLACEHOLDER - ជំនួសដោយការពិពណ៌នាពេញលេញសម្រាប់សេវាលេខសម្គាល់ 8។",
       "subtitle": "ព័ត៌មានអំពីនីតិវិធី"
