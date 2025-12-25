@@ -1,9 +1,15 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
+
 export default function TermOfCondition() {
+  const searchParams = useSearchParams();
+  const embed = searchParams.get('embed');
+  console.log('embed: ', embed);
+  const isEmbed = embed === 'true';
   return (
     <div>
-      <div className="min-h-screen bg-white flex justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className={`min-h-screen bg-white flex justify-center py-12 ${isEmbed ? "px-0" : "px-4"} sm:px-6 lg:px-8 font-sans`}>
         <div className="w-full max-w-4xl  p-8 lg:p-12">
           <header className="border-b pb-6 mb-8">
             <h1 className="text-4xl font-extrabold text-beasy-gradient tracking-tight mb-2">
