@@ -259,7 +259,7 @@ export default function SiteNav() {
 
   const searchParams = useSearchParams();
   const embed = searchParams.get('embed');
-  console.log('embed: ', embed);
+  // console.log('embed: ', embed);
   const isEmbed = embed === 'true';
   if (isEmbed) return null
 
