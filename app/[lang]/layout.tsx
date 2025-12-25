@@ -43,9 +43,11 @@ export default async function LangLayout({
   return (
     <LanguageProvider>
       <div className={fontWrapperClass}>
-        <SiteNav />
+        <Suspense fallback={null}>
+          <SiteNav />
+        </Suspense>
         <>
-          {children}
+          <Suspense fallback={null}>{children}</Suspense>
           {/* Analytics provider records UTM/referrer and emits page_view events */}
           <Suspense fallback={null}>
             <AnalyticsProviderClient />
@@ -53,7 +55,9 @@ export default async function LangLayout({
           {/* Telegram chat widget (client-only) */}
           <TelegramChatButton />
         </>
-        <SiteFooter />
+        <Suspense fallback={null}>
+          <SiteFooter />
+        </Suspense>
       </div>
     </LanguageProvider>
   );
