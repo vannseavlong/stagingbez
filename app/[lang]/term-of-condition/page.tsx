@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 export default function TermOfCondition() {
   const searchParams = useSearchParams();
   const embed = searchParams.get('embed');
-  console.log('embed: ', embed);
+  // console.log('embed: ', embed);
   const isEmbed = embed === 'true';
   return (
     <div>
