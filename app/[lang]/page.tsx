@@ -1,7 +1,7 @@
 "use client";
 
 import HeroSection from "../components/sections/HeroSection";
-// import SeenOnSection from "../components/sections/SeenOnSection";
+import SeenOnSection from "../components/sections/SeenOnSection";
 import InstallSection from "../components/sections/InstallAppSection";
 import FAQSection from "../components/sections/FAQSection";
 import ServiceSection from "../components/sections/ServiceSection";
@@ -21,9 +21,9 @@ export default function Home() {
         <section id="hero">
           <HeroSection />
         </section>
-        {/* <section id="seen-on">
+        <section id="seen-on">
           <SeenOnSection />
-        </section> */}
+        </section>
         {/* The rest of the page is constrained to a centered container */}
         <ContainWrapper>
           <section id="service">
@@ -78,7 +78,7 @@ export default function Home() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-[1440px] lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
+      <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
         {children}
       </div>
     </div>

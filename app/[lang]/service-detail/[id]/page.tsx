@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
     <div className="font-sans min-h-screen">
       <main>
         {/* Background container with max-width */}
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-[1440px] h-full -z-10 px-6 md:px-8 lg:px-16 ">
+        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:max-w-360 h-full -z-10 px-6 md:px-8 lg:px-16 ">
           {/* Use service-specific Imagebg fields when available; fall back to decorative defaults */}
           {(() => {
             const header = aboutEntry?.header ?? {};
@@ -162,7 +162,7 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
                   return (
                     <div
                       key={it?.key ?? idx}
-                      className="min-w-[310px] w-[310px] flex-shrink-0"
+                      className="min-w-77.5 w-77.5 shrink-0"
                     >
                       <ServiceItem
                         title={it?.description || it?.key || "Service"}
