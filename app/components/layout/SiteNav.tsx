@@ -258,14 +258,14 @@ export default function SiteNav() {
     (navbar?.items?.OurServices as any) || [];
 
   const searchParams = useSearchParams();
-  const embed = searchParams.get('embed');
+  const embed = searchParams.get("embed");
   // console.log('embed: ', embed);
-  const isEmbed = embed === 'true';
-  if (isEmbed) return null
+  const isEmbed = embed === "true";
+  if (isEmbed) return null;
 
   return (
     <nav className="w-full bg-white sticky top-0 z-50 shadow-sm">
-      <div className="max-w-full lg:max-w-[1440px] lg:mx-auto px-8 py-6 lg:px-16 lg:py-4">
+      <div className="max-w-full lg:max-w-360 lg:mx-auto px-8 py-6 lg:px-16 lg:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-8 lg:gap-12">
@@ -299,10 +299,11 @@ export default function SiteNav() {
               {/* About us link */}
               <Link
                 href={`/${currentLanguageCode}/about-us`}
-                className={`text-base leading-[2] transition-colors ${isActive("/about-us")
-                  ? "text-beasy-gradient font-medium"
-                  : "text-black font-medium hover:text-beasy-gradient"
-                  }`}
+                className={`text-base leading-[2] transition-colors ${
+                  isActive("/about-us")
+                    ? "text-beasy-gradient font-medium"
+                    : "text-black font-medium hover:text-beasy-gradient"
+                }`}
               >
                 {t("navbar.items.aboutUs", "About us")}
               </Link>
@@ -318,10 +319,10 @@ export default function SiteNav() {
                   className={`text-base leading-[2] transition-colors ${
                     // Consider service-detail pages (any id) as part of Services
                     isActive("/our-service") ||
-                      pathname.includes("/service-detail")
+                    pathname.includes("/service-detail")
                       ? "text-beasy-gradient font-medium"
                       : "text-[#1A1A1A] font-medium hover:text-beasy-gradient"
-                    }`}
+                  }`}
                 >
                   <span>{t("navbar.navigation.services", "Services")}</span>
                 </DropdownMenuTrigger>
@@ -350,10 +351,11 @@ export default function SiteNav() {
 
               <Link
                 href={`/${currentLanguageCode}/media-page`}
-                className={`text-base leading-[2] transition-colors ${isActive("/media-page")
-                  ? "text-beasy-gradient font-medium"
-                  : "text-black font-medium hover:text-beasy-gradient"
-                  }`}
+                className={`text-base leading-[2] transition-colors ${
+                  isActive("/media-page")
+                    ? "text-beasy-gradient font-medium"
+                    : "text-black font-medium hover:text-beasy-gradient"
+                }`}
               >
                 {t("navbar.items.media", "Media")}
               </Link>
@@ -387,33 +389,37 @@ export default function SiteNav() {
 
       {/* Mobile & Tablet slide-down menu */}
       <div
-        className={`lg:hidden fixed inset-0 z-50 ${open ? "pointer-events-auto" : "pointer-events-none"
-          }`}
+        className={`lg:hidden fixed inset-0 z-50 ${
+          open ? "pointer-events-auto" : "pointer-events-none"
+        }`}
         aria-hidden={!open}
       >
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-black/40 transition-opacity duration-450 ease-out ${open
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-            }`}
+          className={`absolute inset-0 bg-black/40 transition-opacity duration-450 ease-out ${
+            open
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
           onClick={() => setOpen(false)}
         />
 
         {/* Slide-down panel (full-width) */}
         <div
-          className={`absolute left-0 top-0 w-full transform-gpu transform transition-transform duration-500 ease-out origin-top ${open ? "translate-y-0" : "-translate-y-full"
-            }`}
+          className={`absolute left-0 top-0 w-full transform-gpu transform transition-transform duration-500 ease-out origin-top ${
+            open ? "translate-y-0" : "-translate-y-full"
+          }`}
           role="dialog"
           aria-modal={open}
         >
           {/* Full-width panel that slides down from the top */}
           <div className="w-full bg-white border-b border-[#E8E8E8] shadow-sm overflow-hidden">
             <div
-              className={`transition-[max-height,opacity] duration-500 ease-out overflow-hidden ${open
-                ? "max-h-[calc(100vh-96px)] opacity-100"
-                : "max-h-0 opacity-0"
-                }`}
+              className={`transition-[max-height,opacity] duration-500 ease-out overflow-hidden ${
+                open
+                  ? "max-h-[calc(100vh-96px)] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
               style={{ willChange: "max-height, opacity" }}
             >
               <div className="flex flex-col px-8 py-6">
@@ -457,10 +463,11 @@ export default function SiteNav() {
                   <Link
                     href={`/${currentLanguageCode}/about-us`}
                     onClick={() => setOpen(false)}
-                    className={`text-base leading-[2] font-medium transition-colors ${isActive("/about-us")
-                      ? "text-beasy-gradient"
-                      : "text-[#1A1A1A]"
-                      }`}
+                    className={`text-base leading-[2] font-medium transition-colors ${
+                      isActive("/about-us")
+                        ? "text-beasy-gradient"
+                        : "text-[#1A1A1A]"
+                    }`}
                   >
                     {t("navbar.items.aboutUs", "About us")}
                   </Link>
@@ -475,18 +482,20 @@ export default function SiteNav() {
                       aria-controls="mobile-services-list"
                     >
                       <span
-                        className={`${isActive("/our-service") ||
+                        className={`${
+                          isActive("/our-service") ||
                           pathname.includes("/service-detail")
-                          ? "text-beasy-gradient"
-                          : ""
-                          }`}
+                            ? "text-beasy-gradient"
+                            : ""
+                        }`}
                       >
                         {t("navbar.navigation.services", "Services")}
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${mobileServicesOpen ? "rotate-180" : "rotate-0"
-                          }`}
+                        className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${
+                          mobileServicesOpen ? "rotate-180" : "rotate-0"
+                        }`}
                         viewBox="0 0 14 10"
                         fill="none"
                       >
@@ -525,10 +534,11 @@ export default function SiteNav() {
                   <Link
                     href={`/${currentLanguageCode}/media-page`}
                     onClick={() => setOpen(false)}
-                    className={`text-base font-medium transition-colors ${isActive("/media-page")
-                      ? "text-beasy-gradient"
-                      : "text-[#1A1A1A]"
-                      }`}
+                    className={`text-base font-medium transition-colors ${
+                      isActive("/media-page")
+                        ? "text-beasy-gradient"
+                        : "text-[#1A1A1A]"
+                    }`}
                   >
                     {t("navbar.items.media", "Media")}
                   </Link>
@@ -564,8 +574,9 @@ export default function SiteNav() {
                       </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${mobileLanguageOpen ? "rotate-180" : "rotate-0"
-                          }`}
+                        className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${
+                          mobileLanguageOpen ? "rotate-180" : "rotate-0"
+                        }`}
                         viewBox="0 0 14 10"
                         fill="none"
                       >

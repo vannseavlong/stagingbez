@@ -14,7 +14,7 @@ export default function TermOfCondition() {
           isEmbed ? "px-0" : "px-4"
         } sm:px-6 lg:px-8 font-sans`}
       >
-        <div className="w-full max-w-4xl  p-8 lg:p-12">
+        <div className="w-full max-w-4xl p-8 lg:p-12 min-w-0 wrap-break-word">
           <header className="border-b pb-6 mb-8">
             <h1 className="text-4xl font-extrabold text-beasy-gradient tracking-tight mb-2">
               TERMS OF USE
@@ -24,7 +24,7 @@ export default function TermOfCondition() {
             </p>
           </header>
 
-          <section className="space-y-8 text-gray-700 leading-relaxed">
+          <section className="space-y-8 text-gray-700 leading-relaxed wrap-break-word whitespace-normal">
             <p>
               <span className="font-bold text-gray-900 ">A.</span> These terms
               of use (the &ldquo;Agreement&rdquo;) govern the use and access of
