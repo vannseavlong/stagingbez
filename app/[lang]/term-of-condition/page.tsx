@@ -4,19 +4,23 @@ import { useSearchParams } from "next/navigation";
 
 export default function TermOfCondition() {
   const searchParams = useSearchParams();
-  const embed = searchParams.get('embed');
+  const embed = searchParams.get("embed");
   // console.log('embed: ', embed);
-  const isEmbed = embed === 'true';
+  const isEmbed = embed === "true";
   return (
     <div>
-      <div className={`min-h-screen bg-white flex justify-center py-12 ${isEmbed ? "px-0" : "px-4"} sm:px-6 lg:px-8 font-sans`}>
+      <div
+        className={`min-h-screen bg-white flex justify-center py-12 ${
+          isEmbed ? "px-0" : "px-4"
+        } sm:px-6 lg:px-8 font-sans`}
+      >
         <div className="w-full max-w-4xl  p-8 lg:p-12">
           <header className="border-b pb-6 mb-8">
             <h1 className="text-4xl font-extrabold text-beasy-gradient tracking-tight mb-2">
               TERMS OF USE
             </h1>
             <p className="text-sm text-gray-500 font-medium">
-              Last updated: 4 June 2025
+              Last updated: 27 December 2025
             </p>
           </header>
 
@@ -76,12 +80,12 @@ export default function TermOfCondition() {
             <p className="text-sm italic text-gray-500">
               Suntel&apos;s Privacy Policy located at{" "}
               <a
-                href="https://suntel.io/privacy-policy"
+                href="https://suntel.io/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-indigo-600 hover:text-indigo-800 underline"
               >
-                https://suntel.io/privacy-policy
+                https://suntel.io/privacy
               </a>{" "}
               applies to the use of the Service, and is made a part of these
               Terms by this reference, notwithstanding any contrary statements
@@ -199,12 +203,12 @@ export default function TermOfCondition() {
               read and understood and you agree to Suntel&apos;s privacy policy
               located at{" "}
               <a
-                href="https://suntel.io/privacy-policy"
+                href="https://suntel.io/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-indigo-600 hover:text-indigo-800 underline"
               >
-                https://suntel.io/privacy-policy
+                https://suntel.io/privacy
               </a>
               . You agree to maintain accurate, complete, and updated
               information in your Account. Your failure to maintain accurate,
@@ -431,73 +435,66 @@ export default function TermOfCondition() {
             </h2>
             <p>
               Refund policy is applicable to all modes of payment at the time of
-              purchase. Currently, by cash or Card. Refunds will be typically
-              made in 12 to 24 hours of applicable cancellations. It may take
-              more than 24 hours if any problem persists. Refunds will be
-              credited via mode of payment when making the booking. Refunds will
-              be carried out specified at the timings below:
+              purchase. Currently, by cash, Card, and bWallet credit. Refunds
+              will be typically made in 12 to 24 hours of applicable
+              cancellations. It may take more than 24 hours if any problem
+              persists. Refunds will be credited via mode of payment when making
+              the booking.
             </p>
 
-            <h4 className="text-lg font-bold text-gray-900 mt-4 mb-2">
-              CLEANING
-            </h4>
-            <ol className="list-decimal pl-5 space-y-1">
-              <li>
-                Cancelling 3 Hours or more before time of service you will be
-                refunded 100% of money paid.
-              </li>
-              <li>
-                Cancelling 30 minutes to 3 Hours before time of service you will
-                be refunded 80% of money paid.
-              </li>
-              <li>
-                Cancelling less than 30 minutes before time of service and no
-                show, no refunds given.
-              </li>
-            </ol>
-
-            <h4 className="text-lg font-bold text-gray-900 mt-4 mb-2">
-              MOVING
-            </h4>
-            <ol className="list-decimal pl-5 space-y-1">
-              <li>
-                Cancelling 3 Hours or more before time of service you will be
-                refunded 100% of money paid.
-              </li>
-              <li>
-                Cancelling 30 minutes to 3 Hours before time of service you will
-                be refunded 70% of money paid.
-              </li>
-              <li>
-                Cancelling less than 30 minutes before time of service and no
-                show, no refunds given.
-              </li>
-            </ol>
-
-            <h4 className="text-lg font-bold text-gray-900 mt-4 mb-2">
-              BEAUTY
-            </h4>
-            <ol className="list-decimal pl-5 space-y-1">
-              <li>
-                Cancelling 3 Hours or more before time of service you will be
-                refunded 100% of money paid.
-              </li>
-              <li>
-                Cancelling 30 minutes to 3 Hours before time of service you will
-                be refunded 75% of money paid.
-              </li>
-              <li>
-                Cancelling less than 30 minutes before time of service and no
-                show, no refunds given.
-              </li>
-            </ol>
-
-            {/* SECTION 7: LICENSED CLEANING COMPANIES */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
               id="section-7"
             >
-              7. LICENSED CLEANING COMPANIES
+              7. CANCELLATION/RESCHEDULING
+            </h2>
+            <p>
+              Once a booking is confirmed through our App, cancellations are
+              strictly not permitted. We do not provide refunds, credits, or any
+              other form of compensation in the event that you wish to cancel a
+              booking.
+            </p>
+            <p>
+              You may request to reschedule a confirmed booking subject to these
+              Terms. You may reschedule your booking through the App up to
+              twenty-four (24) hours prior to the scheduled service time. Each
+              booking may only be rescheduled a maximum of two (2) times, and
+              any new service date selected must fall within one (1) month from
+              the original scheduled service date.
+            </p>
+            <p>
+              If you wish to reschedule within twenty-four (24) hours of the
+              scheduled service time, you are required to contact our Customer
+              Service team. Any rescheduling within this period will be at our
+              sole discretion, and will depend on service provider availability
+              and any applicable charges that may be imposed. We do not
+              guarantee that a rescheduling request within this timeframe will
+              be accommodated.
+            </p>
+            <p>
+              If you do not attend the scheduled service and do not reschedule
+              the booking in accordance with this policy, the booking will be
+              treated as a no-show. In such circumstances, all amounts paid will
+              be forfeited and no refund, rescheduling, or credit will be
+              provided.
+            </p>
+            <p>
+              Your entitlement to reschedule a booking will lapse if you do not
+              reschedule within one (1) month from the original scheduled
+              service date, or if the booking has already been rescheduled two
+              (2) times. In such cases, the booking will be deemed completed and
+              no further rescheduling, refund, or credit will be granted. All
+              rescheduling is strictly subject to the availability of our
+              service providers, and we do not guarantee the availability of any
+              specific date, time, or service provider.
+            </p>
+
+            {/* SECTION 7: LICENSED CLEANING COMPANIES */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-8"
+            >
+              8. LICENSED CLEANING COMPANIES
             </h2>
             <p>
               If you are a service provider for Suntel and the Service, you
@@ -519,9 +516,9 @@ export default function TermOfCondition() {
             {/* SECTION 8: COMPLAINT RESOLUTION */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
-              id="section-8"
+              id="section-9"
             >
-              8. COMPLAINT RESOLUTION
+              9. COMPLAINT RESOLUTION
             </h2>
             <p>
               Suntel will do its utmost best to ensure a smooth and satisfactory
@@ -570,9 +567,9 @@ export default function TermOfCondition() {
             {/* SECTION 9: DISPUTE RESOLUTION; GOVERNING LAW */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
-              id="section-9"
+              id="section-10"
             >
-              9. DISPUTE RESOLUTION; GOVERNING LAW
+              10. DISPUTE RESOLUTION; GOVERNING LAW
             </h2>
             <p>
               Any disputes arising from the interpretation and performance of

@@ -168,10 +168,10 @@ export default function TelegramChatButton({
   if (!isVisible || isEmbedMode) return null;
 
   return (
-    <div className="fixed bottom-5 right-5 z-[1000] flex items-center space-x-3 animate-in slide-in-from-right-5 duration-500">
+    <div className="fixed bottom-5 right-5 z-1000 flex items-center space-x-3 animate-in slide-in-from-right-5 duration-500">
       {/* Telegram Message Box (Hidden on small screens) */}
       <div className="block">
-        <div className="relative bg-white text-[#102C90] p-3 rounded-xl shadow-lg text-sm max-w-[200px] sm:max-w-[260px] z-10">
+        <div className="relative bg-white text-[#102C90] p-3 rounded-xl shadow-lg text-sm max-w-50 sm:max-w-65 z-10">
           {t("telegram.message", fallbackTelegramMessage)}
 
           {/* ARROW SIMULATION (Equivalent to ::after) */}
