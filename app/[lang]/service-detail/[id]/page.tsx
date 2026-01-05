@@ -10,7 +10,7 @@ import serviceDetailKm from "@/app/translations/Khmer/serviceDetail.json";
 import serviceDetailZh from "@/app/translations/Chinese/serviceDetail.json";
 import serviceDetailAboutEn from "@/app/translations/English/serviceDetailAbout.json";
 // import HowItWorkBlog from "@/app/components/sections/HowItWorkBlog";
-import FAQSection from "@/app/components/sections/FAQSection";
+import FAQServiceDetail from "@/app/components/sections/faq-service-detail";
 import InstallSection from "@/app/components/sections/InstallAppSection";
 import { ContainWrapper } from "@/app/components/layout";
 
@@ -184,7 +184,7 @@ export default async function ServiceDetailPage({ params }: { params: any }) {
 
           {/* FAQ */}
           <ContainWrapper>
-            <FAQSection />
+            <FAQServiceDetail serviceKey={String(currentId)} />
           </ContainWrapper>
 
           {/* Install app section */}

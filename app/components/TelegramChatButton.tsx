@@ -42,7 +42,16 @@ export default function TelegramChatButton({
   const [isVisible, setIsVisible] = useState(false); // Start hidden
   const [shouldShow, setShouldShow] = useState(false); // Controls when to show
   const [isInContactSection, setIsInContactSection] = useState(false);
+  const [isEmbedMode, setIsEmbedMode] = useState(false);
   const hideTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Check for embed=true query parameter
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setIsEmbedMode(params.get("embed") === "true");
+    }
+  }, []);
 
   // Detect scroll percentage
   useEffect(() => {
@@ -156,7 +165,7 @@ export default function TelegramChatButton({
     }
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible || isEmbedMode) return null;
 
   return (
     <div className="fixed bottom-5 right-5 z-[1000] flex items-center space-x-3 animate-in slide-in-from-right-5 duration-500">

@@ -70,6 +70,9 @@ import aboutUsZh from "@/app/translations/Chinese/aboutUs.json";
 import seenOnEn from "@/app/translations/English/seenOn.json";
 import seenOnKm from "@/app/translations/Khmer/seenOn.json";
 import seenOnZh from "@/app/translations/Chinese/seenOn.json";
+import faqServiceDetailEn from "@/app/translations/English/faq-service-detail.json";
+import faqServiceDetailKm from "@/app/translations/Khmer/faq-service-detail.json";
+import faqServiceDetailZh from "@/app/translations/Chinese/faq-service-detail.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
@@ -94,6 +97,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     // serviceDetailAbout contains per-service 'about' entries keyed by id
     serviceDetailAbout: serviceDetailAboutEn || {},
     seenOn: seenOnEn,
+    faqServiceDetail: faqServiceDetailEn || {},
   },
   Khmer: {
     navbar: navbarKm,
@@ -115,6 +119,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     // serviceDetailAbout contains per-service 'about' entries keyed by id
     serviceDetailAbout: serviceDetailAboutKm || {},
     seenOn: seenOnKm,
+    faqServiceDetail: faqServiceDetailKm || {},
   },
   Chinese: {
     navbar: navbarZh,
@@ -136,6 +141,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     // serviceDetailAbout contains per-service 'about' entries keyed by id
     serviceDetailAbout: serviceDetailAboutZh || {},
     seenOn: seenOnZh,
+    faqServiceDetail: faqServiceDetailZh || {},
   },
 };
 
