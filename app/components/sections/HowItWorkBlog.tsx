@@ -36,7 +36,7 @@ export default function HowItWorkBlog() {
               {header.title || "Effortless Clean, Every Time"}
             </h1>
 
-            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-0 font-sans">
+            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-0 lg:mb-20 font-sans">
               {header.description ||
                 "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
             </p>
@@ -44,7 +44,7 @@ export default function HowItWorkBlog() {
         </header>
 
         {/* Scrollytelling body (desktop and mobile variants) */}
-        <section className="-mt-16">
+        <section className="-mt-16 lg:mt-0">
           {/* Prepare slides data once */}
           {(() => {
             const slides = items.map((item: any) => {

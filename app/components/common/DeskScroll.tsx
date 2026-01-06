@@ -28,7 +28,7 @@ export function DeskScroll({ items }: DeskScrollProps) {
       style={{ height: `${items.length * 100}vh` }}
     >
       {/* Sticky grid container holding BOTH columns */}
-      <div className="sticky top-0 grid h-screen items-center gap-2 lg:grid-cols-2 lg:gap-4 px-4">
+      <div className="sticky top-20 grid h-screen items-center gap-2 lg:grid-cols-2 lg:gap-4 px-4">
         {/* Left Side - Text Steps */}
         <div className="relative h-full py-0">
           {items.map((item, index) => {
@@ -51,7 +51,7 @@ export function DeskScroll({ items }: DeskScrollProps) {
 
         {/* Right Side - Images */}
         <div className="relative h-full items-center flex">
-          <div className="relative h-[500px] w-full">
+          <div className="relative h-[420px] w-full">
             {items.map((item, index) => {
               const start = index / items.length;
               const end = (index + 1) / items.length;

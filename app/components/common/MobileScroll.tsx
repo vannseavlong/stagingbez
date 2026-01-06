@@ -28,7 +28,7 @@ export function MobileScroll({ items }: MobileScrollProps) {
       style={{ height: `${items.length * 120}vh` }}
     >
       {/* Sticky container that holds both text and image */}
-      <div className="sticky top-[10vh] h-[80vh] flex flex-col items-center justify-center px-4 py-0">
+      <div className="sticky top-[14vh] h-[80vh] flex flex-col items-center justify-center px-4 py-0">
         {/* Text area - sticky, replacing content */}
         <div className="w-full max-w-3xl mb-6">
           <div className="relative min-h-[140px] flex items-center justify-center">
@@ -50,7 +50,7 @@ export function MobileScroll({ items }: MobileScrollProps) {
         </div>
 
         {/* Image area - sticky, replacing content */}
-        <div className="w-full max-w-xl flex-1 max-h-[50vh]">
+        <div className="w-full max-w-xl flex-1 max-h-[45vh]">
           <div className="relative w-full h-full rounded-2xl overflow-hidden">
             {items.map((item, index) => {
               const startProgress = index / items.length;

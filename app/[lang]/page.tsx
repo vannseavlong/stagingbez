@@ -25,11 +25,15 @@ export default function Home() {
           <SeenOnSection />
         </section>
         {/* The rest of the page is constrained to a centered container */}
-        <ContainWrapper>
+        {/* <ContainWrapper>
           <section id="service">
             <ServiceSection />
           </section>
-        </ContainWrapper>
+        </ContainWrapper> */}
+
+        <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16">
+          <ServiceSection />
+        </div>
 
         <section id="why-us">
           <AboutUsSection />
@@ -78,7 +82,7 @@ export default function Home() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-0 lg:pt-0">
+      <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
         {children}
       </div>
     </div>
