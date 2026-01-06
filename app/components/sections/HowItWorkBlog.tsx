@@ -2,9 +2,8 @@
 
 import { useMemo } from "react";
 import { useTranslate } from "@/app/hooks/useTranslate";
-import { ScrollytellingSection } from "@/app/components/common/ScrollytellingSection";
-import { MobileScrollytelling } from "@/app/components/common/MobileScrollytelling";
-// import { ScrollytellingSection } from "../common/ScrollytellingSection";
+import { DeskScroll } from "@/app/components/common/DeskScroll";
+import { MobileScroll } from "@/app/components/common/MobileScroll";
 
 export default function HowItWorkBlog() {
   const { getSection, languageFolder } = useTranslate();
@@ -16,11 +15,11 @@ export default function HowItWorkBlog() {
   );
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-visible">
       {/* Centered container to match other sections */}
-      <div className="max-w-[1440px]">
+      <div className="max-w-[1440px] overflow-visible">
         {/* Header */}
-        <header className="pt-0 pb-8 mb-0 lg:mb-20 min-[1200px]:mb-24 min-[1440px]:mb-28 transition-all duration-300 text-center overflow-x-hidden">
+        <header className="pt-0 mb-0 transition-all duration-300 text-center">
           <div>
             <div
               className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
@@ -37,7 +36,7 @@ export default function HowItWorkBlog() {
               {header.title || "Effortless Clean, Every Time"}
             </h1>
 
-            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-24 font-sans">
+            <p className="text-[16px] md:text-[18px] font-medium text-[#1a1a1a] max-w-2xl mx-auto mb-0 font-sans">
               {header.description ||
                 "Book using our app in just a few taps, and enjoy a spotless home without lifting a finger."}
             </p>
@@ -45,8 +44,7 @@ export default function HowItWorkBlog() {
         </header>
 
         {/* Scrollytelling body (desktop and mobile variants) */}
-        {/* Add top padding to prevent sticky mock from overlapping header */}
-        <section className="py-6 pt-0 lg:pt-32">
+        <section className="-mt-16">
           {/* Prepare slides data once */}
           {(() => {
             const slides = items.map((item: any) => {
@@ -72,15 +70,14 @@ export default function HowItWorkBlog() {
 
             return (
               <>
-                {/* Desktop: flip-story teller (replaces ScrollytellingSection) */}
+                {/* Desktop: scrollytelling with framer-motion */}
                 <div className="hidden lg:block">
-                  {/* Desktop: classic scrollytelling section */}
-                  <ScrollytellingSection items={slides} />
+                  <DeskScroll items={slides} />
                 </div>
 
-                {/* Mobile/Tablet: simplified sticky scrollytelling */}
+                {/* Mobile/Tablet: sticky scrollytelling with framer-motion */}
                 <div className="lg:hidden">
-                  <MobileScrollytelling slides={slides} />
+                  <MobileScroll items={slides} />
                 </div>
               </>
             );
