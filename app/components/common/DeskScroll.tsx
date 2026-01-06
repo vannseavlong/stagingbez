@@ -28,7 +28,7 @@ export function DeskScroll({ items }: DeskScrollProps) {
       style={{ height: `${items.length * 100}vh` }}
     >
       {/* Sticky grid container holding BOTH columns */}
-      <div className="sticky top-20 grid h-screen items-center gap-2 lg:grid-cols-2 lg:gap-4 px-4">
+      <div className="sticky top-20 grid h-[80vh] items-center gap-2 lg:grid-cols-2 lg:gap-4 px-4">
         {/* Left Side - Text Steps */}
         <div className="relative h-full py-0">
           {items.map((item, index) => {
