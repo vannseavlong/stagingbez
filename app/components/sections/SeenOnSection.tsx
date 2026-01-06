@@ -33,14 +33,15 @@ const SeenOnSection: React.FC = () => {
 
   return (
     <section className="w-full bg-white m-0 p-0">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 pt-8 lg:pt-16">
+      <div className="max-w-360 mx-auto px-6 sm:px-8 lg:px-16 pt-8 lg:pt-16">
         <div className="flex flex-row items-center w-full max-[600px]:flex-col max-[600px]:items-center">
           <div
-            className="text-[#b0b0b0] text-2xl font-semibold mb-0 mr-12 text-left whitespace-nowrap
+            className="text-[#1A1A1A] text-2xl font-semibold mb-0 mr-12 text-left whitespace-nowrap
             max-[900px]:mr-8
             md:text-center md:mb-0 md:mr-8
             max-[900px]:text-center max-[900px]:w-full
-            max-[600px]:text-center max-[600px]:text-[1.5rem] max-[600px]:mb-4 max-[600px]:mr-0"
+            max-[600px]:text-center max-[600px]:text-[1.25rem] max-[600px]:mb-4 max-[600px]:mr-0
+            max-[480px]:text-[1rem]"
             style={{ width: "fit-content" }}
           >
             {header.title}
@@ -59,7 +60,10 @@ const SeenOnSection: React.FC = () => {
                   alt={item.alt}
                   width={220}
                   height={60}
-                  className="h-auto w-auto max-w-[220px] max-h-[60px]"
+                  className="h-auto w-auto max-w-55 max-h-15
+                    max-[900px]:max-w-44 max-[900px]:max-h-12
+                    max-[600px]:max-w-36 max-[600px]:max-h-10
+                    max-[480px]:max-w-28 max-[480px]:max-h-8"
                 />
               </a>
             ))}

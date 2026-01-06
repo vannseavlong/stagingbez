@@ -78,7 +78,7 @@ export default function Home() {
 const ContainWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-white">
-      <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-30 lg:pt-40">
+      <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-0 lg:pt-0">
         {children}
       </div>
     </div>
