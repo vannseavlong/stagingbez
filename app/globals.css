@@ -167,10 +167,12 @@
   }
 
   /* Prevent horizontal scroll caused by elements using 100vw or negative margins
-     while keeping vertical scrolling intact. */
-  html, body {
+     IMPORTANT: overflow-x on html/body breaks position: sticky!
+     Only apply to body, not html */
+  body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: auto;
   }
 
   body {

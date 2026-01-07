@@ -25,11 +25,15 @@ export default function Home() {
           <SeenOnSection />
         </section>
         {/* The rest of the page is constrained to a centered container */}
-        <ContainWrapper>
+        {/* <ContainWrapper>
           <section id="service">
             <ServiceSection />
           </section>
-        </ContainWrapper>
+        </ContainWrapper> */}
+
+        <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16">
+          <ServiceSection />
+        </div>
 
         <section id="why-us">
           <AboutUsSection />
@@ -45,11 +49,17 @@ export default function Home() {
             <HowItWorkBlog />
           </section>
         </ContainWrapper>
-        <ContainWrapper>
+        {/* <ContainWrapper>
           <section id="testimonials">
             <TestimonialSection />
           </section>
-        </ContainWrapper>
+        </ContainWrapper> */}
+        <div className="bg-white">
+          <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16 pt-15 lg:pt-20">
+            <TestimonialSection />
+          </div>
+        </div>
+
         <ContainWrapper>
           <section id="faq">
             <FAQSection />

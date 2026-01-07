@@ -174,10 +174,10 @@ const Service = () => {
   };
 
   return (
-    <section className="bg-white py-0 lg:pt-16 text-white relative overflow-hidden">
+    <section className="bg-white py-0 lg:pt-0 text-white relative overflow-hidden">
       <div className="max-w-full lg:max-w-[1440px] lg:mx-auto">
         {/* Header */}
-        <div className="mb-5 mt-10">
+        <div className="mb-5 pt-[80px]">
           <div className="flex items-center text-beasy-gradient mb-4 lg:mb-4 md:mb-4">
             <h5 className="text-base font-bold leading-[32px] tracking-zero text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
               {serviceSection.header?.subtitle}
