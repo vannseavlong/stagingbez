@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Sitemap for production
+Sitemap: https://beasy.info/sitemap.xml
