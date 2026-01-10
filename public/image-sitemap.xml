@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage with logo and hero images -->
+  <url>
+    <loc>https://beasy.info/</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/bEasy_logo.webp</image:loc>
+      <image:caption>bEasy Cambodia cleaning and pest control services logo</image:caption>
+      <image:title>bEasy Cambodia Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/hero/PC_bCombos_EN.webp</image:loc>
+      <image:caption>bEasy combo cleaning and pest control services in Phnom Penh</image:caption>
+      <image:title>bEasy Combo Services</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/hero/PC_Web_Luxury_Eng.webp</image:loc>
+      <image:caption>Premium luxury cleaning service in Phnom Penh Cambodia</image:caption>
+      <image:title>Luxury Cleaning Experience</image:title>
+    </image:image>
+  </url>
+
+  <!-- Khmer language pages -->
+  <url>
+    <loc>https://beasy.info/km</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/hero/PC_bCombos_KH.webp</image:loc>
+      <image:caption>សេវាលាងសម្អាត និង ទប់ស្កាត់សត្វល្អិត ភ្នំពេញ</image:caption>
+      <image:title>bEasy កញ្ចប់សេវា</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/hero/PC_Web_Luxury_KH.webp</image:loc>
+      <image:caption>សេវាលាងសម្អាតថ្នាក់ប្រណីត ភ្នំពេញ</image:caption>
+      <image:title>បទពិសោធន៍លាងសម្អាតប្រណីត</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services - Cleaning -->
+  <url>
+    <loc>https://beasy.info/services/cleaning</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/general.webp</image:loc>
+      <image:caption>General cleaning service for homes and offices in Phnom Penh</image:caption>
+      <image:title>General Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/deep.webp</image:loc>
+      <image:caption>Deep cleaning service Phnom Penh - thorough house cleaning</image:caption>
+      <image:title>Deep Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/office.webp</image:loc>
+      <image:caption>Professional office cleaning service in Phnom Penh</image:caption>
+      <image:title>Office Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/AC_cleaning.webp</image:loc>
+      <image:caption>Air conditioner cleaning and maintenance service Phnom Penh</image:caption>
+      <image:title>AC Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/Post_Reno.webp</image:loc>
+      <image:caption>Post-renovation cleaning service - construction cleanup Phnom Penh</image:caption>
+      <image:title>Post-Renovation Cleaning</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/laundry.webp</image:loc>
+      <image:caption>Professional laundry and dry cleaning service Phnom Penh</image:caption>
+      <image:title>Laundry Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/uphol.webp</image:loc>
+      <image:caption>Upholstery and sofa cleaning service in Phnom Penh</image:caption>
+      <image:title>Upholstery Cleaning Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/washing.webp</image:loc>
+      <image:caption>Window and exterior washing service Phnom Penh</image:caption>
+      <image:title>Washing Service</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services - Pest Control -->
+  <url>
+    <loc>https://beasy.info/services/pest-control</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/services/pest.webp</image:loc>
+      <image:caption>Professional pest control service - termite rodent bed bug control Phnom Penh</image:caption>
+      <image:title>Pest Control Service</image:title>
+    </image:image>
+  </url>
+
+  <!-- Media / Press Coverage -->
+  <url>
+    <loc>https://beasy.info/media</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/Seen/FreshNews.webp</image:loc>
+      <image:caption>bEasy Cambodia featured on Fresh News</image:caption>
+      <image:title>Fresh News Coverage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://beasy.info/images/Seen/PP-post.webp</image:loc>
+      <image:caption>bEasy Cambodia featured in Phnom Penh Post</image:caption>
+      <image:title>Phnom Penh Post Coverage</image:title>
+    </image:image>
+  </url>
+
+  <!-- App Screenshots -->
+  <url>
+    <loc>https://beasy.info/install</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/mock-screen_EN.webp</image:loc>
+      <image:caption>bEasy mobile app - book cleaning and pest control services</image:caption>
+      <image:title>bEasy App Screenshot</image:title>
+    </image:image>
+  </url>
+
+  <!-- Location Map -->
+  <url>
+    <loc>https://beasy.info/contact</loc>
+    <image:image>
+      <image:loc>https://beasy.info/images/location.webp</image:loc>
+      <image:caption>bEasy Cambodia office location map - Sangkat Srah Chak Khan Daun Penh Phnom Penh</image:caption>
+      <image:title>Office Location Map</image:title>
+    </image:image>
+  </url>
+
+</urlset>
