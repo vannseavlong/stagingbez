@@ -65,9 +65,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://beasy.info",
     languages: {
-      "en-US": "/en",
-      km: "/km",
+      "en-US": "https://beasy.info/en",
+      km: "https://beasy.info/km",
     },
+    // default language fallback
+    media: undefined,
+    // add x-default as recommended
+    // Note: Next.js metadata API does not have a direct x-default field; we'll also add explicit link tags in head via layout if needed.
   },
 };
 
@@ -151,6 +155,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Remove global canonical here so individual pages can set their own canonical URLs.
+            Global canonical causes all pages to point to the homepage which harms SEO.
+            Keep hreflang/alternate links, but use JSX-correct attribute `hrefLang`. */}
+        <link rel="alternate" href="https://beasy.info/en" hrefLang="en-US" />
+        <link rel="alternate" href="https://beasy.info/km" hrefLang="km" />
+        <link rel="alternate" href="https://beasy.info" hrefLang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
