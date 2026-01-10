@@ -96,8 +96,56 @@ export default function RootLayout({
       longitude: "104.9282",
     },
     openingHours: "Mo-Su 08:00-20:00",
-    image: ["https://beasy.info/images/Browser_logo.png?v=2"],
-    logo: "https://beasy.info/images/Browser_logo.png?v=2",
+    image: [
+      "https://beasy.info/images/bEasy_logo.webp",
+      "https://beasy.info/images/services/general.webp",
+      "https://beasy.info/images/services/pest.webp",
+      "https://beasy.info/images/hero/PC_bCombos_EN.webp",
+    ],
+    logo: "https://beasy.info/images/bEasy_logo.webp",
+    priceRange: "$$",
+    areaServed: {
+      "@type": "City",
+      name: "Phnom Penh",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cleaning and Pest Control Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "House Cleaning Service",
+            description: "Professional house cleaning service in Phnom Penh",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Office Cleaning Service",
+            description: "Commercial office cleaning service",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Pest Control Service",
+            description: "Termite, rodent, and insect pest control",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Deep Cleaning Service",
+            description: "Thorough deep cleaning for homes and offices",
+          },
+        },
+      ],
+    },
   };
 
   return (
