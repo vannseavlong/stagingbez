@@ -49,7 +49,6 @@ export default function ProtectedImage({
 
   const imageStyle = {
     ...style,
-    pointerEvents: "none" as const,
     userSelect: "none" as const,
     WebkitUserSelect: "none" as const,
     MozUserSelect: "none" as const,
@@ -99,17 +98,6 @@ export default function ProtectedImage({
           onDragStart={handleDragStart}
         />
       )}
-      {/* Transparent overlay to prevent direct image interaction */}
-      <div
-        className="absolute inset-0 z-10"
-        style={{
-          background: "transparent",
-          pointerEvents: "auto",
-          userSelect: "none",
-        }}
-        onContextMenu={handleContextMenu}
-        onDragStart={handleDragStart}
-      />
     </div>
   );
 }
