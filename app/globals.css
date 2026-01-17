@@ -311,7 +311,6 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
-  pointer-events: none;
 }
 
 /* Allow pointer events on protected image wrapper while keeping images protected */
@@ -321,7 +320,6 @@ img {
 }
 
 .protected-image-wrapper img {
-  pointer-events: none;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Safari */
   -khtml-user-select: none;    /* Konqueror HTML */
@@ -330,26 +328,4 @@ img {
   user-select: none;           /* Non-prefixed version */
 }
 
-/* Prevent text selection on the entire body (optional - can be removed if you want text selection) */
-body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Allow text selection on specific elements */
-p, span, div, article, section, h1, h2, h3, h4, h5, h6, li, td, th, input, textarea, button {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-  pointer-events: auto;
-}
-
-/* Ensure interactive elements work properly */
-a, button, input, textarea, select {
-  pointer-events: auto;
-}
+/* Removed body-level restrictions - all elements are fully interactive by default */
