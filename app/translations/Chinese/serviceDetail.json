@@ -463,12 +463,12 @@
     "banner": {
       "title": "翻新后清洁服务",
       "description": "刚翻新完？通过我们的应用程序在金边预订翻新后清洁服务。我们清除灰尘、油漆和碎屑，让您的空间准备就绪，可以入住。",
-      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
+      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero1.webp",
       "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/Post_Reno.webp",
+      "imageSrc": "/images/serviceDetail/Renovate/Reno-Task.webp",
       "title": "您的清洁任务包括哪些？",
       "description": "PLACEHOLDER - 替换为服务 ID 7 的完整描述。",
       "subtitle": "流程信息"

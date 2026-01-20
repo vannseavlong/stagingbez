@@ -53,7 +53,7 @@ export default async function LangLayout({
   const fontWrapperClass = lang === "km" ? "font-kantumruy" : "font-inter";
 
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage={lang}>
       <div className={fontWrapperClass}>
         <Suspense fallback={null}>
           <SiteNav />

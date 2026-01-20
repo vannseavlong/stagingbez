@@ -23,7 +23,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 const AVAILABLE_LANGUAGES: Language[] = [
@@ -47,10 +47,18 @@ const AVAILABLE_LANGUAGES: Language[] = [
   },
 ];
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: {
+  children: ReactNode;
+  initialLanguage?: string;
+}) {
   const pathname = usePathname();
   const router = useRouter();
-  const [currentLanguageCode, setCurrentLanguageCode] = useState("en");
+  const [currentLanguageCode, setCurrentLanguageCode] = useState(
+    initialLanguage || "en",
+  );
 
   // Detect language from URL pathname
   useEffect(() => {

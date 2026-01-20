@@ -462,12 +462,12 @@
     "banner": {
       "title": "Post Renovation Cleaning Service",
       "description": "Just renovated? Book a post-renovation cleaning in Phnom Penh through our app. We clear dust, paint, and debris to make your space move-in ready.",
-      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero.webp",
+      "landscape": "/images/serviceDetail/Renovate/Renovate_Hero1.webp",
       "portrait": "/images/serviceDetail/Renovate/Renovate_Hero_Mobile.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/services/Post_Reno.webp",
+      "imageSrc": "/images/serviceDetail/Renovate/Reno-Task.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 7.",
       "subtitle": "Information of procedure"
