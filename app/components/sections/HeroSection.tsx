@@ -16,12 +16,14 @@ export default function HeroSection() {
   const sectionAData = getSection("sectionA") as {
     hero?: Slide;
     promotions?: Slide[];
+    cny2026?: Slide[];
   };
 
   // Get slides from translation JSON (hero + promotions)
   const slides = [
     sectionAData?.hero,
     ...(sectionAData?.promotions || []),
+    ...(sectionAData?.cny2026 ||[]),
   ].filter(Boolean) as Slide[];
 
   // Tailwind Classes for the Hero Banner

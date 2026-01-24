@@ -11,5 +11,12 @@
       "image_landscape": "/images/hero/PC_Web_Luxury_KH.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_KH.webp"
     }
-  ]
+  ],
+    "cny2026": [
+      {
+    "title": "Celebrate CNY 2026 with bEasy",
+    "image_landscape": "/images/hero/CNY-Km.webp",
+    "image_vertical": "/images/hero/CNY-Km-Mobile.webp"
+  }
+]
 }
