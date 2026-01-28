@@ -14,16 +14,18 @@ interface Slide {
 export default function HeroSection() {
   const { getSection } = useTranslate();
   const sectionAData = getSection("sectionA") as {
+    cny2026?: Slide[];
     hero?: Slide;
     promotions?: Slide[];
-    cny2026?: Slide[];
+    
   };
 
   // Get slides from translation JSON (hero + promotions)
   const slides = [
+    ...(sectionAData?.cny2026 ||[]),
     sectionAData?.hero,
     ...(sectionAData?.promotions || []),
-    ...(sectionAData?.cny2026 ||[]),
+    
   ].filter(Boolean) as Slide[];
 
   // Tailwind Classes for the Hero Banner
@@ -33,11 +35,13 @@ export default function HeroSection() {
   return (
     <section className="w-full overflow-hidden bg-white">
       <Swiper
+        key={slides.map((s) => s.image_landscape || s.image_vertical || s.title).join("|")}
         modules={[Navigation, Autoplay, Pagination]}
         navigation={true}
         pagination={{ clickable: true }}
         autoplay={{ delay: 7000, disableOnInteraction: false }}
         loop={slides.length > 1}
+        initialSlide={0}
         // Use a utility class for base Swiper styling, or just the default Swiper class
         className="w-full"
       >
