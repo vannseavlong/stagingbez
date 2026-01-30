@@ -1,18 +1,16 @@
-
 "use client";
 
-import { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import MediaCard from "../common/mediaCard";
 // import { Button } from "../ui/button";
 import { useLanguage } from "@/app/contexts/LanguageContext";
-import { mediaItems as mediaItemsFallback } from "../../../data/mediaItem";
 import { useTranslate } from "@/app/hooks/useTranslate";
+import { sortByLatest } from "@/lib/utils";
 
 export default function HomeMedia() {
-  const [expanded, setExpanded] = useState(false);
   const { currentLanguageCode } = useLanguage();
-  const { getSection } = useTranslate();
+  const { getSection, t } = useTranslate();
 
 
   const mediaSection = getSection("media") as {
@@ -27,20 +25,24 @@ export default function HomeMedia() {
     }>;
   };
 
-  const items = Array.isArray(mediaSection.articles)
-    ? mediaSection.articles
-    : mediaItemsFallback;
-
-  const itemsToShow = expanded ? items : items.slice(0, 4);
+  const items = Array.isArray(mediaSection.articles) ? mediaSection.articles : [];
+  const itemsToShow = sortByLatest(items as any) as typeof items;
 
   return (
     <section className="bg-white relative min-h-full md:py-20 lg:py-4 py-15">
       {/* Section Heading */}
       <div className="text-left mb-5 lg:mb-0 md:mb-0 gap-1">
         <div className="flex items-center mb-4 md:mb-4 lg:mb-4">
-          <h5 className="text-base font-bold tracking-[4px] text-beasy-gradient opacity-80 mr-4">
-            {mediaSection.header?.media || "Media"}
-          </h5>
+          <span
+            className="text-[16px] md:text-[16px] font-bold uppercase leading-8 tracking-wide font-sans mr-4 inline-block"
+            style={{
+              background: "linear-gradient(90deg,#1B4CFA,#102C90)",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            {t("media.header.media", mediaSection.header?.media || "Media")}
+          </span>
         </div>
         <h2 className="text-[24px] md:text-[32px] font-bold text-black ">
           {mediaSection.header?.ReadLatest || "Read Our Latest Articles"}
@@ -75,8 +77,7 @@ export default function HomeMedia() {
           </Link>
         ))}
       </div>
+      
     </section>
   );
 }
-
-// commit
