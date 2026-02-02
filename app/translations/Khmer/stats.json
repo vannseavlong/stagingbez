@@ -1,0 +1,32 @@
+{
+  "header": {
+    "subtitle": "ស្ថិតិ",
+    "title": "តួលេខរបស់សេវាកម្មយើង"
+  },
+  "items": [
+    {
+      "key": "customers",
+      "icon": "users",
+      "value": "១០,០០០+",
+      "label": "អតិថិជនសប្បាយរីករាយ"
+    },
+    {
+      "key": "services",
+      "icon": "check",
+      "value": "៥០,០០០+",
+      "label": "សេវាកម្មបានបញ្ចប់"
+    },
+    {
+      "key": "experience",
+      "icon": "clock",
+      "value": "៥+",
+      "label": "ឆ្នាំបទពិសោធន៍"
+    },
+    {
+      "key": "rating",
+      "icon": "star",
+      "value": "៤.៩",
+      "label": "ការវាយតម្លៃជាមធ្យម"
+    }
+  ]
+}
