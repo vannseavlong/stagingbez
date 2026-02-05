@@ -7,19 +7,19 @@
     {
       "key": "customers",
       "icon": "users",
-      "value": "10,000+",
+      "value": "2000+",
       "label": "满意客户"
     },
     {
       "key": "services",
       "icon": "check",
-      "value": "50,000+",
+      "value": "600+",
       "label": "已完成服务"
     },
     {
       "key": "experience",
       "icon": "clock",
-      "value": "5+",
+      "value": "3+",
       "label": "年经验"
     },
     {
