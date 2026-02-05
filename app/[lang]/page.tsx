@@ -10,6 +10,7 @@ import TestimonialSection from "../components/sections/TestimonialSection";
 import CompareSection from "../components/sections/CompareSection";
 import HowItWorkBlog from "../components/sections/HowItWorkBlog";
 import HomeMedia from "../components/sections/homeMedia";
+import Stats from "../components/sections/Stats";
 // import Media from "../components/sections/mediaSection";
 
 export default function Home() {
@@ -33,6 +34,12 @@ export default function Home() {
 
         <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16">
           <ServiceSection />
+        </div>
+
+        <div className="lg:max-w-360 lg:mx-auto px-6 sm:px-8 lg:px-16">
+          <section id="stats">
+            <Stats />
+          </section>
         </div>
 
         <section id="why-us">

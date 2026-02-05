@@ -1,0 +1,32 @@
+{
+  "header": {
+    "subtitle": "我们的影响",
+    "title": "数字说明一切"
+  },
+  "items": [
+    {
+      "key": "customers",
+      "icon": "users",
+      "value": "2000+",
+      "label": "满意客户"
+    },
+    {
+      "key": "services",
+      "icon": "check",
+      "value": "600+",
+      "label": "已完成服务"
+    },
+    {
+      "key": "experience",
+      "icon": "clock",
+      "value": "3+",
+      "label": "年经验"
+    },
+    {
+      "key": "rating",
+      "icon": "star",
+      "value": "4.9",
+      "label": "平均评分"
+    }
+  ]
+}

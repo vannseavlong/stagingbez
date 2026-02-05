@@ -1,0 +1,32 @@
+{
+  "header": {
+    "subtitle": "OUR IMPACT",
+    "title": "Numbers That Speak For Themselves"
+  },
+  "items": [
+    {
+      "key": "customers",
+      "icon": "users",
+      "value": "2000+",
+      "label": "Happy Customers"
+    },
+    {
+      "key": "services",
+      "icon": "check",
+      "value": "600+",
+      "label": "Services Completed"
+    },
+    {
+      "key": "experience",
+      "icon": "clock",
+      "value": "3+",
+      "label": "Years Experience"
+    },
+    {
+      "key": "rating",
+      "icon": "star",
+      "value": "4.9",
+      "label": "Average Rating"
+    }
+  ]
+}

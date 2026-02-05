@@ -73,6 +73,9 @@ import seenOnZh from "@/app/translations/Chinese/seenOn.json";
 import faqServiceDetailEn from "@/app/translations/English/faq-service-detail.json";
 import faqServiceDetailKm from "@/app/translations/Khmer/faq-service-detail.json";
 import faqServiceDetailZh from "@/app/translations/Chinese/faq-service-detail.json";
+import statsEn from "@/app/translations/English/stats.json";
+import statsKm from "@/app/translations/Khmer/stats.json";
+import statsZh from "@/app/translations/Chinese/stats.json";
 
 const translations: Record<string, Record<string, TranslationObject>> = {
   English: {
@@ -98,6 +101,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     serviceDetailAbout: serviceDetailAboutEn || {},
     seenOn: seenOnEn,
     faqServiceDetail: faqServiceDetailEn || {},
+    stats: statsEn || {},
   },
   Khmer: {
     navbar: navbarKm,
@@ -120,6 +124,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     serviceDetailAbout: serviceDetailAboutKm || {},
     seenOn: seenOnKm,
     faqServiceDetail: faqServiceDetailKm || {},
+    stats: statsKm || {},
   },
   Chinese: {
     navbar: navbarZh,
@@ -142,6 +147,7 @@ const translations: Record<string, Record<string, TranslationObject>> = {
     serviceDetailAbout: serviceDetailAboutZh || {},
     seenOn: seenOnZh,
     faqServiceDetail: faqServiceDetailZh || {},
+    stats: statsZh || {},
   },
 };
 
