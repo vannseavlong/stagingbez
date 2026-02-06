@@ -10,134 +10,278 @@ const PrivacyPolicy = () => {
               PRIVACY POLICY
             </h1>
             <p className="text-sm text-gray-500 font-medium">
-              Last updated: 8 July 2025
+              Last updated: 5 February 2026
             </p>
           </header>
 
           <section className="space-y-8 text-gray-700 leading-relaxed">
             <p>
-              This Privacy Policy (the &ldquo;Notice&rdquo;) governs the use and
-              access of the bEasy App and Website (as defined below), including
-              any content, functionality and services offered on or through
-              https://beasy.info/ or the bEasy App and Suntel.io (hereinafter
-              referred to as &ldquo;Service&rdquo;) by Suntel Technology
-              Cambodia Co., Limited (hereinafter referred to as
-              &ldquo;Suntel&rdquo;) and its affiliates/subsidiaries with its
-              address at Flatiron by Meridian, FO-2312, FO-2313, FO-2314 Unit,
-              Street 102, Phnom Penh City Center, Phum 1, Sangkat Srah Chak,
-              Khan Daun Penh, Phnom Penh, Cambodia.
+              This Privacy Policy (the &ldquo;Notice&rdquo;) governs the use of
+              and access to all applications, platforms, websites, and digital
+              services operated or provided by Suntel Technology (Cambodia) Co.,
+              Limited (&ldquo;Suntel&rdquo;, &ldquo;we&rdquo;,
+              &ldquo;us&rdquo;, or &ldquo;our&rdquo;), including but not
+              limited to the bEasy application, the bNow messaging application,{" "}
+              <a href="https://beasy.info/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">https://beasy.info/</a>,{" "}
+              <a href="https://suntel.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">https://suntel.io/</a>, and any related services,
+              features, or functionalities (collectively, the
+              &ldquo;Services&rdquo;).
             </p>
 
-            {/* SECTION 1: THE SERVICES */}
+            <p>
+              By accessing, installing, registering for, or using any of the
+              Services, you acknowledge that you have read and understood this
+              Notice and consent to the collection, use, processing, disclosure,
+              and transfer of your Personal Data as described herein.
+            </p>
+
+            {/* SECTION A */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
-              id="section-1"
+              id="section-a"
             >
-              {" "}
-              A. COLLECTION OF PERSONAL DATA
+              A. Collection of Personal Data
             </h2>
 
             <p>
               &ldquo;Personal Data&rdquo; means information about you from which
-              you are identifiable, including but not limited to your name,
-              identification card number, birth certificate number, passport
-              number, nationality, address, telephone number, fax number, bank
-              details, credit card details, race, gender, date of birth, marital
-              status, resident status, education background, financial
-              background, personal interests, email address, your occupation,
-              and any other similar information about you that may be collected,
-              stored, used, and processed by Suntel.
+              you may be identified, including but not limited to your name,
+              identification card number, passport number, nationality, address,
+              telephone number, email address, date of birth, gender,
+              occupation, education background, financial information, banking
+              or payment details, and any other information that has been or may
+              be collected, stored, used, or processed by Suntel from time to
+              time. This may include sensitive personal data such as information
+              relating to health or religious beliefs where required by law or
+              voluntarily provided by you.
             </p>
 
-            <p className="text-base">
-              The provision of your Personal Data is voluntary. However, if you
-              do not provide Suntel with your Personal Data, Suntel will not be
-              able to process your Personal Data for the purposes outlined
-              below. If you are an agent, vendor, supplier, or service provider,
-              the provision of your Personal Data is mandatory and failure to
-              provide it may be a breach of laws or regulatory requirements.
+            <p>
+              For messaging-related services such as bNow, Personal Data may
+              also include account identifiers, device information, contact
+              lists where permission is granted, message metadata (such as
+              timestamps, sender and recipient identifiers, delivery status, and
+              file size), system logs, abuse reports, and security-related
+              information. Suntel does not claim ownership of user
+              communications and does not assume responsibility for the content
+              exchanged between users.
             </p>
 
-            <p className="text-base">
-              By using any service of Suntel or its partners, including all
-              websites operated under its respective brands, your personal data
-              may also be collected from cookies used on the websites.
+            <p>
+              The provision of your Personal Data is voluntary unless otherwise
+              required for the operation of a specific Service. However, failure
+              to provide certain Personal Data may result in our inability to
+              provide some or all features of the Services.
             </p>
 
-            {/* SECTION 2: USAGE OF THE APPLICATION */}
+            {/* SECTION B */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
-              id="section-2"
+              id="section-b"
             >
-              {" "}
-              B. PURPOSE AND USAGE OF INFORMATION
+              B. Purpose and Usage of Information
             </h2>
 
-            <h3 className="text-xl font-semibold text-gray-800">
-              {" "}
-              1. General use:
-            </h3>
-            <ul className="list-disc pl-5 space-y-1 text-base">
-              <li>To respond to your questions, comments, and feedback.</li>
-              <li>
-                To communicate with you for any of the purposes listed in this
-                Notice.
-              </li>
-              <li>
-                For internal administrative purposes, such as auditing, data
-                analysis, and maintaining database records.
-              </li>
-              <li>
-                For purposes of detection, prevention, and prosecution of crime.
-              </li>
-              <li>
-                For Suntel to comply with its obligations under the law, and you
-                agree and consent to Suntel using and processing your Personal
-                Data as described in this Notice.
-              </li>
-            </ul>
+            <p>
+              Suntel collects, uses, and processes Personal Data for legitimate
+              business purposes, including but not limited to responding to
+              inquiries, providing and maintaining the Services, managing
+              accounts, enabling communication features, facilitating customer
+              support, performing internal administration, auditing, system
+              monitoring, data analysis, fraud prevention, security enforcement,
+              and compliance with applicable laws and regulations.
+            </p>
 
-            {/* SECTION 3: PAYMENT */}
+            <p>
+              For messaging services, Personal Data may be used to enable
+              message routing, delivery, synchronization across devices, abuse
+              prevention, system integrity, enforcement of Terms of Use, and
+              investigation of suspected violations. You acknowledge that
+              messaging services involve technical processing that may include
+              temporary storage, transmission, or duplication for operational
+              and security purposes.
+            </p>
+
+            <p>
+              Where you are a customer of Suntel&apos;s Services, your Personal
+              Data may be used to process subscriptions, payments, downloads,
+              service requests, participation in events or promotions, and to
+              improve or enhance our products and offerings.
+            </p>
+
+            <p>
+              Where you act as an agent, vendor, supplier, partner, contractor,
+              or service provider, your Personal Data may be used to facilitate
+              engagement, verification, compliance checks, communication, and
+              payment processing.
+            </p>
+
+            <p>
+              Suntel may also process Personal Data for marketing and
+              promotional purposes, including sending updates, newsletters,
+              alerts, or invitations, unless you have opted out where such
+              option is required by law.
+            </p>
+
+            {/* SECTION C */}
             <h2
               className="text-2xl font-bold text-gray-900 pt-4"
-              id="section-3"
+              id="section-c"
             >
-              2. Customers of Suntel services:
+              C. Accessibility, Disclosure, and Transfers of Personal Data
             </h2>
-            <ul className="list-disc pl-5 space-y-1 text-base">
-              <li>
-                To perform Suntel&apos;s obligations under any contract entered
-                into with you.
-              </li>
-              <li>To provide you with any service you have requested.</li>
-              <li>To process your subscriptions and deliver the services.</li>
-              <li>
-                To process your request to download and use the Suntel
-                Applications (&ldquo;App&rdquo;), deliver the App to you, and
-                provide a license for its use.
-              </li>
-              <li>
-                To manage your participation in events, promotions, surveys, or
-                other marketing activities.
-              </li>
-              <li>
-                To verify your application for subscription with Suntel and
-                provide benefits offered to subscribers.
-              </li>
-              <li>
-                To validate your bookings and process payments related to any
-                requested products or services.
-              </li>
-              <li>
-                To understand and analyze our sales performance, user needs, and
-                preferences.
-              </li>
-              <li>
-                To develop, enhance, and provide products and services that meet
-                your needs.
-              </li>
-              <li>To process exchanges or product returns.</li>
-            </ul>
+
+            <p>
+              Your Personal Data may be transferred to, stored, processed, or
+              accessed in jurisdictions outside your country of residence where
+              Suntel, its affiliates, subsidiaries, service providers, or
+              servers are located. You consent to such transfers, subject to
+              applicable legal safeguards.
+            </p>
+
+            <p>
+              Suntel may disclose Personal Data to third parties for legitimate
+              purposes, including service providers, IT infrastructure partners,
+              professional advisors, auditors, payment processors, affiliated
+              companies, and governmental authorities where required by law. For
+              messaging services, disclosure may occur where reasonably
+              necessary to investigate abuse, enforce platform rules, comply
+              with legal obligations, or protect the rights, safety, and
+              integrity of Suntel, its users, or the public.
+            </p>
+
+            <p>
+              Suntel does not sell Personal Data. Any disclosure is limited to
+              what is reasonably necessary for the stated purposes.
+            </p>
+
+            {/* SECTION D */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-d"
+            >
+              D. Data Retention and Deletion
+            </h2>
+
+            <p>
+              Suntel retains Personal Data only for as long as necessary to
+              fulfill the purposes described in this Notice, comply with legal
+              obligations, resolve disputes, and enforce agreements. Due to the
+              technical nature of messaging services, certain data may be
+              automatically deleted, overwritten, or become unrecoverable, and
+              Suntel does not guarantee message retention or retrievability.
+            </p>
+
+            <p>
+              Upon request, Suntel will delete Personal Data in accordance with
+              applicable law. However, certain transactional, accounting,
+              security, or compliance-related data may be retained as required
+              by law or legitimate business needs.
+            </p>
+
+            {/* SECTION E */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-e"
+            >
+              E. Security Measures
+            </h2>
+
+            <p>
+              Suntel implements reasonable administrative, technical, and
+              organizational measures to protect Personal Data against
+              unauthorized access, loss, misuse, alteration, or disclosure.
+              However, no system is completely secure, and Suntel does not
+              guarantee absolute security of Personal Data or communications
+              transmitted through the Services.
+            </p>
+
+            <p>
+              Users are responsible for safeguarding their own devices,
+              credentials, and account access.
+            </p>
+
+            {/* SECTION F */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-f"
+            >
+              F. Third-Party Links and Services
+            </h2>
+
+            <p>
+              The Services may contain links to third-party websites or
+              services. Suntel is not responsible for the privacy practices,
+              content, or data handling of such third parties. Any Personal Data
+              you provide to third parties is governed by their respective
+              privacy policies and terms.
+            </p>
+
+            {/* SECTION G */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-g"
+            >
+              G. Personal Data of Minors and Third Parties
+            </h2>
+
+            <p>
+              The Services are not intended for individuals under eighteen (18)
+              years of age unless expressly permitted. Where Personal Data of
+              minors or third parties is provided, you represent and warrant
+              that you have obtained all necessary consents and legal authority
+              to do so, and you accept responsibility for such disclosure.
+            </p>
+
+            {/* SECTION H */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-h"
+            >
+              H. Access, Correction, and Requests
+            </h2>
+
+            <p>
+              Subject to applicable law, you may request access to, correction
+              of, or limitation on the processing of your Personal Data by
+              contacting Suntel through the official channels listed on our
+              websites. Suntel reserves the right to refuse requests where
+              permitted by law or to impose reasonable administrative fees.
+            </p>
+
+            {/* SECTION I */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-i"
+            >
+              I. Amendments and Acknowledgement
+            </h2>
+
+            <p>
+              Suntel may modify, update, or amend this Notice at any time by
+              publishing the revised version on its websites or applications.
+              Continued use of any Service after such changes constitutes your
+              acceptance of the updated Notice.
+            </p>
+
+            <p>
+              In the event of any inconsistency between language versions, the
+              English version shall prevail.
+            </p>
+
+            {/* SECTION J */}
+            <h2
+              className="text-2xl font-bold text-gray-900 pt-4"
+              id="section-j"
+            >
+              J. Contact
+            </h2>
+
+            <p>
+              Requests, inquiries, or data deletion requests may be submitted
+              via the contact details published on{" "}
+              <a href="https://suntel.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">https://suntel.io</a>.
+            </p>
           </section>
         </div>
       </div>

@@ -13,20 +13,17 @@ interface Slide {
 // --- Component Implementation ---
 export default function HeroSection() {
   const { getSection } = useTranslate();
-  const sectionAData = getSection("sectionA") as {
-    cny2026?: Slide[];
-    hero?: Slide;
-    promotions?: Slide[];
-    
-  };
+  const sectionAData = getSection("sectionA") as Record<string, any> | null;
 
-  // Get slides from translation JSON (hero + promotions)
-  const slides = [
-    ...(sectionAData?.cny2026 ||[]),
-    sectionAData?.hero,
-    ...(sectionAData?.promotions || []),
-    
-  ].filter(Boolean) as Slide[];
+  // Use explicit slides array from JSON to ensure correct banner ordering
+  const slides: Slide[] = [];
+  if (sectionAData?.slides && Array.isArray(sectionAData.slides)) {
+    for (const item of sectionAData.slides) {
+      if (item && (item.image_landscape || item.image_vertical || item.title)) {
+        slides.push(item as Slide);
+      }
+    }
+  }
 
   // Tailwind Classes for the Hero Banner
   // Desktop/Default: aspect-[16/9], Mobile (<769px): max-md:aspect-[10/16]

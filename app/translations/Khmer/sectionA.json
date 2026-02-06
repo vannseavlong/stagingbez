@@ -1,22 +1,25 @@
 {
   "id": "sectionA",
-  "hero": {
-    "title": "ទាញយក bEasy ឥឡូវនេះ",
-    "image_landscape": "/images/hero/PC_bCombos_KH.webp",
-    "image_vertical": "/images/hero/Mobile_bCombos_KH.webp"
-  },
-  "promotions": [
+  "slides": [
+    {
+      "title": "Celebrate CNY 2026 with bEasy",
+      "image_landscape": "/images/hero/CNY-Km.webp",
+      "image_vertical": "/images/hero/CNY-Km-Mobile.webp"
+    },
+    {
+      "title": "បង្ហាញសេចក្ដីស្រឡាញ់នៅថ្ងៃបុណ្យក្ដីស្រឡាញ់ ជាមួយនឹង bEasy",
+      "image_landscape": "/images/hero/Valentine_KM.webp",
+      "image_vertical": "/images/hero/Valentine_Mobile_KM.webp"
+    },
+    {
+      "title": "ទាញយក bEasy ឥឡូវនេះ",
+      "image_landscape": "/images/hero/PC_bCombos_KH.webp",
+      "image_vertical": "/images/hero/Mobile_bCombos_KH.webp"
+    },
     {
       "title": "ការផ្តល់ជូនពិសេស",
       "image_landscape": "/images/hero/PC_Web_Luxury_KH.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_KH.webp"
     }
-  ],
-    "cny2026": [
-      {
-    "title": "Celebrate CNY 2026 with bEasy",
-    "image_landscape": "/images/hero/CNY-Km.webp",
-    "image_vertical": "/images/hero/CNY-Km-Mobile.webp"
-  }
-]
+  ]
 }

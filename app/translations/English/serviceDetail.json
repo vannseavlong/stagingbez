@@ -183,12 +183,12 @@
     "banner": {
       "title": "Office Cleaning Service",
       "description": "Brighten your workplace with bEasy’s office cleaning — return to a fresh space where everyone can focus and do their best.",
-      "landscape": "/images/serviceDetail/Office/Office_Hero.webp",
-      "portrait": "/images/serviceDetail/Office/Office_Hero_Mobile.webp",
+      "landscape": "/images/serviceDetail/Office/Office_16_9.webp",
+      "portrait": "/images/serviceDetail/Office/Office_2_3.webp",
       "downloadButton": true
     },
     "taskInfo": {
-      "imageSrc": "/images/serviceDetail/General/GenCLN-Task.webp",
+      "imageSrc": "/images/serviceDetail/Office/Office_3_2.webp",
       "title": "What’s Included in Your Cleaning Tasks?",
       "description": "PLACEHOLDER - Replace with full description for service id 3.",
       "subtitle": "Information of procedure"
@@ -330,7 +330,9 @@
       },
       {
         "title": "Post-Treatment",
-        "items": ["Allow 1-2 hours for treatment to settle before re-entry."]
+        "items": [
+          "Allow 1-2 hours for treatment to settle before re-entry."
+        ]
       }
     ],
     "serviceType": {
