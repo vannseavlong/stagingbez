@@ -25,7 +25,7 @@
       {
         "key": "privacy",
         "title": "Privacy Policy",
-        "href": "https://suntel.io/privacy"
+        "href": "/{lang}/privacy-policy"
       }
     ],
     "services": [
