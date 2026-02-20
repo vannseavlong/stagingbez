@@ -8,7 +8,7 @@
     "start": "next start -p 3004",
     "lint": "eslint",
     "deploy": "yarn build && firebase deploy",
-    "deploy:preview": "yarn build && firebase hosting:channel:deploy staging"
+    "deploy:preview": "yarn build && firebase hosting:channel:deploy stagingLink"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
