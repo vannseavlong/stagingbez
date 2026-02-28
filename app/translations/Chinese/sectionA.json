@@ -2,11 +2,6 @@
   "id": "sectionA",
   "slides": [
     {
-      "title": "Celebrate CNY 2026 with bEasy",
-      "image_landscape": "/images/hero/CNY-simplify.webp",
-      "image_vertical": "/images/hero/CNY-Cn-Mobile.webp"
-    },
-    {
       "title": "立即下载 bEasy",
       "image_landscape": "/images/hero/PC_bCombos_CN.webp",
       "image_vertical": "/images/hero/Mobile_bCombos_CN.webp"
