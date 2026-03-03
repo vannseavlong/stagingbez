@@ -2,11 +2,6 @@
   "id": "sectionA",
   "slides": [
     {
-      "title": "立即下载 bEasy",
-      "image_landscape": "/images/hero/PC_bCombos_CN.webp",
-      "image_vertical": "/images/hero/Mobile_bCombos_CN.webp"
-    },
-    {
       "title": "特别优惠",
       "image_landscape": "/images/hero/PC_Web_Luxury_CN.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_CN.webp"

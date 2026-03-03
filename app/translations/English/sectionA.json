@@ -2,11 +2,6 @@
   "id": "sectionA",
   "slides": [
     {
-      "title": "Download bEasy Now",
-      "image_landscape": "/images/hero/PC_bCombos_EN.webp",
-      "image_vertical": "/images/hero/Mobile_bCombos_Eng.webp"
-    },
-    {
       "title": "Luxury Banking Experience",
       "image_landscape": "/images/hero/PC_Web_Luxury_Eng.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_EN.webp"
