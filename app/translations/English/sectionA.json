@@ -2,6 +2,11 @@
   "id": "sectionA",
   "slides": [
     {
+      "title": "Deep Cleaning",
+      "image_landscape": "/images/hero/DEEP20_WebH_EN.webp",
+      "image_vertical": "/images/hero/DEEP20_WebV_EN.webp"
+    },
+    {
       "title": "Luxury Banking Experience",
       "image_landscape": "/images/hero/PC_Web_Luxury_Eng.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_EN.webp"

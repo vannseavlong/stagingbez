@@ -2,6 +2,11 @@
   "id": "sectionA",
   "slides": [
     {
+      "title": "ការសម្អាតជ្រៅ",
+      "image_landscape": "/images/hero/DEEP20_WebH_KM.webp",
+      "image_vertical": "/images/hero/DEEP20_WebV_KM.webp"
+    },
+    {
       "title": "ការផ្តល់ជូនពិសេស",
       "image_landscape": "/images/hero/PC_Web_Luxury_KH.webp",
       "image_vertical": "/images/hero/Mobile_Luxury_KH.webp"
