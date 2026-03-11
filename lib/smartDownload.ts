@@ -4,7 +4,7 @@
  */
 export function handleSmartDownload() {
   const userAgent = navigator.userAgent || navigator.vendor;
-
+  1;
   // Detect iOS
   if (/iPad|iPhone|iPod/.test(userAgent)) {
     window.location.href = "https://apps.apple.com/app/beasy"; // Replace with your App Store link
