@@ -23,7 +23,8 @@ export default function PrivacyPolicy() {
 
           <section className="space-y-8 text-gray-700 leading-relaxed wrap-break-word whitespace-normal">
             <p>
-              bEasy is engineered by Suntel Technology Co., Ltd. Please refer to{" "}
+              bEasy and bPartner are engineered by Suntel Technology Co., Ltd.
+              Please refer to{" "}
               <a
                 href="https://suntel.io/privacy"
                 target="_blank"
