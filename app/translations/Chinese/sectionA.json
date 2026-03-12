@@ -2,6 +2,11 @@
   "id": "sectionA",
   "slides": [
     {
+      "title": "AC App",
+      "image_landscape": "/images/hero/AC-Web-CN.webp",
+      "image_vertical": "/images/hero/AC-Mobile-CN.webp"
+    },
+    {
       "title": "深度清洁",
       "image_landscape": "/images/hero/DEEP20_WebH_CN.webp",
       "image_vertical": "/images/hero/DEEP20_WebV_CN.webp"

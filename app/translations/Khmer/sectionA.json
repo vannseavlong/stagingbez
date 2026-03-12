@@ -2,6 +2,11 @@
   "id": "sectionA",
   "slides": [
     {
+      "title": "AC App",
+      "image_landscape": "/images/hero/AC-Web-KH.webp",
+      "image_vertical": "/images/hero/AC-Mobile-KH.webp"
+    },
+    {
       "title": "ការសម្អាតជ្រៅ",
       "image_landscape": "/images/hero/DEEP20_WebH_KM.webp",
       "image_vertical": "/images/hero/DEEP20_WebV_KM.webp"
