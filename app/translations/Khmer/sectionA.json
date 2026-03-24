@@ -2,6 +2,11 @@
   "id": "sectionA",
   "slides": [
     {
+      "title": "Khmer New Year",
+      "image_landscape": "/images/hero/KNY-WEB-KM.webp",
+      "image_vertical": "/images/hero/KNY-Mobile-KM.webp"
+    },
+    {
       "title": "AC App",
       "image_landscape": "/images/hero/AC-Web-KH.webp",
       "image_vertical": "/images/hero/AC-Mobile-KH.webp"
