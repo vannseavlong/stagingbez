@@ -6,8 +6,8 @@ import { Suspense, useEffect, useState } from "react";
 import moment from "moment";
 
 // const BASE_URL = 'http://localhost:5002/api/';
-const BASE_URL = "https://api.beasy.info/api/";
-// const BASE_URL = "https://api-dev.beasy.info/api/";
+// const BASE_URL = "https://api.beasy.info/api/";
+const BASE_URL = "https://api-dev.beasy.info/api/";
 // const BASE_URL = "https://api.beasy.info/api/";
 
 export default function Page() {
