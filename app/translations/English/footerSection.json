@@ -3,7 +3,7 @@
   "header": {
     "subtitle": "",
     "title": "",
-    "description": "#C17,  Sangkat Srah Chak, Khan Daun Penh, Phnom Penh, Cambodia."
+    "description": "#72 Street 608, 8 village, Sangkat  beong kork2, khan Toul kork, Phnom Penh."
   },
   "links": {
     "company": [
@@ -29,14 +29,38 @@
       }
     ],
     "services": [
-      { "key": "generalCleaning", "title": "General Cleaning" },
-      { "key": "deepCleaning", "title": "Deep Cleaning" },
-      { "key": "officeCleaning", "title": "Office Cleaning" },
-      { "key": "upholstery", "title": "Upholstery" },
-      { "key": "pestControl", "title": "Pest Control" },
-      { "key": "acCleaning", "title": "AC Cleaning" },
-      { "key": "postRenovation", "title": "Post Renovation" },
-      { "key": "washingMachine", "title": "Washing Machine" }
+      {
+        "key": "generalCleaning",
+        "title": "General Cleaning"
+      },
+      {
+        "key": "deepCleaning",
+        "title": "Deep Cleaning"
+      },
+      {
+        "key": "officeCleaning",
+        "title": "Office Cleaning"
+      },
+      {
+        "key": "upholstery",
+        "title": "Upholstery"
+      },
+      {
+        "key": "pestControl",
+        "title": "Pest Control"
+      },
+      {
+        "key": "acCleaning",
+        "title": "AC Cleaning"
+      },
+      {
+        "key": "postRenovation",
+        "title": "Post Renovation"
+      },
+      {
+        "key": "washingMachine",
+        "title": "Washing Machine"
+      }
     ]
   },
   "social": "Find us on",
