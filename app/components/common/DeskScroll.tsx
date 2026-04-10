@@ -51,7 +51,7 @@ export function DeskScroll({ items }: DeskScrollProps) {
 
         {/* Right Side - Images */}
         <div className="relative h-full items-center flex">
-          <div className="relative h-[420px] w-full">
+          <div className="relative h-105 w-full">
             {items.map((item, index) => {
               const start = index / items.length;
               const end = (index + 1) / items.length;
@@ -107,8 +107,8 @@ function TextItem({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [start - 0.05, start + 0.05, middle, end - 0.05, end + 0.05],
-    [0, 1, 1, 1, 0]
+    [start, middle, end],
+    [0, 1, 0]
   );
 
   const y = useTransform(scrollYProgress, [start, middle, end], [30, 0, -30]);
@@ -145,14 +145,14 @@ function ImageItem({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [start - 0.05, start, end, end + 0.05],
-    [0, 1, 1, 0]
+    [start, middle(start, end), end],
+    [0, 1, 0]
   );
 
   const scale = useTransform(
     scrollYProgress,
-    [start - 0.05, start, end, end + 0.05],
-    [0.9, 1, 1, 0.9]
+    [start, middle(start, end), end],
+    [0.94, 1, 0.94]
   );
 
   return (
@@ -181,14 +181,14 @@ function ProgressIndicator({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [start, start + 0.05, end - 0.05, end],
-    [0.5, 1, 1, 0.5]
+    [start, middle(start, end), end],
+    [0.5, 1, 0.5]
   );
 
   const width = useTransform(
     scrollYProgress,
-    [start, start + 0.05, end - 0.05, end],
-    [6, 32, 32, 6]
+    [start, middle(start, end), end],
+    [6, 32, 6]
   );
 
   return (
@@ -197,4 +197,8 @@ function ProgressIndicator({
       className="h-1.5 bg-white rounded-full transition-all"
     />
   );
+}
+
+function middle(start: number, end: number) {
+  return (start + end) / 2;
 }

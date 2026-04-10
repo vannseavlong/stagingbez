@@ -48,7 +48,7 @@ export default function Footer() {
             >
               <Button
                 variant="outline"
-                className="flex items-center h-[50px] bg-white text-black rounded-[10px] border border-gray-500 hover:bg-custom-gradient transition-colors"
+                className="flex items-center h-12.5 bg-white text-black rounded-[10px] border border-gray-500 hover:bg-custom-gradient transition-colors"
               >
                 {/* <img src={Apple} alt="App Store" className="h-[40px] w-auto" /> */}
 
@@ -78,7 +78,7 @@ export default function Footer() {
             >
               <Button
                 variant="outline"
-                className="flex items-center h-[50px] bg-white text-black rounded-[10px] border border-gray-500 hover:bg-custom-gradient transition-colors"
+                className="flex items-center h-12.5 bg-white text-black rounded-[10px] border border-gray-500 hover:bg-custom-gradient transition-colors"
               >
                 {/* <img src={Google} alt="Google Play" className="h-[40px] w-auto" /> */}
 

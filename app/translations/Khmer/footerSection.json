@@ -3,7 +3,7 @@
   "header": {
     "subtitle": "",
     "title": "",
-    "description": "ផ្ទះលេខ C17 ផ្លូវបេតុង សង្កាត់ស្រះចក ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ"
+    "description": "ផ្ទះលេខ ៧២ ផ្លូវលេខ ៦០៨ ភូមិ ៨ សង្កាត់បឹងកក់ ២ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ"
   },
   "links": {
     "company": [
@@ -29,14 +29,38 @@
       }
     ],
     "services": [
-      { "key": "generalCleaning", "title": "សំអាតទូទៅ" },
-      { "key": "deepCleaning", "title": "សំអាតស៊ីជម្រៅ" },
-      { "key": "officeCleaning", "title": "សំអាតការិយាល័យ" },
-      { "key": "upholstery", "title": "សំអាតគ្រឿងសង្ហារឹមក្រណាត់" },
-      { "key": "pestControl", "title": "កម្ចាត់សត្វល្អិត" },
-      { "key": "acCleaning", "title": "សំអាតម៉ាស៊ីនត្រជាក់" },
-      { "key": "postRenovation", "title": "សំអាតក្រោយជួសជុល" },
-      { "key": "washingMachine", "title": "សំអាតម៉ាស៊ីនបោក" }
+      {
+        "key": "generalCleaning",
+        "title": "សំអាតទូទៅ"
+      },
+      {
+        "key": "deepCleaning",
+        "title": "សំអាតស៊ីជម្រៅ"
+      },
+      {
+        "key": "officeCleaning",
+        "title": "សំអាតការិយាល័យ"
+      },
+      {
+        "key": "upholstery",
+        "title": "សំអាតគ្រឿងសង្ហារឹមក្រណាត់"
+      },
+      {
+        "key": "pestControl",
+        "title": "កម្ចាត់សត្វល្អិត"
+      },
+      {
+        "key": "acCleaning",
+        "title": "សំអាតម៉ាស៊ីនត្រជាក់"
+      },
+      {
+        "key": "postRenovation",
+        "title": "សំអាតក្រោយជួសជុល"
+      },
+      {
+        "key": "washingMachine",
+        "title": "សំអាតម៉ាស៊ីនបោក"
+      }
     ]
   },
   "social": "ស្វែងរកយើងនៅលើ",

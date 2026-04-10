@@ -30,7 +30,7 @@ export default function ContactSection() {
       {/* Header */}
       <div className="mb-5 mt-10">
         <div className="flex items-center text-black mb-5 lg:mb-5 md:mb-5">
-          <h5 className="text-base font-bold leading-[32px] tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
+          <h5 className="text-base font-bold leading-8 tracking-[2px] text-beasy-gradient mr-4 whitespace-nowrap opacity-80 font-sans">
             {header.subtitle}
           </h5>
         </div>
@@ -38,11 +38,11 @@ export default function ContactSection() {
 
       {/* Heading + Description */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12 md:gap-10 text-left">
-        <h1 className="w-full lg:w-[500px] text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
+        <h1 className="w-full lg:w-125 text-black text-[24px] md:text-[32px] lg:text-[32px] font-bold tracking-widest leading-snug font-sans">
           {header.title}
         </h1>
         <div className="flex justify-start w-full mb-13 md:justify-items-start lg:justify-end lg:w-[60%] lg:py-0">
-          <p className="text-[#3D3D3D] text-lg font-normal leading-[150%] lg:max-w-[600px] md:max-w-[600px] text-left font-sans">
+          <p className="text-[#3D3D3D] text-lg font-normal leading-[150%] lg:max-w-150 md:max-w-150 text-left font-sans">
             {header.description}
           </p>
         </div>
@@ -58,13 +58,13 @@ export default function ContactSection() {
             data-aos-delay="200"
           >
             <a
-              href="https://maps.app.goo.gl/gpXUP1TSj3rKPPn29"
+              href="https://www.google.com/maps/dir/?api=1&destination=11.571585,104.89107"
               target="_blank"
               rel="noopener noreferrer"
               className="block h-full w-full"
             >
               {/* ✅ Desktop Image */}
-              <div className="hidden lg:block w-full h-auto max-w-[600px] lg:-mt-8">
+              <div className="hidden lg:block w-full h-auto max-w-150 lg:-mt-8">
                 <Image
                   className="w-full h-full object-cover "
                   src="/images/location.webp"
@@ -114,7 +114,7 @@ export default function ContactSection() {
                   {find("location").title}
                 </h4>
               </div>
-              <p className="text-[16px] text-[#1A1A1A] font-medium lg:w-[500px] ">
+              <p className="text-[16px] text-[#1A1A1A] font-medium lg:w-125">
                 {find("location").description}
               </p>
             </div>
