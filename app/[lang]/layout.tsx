@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   description: "Best cleaning services in Cambodia!",
   icons: {
     icon: [
-      { url: "/images/Browser_logo.png", sizes: "64x64", type: "image/png" },
+      { url: "/images/bEasy_logo.png", sizes: "64x64", type: "image/png" },
     ],
-    apple: "/images/Browser_logo.png",
-    shortcut: "/images/Browser_logo.png",
+    apple: "/images/bEasy_logo.png",
+    shortcut: "/images/bEasy_logo.png",
   },
   metadataBase: new URL("https://beasy.info/"),
   openGraph: {

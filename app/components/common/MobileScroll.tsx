@@ -105,14 +105,14 @@ function TextItem({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [startProgress - 0.05, startProgress, endProgress - 0.05, endProgress],
-    [0, 1, 1, 0]
+    [startProgress, middle(startProgress, endProgress), endProgress],
+    [0, 1, 0]
   );
 
   const y = useTransform(
     scrollYProgress,
-    [startProgress - 0.05, startProgress, endProgress - 0.05, endProgress],
-    [20, 0, 0, -20]
+    [startProgress, middle(startProgress, endProgress), endProgress],
+    [20, 0, -20]
   );
 
   return (
@@ -145,8 +145,8 @@ function ImageItem({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [startProgress - 0.05, startProgress, endProgress - 0.05, endProgress],
-    [0, 1, 1, 0]
+    [startProgress, middle(startProgress, endProgress), endProgress],
+    [0, 1, 0]
   );
 
   return (
@@ -178,14 +178,14 @@ function ProgressIndicator({
 }) {
   const opacity = useTransform(
     scrollYProgress,
-    [startProgress, startProgress + 0.05, endProgress - 0.05, endProgress],
-    [0.5, 1, 1, 0.5]
+    [startProgress, middle(startProgress, endProgress), endProgress],
+    [0.5, 1, 0.5]
   );
 
   const width = useTransform(
     scrollYProgress,
-    [startProgress, startProgress + 0.05, endProgress - 0.05, endProgress],
-    [6, 24, 24, 6]
+    [startProgress, middle(startProgress, endProgress), endProgress],
+    [6, 24, 6]
   );
 
   return (
@@ -194,4 +194,8 @@ function ProgressIndicator({
       className="h-1.5 bg-white rounded-full transition-all"
     />
   );
+}
+
+function middle(start: number, end: number) {
+  return (start + end) / 2;
 }

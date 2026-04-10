@@ -31,13 +31,13 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: "/images/Browser_logo.png?v=2",
+      url: "/images/bEasy_logo.png?v=2",
     },
-    { rel: "icon", type: "image/webp", url: "/images/Browser_logo.webp?v=2" },
+    { rel: "icon", type: "image/webp", url: "/images/bEasy_logo.webp?v=2" },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/images/Browser_logo.png?v=2",
+      url: "/images/bEasy_logo.png?v=2",
     },
   ],
   openGraph: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "bEasy Cambodia",
     images: [
       {
-        url: "https://beasy.info/images/Browser_logo.png?v=2",
+        url: "https://beasy.info/images/bEasy_logo.png?v=2",
         alt: "bEasy Cambodia logo",
       },
     ],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "bEasy Cambodia — Cleaning & Pest Services",
     description:
       "Reliable cleaning and pest control services in Phnom Penh. Book online or contact us.",
-    images: ["https://beasy.info/images/Browser_logo.png?v=2"],
+    images: ["https://beasy.info/images/bEasy_logo.png?v=2"],
   },
   alternates: {
     canonical: "https://beasy.info",

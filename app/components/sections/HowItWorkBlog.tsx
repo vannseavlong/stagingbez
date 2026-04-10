@@ -17,12 +17,12 @@ export default function HowItWorkBlog() {
   return (
     <div className="bg-white overflow-visible">
       {/* Centered container to match other sections */}
-      <div className="max-w-[1440px] overflow-visible">
+      <div className="max-w-360 overflow-visible">
         {/* Header */}
         <header className="pt-0 mb-0 transition-all duration-300 text-center">
           <div>
             <div
-              className="font-bold text-[16px] md:text-[16px] leading-[32px] mb-4 font-sans"
+              className="font-bold text-[16px] md:text-[16px] leading-8 mb-4 font-sans"
               style={{
                 background: "linear-gradient(90deg,#1B4CFA,#102C90)",
                 WebkitBackgroundClip: "text",

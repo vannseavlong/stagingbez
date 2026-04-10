@@ -52,9 +52,8 @@ function ComparerComponent({
       if (overlayInner) overlayInner.style.width = `${widthPx}px`;
       if (handle) {
         const px = widthPx;
-        handle.style.transform = `translate3d(${
-          px - handleSize / 2
-        }px, -50%, 0)`;
+        handle.style.transform = `translate3d(${px - handleSize / 2
+          }px, -50%, 0)`;
       }
       if (separatorLine) {
         const px = widthPx;
@@ -155,7 +154,7 @@ function ComparerComponent({
       <Image
         src={afterImg}
         alt="After"
-        onLoadingComplete={onImageLoad}
+        onLoad={onImageLoad}
         className="block select-none"
         draggable={false}
         fill
@@ -178,7 +177,7 @@ function ComparerComponent({
         <Image
           src={beforeImg}
           alt="Before"
-          onLoadingComplete={onImageLoad}
+          onLoad={onImageLoad}
           className="block select-none"
           draggable={false}
           fill
