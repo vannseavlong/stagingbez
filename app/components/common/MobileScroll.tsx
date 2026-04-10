@@ -31,7 +31,7 @@ export function MobileScroll({ items }: MobileScrollProps) {
       <div className="sticky top-[14vh] h-[80vh] flex flex-col items-center justify-center px-4 py-0">
         {/* Text area - sticky, replacing content */}
         <div className="w-full max-w-3xl mb-6">
-          <div className="relative min-h-[140px] flex items-center justify-center">
+          <div className="relative min-h-35 flex items-center justify-center">
             {items.map((item, index) => {
               const startProgress = index / items.length;
               const endProgress = (index + 1) / items.length;

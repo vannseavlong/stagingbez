@@ -95,10 +95,10 @@ function PurchaseCoupon() {
   };
 
   if (loading)
-    return <div className="text-center mt-[100px]">Plase wait...</div>;
+    return <div className="text-center mt-25">Plase wait...</div>;
 
   if (!paymentLinkData)
-    return <div className="text-center mt-[100px]">Coupon not found</div>;
+    return <div className="text-center mt-25">Coupon not found</div>;
   const { user, coupons, type } = paymentLinkData;
 
   const subtotal = paymentLinkData.amount;
@@ -225,7 +225,7 @@ function PurchaseCoupon() {
                 <div className="flex flex-1 justify-end">
                   <div className="text-gray-600 text-sm">Subtotal</div>
                 </div>
-                <div className="w-[70px] flex justify-end">
+                <div className="w-17.5 flex justify-end">
                   <div className="font-medium text-sm">${subtotal}</div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ function PurchaseCoupon() {
                 <div className="flex flex-1 justify-end">
                   <div className="text-gray-600 text-sm">VAT (10%)</div>
                 </div>
-                <div className="w-[70px] flex justify-end">
+                <div className="w-17.5 flex justify-end">
                   <div className="font-medium text-sm">${vat}</div>
                 </div>
               </div>
@@ -241,7 +241,7 @@ function PurchaseCoupon() {
                 <div className="flex flex-1 justify-end">
                   <div className="text-gray-600 text-sm">Total</div>
                 </div>
-                <div className="w-[70px] flex justify-end">
+                <div className="w-17.5 flex justify-end">
                   <div className="font-medium text-sm">${total}</div>
                 </div>
               </div>
